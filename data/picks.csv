@@ -1,10 +1,10 @@
 date,published_at,mode,ticker,setup,order_type,entry,stop,target,risk_pct,reason,status,fill_price,exit_price,exit_time,r_multiple,pct_return
-2026-10-29,2026-10-29T11:25:00-04:00,live,GOOGL,Oversold Bounce,buy_stop,288.21,280.35,300.0,2.73,"RSI 23 (oversold), down 11.8% - only buy if it bounces back above the morning high",,,,,,
-2026-10-29,2026-10-29T11:25:00-04:00,live,MA,VWAP Pullback,buy_limit,637.39,634.84,642.49,0.4,"Up 4.7% on 1.9x volume, rising VWAP - buy the dip to VWAP",,,,,,
-2026-10-29,2026-10-29T11:25:00-04:00,live,CCL,VWAP Pullback,buy_limit,28.94,28.71,29.4,0.79,"Up 3.6% on 3.4x volume, rising VWAP - buy the dip to VWAP",,,,,,
-2026-10-29,2026-10-29T11:25:00-04:00,live,CAT,Oversold Bounce,buy_stop,659.01,631.0,701.02,4.25,"RSI 28 (oversold), down 7.7% - only buy if it bounces back above the morning high",,,,,,
-2026-10-29,2026-10-29T11:25:00-04:00,practice,NCLH,20-Day Breakout,buy_stop,18.43,18.12,19.05,1.68,Knocking on its 20-day high ($16.15) on 5.3x volume,,,,,,
-2026-10-29,2026-10-29T11:25:00-04:00,practice,CMG,MA20 Reclaim,buy_stop,31.2,30.32,32.96,2.82,Climbed back above its 20-day average ($30.08) and pushing new highs,,,,,,
-2026-10-29,2026-10-29T11:25:00-04:00,practice,DASH,Gap & Go,buy_stop,181.61,177.42,189.99,2.31,"Gapped +5.3%, 4.0x normal volume, holding above VWAP",,,,,,
-2026-10-29,2026-10-29T11:25:00-04:00,practice,CCL,20-Day Breakout,buy_stop,29.13,28.67,30.05,1.58,Knocking on its 20-day high ($28.12) on 3.4x volume,,,,,,
-2026-10-29,2026-10-29T11:25:00-04:00,practice,MRK,MA20 Reclaim,buy_stop,149.27,145.84,156.13,2.3,Climbed back above its 20-day average ($144.20) and pushing new highs,,,,,,
+2026-10-29,2026-10-29T11:25:00-04:00,live,GOOGL,Oversold Bounce,buy_stop,288.21,280.35,300.0,2.73,"RSI 23 (oversold), down 11.8% - only buy if it bounces back above the morning high",eod,288.21,283.75,15:55,-0.604,-1.646
+2026-10-29,2026-10-29T11:25:00-04:00,live,MA,VWAP Pullback,buy_limit,637.39,634.84,642.49,0.4,"Up 4.7% on 1.9x volume, rising VWAP - buy the dip to VWAP",stop,637.39,634.84,11:50,-1.249,-0.5
+2026-10-29,2026-10-29T11:25:00-04:00,live,CCL,VWAP Pullback,buy_limit,28.94,28.71,29.4,0.79,"Up 3.6% on 3.4x volume, rising VWAP - buy the dip to VWAP",eod,28.94,28.84,15:55,-0.56,-0.445
+2026-10-29,2026-10-29T11:25:00-04:00,live,CAT,Oversold Bounce,buy_stop,659.01,631.0,701.02,4.25,"RSI 28 (oversold), down 7.7% - only buy if it bounces back above the morning high",eod,659.01,647.26,15:55,-0.443,-1.881
+2026-10-29,2026-10-29T11:25:00-04:00,practice,NCLH,20-Day Breakout,buy_stop,18.43,18.12,19.05,1.68,Knocking on its 20-day high ($16.15) on 5.3x volume,stop,18.43,18.12,12:45,-1.059,-1.78
+2026-10-29,2026-10-29T11:25:00-04:00,practice,CMG,MA20 Reclaim,buy_stop,31.2,30.32,32.96,2.82,Climbed back above its 20-day average ($30.08) and pushing new highs,eod,31.2,31.27,15:55,0.05,0.14
+2026-10-29,2026-10-29T11:25:00-04:00,practice,DASH,Gap & Go,buy_stop,181.61,177.42,189.99,2.31,"Gapped +5.3%, 4.0x normal volume, holding above VWAP",no_fill,,,,0.0,0.0
+2026-10-29,2026-10-29T11:25:00-04:00,practice,CCL,20-Day Breakout,buy_stop,29.13,28.67,30.05,1.58,Knocking on its 20-day high ($28.12) on 3.4x volume,eod,29.13,28.84,15:55,-0.693,-1.094
+2026-10-29,2026-10-29T11:25:00-04:00,practice,MRK,MA20 Reclaim,buy_stop,149.27,145.84,156.13,2.3,Climbed back above its 20-day average ($144.20) and pushing new highs,no_fill,,,,0.0,0.0
