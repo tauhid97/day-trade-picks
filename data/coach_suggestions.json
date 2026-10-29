@@ -1,0 +1,15 @@
+{
+  "ORB Stocks in Play": {
+    "change": {
+      "stop_atr": 0.25
+    },
+    "train_R": [
+      -5.93,
+      -1.2
+    ],
+    "test_R": [
+      -7.77,
+      0.43
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+setup,picks,filled,win_rate_pct,avg_R,total_R,avg_pct,profit_factor,max_drawdown_R
+ALL SETUPS,232,128,45.3,0.065,8.3,0.153,1.12,-13.43
+Gap & Go,28,22,36.4,-0.193,-4.24,-0.056,0.59,-5.04
+ORB Stocks in Play,66,33,27.3,-0.415,-13.7,-0.238,0.52,-13.7
+Oversold Bounce,45,11,72.7,0.247,2.72,0.877,2.2,-1.19
+VWAP Pullback,93,62,53.2,0.38,23.53,0.308,1.81,-6.72

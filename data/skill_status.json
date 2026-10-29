@@ -1,0 +1,22 @@
+{
+  "Gap & Go": {
+    "mode": "practice",
+    "why": "Benched: averaging -0.19R over backtest (22 trades)",
+    "since": "2026-10-28"
+  },
+  "ORB Stocks in Play": {
+    "mode": "practice",
+    "why": "Benched: averaging -0.41R over backtest (33 trades)",
+    "since": "2026-10-28"
+  },
+  "Oversold Bounce": {
+    "mode": "live",
+    "why": "Playing: averaging +0.25R over backtest (11 trades)",
+    "since": "2026-10-28"
+  },
+  "VWAP Pullback": {
+    "mode": "live",
+    "why": "Playing: averaging +0.38R over backtest (62 trades)",
+    "since": "2026-10-28"
+  }
+}
