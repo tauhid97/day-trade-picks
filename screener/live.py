@@ -4,7 +4,7 @@ import os
 import pandas as pd
 
 from . import config as C
-from .bots import guard
+from .bots import guard, timemachine
 from .data import NY, get_daily, get_intraday, load_universe
 from .engine import picks_for_day
 from .notify import to_boss, to_community
@@ -51,7 +51,7 @@ def _pick_lines(i, p):
     return [f"**{i}. ${p['ticker']} - {p['setup']}**",
             f"Order: {ORDER_WORDS[p['order_type']]}",
             f"Entry: ${p['entry']:.2f} | Stop: ${p['stop']:.2f} | Target: {tgt}",
-            f"Risk: {p['risk_pct']:.1f}% | Why: {p['reason']}", ""]
+            f"Risk: {p['risk_pct']:.1f}% | Why: {p['reason']}"] + ([p["tm"]] if p.get("tm") else []) + [""]
 
 
 def format_post(live, ts, practice=None, weather_note=None, weather=None):
@@ -93,6 +93,7 @@ def scan(force=False):
         return
     daily = get_daily(list(intraday), period="1y")
     live, practice, w, note = picks_for_day(today, ts, intraday, daily, load_skills(), guard.modes())
+    add_time_machine(live + practice, ts)
     boss_text = format_post(live, ts, practice, note, w)
     os.makedirs("data", exist_ok=True)
     open(C.TODAY_POST_FILE, "w").write(boss_text)
@@ -100,11 +101,27 @@ def scan(force=False):
     rows = ([{"date": today.strftime("%Y-%m-%d"), "published_at": ts.isoformat(), "mode": "live", **p} for p in live] +
             [{"date": today.strftime("%Y-%m-%d"), "published_at": ts.isoformat(), "mode": "practice", **p} for p in practice])
     if rows:
-        new = pd.DataFrame(rows).drop(columns=["score"])
+        new = pd.DataFrame(rows).drop(columns=["score", "tm"], errors="ignore")
         picks_df = pd.concat([picks_df, new], ignore_index=True) if len(picks_df) else new
         save_picks(picks_df)
     to_boss(boss_text)
-    to_community(format_post(live, ts))
+    to_community(format_post([{k: v for k, v in p.items() if k != "tm"} for p in live], ts))
+
+
+def add_time_machine(picks, ts):
+    if not picks:
+        return
+    try:
+        hist = get_intraday(sorted({p["ticker"] for p in picks}), period="60d", interval="5m")
+    except Exception as e:
+        print("Time Machine skipped:", e)
+        return
+    for p in picks:
+        if p["ticker"] in hist:
+            try:
+                p["tm"] = timemachine.line(timemachine.odds(p, hist[p["ticker"]], ts))
+            except Exception as e:
+                print("Time Machine failed for", p["ticker"], e)
 
 
 def grade():

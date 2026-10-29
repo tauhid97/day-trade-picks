@@ -1,4 +1,98 @@
 date,weather,ticker,setup,order_type,entry,stop,target,risk_pct,score,reason,status,fill_price,exit_price,exit_time,r_multiple,pct_return
+2026-08-19,sunny,MRNA,20-Day Breakout,buy_stop,163.01,161.19,166.65,1.12,9734.645,Knocking on its 20-day high ($65.53) on 62.2x volume,stop,163.01,161.19,10:35,-1.089,-1.215
+2026-08-19,sunny,MRK,20-Day Breakout,buy_stop,151.83,150.21,155.07,1.07,102.179,Knocking on its 20-day high ($137.98) on 9.6x volume,eod,151.83,152.22,15:55,0.147,0.157
+2026-08-20,cloudy,COP,20-Day Breakout,buy_stop,135.09,133.46,138.35,1.21,5.653,Knocking on its 20-day high ($132.38) on 1.7x volume,eod,135.17,134.91,15:55,-0.239,-0.288
+2026-08-20,cloudy,OXY,20-Day Breakout,buy_stop,62.12,61.34,63.68,1.26,3.822,Knocking on its 20-day high ($60.83) on 1.3x volume,eod,62.12,61.52,15:55,-0.848,-1.065
+2026-08-21,sunny,MSTR,20-Day Breakout,buy_stop,120.98,117.7,127.54,2.71,19.476,Knocking on its 20-day high ($113.74) on 3.1x volume,eod,120.98,119.24,15:55,-0.567,-1.537
+2026-08-21,sunny,SOFI,20-Day Breakout,buy_stop,19.18,18.76,20.02,2.19,13.534,Knocking on its 20-day high ($19.00) on 2.3x volume,no_fill,,,,0.0,0.0
+2026-08-24,cloudy,MSTR,20-Day Breakout,buy_stop,126.21,122.82,132.99,2.69,11.673,Knocking on its 20-day high ($121.91) on 2.1x volume,stop,126.61,122.82,13:00,-1.155,-3.09
+2026-08-24,cloudy,DIS,20-Day Breakout,buy_stop,111.88,110.75,114.14,1.01,7.556,Knocking on its 20-day high ($108.69) on 2.5x volume,no_fill,,,,0.0,0.0
+2026-08-25,sunny,CCJ,20-Day Breakout,buy_stop,105.93,103.98,109.83,1.84,4.652,Knocking on its 20-day high ($103.73) on 1.6x volume,eod,105.93,106.97,15:55,0.479,0.881
+2026-08-25,sunny,AMGN,20-Day Breakout,buy_stop,446.66,441.25,457.48,1.21,0.249,Knocking on its 20-day high ($445.87) on 1.7x volume,eod,446.66,442.19,15:55,-0.908,-1.1
+2026-08-27,sunny,CRM,20-Day Breakout,buy_stop,249.81,245.95,257.53,1.55,327.352,Knocking on its 20-day high ($213.17) on 16.1x volume,stop,249.81,245.95,11:40,-1.064,-1.644
+2026-08-27,sunny,NVDA,20-Day Breakout,buy_stop,227.93,224.8,234.19,1.37,28.154,Knocking on its 20-day high ($227.92) on 3.7x volume,eod,227.93,228.05,15:55,-0.035,-0.047
+2026-08-28,sunny,CRM,20-Day Breakout,buy_stop,261.52,256.19,272.18,2.04,4.34,Knocking on its 20-day high ($254.48) on 1.8x volume,stop,261.52,256.19,15:50,-1.049,-2.136
+2026-08-28,sunny,SLB,20-Day Breakout,buy_stop,55.96,55.15,57.58,1.45,2.533,Knocking on its 20-day high ($55.89) on 2.5x volume,eod,55.96,57.33,15:55,1.615,2.337
+2026-08-31,cloudy,RBLX,20-Day Breakout,buy_stop,41.59,40.48,43.81,2.67,17.146,Knocking on its 20-day high ($40.19) on 2.6x volume,no_fill,,,,0.0,0.0
+2026-08-31,cloudy,TSLA,20-Day Breakout,buy_stop,366.51,359.98,379.57,1.78,6.965,Knocking on its 20-day high ($366.50) on 1.6x volume,eod,366.51,367.92,15:55,0.16,0.284
+2026-09-01,cloudy,AAPL,20-Day Breakout,buy_stop,325.4,321.78,332.64,1.11,4.695,Knocking on its 20-day high ($322.37) on 1.8x volume,eod,325.4,325.14,15:55,-0.162,-0.18
+2026-09-01,cloudy,DE,20-Day Breakout,buy_stop,672.4,662.39,692.42,1.49,4.451,Knocking on its 20-day high ($660.70) on 1.8x volume,eod,673.33,676.06,15:55,0.205,0.305
+2026-09-02,cloudy,WFC,20-Day Breakout,buy_stop,90.18,89.32,91.9,0.95,3.507,Knocking on its 20-day high ($90.17) on 1.3x volume,no_fill,,,,0.0,0.0
+2026-09-02,cloudy,CEG,20-Day Breakout,buy_stop,287.01,282.47,296.09,1.58,1.361,Knocking on its 20-day high ($287.00) on 1.3x volume,eod,287.01,290.1,15:55,0.617,0.976
+2026-09-03,cloudy,HOOD,20-Day Breakout,buy_stop,123.35,120.42,129.21,2.38,40.838,Knocking on its 20-day high ($112.45) on 2.8x volume,eod,123.35,124.71,15:55,0.422,1.002
+2026-09-03,cloudy,TSLA,20-Day Breakout,buy_stop,380.47,373.69,394.03,1.78,13.758,Knocking on its 20-day high ($368.92) on 2.3x volume,eod,380.47,376.36,15:55,-0.663,-1.18
+2026-09-04,cloudy,ORCL,20-Day Breakout,buy_stop,159.71,156.9,165.33,1.76,5.343,Knocking on its 20-day high ($159.26) on 1.8x volume,no_fill,,,,0.0,0.0
+2026-09-08,cloudy,VST,20-Day Breakout,buy_stop,153.59,150.87,159.03,1.77,4.701,Knocking on its 20-day high ($150.18) on 2.4x volume,eod,153.62,151.74,15:55,-0.747,-1.323
+2026-09-09,cloudy,GME,20-Day Breakout,buy_stop,19.9,19.64,20.42,1.31,11.084,Knocking on its 20-day high ($19.50) on 2.3x volume,eod,19.9,19.89,15:55,-0.115,-0.15
+2026-09-09,cloudy,AMD,20-Day Breakout,buy_stop,526.8,515.11,550.18,2.22,5.069,Knocking on its 20-day high ($517.35) on 1.7x volume,no_fill,,,,0.0,0.0
+2026-09-11,cloudy,HPQ,20-Day Breakout,buy_stop,36.04,35.32,37.48,2.0,20.127,Knocking on its 20-day high ($33.17) on 2.0x volume,stop,36.04,35.32,11:10,-1.05,-2.096
+2026-09-11,cloudy,DELL,20-Day Breakout,buy_stop,567.76,552.15,598.98,2.75,17.856,Knocking on its 20-day high ($562.99) on 1.6x volume,no_fill,,,,0.0,0.0
+2026-09-14,cloudy,CRWD,20-Day Breakout,buy_stop,233.89,228.23,245.21,2.42,37.049,Knocking on its 20-day high ($233.88) on 3.0x volume,eod,233.89,235.44,15:55,0.232,0.562
+2026-09-14,cloudy,RBLX,20-Day Breakout,buy_stop,48.71,47.65,50.83,2.18,15.483,Knocking on its 20-day high ($46.50) on 2.2x volume,target,49.56,50.83,11:45,1.151,2.46
+2026-09-15,cloudy,CRWD,20-Day Breakout,buy_stop,239.38,232.96,252.22,2.68,0.533,Knocking on its 20-day high ($239.37) on 1.4x volume,eod,239.38,242.52,15:55,0.452,1.21
+2026-09-17,cloudy,INTC,20-Day Breakout,buy_stop,109.85,107.03,115.49,2.57,14.841,Knocking on its 20-day high ($106.69) on 1.8x volume,eod,109.85,108.75,15:55,-0.429,-1.1
+2026-09-17,cloudy,CLF,20-Day Breakout,buy_stop,12.91,12.63,13.47,2.17,11.33,Knocking on its 20-day high ($12.81) on 2.0x volume,eod,12.91,12.76,15:55,-0.599,-1.299
+2026-09-18,cloudy,MSTR,20-Day Breakout,buy_stop,147.23,143.04,155.61,2.85,21.176,Knocking on its 20-day high ($144.92) on 2.1x volume,eod,147.23,153.91,15:55,1.558,4.433
+2026-09-21,sunny,ARM,20-Day Breakout,buy_stop,312.88,304.61,329.42,2.64,45.554,Knocking on its 20-day high ($275.78) on 3.6x volume,eod,312.88,323.1,15:55,1.197,3.163
+2026-09-21,sunny,AMD,20-Day Breakout,buy_stop,613.93,601.93,637.93,1.95,21.097,Knocking on its 20-day high ($559.91) on 2.4x volume,eod,613.93,615.36,15:55,0.068,0.133
+2026-09-22,sunny,MRNA,20-Day Breakout,buy_stop,182.66,176.38,195.22,3.44,10.228,Knocking on its 20-day high ($176.86) on 2.0x volume,eod,182.66,182.57,15:55,-0.043,-0.149
+2026-09-22,sunny,RIOT,20-Day Breakout,buy_stop,25.36,24.56,26.96,3.15,8.783,Knocking on its 20-day high ($25.07) on 1.9x volume,no_fill,,,,0.0,0.0
+2026-09-23,cloudy,DE,20-Day Breakout,buy_stop,721.23,712.63,738.43,1.19,3.626,Knocking on its 20-day high ($705.88) on 1.8x volume,no_fill,,,,0.0,0.0
+2026-09-24,cloudy,META,20-Day Breakout,buy_stop,768.66,755.59,794.8,1.7,4.732,Knocking on its 20-day high ($763.90) on 1.6x volume,eod,768.66,777.44,15:55,0.613,1.041
+2026-09-24,cloudy,GILD,20-Day Breakout,buy_stop,154.21,152.38,157.87,1.19,1.073,Knocking on its 20-day high ($154.20) on 1.5x volume,no_fill,,,,0.0,0.0
+2026-09-25,sunny,MSFT,20-Day Breakout,buy_stop,517.79,512.3,528.77,1.06,7.782,Knocking on its 20-day high ($517.78) on 2.4x volume,eod,517.79,516.1,15:55,-0.402,-0.426
+2026-09-25,sunny,QCOM,20-Day Breakout,buy_stop,202.06,197.84,210.5,2.09,5.484,Knocking on its 20-day high ($199.61) on 1.6x volume,eod,202.06,201.95,15:55,-0.074,-0.154
+2026-09-28,cloudy,IONQ,20-Day Breakout,buy_stop,47.92,46.53,50.7,2.9,5.148,Knocking on its 20-day high ($46.55) on 1.3x volume,no_fill,,,,0.0,0.0
+2026-09-29,cloudy,CCL,20-Day Breakout,buy_stop,25.17,24.78,25.95,1.55,85.352,Knocking on its 20-day high ($24.56) on 6.8x volume,eod,25.17,25.14,15:55,-0.141,-0.219
+2026-09-29,cloudy,MCHP,20-Day Breakout,buy_stop,80.38,78.97,83.2,1.75,4.01,Knocking on its 20-day high ($78.96) on 1.6x volume,no_fill,,,,0.0,0.0
+2026-10-02,sunny,SMCI,20-Day Breakout,buy_stop,44.59,43.46,46.85,2.53,8.252,Knocking on its 20-day high ($43.76) on 1.5x volume,no_fill,,,,0.0,0.0
+2026-10-02,sunny,NVDA,20-Day Breakout,buy_stop,237.88,234.97,243.7,1.22,5.23,Knocking on its 20-day high ($234.76) on 1.8x volume,no_fill,,,,0.0,0.0
+2026-10-05,sunny,U,20-Day Breakout,buy_stop,45.84,44.8,47.92,2.27,6.649,Knocking on its 20-day high ($45.38) on 1.3x volume,eod,45.84,45.69,15:55,-0.183,-0.416
+2026-10-05,sunny,TSM,20-Day Breakout,buy_stop,481.51,476.39,491.75,1.06,1.894,Knocking on its 20-day high ($474.79) on 1.4x volume,eod,481.51,485.91,15:55,0.765,0.813
+2026-10-06,sunny,AVGO,20-Day Breakout,buy_stop,377.62,372.25,388.36,1.42,6.171,Knocking on its 20-day high ($372.70) on 1.9x volume,eod,377.62,375.91,15:55,-0.389,-0.552
+2026-10-06,sunny,ANET,20-Day Breakout,buy_stop,212.37,209.03,219.05,1.57,3.592,Knocking on its 20-day high ($212.00) on 1.6x volume,eod,212.37,215.36,15:55,0.831,1.307
+2026-10-07,cloudy,ABBV,20-Day Breakout,buy_stop,273.24,270.49,278.74,1.01,3.111,Knocking on its 20-day high ($269.39) on 1.4x volume,eod,273.24,271.31,15:55,-0.801,-0.806
+2026-10-07,cloudy,VST,20-Day Breakout,buy_stop,163.7,160.71,169.68,1.83,2.425,Knocking on its 20-day high ($162.69) on 1.3x volume,eod,163.7,166.66,15:55,0.935,1.706
+2026-10-08,cloudy,MA,20-Day Breakout,buy_stop,578.91,574.26,588.21,0.8,1.708,Knocking on its 20-day high ($578.90) on 1.5x volume,stop,578.91,574.26,15:00,-1.124,-0.902
+2026-10-09,sunny,MRNA,20-Day Breakout,buy_stop,216.96,209.86,231.16,3.27,16.951,Knocking on its 20-day high ($212.22) on 1.9x volume,eod,216.96,224.98,15:55,1.098,3.593
+2026-10-09,sunny,SNOW,20-Day Breakout,buy_stop,358.61,351.87,372.09,1.88,8.709,Knocking on its 20-day high ($349.00) on 2.1x volume,eod,358.61,368.92,15:55,1.476,2.772
+2026-10-12,cloudy,SHOP,20-Day Breakout,buy_stop,179.5,176.26,185.98,1.81,6.939,Knocking on its 20-day high ($171.04) on 1.9x volume,no_fill,,,,0.0,0.0
+2026-10-12,cloudy,SNAP,20-Day Breakout,buy_stop,6.51,6.37,6.79,2.15,6.661,Knocking on its 20-day high ($6.35) on 1.7x volume,eod,6.51,6.54,15:55,0.168,0.36
+2026-10-13,cloudy,META,20-Day Breakout,buy_stop,779.83,768.37,802.75,1.47,8.315,Knocking on its 20-day high ($779.82) on 2.3x volume,no_fill,,,,0.0,0.0
+2026-10-13,cloudy,SNAP,20-Day Breakout,buy_stop,6.86,6.72,7.14,2.04,8.002,Knocking on its 20-day high ($6.64) on 2.2x volume,no_fill,,,,0.0,0.0
+2026-10-14,cloudy,LLY,20-Day Breakout,buy_stop,1215.01,1198.4,1248.23,1.37,6.073,Knocking on its 20-day high ($1215.00) on 1.6x volume,eod,1215.01,1210.84,15:55,-0.324,-0.443
+2026-10-14,cloudy,PFE,20-Day Breakout,buy_stop,29.28,29.02,29.8,0.89,4.937,Knocking on its 20-day high ($28.95) on 1.9x volume,eod,29.28,29.23,15:55,-0.324,-0.288
+2026-10-15,cloudy,WMT,20-Day Breakout,buy_stop,121.39,120.24,123.69,0.95,12.046,Knocking on its 20-day high ($116.24) on 3.2x volume,no_fill,,,,0.0,0.0
+2026-10-15,cloudy,LOW,20-Day Breakout,buy_stop,199.36,197.13,203.82,1.12,10.497,Knocking on its 20-day high ($199.35) on 2.3x volume,no_fill,,,,0.0,0.0
+2026-10-16,cloudy,LMT,20-Day Breakout,buy_stop,548.0,542.36,559.28,1.03,4.173,Knocking on its 20-day high ($538.10) on 1.6x volume,stop,548.0,542.36,12:00,-1.097,-1.128
+2026-10-16,cloudy,UPS,20-Day Breakout,buy_stop,100.01,99.05,101.93,0.96,2.783,Knocking on its 20-day high ($100.00) on 1.8x volume,no_fill,,,,0.0,0.0
+2026-10-19,cloudy,AMZN,20-Day Breakout,buy_stop,263.71,260.74,269.65,1.13,6.468,Knocking on its 20-day high ($263.70) on 1.6x volume,no_fill,,,,0.0,0.0
+2026-10-19,cloudy,AAPL,20-Day Breakout,buy_stop,348.16,344.81,354.86,0.96,0.805,Knocking on its 20-day high ($348.15) on 1.6x volume,no_fill,,,,0.0,0.0
+2026-10-20,sunny,NOC,20-Day Breakout,buy_stop,550.9,544.86,562.98,1.1,35.927,Knocking on its 20-day high ($529.00) on 5.2x volume,no_fill,,,,0.0,0.0
+2026-10-20,sunny,LLY,20-Day Breakout,buy_stop,1311.76,1294.4,1346.48,1.32,10.397,Knocking on its 20-day high ($1275.88) on 2.0x volume,no_fill,,,,0.0,0.0
+2026-10-21,cloudy,HON,20-Day Breakout,buy_stop,216.14,214.0,220.42,0.99,0.674,Knocking on its 20-day high ($216.13) on 1.8x volume,no_fill,,,,0.0,0.0
+2026-10-23,cloudy,COP,20-Day Breakout,buy_stop,151.25,149.58,154.59,1.1,7.616,Knocking on its 20-day high ($147.55) on 2.0x volume,eod,151.25,150.81,15:55,-0.354,-0.391
+2026-10-23,cloudy,OXY,20-Day Breakout,buy_stop,64.24,63.46,65.8,1.21,3.217,Knocking on its 20-day high ($63.63) on 1.4x volume,eod,64.24,64.15,15:55,-0.191,-0.232
+2026-10-26,cloudy,TSLA,20-Day Breakout,buy_stop,396.66,390.37,409.24,1.59,10.562,Knocking on its 20-day high ($388.86) on 1.7x volume,eod,396.66,391.69,15:55,-0.853,-1.352
+2026-10-26,cloudy,LMT,20-Day Breakout,buy_stop,624.01,615.93,640.17,1.29,4.113,Knocking on its 20-day high ($609.32) on 1.5x volume,eod,624.01,635.31,15:55,1.321,1.709
+2026-10-27,cloudy,SOFI,20-Day Breakout,buy_stop,16.36,16.05,16.98,1.89,68.142,Knocking on its 20-day high ($16.25) on 5.5x volume,eod,16.36,16.4,15:55,0.06,0.114
+2026-10-27,cloudy,UPS,20-Day Breakout,buy_stop,103.5,102.46,105.58,1.0,10.268,Knocking on its 20-day high ($102.15) on 3.5x volume,target,103.5,105.58,14:00,1.899,1.908
+2026-08-19,sunny,REGN,Bull Flag,buy_stop,843.27,833.46,862.89,1.16,4.196,"Bull flag: ran up 15%, rested 5 days, now pushing the top of the flag on 2.9x volume",eod,843.27,840.94,15:55,-0.323,-0.376
+2026-08-19,sunny,KGC,Bull Flag,buy_stop,29.97,29.47,30.97,1.67,3.637,"Bull flag: ran up 16%, rested 5 days, now pushing the top of the flag on 2.3x volume",stop,29.97,29.47,13:15,-1.059,-1.767
+2026-08-20,cloudy,FCX,Bull Flag,buy_stop,69.87,68.53,72.55,1.92,2.398,"Bull flag: ran up 15%, rested 5 days, now pushing the top of the flag on 1.6x volume",eod,69.87,71.25,15:55,0.977,1.873
+2026-08-21,sunny,SOFI,Bull Flag,buy_stop,19.18,18.76,20.02,2.19,2.789,"Bull flag: ran up 12%, rested 5 days, now pushing the top of the flag on 2.3x volume",no_fill,,,,0.0,0.0
+2026-08-21,sunny,ALB,Bull Flag,buy_stop,142.34,139.72,147.58,1.84,2.571,"Bull flag: ran up 11%, rested 5 days, now pushing the top of the flag on 2.4x volume",eod,142.34,143.28,15:55,0.304,0.56
+2026-08-24,cloudy,ABNB,Bull Flag,buy_stop,193.35,190.48,199.09,1.48,3.293,"Bull flag: ran up 21%, rested 5 days, now pushing the top of the flag on 1.5x volume",stop,193.35,190.48,12:35,-1.067,-1.583
+2026-08-24,cloudy,DIS,Bull Flag,buy_stop,111.88,110.75,114.14,1.01,2.82,"Bull flag: ran up 11%, rested 5 days, now pushing the top of the flag on 2.5x volume",no_fill,,,,0.0,0.0
+2026-08-25,sunny,AMGN,Bull Flag,buy_stop,446.66,441.25,457.48,1.21,1.833,"Bull flag: ran up 11%, rested 5 days, now pushing the top of the flag on 1.7x volume",eod,446.66,442.19,15:55,-0.908,-1.1
+2026-08-27,sunny,PLTR,Bull Flag,buy_stop,185.23,181.28,193.13,2.13,1.636,"Bull flag: ran up 11%, rested 5 days, now pushing the top of the flag on 1.5x volume",eod,185.23,185.9,15:55,0.123,0.261
+2026-08-31,cloudy,TSLA,Bull Flag,buy_stop,364.87,358.34,377.93,1.79,1.708,"Bull flag: ran up 10%, rested 5 days, now pushing the top of the flag on 1.6x volume",eod,364.87,367.92,15:55,0.411,0.735
+2026-09-08,cloudy,FCX,Bull Flag,buy_stop,78.24,76.81,81.1,1.83,2.355,"Bull flag: ran up 15%, rested 5 days, now pushing the top of the flag on 1.6x volume",stop,78.24,76.81,12:10,-1.054,-1.926
+2026-09-14,cloudy,CRWD,Bull Flag,buy_stop,232.45,226.79,243.77,2.43,3.942,"Bull flag: ran up 13%, rested 5 days, now pushing the top of the flag on 3.0x volume",eod,232.45,235.44,15:55,0.487,1.185
+2026-09-21,sunny,META,Bull Flag,buy_stop,716.3,705.68,737.54,1.48,2.797,"Bull flag: ran up 13%, rested 5 days, now pushing the top of the flag on 2.1x volume",target,716.3,737.54,13:25,1.932,2.862
+2026-10-06,sunny,AMD,Bull Flag,buy_stop,649.89,638.15,673.37,1.81,3.035,"Bull flag: ran up 23%, rested 5 days, now pushing the top of the flag on 1.3x volume",eod,649.89,649.55,15:55,-0.084,-0.152
+2026-10-23,cloudy,COP,Bull Flag,buy_stop,151.25,149.58,154.59,1.1,2.318,"Bull flag: ran up 12%, rested 5 days, now pushing the top of the flag on 2.0x volume",eod,151.25,150.81,15:55,-0.354,-0.391
+2026-10-27,cloudy,RBLX,Bull Flag,buy_stop,54.73,53.57,57.05,2.12,2.29,"Bull flag: ran up 14%, rested 5 days, now pushing the top of the flag on 1.7x volume",eod,54.73,54.45,15:55,-0.288,-0.611
 2026-08-19,sunny,MRNA,Gap & Go,buy_stop,163.01,161.19,166.65,1.12,5266.097,"Gapped +84.6%, 62.2x normal volume, holding above VWAP",stop,163.01,161.19,10:35,-1.089,-1.215
 2026-08-19,sunny,BNTX,Gap & Go,buy_stop,116.01,114.78,118.47,1.06,716.587,"Gapped +17.8%, 40.2x normal volume, holding above VWAP",no_fill,,,,0.0,0.0
 2026-08-20,cloudy,DE,Gap & Go,buy_stop,629.61,621.62,645.59,1.27,34.538,"Gapped +5.3%, 6.6x normal volume, holding above VWAP",stop,629.61,621.62,13:40,-1.078,-1.368
@@ -27,6 +121,69 @@ date,weather,ticker,setup,order_type,entry,stop,target,risk_pct,score,reason,sta
 2026-10-15,cloudy,HD,Gap & Go,buy_stop,309.0,305.83,315.34,1.03,7.57,"Gapped +3.4%, 2.2x normal volume, holding above VWAP",stop,309.0,305.83,10:55,-1.097,-1.125
 2026-10-16,cloudy,AA,Gap & Go,buy_stop,43.72,42.96,45.24,1.74,17.943,"Gapped +3.0%, 5.9x normal volume, holding above VWAP",stop,43.72,42.96,11:55,-1.057,-1.837
 2026-10-27,cloudy,SOFI,Gap & Go,buy_stop,16.36,16.05,16.98,1.89,57.383,"Gapped +10.5%, 5.5x normal volume, holding above VWAP",eod,16.36,16.4,15:55,0.06,0.114
+2026-08-19,sunny,MSTR,MA20 Reclaim,buy_stop,99.91,95.33,109.07,4.58,14.155,Climbed back above its 20-day average ($96.04) and pushing new highs,eod,99.91,104.21,15:55,0.918,4.205
+2026-08-19,sunny,COIN,MA20 Reclaim,buy_stop,155.71,152.9,161.33,1.8,10.903,Climbed back above its 20-day average ($154.12) and pushing new highs,target,155.71,161.33,11:25,1.944,3.506
+2026-08-20,cloudy,DE,MA20 Reclaim,buy_stop,629.61,616.82,655.19,2.03,48.336,Climbed back above its 20-day average ($610.69) and pushing new highs,stop,629.61,616.82,14:20,-1.049,-2.129
+2026-08-21,sunny,XYZ,MA20 Reclaim,buy_stop,82.08,80.57,85.1,1.84,4.151,Climbed back above its 20-day average ($80.97) and pushing new highs,eod,82.08,82.16,15:55,-0.001,-0.003
+2026-08-25,sunny,UPS,MA20 Reclaim,buy_stop,105.08,104.06,107.12,0.97,4.251,Climbed back above its 20-day average ($104.41) and pushing new highs,eod,105.08,105.14,15:55,-0.044,-0.043
+2026-08-25,sunny,NVO,MA20 Reclaim,buy_stop,48.28,47.18,50.48,2.28,3.752,Climbed back above its 20-day average ($47.06) and pushing new highs,eod,48.28,48.65,15:55,0.292,0.666
+2026-08-26,cloudy,BBY,MA20 Reclaim,buy_stop,87.28,85.05,91.74,2.55,3.409,Climbed back above its 20-day average ($85.46) and pushing new highs,eod,87.28,87.39,15:55,0.008,0.02
+2026-08-26,cloudy,SBUX,MA20 Reclaim,buy_stop,107.5,105.57,111.36,1.8,1.971,Climbed back above its 20-day average ($105.98) and pushing new highs,eod,107.5,108.48,15:55,0.452,0.811
+2026-08-27,sunny,CRWD,MA20 Reclaim,buy_stop,225.79,218.24,240.89,3.34,92.566,Climbed back above its 20-day average ($205.44) and pushing new highs,eod,225.79,227.95,15:55,0.256,0.856
+2026-08-27,sunny,NVDA,MA20 Reclaim,buy_stop,226.41,221.41,236.41,2.21,28.154,Climbed back above its 20-day average ($215.56) and pushing new highs,eod,226.41,228.05,15:55,0.283,0.624
+2026-09-01,cloudy,CVS,MA20 Reclaim,buy_stop,97.39,95.62,100.93,1.82,5.362,Climbed back above its 20-day average ($95.10) and pushing new highs,eod,97.39,97.61,15:55,0.069,0.126
+2026-09-01,cloudy,WFC,MA20 Reclaim,buy_stop,87.95,86.58,90.69,1.56,4.833,Climbed back above its 20-day average ($86.72) and pushing new highs,no_fill,,,,0.0,0.0
+2026-09-02,cloudy,BBY,MA20 Reclaim,buy_stop,86.69,83.96,92.15,3.15,9.579,Climbed back above its 20-day average ($84.48) and pushing new highs,eod,86.69,87.0,15:55,0.082,0.257
+2026-09-02,cloudy,LULU,MA20 Reclaim,buy_stop,122.22,119.96,126.74,1.85,3.966,Climbed back above its 20-day average ($120.64) and pushing new highs,no_fill,,,,0.0,0.0
+2026-09-03,cloudy,PLTR,MA20 Reclaim,buy_stop,185.84,179.52,198.48,3.4,18.91,Climbed back above its 20-day average ($175.47) and pushing new highs,no_fill,,,,0.0,0.0
+2026-09-04,cloudy,INTC,MA20 Reclaim,buy_stop,95.35,93.46,99.13,1.98,4.882,Climbed back above its 20-day average ($94.24) and pushing new highs,eod,95.35,95.81,15:55,0.193,0.382
+2026-09-04,cloudy,TSM,MA20 Reclaim,buy_stop,426.99,417.85,445.27,2.14,3.107,Climbed back above its 20-day average ($419.49) and pushing new highs,eod,426.99,428.58,15:55,0.127,0.272
+2026-09-08,cloudy,ENPH,MA20 Reclaim,buy_stop,38.89,38.08,40.51,2.08,14.748,Climbed back above its 20-day average ($38.37) and pushing new highs,eod,38.89,38.85,15:55,-0.097,-0.203
+2026-09-08,cloudy,STX,MA20 Reclaim,buy_stop,891.62,847.08,980.7,5.0,6.087,Climbed back above its 20-day average ($853.35) and pushing new highs,eod,891.62,903.35,15:55,0.243,1.214
+2026-09-09,cloudy,NET,MA20 Reclaim,buy_stop,309.01,296.39,334.25,4.08,17.754,Climbed back above its 20-day average ($294.97) and pushing new highs,eod,309.01,314.28,15:55,0.393,1.604
+2026-09-11,cloudy,KR,MA20 Reclaim,buy_stop,59.5,58.42,61.66,1.82,16.971,Climbed back above its 20-day average ($57.45) and pushing new highs,no_fill,,,,0.0,0.0
+2026-09-11,cloudy,SMCI,MA20 Reclaim,buy_stop,40.45,38.66,44.03,4.43,12.007,Climbed back above its 20-day average ($37.83) and pushing new highs,no_fill,,,,0.0,0.0
+2026-09-14,cloudy,CRWD,MA20 Reclaim,buy_stop,232.45,223.39,250.57,3.9,37.049,Climbed back above its 20-day average ($207.51) and pushing new highs,eod,232.45,235.44,15:55,0.304,1.185
+2026-09-14,cloudy,PANW,MA20 Reclaim,buy_stop,367.11,353.32,394.69,3.76,27.52,Climbed back above its 20-day average ($353.25) and pushing new highs,eod,367.11,373.96,15:55,0.47,1.764
+2026-09-15,cloudy,NXPI,MA20 Reclaim,buy_stop,228.75,224.72,236.81,1.76,1.939,Climbed back above its 20-day average ($225.92) and pushing new highs,no_fill,,,,0.0,0.0
+2026-09-16,cloudy,DIS,MA20 Reclaim,buy_stop,107.62,106.82,109.22,0.74,1.287,Climbed back above its 20-day average ($107.16) and pushing new highs,stop,107.62,106.82,15:20,-1.134,-0.843
+2026-09-17,cloudy,MRNA,MA20 Reclaim,buy_stop,161.97,152.68,180.55,5.74,19.814,Climbed back above its 20-day average ($145.67) and pushing new highs,no_fill,,,,0.0,0.0
+2026-09-17,cloudy,SMCI,MA20 Reclaim,buy_stop,39.72,37.86,43.44,4.68,10.272,Climbed back above its 20-day average ($37.56) and pushing new highs,eod,39.8,40.35,15:55,0.271,1.268
+2026-09-18,cloudy,COIN,MA20 Reclaim,buy_stop,190.47,181.0,209.41,4.97,18.803,Climbed back above its 20-day average ($179.86) and pushing new highs,eod,190.47,194.27,15:55,0.381,1.896
+2026-09-18,cloudy,HOOD,MA20 Reclaim,buy_stop,118.06,112.77,128.64,4.48,9.744,Climbed back above its 20-day average ($110.06) and pushing new highs,eod,118.06,119.83,15:55,0.312,1.398
+2026-09-21,sunny,SNAP,MA20 Reclaim,buy_stop,5.87,5.64,6.33,3.92,8.591,Climbed back above its 20-day average ($5.55) and pushing new highs,no_fill,,,,0.0,0.0
+2026-09-21,sunny,APP,MA20 Reclaim,buy_stop,323.41,312.94,344.35,3.24,8.05,Climbed back above its 20-day average ($315.39) and pushing new highs,eod,323.41,330.18,15:55,0.615,1.991
+2026-09-22,sunny,SHOP,MA20 Reclaim,buy_stop,150.19,145.28,160.01,3.27,38.858,Climbed back above its 20-day average ($139.31) and pushing new highs,no_fill,,,,0.0,0.0
+2026-09-25,sunny,COST,MA20 Reclaim,buy_stop,921.71,910.75,943.63,1.19,9.946,Climbed back above its 20-day average ($912.79) and pushing new highs,eod,921.71,922.95,15:55,0.029,0.034
+2026-09-25,sunny,PYPL,MA20 Reclaim,buy_stop,54.46,53.54,56.3,1.69,9.177,Climbed back above its 20-day average ($53.78) and pushing new highs,eod,54.64,55.04,15:55,0.375,0.631
+2026-09-28,cloudy,TGT,MA20 Reclaim,buy_stop,160.81,158.6,165.23,1.37,2.881,Climbed back above its 20-day average ($159.19) and pushing new highs,no_fill,,,,0.0,0.0
+2026-09-29,cloudy,CCL,MA20 Reclaim,buy_stop,25.17,24.55,26.41,2.46,85.352,Climbed back above its 20-day average ($22.63) and pushing new highs,eod,25.17,25.14,15:55,-0.089,-0.219
+2026-09-29,cloudy,RCL,MA20 Reclaim,buy_stop,260.81,252.95,276.53,3.01,10.12,Climbed back above its 20-day average ($253.40) and pushing new highs,eod,260.81,260.65,15:55,-0.054,-0.161
+2026-09-30,sunny,AAPL,MA20 Reclaim,buy_stop,339.51,333.88,350.77,1.66,3.483,Climbed back above its 20-day average ($330.96) and pushing new highs,no_fill,,,,0.0,0.0
+2026-10-02,sunny,TSLA,MA20 Reclaim,buy_stop,374.37,364.91,393.29,2.53,9.934,Climbed back above its 20-day average ($365.15) and pushing new highs,no_fill,,,,0.0,0.0
+2026-10-02,sunny,FCX,MA20 Reclaim,buy_stop,73.08,71.4,76.44,2.3,7.227,Climbed back above its 20-day average ($71.81) and pushing new highs,no_fill,,,,0.0,0.0
+2026-10-05,sunny,NU,MA20 Reclaim,buy_stop,15.47,15.03,16.35,2.84,91.279,Climbed back above its 20-day average ($13.91) and pushing new highs,no_fill,,,,0.0,0.0
+2026-10-05,sunny,CLF,MA20 Reclaim,buy_stop,12.18,11.9,12.74,2.3,13.439,Climbed back above its 20-day average ($11.99) and pushing new highs,eod,12.18,12.23,15:55,0.135,0.31
+2026-10-06,sunny,NRG,MA20 Reclaim,buy_stop,105.5,103.17,110.16,2.21,26.689,Climbed back above its 20-day average ($103.78) and pushing new highs,stop,105.5,103.17,14:20,-1.045,-2.306
+2026-10-06,sunny,OKLO,MA20 Reclaim,buy_stop,39.13,37.8,41.79,3.4,24.149,Climbed back above its 20-day average ($38.12) and pushing new highs,eod,39.13,38.58,15:55,-0.447,-1.517
+2026-10-07,cloudy,INTC,MA20 Reclaim,buy_stop,115.31,112.16,121.61,2.73,2.379,Climbed back above its 20-day average ($113.06) and pushing new highs,no_fill,,,,0.0,0.0
+2026-10-08,cloudy,CVX,MA20 Reclaim,buy_stop,211.15,207.77,217.91,1.6,3.483,Climbed back above its 20-day average ($207.95) and pushing new highs,eod,211.15,211.6,15:55,0.072,0.115
+2026-10-09,sunny,RBLX,MA20 Reclaim,buy_stop,48.69,46.78,52.51,3.92,8.321,Climbed back above its 20-day average ($46.49) and pushing new highs,eod,48.69,48.09,15:55,-0.339,-1.331
+2026-10-12,cloudy,META,MA20 Reclaim,buy_stop,748.17,730.49,783.53,2.36,4.824,Climbed back above its 20-day average ($719.18) and pushing new highs,eod,748.17,743.11,15:55,-0.328,-0.776
+2026-10-12,cloudy,CHWY,MA20 Reclaim,buy_stop,19.41,19.06,20.11,1.8,2.015,Climbed back above its 20-day average ($19.18) and pushing new highs,eod,19.41,19.51,15:55,0.23,0.415
+2026-10-13,cloudy,LI,MA20 Reclaim,buy_stop,11.72,11.41,12.34,2.65,3.323,Climbed back above its 20-day average ($11.44) and pushing new highs,eod,11.72,11.76,15:55,0.075,0.198
+2026-10-13,cloudy,IBM,MA20 Reclaim,buy_stop,233.51,228.6,243.33,2.1,3.025,Climbed back above its 20-day average ($227.74) and pushing new highs,no_fill,,,,0.0,0.0
+2026-10-15,cloudy,TTD,MA20 Reclaim,buy_stop,13.04,12.64,13.84,3.07,13.845,Climbed back above its 20-day average ($12.52) and pushing new highs,eod,13.04,13.11,15:55,0.153,0.469
+2026-10-15,cloudy,BBY,MA20 Reclaim,buy_stop,93.46,91.26,97.86,2.35,7.829,Climbed back above its 20-day average ($89.33) and pushing new highs,eod,93.67,94.17,15:55,0.185,0.433
+2026-10-16,cloudy,AA,MA20 Reclaim,buy_stop,43.72,42.5,46.16,2.79,46.243,Climbed back above its 20-day average ($42.57) and pushing new highs,stop,43.72,42.5,13:00,-1.035,-2.888
+2026-10-16,cloudy,NEM,MA20 Reclaim,buy_stop,119.79,117.33,124.71,2.05,6.58,Climbed back above its 20-day average ($117.90) and pushing new highs,stop,119.79,117.33,12:00,-1.048,-2.151
+2026-10-19,cloudy,AMZN,MA20 Reclaim,buy_stop,260.24,255.48,269.76,1.83,6.468,Climbed back above its 20-day average ($253.23) and pushing new highs,eod,260.24,262.41,15:55,0.401,0.733
+2026-10-20,sunny,XPEV,MA20 Reclaim,buy_stop,9.85,9.64,10.27,2.13,11.8,Climbed back above its 20-day average ($9.68) and pushing new highs,eod,9.85,9.91,15:55,0.239,0.509
+2026-10-20,sunny,LI,MA20 Reclaim,buy_stop,11.88,11.58,12.48,2.53,7.292,Climbed back above its 20-day average ($11.32) and pushing new highs,eod,11.91,11.93,15:55,0.01,0.026
+2026-10-21,cloudy,DDOG,MA20 Reclaim,buy_stop,274.11,268.24,285.85,2.14,9.62,Climbed back above its 20-day average ($270.22) and pushing new highs,eod,274.11,272.98,15:55,-0.239,-0.512
+2026-10-26,cloudy,PANW,MA20 Reclaim,buy_stop,392.09,381.41,413.45,2.72,3.71,Climbed back above its 20-day average ($384.25) and pushing new highs,eod,392.73,390.54,15:55,-0.242,-0.657
+2026-10-26,cloudy,RCL,MA20 Reclaim,buy_stop,286.7,278.85,302.4,2.74,3.158,Climbed back above its 20-day average ($277.08) and pushing new highs,no_fill,,,,0.0,0.0
+2026-10-27,cloudy,SOFI,MA20 Reclaim,buy_stop,16.36,15.86,17.36,3.06,68.142,Climbed back above its 20-day average ($15.20) and pushing new highs,eod,16.36,16.4,15:55,0.037,0.114
 2026-08-19,sunny,LLY,ORB Stocks in Play,buy_stop,1292.66,1286.59,,0.47,2.448,"Stock in play: 2.4x normal volume, green opening range - buy the breakout",no_fill,,,,0.0,0.0
 2026-08-20,cloudy,BABA,ORB Stocks in Play,buy_stop,126.4,125.85,,0.44,4.811,"Stock in play: 4.8x normal volume, green opening range - buy the breakout",stop,126.4,125.85,10:50,-1.229,-0.535
 2026-08-20,cloudy,BNTX,ORB Stocks in Play,buy_stop,112.4,111.81,,0.52,2.655,"Stock in play: 2.7x normal volume, green opening range - buy the breakout",no_fill,,,,0.0,0.0

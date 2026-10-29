@@ -1,7 +1,22 @@
 {
+  "20-Day Breakout": {
+    "mode": "practice",
+    "why": "Holding: averaging +0.01R over backtest (53 trades) (not clearly good or bad)",
+    "since": "2026-10-28"
+  },
+  "Bull Flag": {
+    "mode": "practice",
+    "why": "Holding: averaging -0.06R over backtest (14 trades) (not clearly good or bad)",
+    "since": "2026-10-28"
+  },
   "Gap & Go": {
     "mode": "practice",
     "why": "Benched: averaging -0.19R over backtest (22 trades)",
+    "since": "2026-10-28"
+  },
+  "MA20 Reclaim": {
+    "mode": "practice",
+    "why": "Holding: averaging +0.05R over backtest (46 trades) (not clearly good or bad)",
     "since": "2026-10-28"
   },
   "ORB Stocks in Play": {

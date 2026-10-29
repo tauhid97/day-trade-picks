@@ -18,15 +18,19 @@ You check how they do for a while. When they've proven they're good, you let the
 | **Messenger** | Texts you the picks on Telegram, then the results after school | The friend who passes notes |
 | **Judge** | After the market closes, checks every pick: did it win or lose? It's strict: if it's unsure, it counts a **loss**. | A referee |
 | **Guard** | Watches each skill's scores. If a skill keeps losing, it gets **benched** (practice mode). If a practice skill starts winning, it gets **put back in the game**. | A coach deciding who plays |
+| **Time Machine** | Replays the rest of today 2,000 times using the stock's own past moves, and tells you the odds for each pick. If a skill beats the Time Machine, it's beating plain luck. | Practicing a game 2,000 times in your head |
 | **Coach** | Every Saturday it tries small changes to each skill's settings to see if they'd work better. It **asks you before changing anything.** | A coach trying new plays at practice |
 
-### The 4 skills
+### The skills (7 and counting)
 
 | Skill | The trick, explained like you're 5 |
 |---|---|
 | **Gap & Go** | A stock jumped up this morning and lots of people are buying. If it climbs above today's highest point, we hop on for the ride. |
 | **VWAP Pullback** | A stock is having a good day. VWAP is the "average price" line. When the price dips back down to that line, we buy it on sale. |
 | **Oversold Bounce** | A big, famous stock fell too far, too fast, like a ball dropped hard. We wait until it starts bouncing back up, then buy. |
+| **Bull Flag** | The stock ran up fast like a rocket, then rested a few days. When it breaks above the resting spot, the rocket often takes off again. |
+| **20-Day Breakout** | The stock is about to jump over its highest price in a whole month. |
+| **MA20 Reclaim** | The stock slipped under its "normal" line yesterday and jumped back above it today. |
 | **ORB Stocks in Play** | **Copied from a real research paper.** We find the stocks everyone is crowding into today. If the price breaks above its first-30-minute high, we buy and hold until the end of the day. |
 
 ### Every pick has 3 numbers
@@ -108,6 +112,8 @@ Your job: **read the picks, watch what happens, and learn.** Don't use real mone
 2. Add one or both as secrets: `DISCORD_WEBHOOK_URL` (Discord: Channel settings, then Integrations, then Webhooks, then Copy URL) or `TELEGRAM_COMMUNITY_CHAT_ID` (add your bot to the channel as an admin, then use `@yourchannelname`).
 3. Ask Claude to flip `COMMUNITY_POSTING` to `True`. From then on, **live** picks go to the community and **you** still get everything, including practice picks.
 4. Charge through **Whop**, **LaunchPass**, or **Patreon**. Signal groups often charge about $29–$99 a month. Start low and raise the price as your scoreboard grows.
+
+Bull Flag, 20-Day Breakout, MA20 Reclaim and the Time Machine are ideas borrowed from Jake Schincariol's free, MIT-licensed trader skills, rewritten for this team.
 
 ## Adding new skills (from GitHub, YouTube, books...)
 Found a strategy you like? **Send Claude the link.** Claude will check it's safe and real, then turn it into a new skill file. New skills always start in **practice**, so a bad one can't hurt your scoreboard. The Guard only lets it play if it wins.
