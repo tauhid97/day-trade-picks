@@ -1,7 +1,7 @@
 {
   "20-Day Breakout": {
     "mode": "practice",
-    "why": "Holding: averaging +0.01R over backtest (53 trades) (not clearly good or bad)",
+    "why": "Holding: averaging +0.01R over backtest (52 trades) (not clearly good or bad)",
     "since": "2026-10-28"
   },
   "Bull Flag": {
@@ -16,22 +16,22 @@
   },
   "MA20 Reclaim": {
     "mode": "practice",
-    "why": "Holding: averaging +0.05R over backtest (46 trades) (not clearly good or bad)",
+    "why": "Holding: averaging +0.00R over backtest (46 trades) (not clearly good or bad)",
     "since": "2026-10-28"
   },
   "ORB Stocks in Play": {
     "mode": "practice",
-    "why": "Benched: averaging -0.41R over backtest (33 trades)",
+    "why": "Benched: averaging -0.74R over backtest (33 trades)",
     "since": "2026-10-28"
   },
   "Oversold Bounce": {
     "mode": "live",
-    "why": "Playing: averaging +0.25R over backtest (11 trades)",
+    "why": "Playing: averaging +0.22R over backtest (12 trades)",
     "since": "2026-10-28"
   },
   "VWAP Pullback": {
     "mode": "live",
-    "why": "Playing: averaging +0.38R over backtest (62 trades)",
+    "why": "Playing: averaging +0.27R over backtest (62 trades)",
     "since": "2026-10-28"
   }
 }
