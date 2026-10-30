@@ -8,5 +8,5 @@ date,published_at,mode,ticker,setup,order_type,entry,stop,target,risk_pct,reason
 2026-10-29,2026-10-29T11:25:00-04:00,practice,DASH,Gap & Go,buy_stop,181.61,177.42,189.99,2.31,"Gapped +5.3%, 4.0x normal volume, holding above VWAP",no_fill,,,,0.0,0.0,
 2026-10-29,2026-10-29T11:25:00-04:00,practice,CCL,20-Day Breakout,buy_stop,29.13,28.67,30.05,1.58,Knocking on its 20-day high ($28.12) on 3.4x volume,eod,29.13,28.84,15:55,-0.693,-1.094,
 2026-10-29,2026-10-29T11:25:00-04:00,practice,MRK,MA20 Reclaim,buy_stop,149.27,145.84,156.13,2.3,Climbed back above its 20-day average ($144.20) and pushing new highs,no_fill,,,,0.0,0.0,
-2026-10-30,2026-10-30T11:24:00-04:00,live,APP,Oversold Bounce,buy_stop,242.46,231.99,258.17,4.32,"RSI 27 (oversold), down 7.9% - only buy if it bounces back above the morning high",,,,,,,healthy
+2026-10-30,2026-10-30T11:24:00-04:00,live,APP,Oversold Bounce,buy_stop,242.46,231.99,258.17,4.32,"RSI 27 (oversold), down 7.9% - only buy if it bounces back above the morning high",no_fill,,,,0.0,0.0,healthy
 2026-10-30,2026-10-30T11:24:00-04:00,live,CAT,Oversold Bounce,buy_stop,637.25,621.84,660.37,2.42,"RSI 25 (oversold), down 2.2% - only buy if it bounces back above the morning high",,,,,,,healthy
