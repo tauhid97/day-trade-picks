@@ -82,11 +82,17 @@ def test_all(tmp="/tmp/dtp_test"):
             import importlib; mod = importlib.import_module("screener.skills.oversold_bounce")
             mod.SKILL["params"]["min_avg_dollar_vol"] = 1e6
     intraday, daily = build()
+    from screener.bots import breadth
+    bd = pd.bdate_range("2026-06-01", "2026-12-31")
+    breadth._cache["df"] = pd.DataFrame({"Breadth_Index_8MA": np.linspace(0.35, 0.75, len(bd)),
+                                         "Breadth_200MA_Trend": 1}, index=bd)
+    assert breadth.zone(0.65) == "healthy" and breadth.zone(0.2) == "very weak"
 
     # 1) backtest + coach + guard
     trades, summary, prepared, ib = backtest.run(intraday, daily)
     print(summary.to_string(index=False))
-    assert len(trades) and "weather" in trades
+    assert len(trades) and "weather" in trades and "breadth" in trades
+    print("\n".join(backtest.by_breadth(trades)))
     print(coach.run(prepared, ib))
     status, changes = guard.run(live.load_picks(), "2026-09-01")
     print(guard.team_sheet(status)); assert set(status) == {s["name"] for s in load_skills()}
@@ -110,7 +116,8 @@ def test_all(tmp="/tmp/dtp_test"):
     assert g, "nothing graded"
     report.build()
     df = live.load_picks()
-    print(df[["date", "mode", "ticker", "setup", "status", "r_multiple"]].to_string())
+    print(df[["date", "mode", "ticker", "setup", "status", "r_multiple", "breadth"]].to_string())
+    assert df["breadth"].notna().all()
     print("\n--- sample message to Boss ---\n" + [t for who, t in sent if who == "boss"][0])
     print("\n--- results message ---\n" + [t for who, t in sent if who == "boss"][-1][:1500])
     print("ALL OK")

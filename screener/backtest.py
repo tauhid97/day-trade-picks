@@ -6,6 +6,7 @@ not proof. Each skill is tested on its own (top picks per day, per skill).
 import pandas as pd
 
 from . import config as C
+from .bots import breadth
 from .bots import weather as weather_bot
 from .data import get_daily, get_intraday, load_universe
 from .engine import build_contexts, ideas
@@ -33,7 +34,8 @@ def prepare(intraday, daily):
         scan_ts = day + pd.Timedelta(hours=hh, minutes=mm)
         w, _ = weather_bot.check(day, scan_ts, intraday, daily)
         out.append({"day": day, "publish_ts": scan_ts + pd.Timedelta(minutes=PUBLISH_DELAY_MIN),
-                    "ctxs": build_contexts(day, scan_ts, intraday, daily), "weather": w})
+                    "ctxs": build_contexts(day, scan_ts, intraday, daily), "weather": w,
+                    "breadth": breadth.check(day)[0]})
     return out
 
 
@@ -44,7 +46,8 @@ def trades_for(skill, params, prepared, intraday):
         for p in picks:
             bars = intraday[p["ticker"]]
             after = bars[(bars.index.normalize() == d["day"]) & (bars.index >= d["publish_ts"])]
-            trades.append({"date": d["day"].strftime("%Y-%m-%d"), "weather": d["weather"], **p, **simulate(p, after)})
+            trades.append({"date": d["day"].strftime("%Y-%m-%d"), "weather": d["weather"],
+                           "breadth": d["breadth"], **p, **simulate(p, after)})
     return trades
 
 
@@ -66,6 +69,18 @@ def summarize(trades: pd.DataFrame) -> pd.DataFrame:
             "max_drawdown_R": round(dd, 2),
         })
     return pd.DataFrame(rows)
+
+
+def by_breadth(trades: pd.DataFrame) -> list:
+    """Practice check: do picks do better when more stocks are in uptrends?"""
+    f = trades[trades["status"] != "no_fill"]
+    order = ["strong", "healthy", "neutral", "weak", "very weak", "unknown"]
+    out = []
+    for z in order:
+        g = f[f["breadth"] == z]
+        if len(g):
+            out.append(f"- {z}: {len(g)} trades, win {(g['r_multiple'] > 0).mean() * 100:.0f}%, avg {g['r_multiple'].mean():+.2f}R")
+    return out
 
 
 def run(intraday=None, daily=None):

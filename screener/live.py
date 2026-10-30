@@ -4,7 +4,7 @@ import os
 import pandas as pd
 
 from . import config as C
-from .bots import guard, timemachine
+from .bots import breadth, guard, timemachine
 from .data import NY, get_daily, get_intraday, load_universe
 from .engine import picks_for_day
 from .notify import to_boss, to_community
@@ -13,7 +13,7 @@ from .skills import load_skills
 
 PICK_COLS = ["date", "published_at", "mode", "ticker", "setup", "order_type", "entry", "stop",
              "target", "risk_pct", "reason", "status", "fill_price", "exit_price",
-             "exit_time", "r_multiple", "pct_return"]
+             "exit_time", "r_multiple", "pct_return", "breadth"]
 
 DISCLAIMER = ("Educational content only, not financial advice. Same picks for every member; "
               "not tailored to anyone. Trading involves risk of loss. Past results do not "
@@ -54,10 +54,12 @@ def _pick_lines(i, p):
             f"Risk: {p['risk_pct']:.1f}% | Why: {p['reason']}"] + ([p["tm"]] if p.get("tm") else []) + [""]
 
 
-def format_post(live, ts, practice=None, weather_note=None, weather=None):
+def format_post(live, ts, practice=None, weather_note=None, weather=None, breadth_note=None, breadth_zone=None):
     lines = [f"**{C.BRAND_NAME} - {ts:%a %b %d, %Y}** (posted {ts:%I:%M %p} ET)", ""]
     if weather:
         lines += [f"Market weather: {weather.upper()} ({weather_note})", ""]
+    if breadth_zone:
+        lines += [f"Market breadth [practice]: {breadth_zone.upper()} ({breadth_note})", ""]
     if not live:
         lines += ["No live setups met our rules today. No trade is a valid trade.", ""]
     for i, p in enumerate(live, 1):
@@ -94,12 +96,13 @@ def scan(force=False):
     daily = get_daily(list(intraday), period="1y")
     live, practice, w, note = picks_for_day(today, ts, intraday, daily, load_skills(), guard.modes())
     add_time_machine(live + practice, ts)
-    boss_text = format_post(live, ts, practice, note, w)
+    bz, bnote = breadth.check(today)
+    boss_text = format_post(live, ts, practice, note, w, bnote, bz)
     os.makedirs("data", exist_ok=True)
     open(C.TODAY_POST_FILE, "w").write(boss_text)
     print(boss_text)
-    rows = ([{"date": today.strftime("%Y-%m-%d"), "published_at": ts.isoformat(), "mode": "live", **p} for p in live] +
-            [{"date": today.strftime("%Y-%m-%d"), "published_at": ts.isoformat(), "mode": "practice", **p} for p in practice])
+    rows = ([{"date": today.strftime("%Y-%m-%d"), "published_at": ts.isoformat(), "mode": "live", "breadth": bz, **p} for p in live] +
+            [{"date": today.strftime("%Y-%m-%d"), "published_at": ts.isoformat(), "mode": "practice", "breadth": bz, **p} for p in practice])
     if rows:
         new = pd.DataFrame(rows).drop(columns=["score", "tm"], errors="ignore")
         picks_df = pd.concat([picks_df, new], ignore_index=True) if len(picks_df) else new

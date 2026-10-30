@@ -27,6 +27,7 @@ EXIT_TIME = "15:55"
 MIN_PRICE = 5.0
 MIN_AVG_DOLLAR_VOL = 20_000_000
 MARKET_TICKER = "SPY"          # used by the Weather bot, never picked
+BREADTH_URL = "https://tradermonty.github.io/market-breadth-analysis/market_breadth_data.csv"  # Breadth bot (practice only)
 
 # --- Costs ---
 SLIPPAGE_PCT = 0.0005          # 0.05% per side

@@ -25,6 +25,8 @@ def weekly():
         msg.append("Backtest (last ~2 months, hypothetical):")
         for _, r in summary.iterrows():
             msg.append(f"- {r['setup']}: {int(r['filled'])} trades, win {r['win_rate_pct']}%, avg {r['avg_R']:+.2f}R, total {r['total_R']:+.1f}R")
+        if "breadth" in trades:
+            msg += ["", "Breadth bot [practice - info only, all skills, by market breadth]:"] + backtest.by_breadth(trades)
         msg += ["", coach.run(prepared, intraday)]
     status, changes = guard.run(live.load_picks(), pd.Timestamp.now(tz="America/New_York").strftime("%Y-%m-%d"))
     msg += ["", guard.team_sheet(status)]
