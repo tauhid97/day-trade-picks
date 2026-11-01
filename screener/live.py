@@ -4,6 +4,7 @@ import os
 import pandas as pd
 
 from . import config as C
+from . import plain
 from .bots import breadth, guard, timemachine
 from .data import NY, get_daily, get_intraday, load_universe
 from .engine import picks_for_day
@@ -18,11 +19,6 @@ PICK_COLS = ["date", "published_at", "mode", "ticker", "setup", "order_type", "e
 DISCLAIMER = ("Educational content only, not financial advice. Same picks for every member; "
               "not tailored to anyone. Trading involves risk of loss. Past results do not "
               "guarantee future results.")
-
-ORDER_WORDS = {
-    "buy_stop": "BUY STOP - only buy if the price climbs UP to the entry",
-    "buy_limit": "BUY LIMIT - only buy if the price dips DOWN to the entry",
-}
 
 
 def now_ny():
@@ -46,30 +42,21 @@ def save_picks(df):
     df[PICK_COLS].to_csv(C.PICKS_FILE, index=False)
 
 
-def _pick_lines(i, p):
-    tgt = f"${p['target']:.2f}" if p.get("target") is not None and p["target"] == p["target"] else f"sell at {C.EXIT_TIME} ET"
-    return [f"**{i}. ${p['ticker']} - {p['setup']}**",
-            f"Order: {ORDER_WORDS[p['order_type']]}",
-            f"Entry: ${p['entry']:.2f} | Stop: ${p['stop']:.2f} | Target: {tgt}",
-            f"Risk: {p['risk_pct']:.1f}% | Why: {p['reason']}"] + ([p["tm"]] if p.get("tm") else []) + [""]
-
-
 def format_post(live, ts, practice=None, weather_note=None, weather=None, breadth_note=None, breadth_zone=None):
-    lines = [f"**{C.BRAND_NAME} - {ts:%a %b %d, %Y}** (posted {ts:%I:%M %p} ET)", ""]
+    lines = [f"**{C.BRAND_NAME} - {ts:%a %b %d, %Y}** (sent {ts:%I:%M %p} ET)", ""]
     if weather:
-        lines += [f"Market weather: {weather.upper()} ({weather_note})", ""]
+        lines += [plain.weather_line(weather, weather_note), ""]
     if breadth_zone:
-        lines += [f"Market breadth [practice]: {breadth_zone.upper()} ({breadth_note})", ""]
+        lines += [plain.breadth_line(breadth_zone, breadth_note), ""]
     if not live:
-        lines += ["No live setups met our rules today. No trade is a valid trade.", ""]
+        lines += ["No real picks today - nothing met our rules. No trade is a good trade.", ""]
     for i, p in enumerate(live, 1):
-        lines += _pick_lines(i, p)
+        lines += plain.pick_lines(i, p)
     if practice:
-        lines += ["--- PRACTICE picks (skills on the bench - tracked, not for the community) ---", ""]
+        lines += ["--- PRACTICE picks (skills still being tested - just watch, don't trade these) ---", ""]
         for i, p in enumerate(practice, 1):
-            lines += _pick_lines(i, p)
-    lines += [f"Unfilled orders cancel at {C.LAST_ENTRY_TIME} ET. Open trades close at {C.EXIT_TIME} ET.",
-              "", f"_{DISCLAIMER}_"]
+            lines += plain.pick_lines(i, p)
+    lines += plain.footer() + ["", f"_{DISCLAIMER}_"]
     return "\n".join(lines)
 
 
@@ -122,7 +109,7 @@ def add_time_machine(picks, ts):
     for p in picks:
         if p["ticker"] in hist:
             try:
-                p["tm"] = timemachine.line(timemachine.odds(p, hist[p["ticker"]], ts))
+                p["tm"] = plain.luck(timemachine.odds(p, hist[p["ticker"]], ts))
             except Exception as e:
                 print("Time Machine failed for", p["ticker"], e)
 
@@ -161,16 +148,4 @@ def grade():
 
 
 def format_results(graded):
-    word = {"target": "TARGET HIT", "stop": "STOPPED OUT", "eod": "SOLD AT CLOSE", "no_fill": "NEVER TRIGGERED"}
-    lines = []
-    for day in sorted({g["date"] for g in graded}):
-        rows = [g for g in graded if g["date"] == day]
-        lines += [f"**{C.BRAND_NAME} - results for {day}**", ""]
-        for g in rows:
-            r = f"{g['r_multiple']:+.2f}R ({g['pct_return']:+.2f}%)" if g["status"] != "no_fill" else "no trade"
-            tag = " [practice]" if g.get("mode") == "practice" else ""
-            lines.append(f"${g['ticker']} {g['setup']}{tag}: {word[g['status']]} - {r}")
-        live = [g for g in rows if g.get("mode", "live") == "live"]
-        lines += [f"Live total: {sum(g['r_multiple'] for g in live):+.2f}R", ""]
-    lines.append("Every pick, win or lose, is on the public track-record page.")
-    return "\n".join(lines)
+    return plain.results(graded)

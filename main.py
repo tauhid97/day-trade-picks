@@ -12,7 +12,7 @@ import sys
 
 import pandas as pd
 
-from screener import backtest, live, report
+from screener import backtest, live, plain, report
 from screener import config as C
 from screener.bots import coach, guard
 from screener.notify import to_boss
@@ -22,9 +22,10 @@ def weekly():
     trades, summary, prepared, intraday = backtest.run()
     msg = ["Boss, here's the weekly check-up.", ""]
     if len(summary):
-        msg.append("Backtest (last ~2 months, hypothetical):")
+        msg.append("Practice on the past (last ~2 months, hypothetical - not real trades):")
         for _, r in summary.iterrows():
-            msg.append(f"- {r['setup']}: {int(r['filled'])} trades, win {r['win_rate_pct']}%, avg {r['avg_R']:+.2f}R, total {r['total_R']:+.1f}R")
+            msg.append(f"- {plain.nick(r['setup'])}: {int(r['filled'])} trades, won {r['win_rate_pct']}%, "
+                       f"total {plain.money(r['total_R'])} if you risked ${plain.RISK_DOLLARS} each")
         if "breadth" in trades:
             msg += ["", "Breadth bot [practice - info only, all skills, by market breadth]:"] + backtest.by_breadth(trades)
         msg += ["", coach.run(prepared, intraday)]

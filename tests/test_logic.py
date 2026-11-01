@@ -65,6 +65,24 @@ def test_simulate():
     print("simulate OK")
 
 
+def test_plain():
+    from screener import plain
+    assert plain.money(1.5) == "+$15.00" and plain.money(-1) == "-$10.00"
+    assert plain.nick("VWAP Pullback") == "Dip Buy (VWAP Pullback)"
+    assert plain.nick("Brand New Skill") == "Brand New Skill"
+    pick = {"ticker": "ABC", "setup": "VWAP Pullback", "order_type": "buy_limit", "entry": 10.0,
+            "stop": 9.5, "target": 11.0, "risk_pct": 5.0, "reason": "dipped to VWAP"}
+    text = "\n".join(plain.pick_lines(1, pick))
+    assert "Buy: only if the price dips DOWN to $10.00" in text and "Safety" in text and "+$20.00" in text, text
+    res = plain.results([{**pick, "date": "2026-11-02", "mode": "live", "status": "target", "r_multiple": 2.0},
+                         {**pick, "date": "2026-11-02", "mode": "practice", "status": "no_fill", "r_multiple": 0.0}])
+    assert "+$20.00" in res and "never reached the Buy price" in res and "risked $10" in res, res
+    lk = plain.luck({"trigger_pct": 40, "target_pct": 15, "stop_pct": 20, "avg_r": 0.1, "sessions": 39})
+    assert "+$1.00 per $10 risked" in lk and "0.10R" not in lk, lk
+    assert plain.clock("15:55") == "3:55 PM" and plain.clock("10:30") == "10:30 AM"
+    print("plain OK")
+
+
 def test_all(tmp="/tmp/dtp_test"):
     import os, shutil
     import screener.config as C
@@ -125,4 +143,5 @@ def test_all(tmp="/tmp/dtp_test"):
 
 if __name__ == "__main__":
     test_simulate()
+    test_plain()
     test_all()
