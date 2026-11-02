@@ -7,12 +7,13 @@
   python main.py hello      # send a test message to your Telegram
   python main.py report     # rebuild the track-record page
   python main.py auto       # picks the right job based on the time (used by the schedule)
+  python main.py commands   # answer Boss's /status /picks /scoreboard /skills messages (every ~15 min)
 """
 import sys
 
 import pandas as pd
 
-from screener import backtest, live, plain, report
+from screener import backtest, commands, live, plain, report
 from screener import config as C
 from screener.bots import coach, guard
 from screener.notify import to_boss
@@ -52,6 +53,8 @@ def main():
         print("Sent!" if ok else "Telegram secrets are missing - see README step 3.")
     elif cmd == "report":
         report.build()
+    elif cmd == "commands":
+        commands.handle()
     elif cmd == "auto":
         hm = pd.Timestamp.now(tz="America/New_York").strftime("%H:%M")
         if C.SCAN_TIME <= hm <= C.SCAN_WINDOW_END:

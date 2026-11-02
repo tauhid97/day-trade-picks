@@ -215,6 +215,30 @@ def test_all(tmp="/tmp/dtp_test"):
     live.grade()
     assert "couldn't get prices" in sent[-1][1], sent[-1][1]
     print("\n--- quiet evening message ---\n" + quiet)
+
+    # 4) Telegram commands: Boss types /status, /picks, /scoreboard, /skills
+    from screener import commands
+    os.environ["TELEGRAM_CHAT_ID"] = "111"
+    msg = lambda uid, chat, text: {"update_id": uid, "message": {"chat": {"id": chat}, "text": text}}
+    inbox = [msg(10, 111, "/status"), msg(11, 111, "/picks"), msg(12, 111, "/scoreboard"),
+             msg(13, 999, "/picks"),                       # a stranger: ignored
+             msg(14, 111, "/skills"), msg(15, 111, "hi bot"), msg(16, 111, "/Status@BossSignalsBot")]
+    asked, replies = [], []
+    commands.get_updates = lambda offset: asked.append(offset) or [u for u in inbox if u["update_id"] >= (offset or 0)]
+    commands.to_boss = lambda t: replies.append(t) or True
+    commands.handle()
+    assert asked == [None, 17], asked                       # read, then tell Telegram we're done up to 16
+    assert len(replies) == 6, replies                       # stranger never answered
+    assert "awake" in replies[0].lower() and "skills" in replies[0].lower(), replies[0]
+    assert "Buy:" in replies[1] and "Safety" in replies[1], replies[1]
+    assert "All-time scorecard" in replies[2] and "Dip Buy" in replies[2], replies[2]
+    assert "LIVE" in replies[3] and "PRACTICE" in replies[3], replies[3]
+    assert "/scoreboard" in replies[4] and "/picks" in replies[4], replies[4]   # unknown -> help
+    assert "awake" in replies[5].lower()                                        # works with @botname
+    saved = list(replies)
+    replies.clear(); inbox.clear(); commands.handle()
+    assert replies == [] and asked[-1] is None, (replies, asked)                # nothing new -> quiet
+    print("\n--- command replies ---\n" + "\n\n".join(saved))
     print("ALL OK")
 
 
