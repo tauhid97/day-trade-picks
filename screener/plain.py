@@ -15,6 +15,9 @@ NICKNAMES = {
     "Bull Flag": "Rest & Rocket",
     "20-Day Breakout": "New Monthly High",
     "MA20 Reclaim": "Back Above Normal",
+    "NR7 Breakout": "Tight Spring",
+    "Relative Strength": "Strong Kid",
+    "Downtrend Reversal": "Wake Up Rally",
 }
 
 BUY_WORDS = {

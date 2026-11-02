@@ -83,6 +83,64 @@ def test_plain():
     print("plain OK")
 
 
+def test_new_skills():
+    from types import SimpleNamespace
+    from screener import engine
+    from screener.skills import strong_kid, tight_spring
+    # Tight Spring: yesterday was the quietest of the last 7 days, stock in an uptrend
+    idx = pd.bdate_range("2026-08-03", periods=60)
+    close = np.linspace(40, 50, 60)
+    rng_ = np.r_[np.full(59, 1.0), 0.3]                       # last day = narrowest range
+    daily = pd.DataFrame({"Open": close, "High": close + rng_ / 2, "Low": close - rng_ / 2,
+                          "Close": close, "Volume": 1e6}, index=idx)
+    ctx = SimpleNamespace(daily=daily, last=50.05, hod=50.10, lod=49.80, vwap=49.95, atr=1.0, rvol=1.2)
+    idea = tight_spring.find(ctx, tight_spring.SKILL["params"])
+    assert idea and idea["order_type"] == "buy_stop" and round(idea["entry"], 2) == 50.16, idea   # above yesterday's high
+    wide = daily.copy(); wide.iloc[-1, wide.columns.get_loc("High")] += 2
+    assert tight_spring.find(SimpleNamespace(**{**vars(ctx), "daily": wide}), tight_spring.SKILL["params"]) is None
+    down = daily.copy(); down["Close"] = close[::-1]
+    assert tight_spring.find(SimpleNamespace(**{**vars(ctx), "daily": down}), tight_spring.SKILL["params"]) is None
+    # Strong Kid: stock +3% while the market is -0.5%
+    ctx = SimpleNamespace(day_chg_pct=3.0, market_chg_pct=-0.5, last=103.0, hod=103.2, lod=100.5,
+                          vwap=102.0, atr=2.5, rvol=2.0)
+    idea = strong_kid.find(ctx, strong_kid.SKILL["params"])
+    assert idea and round(idea["entry"], 2) == 103.21 and idea["stop"] >= 101.99 - 1e-9, idea
+    assert strong_kid.find(SimpleNamespace(**{**vars(ctx), "market_chg_pct": 1.5}), strong_kid.SKILL["params"]) is None
+    assert strong_kid.find(SimpleNamespace(**{**vars(ctx), "market_chg_pct": None}), strong_kid.SKILL["params"]) is None
+    assert "stormy" in strong_kid.SKILL["weather"]
+    # Wake Up Rally: fell 30% over 3 months, today +5% on 3x volume with a wide range
+    from screener.skills import wake_up_rally
+    fall = np.linspace(100, 70, 80)
+    dd = pd.DataFrame({"Open": fall, "High": fall + 1, "Low": fall - 1, "Close": fall, "Volume": 1e6},
+                      index=pd.bdate_range("2026-06-01", periods=80))
+    ctx = SimpleNamespace(daily=dd, day_chg_pct=5.0, last=73.4, hod=73.6, lod=70.1, vwap=72.0, atr=2.0, rvol=3.0)
+    idea = wake_up_rally.find(ctx, wake_up_rally.SKILL["params"])
+    assert idea and round(idea["entry"], 2) == 73.61 and idea["stop"] < idea["entry"], idea
+    up = dd.copy(); up["Close"] = fall[::-1]                    # was rising, not falling -> skip
+    assert wake_up_rally.find(SimpleNamespace(**{**vars(ctx), "daily": up}), wake_up_rally.SKILL["params"]) is None
+    assert wake_up_rally.find(SimpleNamespace(**{**vars(ctx), "rvol": 1.1}), wake_up_rally.SKILL["params"]) is None
+    assert wake_up_rally.find(SimpleNamespace(**{**vars(ctx), "hod": 74.6, "lod": 73.0}), wake_up_rally.SKILL["params"]) is None
+    # A skill missing from the Guard's team list must start in PRACTICE, never live
+    fake = {"name": "Brand New", "weather": ["cloudy"], "params": {},
+            "find": lambda c, p: {"order_type": "buy_stop", "entry": 10.0, "stop": 9.8, "target_r": 2, "score": 1, "reason": "x"}}
+    old_bc, old_w = engine.build_contexts, engine.weather_bot.check
+    engine.build_contexts = lambda *a: [SimpleNamespace(ticker="ABC")]
+    engine.weather_bot.check = lambda *a: ("cloudy", "test")
+    try:
+        live_p, practice_p, _, _ = engine.picks_for_day(None, None, {}, {}, [fake], {"Other": "live"})
+    finally:
+        engine.build_contexts, engine.weather_bot.check = old_bc, old_w
+    assert not live_p and len(practice_p) == 1, (live_p, practice_p)
+    assert plain_nick_ok()
+    print("new skills OK")
+
+
+def plain_nick_ok():
+    from screener import plain
+    return plain.nick("NR7 Breakout") == "Tight Spring (NR7 Breakout)" and plain.nick("Relative Strength") == "Strong Kid (Relative Strength)" \
+        and plain.nick("Downtrend Reversal") == "Wake Up Rally (Downtrend Reversal)"
+
+
 def test_all(tmp="/tmp/dtp_test"):
     import os, shutil
     import screener.config as C
@@ -144,4 +202,5 @@ def test_all(tmp="/tmp/dtp_test"):
 if __name__ == "__main__":
     test_simulate()
     test_plain()
+    test_new_skills()
     test_all()

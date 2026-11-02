@@ -6,8 +6,22 @@ from .bots import weather as weather_bot
 from .setups import Context, make_pick, rank_and_cap
 
 
+def market_change(day, scan_ts, intraday, daily):
+    """SPY's % change today at scan time, or None if the data is missing."""
+    t = C.MARKET_TICKER
+    if t not in intraday or t not in daily:
+        return None
+    b = intraday[t]
+    b = b[(b.index.normalize() == day) & (b.index < scan_ts)]
+    d = daily[t][daily[t].index < day.tz_localize(None)]
+    if b.empty or d.empty:
+        return None
+    return (float(b["Close"].iloc[-1]) / float(d["Close"].iloc[-1]) - 1) * 100
+
+
 def build_contexts(day, scan_ts, intraday, daily):
     cut = scan_ts.strftime("%H:%M")
+    mkt = market_change(day, scan_ts, intraday, daily)
     out = []
     for t, bars in intraday.items():
         if t == C.MARKET_TICKER or t not in daily:
@@ -29,6 +43,7 @@ def build_contexts(day, scan_ts, intraday, daily):
         except Exception:
             continue
         if ctx.last >= C.MIN_PRICE and ctx.avg_dollar_vol >= C.MIN_AVG_DOLLAR_VOL:
+            ctx.market_chg_pct = mkt
             out.append(ctx)
     return out
 
@@ -58,5 +73,5 @@ def picks_for_day(day, scan_ts, intraday, daily, skills, status=None):
     live, practice = [], []
     for sk in skills:
         found = ideas(ctxs, sk, weather=w)
-        (live if status.get(sk["name"], "live") == "live" else practice).extend(found)
+        (live if status.get(sk["name"], "practice") == "live" else practice).extend(found)   # new skills start in practice
     return rank_and_cap(live), rank_and_cap(practice), w, note
