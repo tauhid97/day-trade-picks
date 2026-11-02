@@ -5,7 +5,7 @@ import pandas as pd
 
 from . import config as C
 from . import plain
-from .bots import breadth, guard, timemachine
+from .bots import breadth, guard, news, timemachine
 from .data import NY, get_daily, get_intraday, load_universe
 from .engine import picks_for_day
 from .notify import to_boss, to_community
@@ -14,7 +14,7 @@ from .skills import load_skills
 
 PICK_COLS = ["date", "published_at", "mode", "ticker", "setup", "order_type", "entry", "stop",
              "target", "risk_pct", "reason", "status", "fill_price", "exit_price",
-             "exit_time", "r_multiple", "pct_return", "breadth"]
+             "exit_time", "r_multiple", "pct_return", "breadth", "news"]
 
 DISCLAIMER = ("Educational content only, not financial advice. Same picks for every member; "
               "not tailored to anyone. Trading involves risk of loss. Past results do not "
@@ -83,6 +83,7 @@ def scan(force=False):
     daily = get_daily(list(intraday), period="1y")
     live, practice, w, note = picks_for_day(today, ts, intraday, daily, load_skills(), guard.modes())
     add_time_machine(live + practice, ts)
+    add_news(live + practice, ts)
     bz, bnote = breadth.check(today)
     boss_text = format_post(live, ts, practice, note, w, bnote, bz)
     os.makedirs("data", exist_ok=True)
@@ -91,11 +92,17 @@ def scan(force=False):
     rows = ([{"date": today.strftime("%Y-%m-%d"), "published_at": ts.isoformat(), "mode": "live", "breadth": bz, **p} for p in live] +
             [{"date": today.strftime("%Y-%m-%d"), "published_at": ts.isoformat(), "mode": "practice", "breadth": bz, **p} for p in practice])
     if rows:
-        new = pd.DataFrame(rows).drop(columns=["score", "tm"], errors="ignore")
+        new = pd.DataFrame(rows).drop(columns=["score", "tm", "news_note"], errors="ignore")
         picks_df = pd.concat([picks_df, new], ignore_index=True) if len(picks_df) else new
         save_picks(picks_df)
     to_boss(boss_text)
-    to_community(format_post([{k: v for k, v in p.items() if k != "tm"} for p in live], ts))
+    to_community(format_post([{k: v for k, v in p.items() if k not in ("tm", "news_note")} for p in live], ts))
+
+
+def add_news(picks, ts):
+    for p in picks:
+        p["news"], note = news.check(p["ticker"], ts)
+        p["news_note"] = news.line(p["news"], note)
 
 
 def add_time_machine(picks, ts):

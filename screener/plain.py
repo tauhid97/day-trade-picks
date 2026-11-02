@@ -65,7 +65,7 @@ def pick_lines(i, p):
         lines += [f"Win: no set price - sell at {clock(C.EXIT_TIME)} ET",
                   f"If you risked ${RISK_DOLLARS}: lose {money(-1)[1:]} at Safety."]
     lines.append(f"Why: {p['reason']}")
-    return lines + ([p["tm"]] if p.get("tm") else []) + [""]
+    return lines + [p[k] for k in ("tm", "news_note") if p.get(k)] + [""]
 
 
 def luck(o):

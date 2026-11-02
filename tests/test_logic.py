@@ -140,6 +140,33 @@ def test_new_skills():
     print("new skills OK")
 
 
+def test_news():
+    import datetime as dt
+    from screener import plain
+    from screener.bots import news
+    now = pd.Timestamp("2026-11-02 10:31", tz="America/New_York")
+    h = lambda hrs, title: (now - pd.Timedelta(hours=hrs), title)
+    tag, note = news.classify(dt.date(2026, 11, 2), [], now)
+    assert tag == "earnings" and "today" in note, note
+    tag, note = news.classify(dt.date(2026, 11, 3), [], now)
+    assert tag == "earnings" and "tomorrow" in note, note
+    heads = [h(2, "Palantir lands Army deal"), h(5, "Palantir CEO interview"), h(40, "Palantir old news")]
+    tag, note = news.classify(dt.date(2026, 12, 1), heads, now)
+    assert tag == "news" and "2 headlines" in note and "deal" in note, note
+    assert news.classify(None, [h(30, "old")], now)[0] == "quiet"
+    assert news.mentions("Palantir (PLTR) rises", "PLTR", "Palantir Technologies Inc.")
+    assert news.mentions("Is Palantir a buy?", "PLTR", "Palantir Technologies Inc.")
+    assert not news.mentions("Apple and Microsoft report", "PLTR", "Palantir Technologies Inc.")
+    assert not news.mentions("Advanced chips rally", "AMD", "Advanced Micro Devices")
+    pick = {"ticker": "ABC", "setup": "VWAP Pullback", "order_type": "buy_limit", "entry": 10.0,
+            "stop": 9.5, "target": 11.0, "risk_pct": 5.0, "reason": "dipped", "news_note": news.line("news", "1 headline")}
+    assert "News [practice, info only]: IN THE NEWS" in "\n".join(plain.pick_lines(1, pick))
+    df = pd.DataFrame({"mode": "live", "news": ["earnings", "quiet", "quiet", None],
+                       "status": ["target", "stop", "no_fill", "target"], "r_multiple": [2.0, -1.0, 0.0, 1.0]})
+    text = "\n".join(news.summary(df))
+    assert "Earnings day: 1 trade" in text and "Quiet: 1 trade" in text, text
+
+
 def plain_nick_ok():
     from screener import plain
     return plain.nick("NR7 Breakout") == "Tight Spring (NR7 Breakout)" and plain.nick("Relative Strength") == "Strong Kid (Relative Strength)" \
@@ -168,6 +195,10 @@ def test_all(tmp="/tmp/dtp_test"):
     breadth._cache["df"] = pd.DataFrame({"Breadth_Index_8MA": np.linspace(0.35, 0.75, len(bd)),
                                          "Breadth_200MA_Trend": 1}, index=bd)
     assert breadth.zone(0.65) == "healthy" and breadth.zone(0.2) == "very weak"
+    from screener.bots import news
+    news.earnings_date = lambda t: None
+    news.headlines = lambda t: [(pd.Timestamp.now(tz="UTC"), f"{t} wins big contract")]
+    news.company_name = lambda t: None
 
     # 1) backtest + coach + guard
     trades, summary, prepared, ib = backtest.run(intraday, daily)
@@ -199,6 +230,9 @@ def test_all(tmp="/tmp/dtp_test"):
     df = live.load_picks()
     print(df[["date", "mode", "ticker", "setup", "status", "r_multiple", "breadth"]].to_string())
     assert df["breadth"].notna().all()
+    assert df["news"].notna().all() and "news_note" not in df
+    assert "News [practice, info only]" in [t for who, t in sent if who == "boss"][0]
+    assert all("News [practice" not in t for who, t in sent if who == "community")
     print("\n--- sample message to Boss ---\n" + [t for who, t in sent if who == "boss"][0])
     results_msg = [t for who, t in sent if who == "boss"][-1]
     assert "Today's scorecard" in results_msg and "All-time scorecard" in results_msg, results_msg[-600:]
@@ -245,5 +279,6 @@ def test_all(tmp="/tmp/dtp_test"):
 if __name__ == "__main__":
     test_simulate()
     test_plain()
+    test_news()
     test_new_skills()
     test_all()

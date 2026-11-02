@@ -15,7 +15,7 @@ import pandas as pd
 
 from screener import backtest, commands, live, plain, report
 from screener import config as C
-from screener.bots import coach, guard
+from screener.bots import coach, guard, news
 from screener.notify import to_boss
 
 
@@ -29,6 +29,7 @@ def weekly():
                        f"total {plain.money(r['total_R'])} if you risked ${plain.RISK_DOLLARS} each")
         if "breadth" in trades:
             msg += ["", "Breadth bot [practice - info only, all skills, by market breadth]:"] + backtest.by_breadth(trades)
+        msg += ["", "News bot [practice - info only, real picks so far, by news label]:"] + news.summary(live.load_picks())
         msg += ["", coach.run(prepared, intraday)]
     status, changes = guard.run(live.load_picks(), pd.Timestamp.now(tz="America/New_York").strftime("%Y-%m-%d"))
     msg += ["", guard.team_sheet(status)]
