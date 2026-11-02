@@ -138,7 +138,10 @@ def grade():
             save_picks(df)
     status, changes = guard.run(df, now.strftime("%Y-%m-%d"))
     if graded:
-        to_boss(format_results(graded) + ("\n\nGuard bot: " + "\n".join(changes) if changes else ""))
+        done = df[df["status"].isin(["target", "stop", "eod"])]
+        all_live = done[done["mode"].fillna("live") == "live"].to_dict("records")
+        to_boss(format_results(graded) + "\n\n" + plain.scoreboard(graded, all_live)
+                + ("\n\nGuard bot: " + "\n".join(changes) if changes else ""))
         live_only = [g for g in graded if g.get("mode", "live") == "live"]
         if live_only:
             to_community(format_results(live_only))

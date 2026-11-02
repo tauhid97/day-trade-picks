@@ -94,6 +94,29 @@ def footer():
     return [f"Not bought by {clock(C.LAST_ENTRY_TIME)} ET? Forget it. Still holding at {clock(C.EXIT_TIME)} ET? Sell."]
 
 
+def scorecard(rows):
+    """Simple count, e.g. '3 trades. 1 win. 2 losses. 33% wins. Total +$8.00'. Picks that never bought don't count."""
+    rs = [float(g["r_multiple"]) for g in rows if g["status"] != "no_fill"]
+    if not rs:
+        return "0 trades (no Buy prices were reached)"
+    wins = sum(r > 0 for r in rs)
+    losses = len(rs) - wins
+    return (f"{len(rs)} trade{'s' if len(rs) != 1 else ''}. {wins} win{'s' if wins != 1 else ''}. "
+            f"{losses} loss{'es' if losses != 1 else ''}. {round(wins / len(rs) * 100)}% wins. Total {money(sum(rs))}")
+
+
+def scoreboard(today, all_live):
+    """The daily scorecard block for Boss's results message."""
+    live = [g for g in today if g.get("mode", "live") == "live"]
+    practice = [g for g in today if g.get("mode") == "practice"]
+    lines = ["📊 Today's scorecard", f"Real picks: {scorecard(live)}"]
+    if practice:
+        lines.append(f"Practice picks: {scorecard(practice)}")
+    lines += ["", f"📈 All-time scorecard (real picks): {scorecard(all_live)}",
+              f"(Money shown as if you risked ${RISK_DOLLARS} on each trade)"]
+    return "\n".join(lines)
+
+
 def results(graded):
     lines = []
     for day in sorted({g["date"] for g in graded}):

@@ -80,6 +80,11 @@ def test_plain():
     lk = plain.luck({"trigger_pct": 40, "target_pct": 15, "stop_pct": 20, "avg_r": 0.1, "sessions": 39})
     assert "+$1.00 per $10 risked" in lk and "0.10R" not in lk, lk
     assert plain.clock("15:55") == "3:55 PM" and plain.clock("10:30") == "10:30 AM"
+    day = [{"status": "target", "r_multiple": 2.0}, {"status": "stop", "r_multiple": -1.0},
+           {"status": "eod", "r_multiple": -0.2}, {"status": "no_fill", "r_multiple": 0.0}]
+    assert plain.scorecard(day) == "3 trades. 1 win. 2 losses. 33% wins. Total +$8.00", plain.scorecard(day)
+    assert plain.scorecard(day[:1]) == "1 trade. 1 win. 0 losses. 100% wins. Total +$20.00"
+    assert plain.scorecard(day[3:]) == "0 trades (no Buy prices were reached)"
     print("plain OK")
 
 
@@ -195,7 +200,9 @@ def test_all(tmp="/tmp/dtp_test"):
     print(df[["date", "mode", "ticker", "setup", "status", "r_multiple", "breadth"]].to_string())
     assert df["breadth"].notna().all()
     print("\n--- sample message to Boss ---\n" + [t for who, t in sent if who == "boss"][0])
-    print("\n--- results message ---\n" + [t for who, t in sent if who == "boss"][-1][:1500])
+    results_msg = [t for who, t in sent if who == "boss"][-1]
+    assert "Today's scorecard" in results_msg and "All-time scorecard" in results_msg, results_msg[-600:]
+    print("\n--- results message (end) ---\n" + results_msg[-700:])
     print("ALL OK")
 
 
