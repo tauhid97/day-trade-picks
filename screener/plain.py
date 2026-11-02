@@ -117,6 +117,17 @@ def scoreboard(today, all_live):
     return "\n".join(lines)
 
 
+def quiet_day(waiting, all_live):
+    """Evening message when there was nothing to grade."""
+    if waiting:
+        first = (f"Boss, I couldn't get prices to grade {waiting} pick{'s' if waiting != 1 else ''} today. "
+                 "I'll try again tomorrow evening.")
+    else:
+        first = "Boss, no picks were made today, so there's nothing to grade. No trade is a good trade."
+    return (f"**{C.BRAND_NAME} - evening update**\n\n{first}\n\n"
+            f"📈 All-time scorecard (real picks): {scorecard(all_live)}")
+
+
 def results(graded):
     lines = []
     for day in sorted({g["date"] for g in graded}):

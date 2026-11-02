@@ -203,6 +203,18 @@ def test_all(tmp="/tmp/dtp_test"):
     results_msg = [t for who, t in sent if who == "boss"][-1]
     assert "Today's scorecard" in results_msg and "All-time scorecard" in results_msg, results_msg[-600:]
     print("\n--- results message (end) ---\n" + results_msg[-700:])
+
+    # 3) evening with nothing to grade -> still tell Boss
+    n = len(sent)
+    assert live.grade() == []
+    quiet = sent[-1][1]
+    assert len(sent) == n + 1 and "no picks were made today" in quiet and "All-time scorecard" in quiet, quiet
+    # a pick whose prices couldn't be downloaded -> say we'll retry
+    stuck = live.load_picks().iloc[[0]].assign(ticker="ZZZZ", status=None)
+    live.save_picks(pd.concat([live.load_picks(), stuck], ignore_index=True))
+    live.grade()
+    assert "couldn't get prices" in sent[-1][1], sent[-1][1]
+    print("\n--- quiet evening message ---\n" + quiet)
     print("ALL OK")
 
 

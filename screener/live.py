@@ -117,7 +117,7 @@ def add_time_machine(picks, ts):
 def grade():
     df = load_picks()
     now = now_ny()
-    graded = []
+    graded, waiting = [], 0
     if len(df):
         todo = df[df["status"].isna() | (df["status"] == "")]
         todo = todo[[pd.Timestamp(d).tz_localize(NY) + pd.Timedelta(hours=16, minutes=5) < now for d in todo["date"]]]
@@ -136,17 +136,18 @@ def grade():
                     df.at[i, k] = v
                 graded.append({**row.to_dict(), **res})
             save_picks(df)
+            waiting = len(todo) - len(graded)
     status, changes = guard.run(df, now.strftime("%Y-%m-%d"))
+    guard_note = "\n\nGuard bot: " + "\n".join(changes) if changes else ""
+    done = df[df["status"].isin(["target", "stop", "eod"])] if len(df) else df
+    all_live = done[done["mode"].fillna("live") == "live"].to_dict("records") if len(done) else []
     if graded:
-        done = df[df["status"].isin(["target", "stop", "eod"])]
-        all_live = done[done["mode"].fillna("live") == "live"].to_dict("records")
-        to_boss(format_results(graded) + "\n\n" + plain.scoreboard(graded, all_live)
-                + ("\n\nGuard bot: " + "\n".join(changes) if changes else ""))
+        to_boss(format_results(graded) + "\n\n" + plain.scoreboard(graded, all_live) + guard_note)
         live_only = [g for g in graded if g.get("mode", "live") == "live"]
         if live_only:
             to_community(format_results(live_only))
-    elif changes:
-        to_boss("Guard bot update:\n" + "\n".join(changes))
+    else:
+        to_boss(plain.quiet_day(waiting, all_live) + guard_note)
     return graded
 
 
