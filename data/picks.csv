@@ -9,12 +9,12 @@ date,published_at,mode,ticker,setup,order_type,entry,stop,target,risk_pct,reason
 2026-10-29,2026-10-29T11:25:00-04:00,practice,CCL,20-Day Breakout,buy_stop,29.13,28.67,30.05,1.58,Knocking on its 20-day high ($28.12) on 3.4x volume,eod,29.13,28.84,15:55,-0.693,-1.094,,
 2026-10-29,2026-10-29T11:25:00-04:00,practice,MRK,MA20 Reclaim,buy_stop,149.27,145.84,156.13,2.3,Climbed back above its 20-day average ($144.20) and pushing new highs,no_fill,,,,0.0,0.0,,
 2026-10-30,2026-10-30T11:24:00-04:00,live,APP,Oversold Bounce,buy_stop,242.46,231.99,258.17,4.32,"RSI 27 (oversold), down 7.9% - only buy if it bounces back above the morning high",no_fill,,,,0.0,0.0,healthy,
-2026-10-30,2026-10-30T11:24:00-04:00,live,CAT,Oversold Bounce,buy_stop,637.25,621.84,660.37,2.42,"RSI 25 (oversold), down 2.2% - only buy if it bounces back above the morning high",,,,,,,healthy,
-2026-11-02,2026-11-02T11:34:00-05:00,live,TSLA,VWAP Pullback,buy_limit,410.96,407.6,417.68,0.82,"Up 2.8% on 5.9x volume, rising VWAP - buy the dip to VWAP",,,,,,,healthy,news
-2026-11-02,2026-11-02T11:34:00-05:00,live,INTC,Oversold Bounce,buy_stop,65.71,62.54,70.46,4.82,"RSI 24 (oversold), down 4.1% - only buy if it bounces back above the morning high",,,,,,,healthy,news
-2026-11-02,2026-11-02T11:34:00-05:00,live,FSLR,VWAP Pullback,buy_limit,183.74,181.92,187.38,0.99,"Up 6.0% on 4.0x volume, rising VWAP - buy the dip to VWAP",,,,,,,healthy,quiet
-2026-11-02,2026-11-02T11:34:00-05:00,practice,RIVN,MA20 Reclaim,buy_stop,13.7,13.27,14.56,3.14,Climbed back above its 20-day average ($12.83) and pushing new highs,,,,,,,healthy,news
-2026-11-02,2026-11-02T11:34:00-05:00,practice,FSLR,MA20 Reclaim,buy_stop,186.25,180.41,197.93,3.14,Climbed back above its 20-day average ($176.27) and pushing new highs,,,,,,,healthy,quiet
-2026-11-02,2026-11-02T11:34:00-05:00,practice,RUN,20-Day Breakout,buy_stop,8.4,8.19,8.82,2.5,Knocking on its 20-day high ($7.86) on 1.9x volume,,,,,,,healthy,quiet
-2026-11-02,2026-11-02T11:34:00-05:00,practice,TSLA,20-Day Breakout,buy_stop,414.24,407.52,427.68,1.62,Knocking on its 20-day high ($410.85) on 5.9x volume,,,,,,,healthy,news
-2026-11-02,2026-11-02T11:34:00-05:00,practice,XPEV,Gap & Go,buy_stop,9.83,9.67,10.15,1.63,"Gapped +5.3%, 2.4x normal volume, holding above VWAP",,,,,,,healthy,news
+2026-10-30,2026-10-30T11:24:00-04:00,live,CAT,Oversold Bounce,buy_stop,637.25,621.84,660.37,2.42,"RSI 25 (oversold), down 2.2% - only buy if it bounces back above the morning high",no_fill,,,,0.0,0.0,healthy,
+2026-11-02,2026-11-02T11:34:00-05:00,live,TSLA,VWAP Pullback,buy_limit,410.96,407.6,417.68,0.82,"Up 2.8% on 5.9x volume, rising VWAP - buy the dip to VWAP",stop,410.96,407.6,12:45,-1.122,-0.917,healthy,news
+2026-11-02,2026-11-02T11:34:00-05:00,live,INTC,Oversold Bounce,buy_stop,65.71,62.54,70.46,4.82,"RSI 24 (oversold), down 4.1% - only buy if it bounces back above the morning high",no_fill,,,,0.0,0.0,healthy,news
+2026-11-02,2026-11-02T11:34:00-05:00,live,FSLR,VWAP Pullback,buy_limit,183.74,181.92,187.38,0.99,"Up 6.0% on 4.0x volume, rising VWAP - buy the dip to VWAP",stop,183.74,181.92,14:40,-1.1,-1.089,healthy,quiet
+2026-11-02,2026-11-02T11:34:00-05:00,practice,RIVN,MA20 Reclaim,buy_stop,13.7,13.27,14.56,3.14,Climbed back above its 20-day average ($12.83) and pushing new highs,no_fill,,,,0.0,0.0,healthy,news
+2026-11-02,2026-11-02T11:34:00-05:00,practice,FSLR,MA20 Reclaim,buy_stop,186.25,180.41,197.93,3.14,Climbed back above its 20-day average ($176.27) and pushing new highs,no_fill,,,,0.0,0.0,healthy,quiet
+2026-11-02,2026-11-02T11:34:00-05:00,practice,RUN,20-Day Breakout,buy_stop,8.4,8.19,8.82,2.5,Knocking on its 20-day high ($7.86) on 1.9x volume,stop,8.42,8.19,12:00,-1.135,-2.829,healthy,quiet
+2026-11-02,2026-11-02T11:34:00-05:00,practice,TSLA,20-Day Breakout,buy_stop,414.24,407.52,427.68,1.62,Knocking on its 20-day high ($410.85) on 5.9x volume,no_fill,,,,0.0,0.0,healthy,news
+2026-11-02,2026-11-02T11:34:00-05:00,practice,XPEV,Gap & Go,buy_stop,9.83,9.67,10.15,1.63,"Gapped +5.3%, 2.4x normal volume, holding above VWAP",no_fill,,,,0.0,0.0,healthy,news

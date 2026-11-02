@@ -29,9 +29,24 @@
     "why": "Holding: averaging +0.08R over backtest (13 trades) (not clearly good or bad)",
     "since": "2026-10-28"
   },
+  "Relative Strength": {
+    "mode": "practice",
+    "why": "New skill - must prove itself first",
+    "since": "2026-11-02"
+  },
+  "NR7 Breakout": {
+    "mode": "practice",
+    "why": "New skill - must prove itself first",
+    "since": "2026-11-02"
+  },
   "VWAP Pullback": {
     "mode": "live",
     "why": "Playing: averaging +0.41R over backtest (61 trades)",
     "since": "2026-10-28"
+  },
+  "Downtrend Reversal": {
+    "mode": "practice",
+    "why": "New skill - must prove itself first",
+    "since": "2026-11-02"
   }
 }
