@@ -1,82 +1,82 @@
-**Day Trade Picks - Mon Nov 02, 2026** (sent 11:34 AM ET)
+**Day Trade Picks - Tue Nov 03, 2026** (sent 11:27 AM ET)
 
-Market mood: ⛅ CLOUDY - mixed day, be picky (SPY +0.63% today, below its 20-day average)
+Market mood: ⛅ CLOUDY - mixed day, be picky (SPY +0.47% today, below its 20-day average)
 
-How many stocks are rising [practice, info only]: HEALTHY (61% of S&P 500 stocks in uptrends, long-term trend falling)
+How many stocks are rising [practice, info only]: HEALTHY (62% of S&P 500 stocks in uptrends, long-term trend falling)
 
-**1. $TSLA - Dip Buy (VWAP Pullback)**
-Buy: only if the price dips DOWN to $410.96
-Safety (sell if it falls to): $407.60
-Win (sell if it rises to): $417.68
+**1. $ORCL - Dip Buy (VWAP Pullback)**
+Buy: only if the price dips DOWN to $124.96
+Safety (sell if it falls to): $122.97
+Win (sell if it rises to): $128.94
 If you risked $10: lose $10.00 at Safety, win +$20.00 at Win.
-Why: Up 2.8% on 5.9x volume, rising VWAP - buy the dip to VWAP
-Luck check (59 past days replayed 2,000 times): the Buy happens 96% of the time. Win first 10%, Safety first 43%. Average -$0.50 per $10 risked. A simulation, not a promise.
-News [practice, info only]: IN THE NEWS (14 headlines in the last 24 hours, about: analyst, deal)
+Why: Up 5.2% on 6.2x volume, rising VWAP - buy the dip to VWAP
+Luck check (59 past days replayed 2,000 times): the Buy happens 80% of the time. Win first 2%, Safety first 22%. Average -$1.20 per $10 risked. A simulation, not a promise.
+News [practice, info only]: IN THE NEWS (8 headlines in the last 24 hours, about: analyst, risk)
 
-**2. $INTC - Bounce Back (Oversold Bounce)**
-Buy: only if the price climbs UP to $65.71
-Safety (sell if it falls to): $62.54
-Win (sell if it rises to): $70.46
-If you risked $10: lose $10.00 at Safety, win +$14.98 at Win.
-Why: RSI 24 (oversold), down 4.1% - only buy if it bounces back above the morning high
-Luck check (59 past days replayed 2,000 times): the Buy happens 0% of the time. Win first 0%, Safety first 0%. Average +$2.50 per $10 risked. A simulation, not a promise.
-News [practice, info only]: IN THE NEWS (8 headlines in the last 24 hours, about: earnings, analyst)
-
-**3. $FSLR - Dip Buy (VWAP Pullback)**
-Buy: only if the price dips DOWN to $183.74
-Safety (sell if it falls to): $181.92
-Win (sell if it rises to): $187.38
+**2. $NVDA - Dip Buy (VWAP Pullback)**
+Buy: only if the price dips DOWN to $208.04
+Safety (sell if it falls to): $206.45
+Win (sell if it rises to): $211.22
 If you risked $10: lose $10.00 at Safety, win +$20.00 at Win.
-Why: Up 6.0% on 4.0x volume, rising VWAP - buy the dip to VWAP
-Luck check (59 past days replayed 2,000 times): the Buy happens 62% of the time. Win first 5%, Safety first 29%. Average -$1.30 per $10 risked. A simulation, not a promise.
+Why: Up 3.1% on 4.3x volume, rising VWAP - buy the dip to VWAP
+Luck check (59 past days replayed 2,000 times): the Buy happens 84% of the time. Win first 3%, Safety first 38%. Average -$2.40 per $10 risked. A simulation, not a promise.
+News [practice, info only]: IN THE NEWS (1 headline in the last 24 hours)
+
+**3. $FCX - Bounce Back (Oversold Bounce)**
+Buy: only if the price climbs UP to $62.86
+Safety (sell if it falls to): $61.51
+Win (sell if it rises to): $64.89
+If you risked $10: lose $10.00 at Safety, win +$15.04 at Win.
+Why: RSI 30 (oversold), down 2.3% - only buy if it bounces back above the morning high
+Luck check (59 past days replayed 2,000 times): the Buy happens 4% of the time. Win first 0%, Safety first 0%. Average +$0.00 per $10 risked. A simulation, not a promise.
 News [practice, info only]: QUIET (no headlines in the last 24 hours)
 
 --- PRACTICE picks (skills still being tested - just watch, don't trade these) ---
 
-**1. $RIVN - Back Above Normal (MA20 Reclaim)**
-Buy: only if the price climbs UP to $13.70
-Safety (sell if it falls to): $13.27
-Win (sell if it rises to): $14.56
+**1. $HUT - Wake Up Rally (Downtrend Reversal)**
+Buy: only if the price climbs UP to $64.14
+Safety (sell if it falls to): $61.33
+Win (sell if it rises to): $69.76
 If you risked $10: lose $10.00 at Safety, win +$20.00 at Win.
-Why: Climbed back above its 20-day average ($12.83) and pushing new highs
-Luck check (59 past days replayed 2,000 times): the Buy happens 36% of the time. Win first 0%, Safety first 1%. Average -$0.30 per $10 risked. A simulation, not a promise.
-News [practice, info only]: IN THE NEWS (7 headlines in the last 24 hours, about: earnings, analyst)
+Why: Down 36% in 60 days, now up 15.8% on 2.0x volume - buy if it makes a new high
+Luck check (59 past days replayed 2,000 times): the Buy happens 71% of the time. Win first 0%, Safety first 6%. Average +$0.50 per $10 risked. A simulation, not a promise.
+News [practice, info only]: ⚠️ EARNINGS (earnings report tomorrow - expect big moves either way)
 
-**2. $FSLR - Back Above Normal (MA20 Reclaim)**
-Buy: only if the price climbs UP to $186.25
-Safety (sell if it falls to): $180.41
-Win (sell if it rises to): $197.93
+**2. $RIOT - Wake Up Rally (Downtrend Reversal)**
+Buy: only if the price climbs UP to $13.69
+Safety (sell if it falls to): $13.16
+Win (sell if it rises to): $14.75
 If you risked $10: lose $10.00 at Safety, win +$20.00 at Win.
-Why: Climbed back above its 20-day average ($176.27) and pushing new highs
-Luck check (59 past days replayed 2,000 times): the Buy happens 58% of the time. Win first 0%, Safety first 2%. Average -$0.80 per $10 risked. A simulation, not a promise.
-News [practice, info only]: QUIET (no headlines in the last 24 hours)
+Why: Down 39% in 60 days, now up 14.5% on 2.1x volume - buy if it makes a new high
+Luck check (59 past days replayed 2,000 times): the Buy happens 52% of the time. Win first 0%, Safety first 5%. Average +$0.20 per $10 risked. A simulation, not a promise.
+News [practice, info only]: ⚠️ EARNINGS (earnings report tomorrow - expect big moves either way)
 
-**3. $RUN - New Monthly High (20-Day Breakout)**
-Buy: only if the price climbs UP to $8.40
-Safety (sell if it falls to): $8.19
-Win (sell if it rises to): $8.82
-If you risked $10: lose $10.00 at Safety, win +$20.00 at Win.
-Why: Knocking on its 20-day high ($7.86) on 1.9x volume
-Luck check (59 past days replayed 2,000 times): the Buy happens 100% of the time. Win first 1%, Safety first 14%. Average +$0.60 per $10 risked. A simulation, not a promise.
-News [practice, info only]: QUIET (no headlines in the last 24 hours)
+**3. $PLTR - Crowd Breakout (ORB Stocks in Play)**
+Buy: only if the price climbs UP to $172.67
+Safety (sell if it falls to): $171.41
+Win: no set price - sell at 3:55 PM ET
+If you risked $10: lose $10.00 at Safety.
+Why: Stock in play: 7.7x normal volume, green opening range - buy the breakout
+Luck check (59 past days replayed 2,000 times): the Buy happens 74% of the time. Win first 0%, Safety first 40%. Average -$0.30 per $10 risked. A simulation, not a promise.
+News [practice, info only]: IN THE NEWS (13 headlines in the last 24 hours, about: earnings, analyst, deal)
 
-**4. $TSLA - New Monthly High (20-Day Breakout)**
-Buy: only if the price climbs UP to $414.24
-Safety (sell if it falls to): $407.52
-Win (sell if it rises to): $427.68
+**4. $MGM - New Monthly High (20-Day Breakout)**
+Buy: only if the price climbs UP to $31.57
+Safety (sell if it falls to): $30.98
+Win (sell if it rises to): $32.75
 If you risked $10: lose $10.00 at Safety, win +$20.00 at Win.
-Why: Knocking on its 20-day high ($410.85) on 5.9x volume
-Luck check (59 past days replayed 2,000 times): the Buy happens 38% of the time. Win first 0%, Safety first 3%. Average -$0.40 per $10 risked. A simulation, not a promise.
-News [practice, info only]: IN THE NEWS (14 headlines in the last 24 hours, about: analyst, deal)
+Why: Knocking on its 20-day high ($31.06) on 1.7x volume
+Luck check (59 past days replayed 2,000 times): the Buy happens 62% of the time. Win first 1%, Safety first 6%. Average -$0.90 per $10 risked. A simulation, not a promise.
+News [practice, info only]: IN THE NEWS (1 headline in the last 24 hours)
 
-**5. $XPEV - Morning Rocket (Gap & Go)**
-Buy: only if the price climbs UP to $9.83
-Safety (sell if it falls to): $9.67
-Win (sell if it rises to): $10.15
-If you risked $10: lose $10.00 at Safety, win +$20.00 at Win.
-Why: Gapped +5.3%, 2.4x normal volume, holding above VWAP
-Luck check (59 past days replayed 2,000 times): the Buy happens 55% of the time. Win first 0%, Safety first 3%. Average -$0.20 per $10 risked. A simulation, not a promise.
-News [practice, info only]: IN THE NEWS (5 headlines in the last 24 hours, about: earnings)
+**5. $ASML - Crowd Breakout (ORB Stocks in Play)**
+Buy: only if the price climbs UP to $1575.59
+Safety (sell if it falls to): $1566.53
+Win: no set price - sell at 3:55 PM ET
+If you risked $10: lose $10.00 at Safety.
+Why: Stock in play: 3.6x normal volume, green opening range - buy the breakout
+Luck check (59 past days replayed 2,000 times): the Buy happens 7% of the time. Win first 0%, Safety first 4%. Average -$2.40 per $10 risked. A simulation, not a promise.
+News [practice, info only]: IN THE NEWS (1 headline in the last 24 hours)
 
 Not bought by 3:00 PM ET? Forget it. Still holding at 3:55 PM ET? Sell.
 
