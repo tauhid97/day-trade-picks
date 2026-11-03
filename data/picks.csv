@@ -18,11 +18,11 @@ date,published_at,mode,ticker,setup,order_type,entry,stop,target,risk_pct,reason
 2026-11-02,2026-11-02T11:34:00-05:00,practice,RUN,20-Day Breakout,buy_stop,8.4,8.19,8.82,2.5,Knocking on its 20-day high ($7.86) on 1.9x volume,stop,8.42,8.19,12:00,-1.135,-2.829,healthy,quiet
 2026-11-02,2026-11-02T11:34:00-05:00,practice,TSLA,20-Day Breakout,buy_stop,414.24,407.52,427.68,1.62,Knocking on its 20-day high ($410.85) on 5.9x volume,no_fill,,,,0.0,0.0,healthy,news
 2026-11-02,2026-11-02T11:34:00-05:00,practice,XPEV,Gap & Go,buy_stop,9.83,9.67,10.15,1.63,"Gapped +5.3%, 2.4x normal volume, holding above VWAP",no_fill,,,,0.0,0.0,healthy,news
-2026-11-03,2026-11-03T11:27:00-05:00,live,ORCL,VWAP Pullback,buy_limit,124.96,122.97,128.94,1.59,"Up 5.2% on 6.2x volume, rising VWAP - buy the dip to VWAP",,,,,,,healthy,news
-2026-11-03,2026-11-03T11:27:00-05:00,live,NVDA,VWAP Pullback,buy_limit,208.04,206.45,211.22,0.76,"Up 3.1% on 4.3x volume, rising VWAP - buy the dip to VWAP",,,,,,,healthy,news
+2026-11-03,2026-11-03T11:27:00-05:00,live,ORCL,VWAP Pullback,buy_limit,124.96,122.97,128.94,1.59,"Up 5.2% on 6.2x volume, rising VWAP - buy the dip to VWAP",eod,124.96,126.21,15:55,0.563,0.895,healthy,news
+2026-11-03,2026-11-03T11:27:00-05:00,live,NVDA,VWAP Pullback,buy_limit,208.04,206.45,211.22,0.76,"Up 3.1% on 4.3x volume, rising VWAP - buy the dip to VWAP",stop,208.04,206.45,14:50,-1.13,-0.863,healthy,news
 2026-11-03,2026-11-03T11:27:00-05:00,live,FCX,Oversold Bounce,buy_stop,62.86,61.51,64.89,2.15,"RSI 30 (oversold), down 2.3% - only buy if it bounces back above the morning high",,,,,,,healthy,quiet
-2026-11-03,2026-11-03T11:27:00-05:00,practice,HUT,Downtrend Reversal,buy_stop,64.14,61.33,69.76,4.38,"Down 36% in 60 days, now up 15.8% on 2.0x volume - buy if it makes a new high",,,,,,,healthy,earnings
-2026-11-03,2026-11-03T11:27:00-05:00,practice,RIOT,Downtrend Reversal,buy_stop,13.69,13.16,14.75,3.87,"Down 39% in 60 days, now up 14.5% on 2.1x volume - buy if it makes a new high",,,,,,,healthy,earnings
-2026-11-03,2026-11-03T11:27:00-05:00,practice,PLTR,ORB Stocks in Play,buy_stop,172.67,171.41,,0.73,"Stock in play: 7.7x normal volume, green opening range - buy the breakout",,,,,,,healthy,news
-2026-11-03,2026-11-03T11:27:00-05:00,practice,MGM,20-Day Breakout,buy_stop,31.57,30.98,32.75,1.87,Knocking on its 20-day high ($31.06) on 1.7x volume,,,,,,,healthy,news
-2026-11-03,2026-11-03T11:27:00-05:00,practice,ASML,ORB Stocks in Play,buy_stop,1575.59,1566.53,,0.58,"Stock in play: 3.6x normal volume, green opening range - buy the breakout",,,,,,,healthy,news
+2026-11-03,2026-11-03T11:27:00-05:00,practice,HUT,Downtrend Reversal,buy_stop,64.14,61.33,69.76,4.38,"Down 36% in 60 days, now up 15.8% on 2.0x volume - buy if it makes a new high",eod,64.14,63.62,15:55,-0.208,-0.91,healthy,earnings
+2026-11-03,2026-11-03T11:27:00-05:00,practice,RIOT,Downtrend Reversal,buy_stop,13.69,13.16,14.75,3.87,"Down 39% in 60 days, now up 14.5% on 2.1x volume - buy if it makes a new high",eod,13.69,14.02,15:55,0.597,2.308,healthy,earnings
+2026-11-03,2026-11-03T11:27:00-05:00,practice,PLTR,ORB Stocks in Play,buy_stop,172.67,171.41,,0.73,"Stock in play: 7.7x normal volume, green opening range - buy the breakout",eod,172.67,175.41,15:55,2.036,1.485,healthy,news
+2026-11-03,2026-11-03T11:27:00-05:00,practice,MGM,20-Day Breakout,buy_stop,31.57,30.98,32.75,1.87,Knocking on its 20-day high ($31.06) on 1.7x volume,no_fill,,,,0.0,0.0,healthy,news
+2026-11-03,2026-11-03T11:27:00-05:00,practice,ASML,ORB Stocks in Play,buy_stop,1575.59,1566.53,,0.58,"Stock in play: 3.6x normal volume, green opening range - buy the breakout",no_fill,,,,0.0,0.0,healthy,news
