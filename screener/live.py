@@ -121,7 +121,8 @@ def add_time_machine(picks, ts):
                 print("Time Machine failed for", p["ticker"], e)
 
 
-def grade():
+def grade(note=""):
+    """Grade finished picks and send the evening message (note = extra text, e.g. from the Study bot)."""
     df = load_picks()
     now = now_ny()
     graded, waiting = [], 0
@@ -145,7 +146,7 @@ def grade():
             save_picks(df)
             waiting = len(todo) - len(graded)
     status, changes = guard.run(df, now.strftime("%Y-%m-%d"))
-    guard_note = "\n\nGuard bot: " + "\n".join(changes) if changes else ""
+    guard_note = ("\n\nGuard bot: " + "\n".join(changes) if changes else "") + ("\n\n" + note if note else "")
     done = df[df["status"].isin(["target", "stop", "eod"])] if len(df) else df
     all_live = done[done["mode"].fillna("live") == "live"].to_dict("records") if len(done) else []
     if graded:

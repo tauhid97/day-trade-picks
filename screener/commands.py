@@ -7,6 +7,7 @@ It only ever answers Boss's own chat (TELEGRAM_CHAT_ID); anyone else is ignored.
   /picks        the latest picks and how they did
   /scoreboard   win/loss scorecard, all-time and per skill
   /skills       which skills are LIVE and which are PRACTICE
+  /lessons      what the Study bot has learned from past charts
   anything else this help message
 """
 import json
@@ -16,7 +17,7 @@ import pandas as pd
 import requests
 
 from . import plain
-from .bots import guard
+from .bots import guard, study
 from .data import NY
 from .live import load_picks
 from .notify import to_boss
@@ -28,7 +29,8 @@ HELP = ("Hi Boss! I check for messages about every 15 minutes, so my answers can
         "/status - am I working\n"
         "/picks - the latest picks and how they did\n"
         "/scoreboard - wins and losses so far\n"
-        "/skills - which skills are live and which are practice")
+        "/skills - which skills are live and which are practice\n"
+        "/lessons - what the Study bot learned from past charts")
 
 
 def get_updates(offset):
@@ -108,6 +110,8 @@ def answer(text, df, status):
         return scoreboard_text(df)
     if word == "/skills":
         return skills_text(status)
+    if word == "/lessons":
+        return study.lessons_text()
     return HELP
 
 

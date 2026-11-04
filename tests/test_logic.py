@@ -185,7 +185,7 @@ def test_all(tmp="/tmp/dtp_test"):
     import screener.config as C
     shutil.rmtree(tmp, ignore_errors=True); os.makedirs(tmp)
     for k in ["PICKS_FILE", "BACKTEST_TRADES_FILE", "BACKTEST_SUMMARY_FILE", "SKILL_STATUS_FILE",
-              "TUNED_FILE", "COACH_FILE", "REPORT_FILE", "TODAY_POST_FILE"]:
+              "TUNED_FILE", "COACH_FILE", "REPORT_FILE", "TODAY_POST_FILE", "STUDY_FILE"]:
         setattr(C, k, os.path.join(tmp, os.path.basename(getattr(C, k))))
     C.MIN_AVG_DOLLAR_VOL = 1e6
     C.GUARD_MIN_TRADES = 2; C.COACH_MIN_TRADES = 1
@@ -280,7 +280,50 @@ def test_all(tmp="/tmp/dtp_test"):
     replies.clear(); inbox.clear(); commands.handle()
     assert replies == [] and asked[-1] is None, (replies, asked)                # nothing new -> quiet
     print("\n--- command replies ---\n" + "\n\n".join(saved))
+
+    # 5) Study bot: after the close it studies past charts for clues that came before rises / drops
+    from screener.bots import study
+    note = study.run(daily)
+    assert "Study bot" in note and "Biggest riser" in note and "Biggest faller" in note, note
+    assert os.path.exists(C.STUDY_FILE)
+    assert "Study bot" in commands.answer("/lessons", live.load_picks(), {})
+    assert "/lessons" in commands.HELP
+    n = len(sent); live.grade(note=note)                     # the note rides along in the evening message
+    assert len(sent) == n + 1 and "Study bot" in sent[-1][1], sent[-1][1]
+    print("\n--- study note ---\n" + note + "\n\n--- /lessons ---\n" + commands.answer("/lessons", live.load_picks(), {}))
     print("ALL OK")
+
+
+def test_study_finds_a_planted_clue():
+    """Heavy-volume days are always followed by a +2% day: the Study bot must spot that, on unseen days too."""
+    import os
+    import screener.config as C
+    from screener.bots import study
+    C.STUDY_FILE = "/tmp/dtp_study_test.json"
+    idx = pd.bdate_range("2025-06-02", periods=260)
+    daily = {}
+    for t, seed in [("AAA", 1), ("BBB", 2), ("CCC", 3), ("SPY", 4)]:
+        r = np.random.default_rng(seed)
+        o = 50 + np.cumsum(r.normal(0, 0.1, len(idx)))
+        c = o * (1 + r.normal(0, 0.002, len(idx)))
+        v = np.full(len(idx), 1e6)
+        for i in range(25, len(idx) - 1, 6):
+            v[i] = 4e6                                       # heavy volume today...
+            c[i + 1] = o[i + 1] * 1.02                       # ...then +2% open-to-close tomorrow
+        daily[t] = pd.DataFrame({"Open": o, "High": np.maximum(o, c) * 1.001, "Low": np.minimum(o, c) * 0.999,
+                                 "Close": c, "Volume": v}, index=idx)
+    old = study.MIN_CHECK
+    study.MIN_CHECK = 10
+    try:
+        study.run(daily)
+    finally:
+        study.MIN_CHECK = old
+    notes = study.load()
+    heavy = [x for x in notes["clues"] if x["name"].startswith("Heavy volume")][0]
+    assert heavy["held"] and heavy["kind"] == "rise" and heavy["check"]["rise_pct"] > 90, heavy
+    assert "Heavy volume" in study.lessons_text(), study.lessons_text()
+    os.remove(C.STUDY_FILE)
+    print("study OK")
 
 
 if __name__ == "__main__":
@@ -288,4 +331,5 @@ if __name__ == "__main__":
     test_plain()
     test_news()
     test_new_skills()
+    test_study_finds_a_planted_clue()
     test_all()

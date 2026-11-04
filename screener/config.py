@@ -9,6 +9,7 @@ TUNED_FILE = "data/tuned_params.json"            # settings you approved from th
 COACH_FILE = "data/coach_suggestions.json"       # Coach bot's latest ideas
 REPORT_FILE = "docs/index.html"
 TODAY_POST_FILE = "data/today_post.md"
+STUDY_FILE = "data/study_notes.json"             # what the Study bot learned from past charts
 
 BRAND_NAME = "Day Trade Picks"
 

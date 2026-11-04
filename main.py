@@ -7,7 +7,8 @@
   python main.py hello      # send a test message to your Telegram
   python main.py report     # rebuild the track-record page
   python main.py auto       # picks the right job based on the time (used by the schedule)
-  python main.py commands   # answer Boss's /status /picks /scoreboard /skills messages (every ~15 min)
+  python main.py commands   # answer Boss's /status /picks /scoreboard /skills /lessons messages (every ~15 min)
+  python main.py study      # Study bot: learn from past charts (also runs every evening before grading)
 """
 import sys
 
@@ -15,7 +16,7 @@ import pandas as pd
 
 from screener import backtest, commands, live, plain, report
 from screener import config as C
-from screener.bots import coach, guard, news
+from screener.bots import coach, guard, news, study
 from screener.notify import to_boss
 
 
@@ -31,6 +32,7 @@ def weekly():
             msg += ["", "Breadth bot [practice - info only, all skills, by market breadth]:"] + backtest.by_breadth(trades)
         msg += ["", "News bot [practice - info only, real picks so far, by news label]:"] + news.summary(live.load_picks())
         msg += ["", coach.run(prepared, intraday)]
+    msg += ["", study.lessons_text()]
     status, changes = guard.run(live.load_picks(), pd.Timestamp.now(tz="America/New_York").strftime("%Y-%m-%d"))
     msg += ["", guard.team_sheet(status)]
     text = "\n".join(msg)
@@ -39,12 +41,21 @@ def weekly():
     report.build()
 
 
+def evening():
+    try:
+        note = study.run()
+    except Exception as e:           # a study hiccup must never stop the results being graded
+        print("Study bot skipped:", e)
+        note = ""
+    live.grade(note=note); report.build()
+
+
 def main():
     cmd = sys.argv[1] if len(sys.argv) > 1 else "auto"
     if cmd == "scan":
         live.scan(force="--force" in sys.argv)
     elif cmd == "grade":
-        live.grade(); report.build()
+        evening()
     elif cmd == "backtest":
         weekly()
     elif cmd == "approve":
@@ -56,12 +67,14 @@ def main():
         report.build()
     elif cmd == "commands":
         commands.handle()
+    elif cmd == "study":
+        text = study.run(); print(text); to_boss(text)
     elif cmd == "auto":
         hm = pd.Timestamp.now(tz="America/New_York").strftime("%H:%M")
         if C.SCAN_TIME <= hm <= C.SCAN_WINDOW_END:
             live.scan()
         elif hm >= "16:10" or hm < "09:00":
-            live.grade(); report.build()
+            evening()
         else:
             print(f"Nothing scheduled at {hm} ET.")
     else:
