@@ -174,6 +174,47 @@ def test_news():
     assert "Earnings day: 1 trade" in text and "Quiet: 1 trade" in text, text
 
 
+def test_reader():
+    """News mood (good/bad headlines) and the Hype bot (Reddit buzz)."""
+    import os
+    import screener.config as C
+    from screener.bots import hype, news
+    assert news.mood(["Acme beats estimates, raises guidance", "Analyst upgrades Acme"]) == "good"
+    assert news.mood(["Acme misses estimates", "Acme downgraded to sell"]) == "bad"
+    assert news.mood(["Acme beats estimates", "Acme sued by rival"]) == "mixed"
+    assert news.mood(["Acme CEO interview"]) == "neutral"
+    assert news.mood(["Futures fall as techs tumble; Acme rises"]) == "neutral"     # good + bad in one headline
+    now = pd.Timestamp("2026-11-02 10:31", tz="America/New_York")
+    tag, note = news.classify(None, [(now - pd.Timedelta(hours=2), "Acme upgraded at Goldman")], now)
+    assert tag == "news" and "mood: GOOD" in note, note
+    assert hype.level(331, 114) == "hype" and hype.level(25, 20) == "buzz" and hype.level(3, 1) == "quiet"
+    assert hype.level(None, None) == "quiet"
+    hype.fetch = lambda: {"AMD": {"mentions": 331, "mentions_24h_ago": 114}, "MU": {"mentions": 25, "mentions_24h_ago": 30}}
+    hype._cache.clear()
+    tag, note = hype.check("AMD")
+    assert tag == "hype" and "331" in note and "3x" in note, note
+    assert hype.check("ZZZ")[0] == "quiet"
+    assert "Hype [practice, info only]: 🔥 HYPE" in hype.line(tag, note)
+    C.HYPE_HISTORY_FILE, C.NEWS_HISTORY_FILE = "/tmp/dtp_hype.csv", "/tmp/dtp_newsmood.csv"
+    for f in (C.HYPE_HISTORY_FILE, C.NEWS_HISTORY_FILE):
+        if os.path.exists(f):
+            os.remove(f)
+    hype.snapshot(["AMD", "MU", "ZZZ"], "2026-11-03"); hype.snapshot(["AMD", "MU", "ZZZ"], "2026-11-03")   # twice -> kept once
+    h = pd.read_csv(C.HYPE_HISTORY_FILE)
+    assert list(h["ticker"]) == ["AMD", "MU"] and h.loc[0, "level"] == "hype", h
+    old = news.headlines
+    news.headlines = lambda t: [(now.tz_convert("UTC") - pd.Timedelta(hours=1), f"{t} beats estimates")]
+    try:
+        news.snapshot(["AMD", "MU"], now)
+    finally:
+        news.headlines = old
+    m = pd.read_csv(C.NEWS_HISTORY_FILE)
+    assert list(m["mood"]) == ["good", "good"] and list(m["headlines"]) == [1, 1], m
+    for f in (C.HYPE_HISTORY_FILE, C.NEWS_HISTORY_FILE):
+        os.remove(f)
+    print("reader OK")
+
+
 def plain_nick_ok():
     from screener import plain
     return plain.nick("NR7 Breakout") == "Tight Spring (NR7 Breakout)" and plain.nick("Relative Strength") == "Strong Kid (Relative Strength)" \
@@ -185,7 +226,8 @@ def test_all(tmp="/tmp/dtp_test"):
     import screener.config as C
     shutil.rmtree(tmp, ignore_errors=True); os.makedirs(tmp)
     for k in ["PICKS_FILE", "BACKTEST_TRADES_FILE", "BACKTEST_SUMMARY_FILE", "SKILL_STATUS_FILE",
-              "TUNED_FILE", "COACH_FILE", "REPORT_FILE", "TODAY_POST_FILE", "STUDY_FILE"]:
+              "TUNED_FILE", "COACH_FILE", "REPORT_FILE", "TODAY_POST_FILE", "STUDY_FILE",
+              "HYPE_HISTORY_FILE", "NEWS_HISTORY_FILE"]:
         setattr(C, k, os.path.join(tmp, os.path.basename(getattr(C, k))))
     C.MIN_AVG_DOLLAR_VOL = 1e6
     C.GUARD_MIN_TRADES = 2; C.COACH_MIN_TRADES = 1
@@ -206,6 +248,9 @@ def test_all(tmp="/tmp/dtp_test"):
     news.earnings_date = lambda t: None
     news.headlines = lambda t: [(pd.Timestamp.now(tz="UTC"), f"{t} wins big contract")]
     news.company_name = lambda t: None
+    from screener.bots import hype
+    hype.fetch = lambda: {"GAPR": {"mentions": 80, "mentions_24h_ago": 20}}
+    hype._cache.clear()
 
     # 1) backtest + coach + guard
     trades, summary, prepared, ib = backtest.run(intraday, daily)
@@ -238,6 +283,9 @@ def test_all(tmp="/tmp/dtp_test"):
     print(df[["date", "mode", "ticker", "setup", "status", "r_multiple", "breadth"]].to_string())
     assert df["breadth"].notna().all()
     assert df["news"].notna().all() and "news_note" not in df
+    assert df["hype"].notna().all() and "hype_note" not in df
+    assert "Hype [practice, info only]" in [t for who, t in sent if who == "boss"][0]
+    assert all("Hype [practice" not in t for who, t in sent if who == "community")
     assert "News [practice, info only]" in [t for who, t in sent if who == "boss"][0]
     assert all("News [practice" not in t for who, t in sent if who == "community")
     print("\n--- sample message to Boss ---\n" + [t for who, t in sent if who == "boss"][0])
@@ -283,6 +331,8 @@ def test_all(tmp="/tmp/dtp_test"):
 
     # 5) Study bot: after the close it studies past charts for clues that came before rises / drops
     from screener.bots import study
+    hype.snapshot(list(daily), "2026-09-04"); news.snapshot(list(daily), live.now_ny())
+    assert os.path.exists(C.HYPE_HISTORY_FILE) and os.path.exists(C.NEWS_HISTORY_FILE)
     note = study.run(daily)
     assert "Study bot" in note and "Biggest riser" in note and "Biggest faller" in note, note
     assert os.path.exists(C.STUDY_FILE)
@@ -312,6 +362,18 @@ def test_study_finds_a_planted_clue():
             c[i + 1] = o[i + 1] * 1.02                       # ...then +2% open-to-close tomorrow
         daily[t] = pd.DataFrame({"Open": o, "High": np.maximum(o, c) * 1.001, "Low": np.minimum(o, c) * 0.999,
                                  "Close": c, "Volume": v}, index=idx)
+    # Reddit hype history for the last 120 days: hyped days are followed by a -2% day
+    C.HYPE_HISTORY_FILE, C.NEWS_HISTORY_FILE = "/tmp/dtp_hype_plant.csv", "/tmp/dtp_news_plant.csv"
+    rows = []
+    for t in ["AAA", "BBB", "CCC"]:
+        d = daily[t]
+        for i in range(len(idx) - 120, len(idx) - 1):
+            hyped = i % 4 == 0 and i % 6 != 1                # never on a heavy-volume day
+            rows.append({"date": idx[i].strftime("%Y-%m-%d"), "ticker": t, "mentions": 90 if hyped else 2,
+                         "mentions_24h_ago": 10 if hyped else 2, "level": "hype" if hyped else "quiet"})
+            if hyped:
+                d.iloc[i + 1, d.columns.get_loc("Close")] = d["Open"].iloc[i + 1] * 0.98
+    pd.DataFrame(rows).to_csv(C.HYPE_HISTORY_FILE, index=False)
     old = study.MIN_CHECK
     study.MIN_CHECK = 10
     try:
@@ -321,8 +383,13 @@ def test_study_finds_a_planted_clue():
     notes = study.load()
     heavy = [x for x in notes["clues"] if x["name"].startswith("Heavy volume")][0]
     assert heavy["held"] and heavy["kind"] == "rise" and heavy["check"]["rise_pct"] > 90, heavy
-    assert "Heavy volume" in study.lessons_text(), study.lessons_text()
-    os.remove(C.STUDY_FILE)
+    hyped = [x for x in notes["clues"] if x["name"].startswith("Reddit hype")][0]
+    assert hyped["held"] and hyped["kind"] == "fall", hyped
+    assert any(" + " in x["name"] for x in notes["clues"]), "no combos studied"
+    text = study.lessons_text()
+    assert "Heavy volume" in text and "Reddit hype" in text, text
+    for f in (C.STUDY_FILE, C.HYPE_HISTORY_FILE):
+        os.remove(f)
     print("study OK")
 
 
@@ -330,6 +397,7 @@ if __name__ == "__main__":
     test_simulate()
     test_plain()
     test_news()
+    test_reader()
     test_new_skills()
     test_study_finds_a_planted_clue()
     test_all()
