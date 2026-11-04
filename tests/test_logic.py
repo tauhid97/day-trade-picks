@@ -62,6 +62,26 @@ def test_simulate():
     assert r2["status"] == "stop" and r2["r_multiple"] < -0.9, r2   # entry bar low 10.05 <= stop
     p3 = {"entry": 12.0, "stop": 11.5, "target": 13.0, "order_type": "buy_stop"}
     assert simulate(p3, bars)["status"] == "no_fill"
+    # swing trades: follow the trade into the next day(s)
+    def two_days(day2_open, day2_high):
+        d1 = pd.date_range("2026-09-01 10:35", "2026-09-01 15:55", freq="5min", tz=NY)
+        d2 = pd.date_range("2026-09-02 09:30", "2026-09-02 15:55", freq="5min", tz=NY)
+        b1 = pd.DataFrame({"Open": 10.0, "High": 10.25, "Low": 9.95, "Close": 10.1, "Volume": 1}, index=d1)
+        b2 = pd.DataFrame({"Open": day2_open, "High": day2_high, "Low": min(day2_open, 10.0) - 0.02,
+                           "Close": day2_open, "Volume": 1}, index=d2)
+        return pd.concat([b1, b2])
+    sw = {"entry": 10.2, "stop": 9.9, "target": 10.8, "order_type": "buy_stop"}
+    r = simulate({**sw, "hold_days": 2}, two_days(10.3, 10.9))
+    assert r["status"] == "target" and r["days_held"] == 2, r                  # won on day 2
+    r = simulate({**sw, "hold_days": 1}, two_days(10.3, 10.9))
+    assert r["status"] == "eod" and r["days_held"] == 1 and r["exit_time"] == "15:55", r   # day trade: sold day 1
+    r = simulate({**sw, "hold_days": 2}, two_days(10.4, 10.5))
+    assert r["status"] == "eod" and r["days_held"] == 2, r                     # sold at the close of day 2
+    r = simulate({**sw, "hold_days": 2}, two_days(9.5, 9.6))
+    assert r["status"] == "stop" and r["exit_price"] == 9.5 and r["r_multiple"] < -2, r   # overnight gap: the real, bigger loss
+    r = simulate({**sw, "hold_days": 2}, two_days(10.3, 10.9).loc[:"2026-09-01 23:59"])
+    assert r["status"] == "open" and r["days_held"] == 1, r                     # day 2 not here yet: still holding
+    assert simulate({**sw, "hold_days": float("nan")}, two_days(10.3, 10.9))["status"] == "eod"   # old picks = day trades
     print("simulate OK")
 
 
@@ -85,6 +105,13 @@ def test_plain():
     assert plain.scorecard(day) == "3 trades. 1 win. 2 losses. 33% wins. Total +$8.00", plain.scorecard(day)
     assert plain.scorecard(day[:1]) == "1 trade. 1 win. 0 losses. 100% wins. Total +$20.00"
     assert plain.scorecard(day[3:]) == "0 trades (no Buy prices were reached)"
+    assert plain.scorecard(day + [{"status": "open", "r_multiple": 0.0}]) == plain.scorecard(day)   # still holding: not counted yet
+    assert plain.result_word({"status": "eod", "days_held": 2}) == "⏰ sold after 2 days"
+    assert plain.result_word({"status": "eod", "days_held": 1}) == "⏰ sold at the end of the day"
+    assert "still holding" in plain.result_word({"status": "open", "days_held": 1, "hold_days": 2})
+    swing = "\n".join(plain.pick_lines(1, {**pick, "hold_days": 2}))
+    assert "Hold: up to 2 days" in swing, swing
+    assert "Hold:" not in text                                                  # day trades say nothing new
     print("plain OK")
 
 
@@ -201,6 +228,14 @@ def test_news():
                        "status": ["target", "stop", "no_fill", "target"], "r_multiple": [2.0, -1.0, 0.0, 1.0]})
     text = "\n".join(news.summary(df))
     assert "Earnings day: 1 trade" in text and "Quiet: 1 trade" in text, text
+    # Dip Buy may hold through an earnings report (sell the day after), up to 5 trading days
+    mon = pd.Timestamp("2026-11-02")
+    assert news.earnings_hold(mon, dt.date(2026, 11, 4))[0] == 4                # Wed report -> sell Thu close
+    assert news.earnings_hold(mon, dt.date(2026, 11, 2))[0] == 2                # report today -> sell tomorrow
+    assert news.earnings_hold(mon, dt.date(2026, 11, 6))[0] is None            # Fri report -> Mon exit is too far
+    assert news.earnings_hold(mon, dt.date(2026, 10, 30))[0] is None           # already happened
+    assert news.earnings_hold(mon, None)[0] is None
+    assert "Thu Nov 05" in news.earnings_hold(mon, dt.date(2026, 11, 4))[1]
 
 
 def test_reader():
@@ -372,6 +407,28 @@ def test_all(tmp="/tmp/dtp_test"):
     n = len(sent); live.grade(note=note)                     # the note rides along in the evening message
     assert len(sent) == n + 1 and "Study bot" in sent[-1][1], sent[-1][1]
     print("\n--- study note ---\n" + note + "\n\n--- /lessons ---\n" + commands.answer("/lessons", live.load_picks(), {}))
+
+    # 6) a 2-day swing pick: still holding after day 1, graded after day 2
+    d1, d2 = days[-2], days[-1]
+    first = intraday["FLAT"][intraday["FLAT"].index >= d1 + pd.Timedelta(hours=10, minutes=35)].iloc[0]
+    row = {"date": d1.strftime("%Y-%m-%d"), "published_at": (d1 + pd.Timedelta(hours=10, minutes=31)).isoformat(),
+           "mode": "practice", "ticker": "FLAT", "setup": "NR7 Breakout", "order_type": "buy_stop",
+           "entry": round(first["Open"] * 0.999, 2), "stop": round(first["Open"] * 0.5, 2),
+           "target": round(first["Open"] * 2, 2), "risk_pct": 50.0, "reason": "test swing", "hold_days": 2}
+    live.save_picks(pd.concat([live.load_picks(), pd.DataFrame([row])], ignore_index=True))
+    live.now_ny = lambda: d1 + pd.Timedelta(hours=17)
+    live.get_intraday = lambda t, **k: {x: intraday[x][intraday[x].index < d2] for x in t if x in intraday}
+    live.grade()
+    held = live.load_picks().iloc[-1]
+    assert held["status"] == "open", held.to_dict()
+    assert "still holding" in sent[-1][1], sent[-1][1]
+    live.now_ny = lambda: d2 + pd.Timedelta(hours=17)
+    live.get_intraday = lambda t, **k: {x: intraday[x] for x in t if x in intraday}
+    live.grade()
+    done = live.load_picks().iloc[-1]
+    assert done["status"] == "eod" and int(done["days_held"]) == 2, done.to_dict()
+    assert "sold after 2 days" in sent[-1][1], sent[-1][1]
+    report.build()
     print("ALL OK")
 
 
