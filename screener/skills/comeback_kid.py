@@ -1,7 +1,8 @@
 """Boss's idea + a Study bot lesson: stocks that just got knocked down often bounce.
 The Study bot found that after a big down day into oversold, the next day rose 1%+ more
 often than normal (39% vs 30% on unseen days). Day-trade version: wait for proof - only
-buy once today's price climbs back above the morning high."""
+buy once today's price climbs back above the morning high.
+Holds up to 2 days: in the Nov 2026 replay that beat selling the same day (+2.0R vs +0.6R)."""
 from ..indicators import rsi
 
 
@@ -30,7 +31,7 @@ SKILL = {
                      "We don't guess - we only buy once it starts climbing again today.",
     "weather": ["sunny", "cloudy", "stormy"],
     "params": {"min_drop_pct": 3.0, "max_rsi": 30, "min_rvol": 1.0, "max_dist_pct": 2.0,
-               "stop_atr": 1.0, "target_r": 2.0},
+               "stop_atr": 1.0, "target_r": 2.0, "hold_days": 2},
     "tune": {"min_drop_pct": [2.0, 4.0], "max_rsi": [25, 35], "target_r": [1.5, 3.0]},
     "find": find,
 }

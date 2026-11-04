@@ -40,6 +40,22 @@ RESULT_WORDS = {
     "no_fill": "⏸️ price never reached the Buy price - no trade",
 }
 
+FINISHED = ("target", "stop", "eod")
+
+
+def _int(x, default=1):
+    return int(x) if x is not None and x == x and x else default
+
+
+def result_word(g):
+    """What happened to a pick, in plain words (knows about multi-day holds)."""
+    st, n = g["status"], _int(g.get("days_held"))
+    if st == "eod" and n > 1:
+        return f"⏰ sold after {n} days"
+    if st == "open":
+        return f"⏳ still holding (day {n} of {_int(g.get('hold_days'))}) - result comes later"
+    return RESULT_WORDS[st]
+
 
 def nick(setup):
     n = NICKNAMES.get(setup)
@@ -67,7 +83,10 @@ def pick_lines(i, p):
         lines += [f"Win: no set price - sell at {clock(C.EXIT_TIME)} ET",
                   f"If you risked ${RISK_DOLLARS}: lose {money(-1)[1:]} at Safety."]
     lines.append(f"Why: {p['reason']}")
-    return lines + [p[k] for k in ("tm", "news_note", "hype_note") if p.get(k)] + [""]
+    hold = _int(p.get("hold_days"))
+    if hold > 1:
+        lines.append(f"Hold: up to {hold} days - if Safety/Win aren't hit, sell at {clock(C.EXIT_TIME)} ET on day {hold}.")
+    return lines + [p[k] for k in ("hold_note", "tm", "news_note", "hype_note") if p.get(k)] + [""]
 
 
 def luck(o):
@@ -93,12 +112,13 @@ def clock(hm):
 
 
 def footer():
-    return [f"Not bought by {clock(C.LAST_ENTRY_TIME)} ET? Forget it. Still holding at {clock(C.EXIT_TIME)} ET? Sell."]
+    return [f"Not bought by {clock(C.LAST_ENTRY_TIME)} ET? Forget it. Still holding at {clock(C.EXIT_TIME)} ET? Sell "
+            "- unless the pick says Hold."]
 
 
 def scorecard(rows):
     """Simple count, e.g. '3 trades. 1 win. 2 losses. 33% wins. Total +$8.00'. Picks that never bought don't count."""
-    rs = [float(g["r_multiple"]) for g in rows if g["status"] != "no_fill"]
+    rs = [float(g["r_multiple"]) for g in rows if g["status"] in FINISHED]
     if not rs:
         return "0 trades (no Buy prices were reached)"
     wins = sum(r > 0 for r in rs)
@@ -137,9 +157,9 @@ def results(graded):
         lines += [f"**{C.BRAND_NAME} - results for {day}**", ""]
         for g in rows:
             tag = " [practice]" if g.get("mode") == "practice" else ""
-            r = f" → {money(g['r_multiple'])}" if g["status"] != "no_fill" else ""
-            lines.append(f"${g['ticker']} {nick(g['setup'])}{tag}: {RESULT_WORDS[g['status']]}{r}")
-        live = [g for g in rows if g.get("mode", "live") == "live"]
+            r = f" → {money(g['r_multiple'])}" if g["status"] in FINISHED else ""
+            lines.append(f"${g['ticker']} {nick(g['setup'])}{tag}: {result_word(g)}{r}")
+        live = [g for g in rows if g.get("mode", "live") == "live" and g["status"] in FINISHED]
         lines += ["", f"Real picks total: {money(sum(g['r_multiple'] for g in live))} (if you risked ${RISK_DOLLARS} on each)", ""]
     lines.append("Every pick, win or lose, is on the public scoreboard.")
     return "\n".join(lines)

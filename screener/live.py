@@ -14,7 +14,7 @@ from .skills import load_skills
 
 PICK_COLS = ["date", "published_at", "mode", "ticker", "setup", "order_type", "entry", "stop",
              "target", "risk_pct", "reason", "status", "fill_price", "exit_price",
-             "exit_time", "r_multiple", "pct_return", "breadth", "news", "hype"]
+             "exit_time", "r_multiple", "pct_return", "breadth", "news", "hype", "hold_days", "days_held"]
 
 DISCLAIMER = ("Educational content only, not financial advice. Same picks for every member; "
               "not tailored to anyone. Trading involves risk of loss. Past results do not "
@@ -82,6 +82,7 @@ def scan(force=False):
         return
     daily = get_daily(list(intraday), period="1y")
     live, practice, w, note = picks_for_day(today, ts, intraday, daily, load_skills(), guard.modes())
+    add_earnings_hold(live + practice, today)
     add_time_machine(live + practice, ts)
     add_news(live + practice, ts)
     add_hype(live + practice)
@@ -93,17 +94,33 @@ def scan(force=False):
     rows = ([{"date": today.strftime("%Y-%m-%d"), "published_at": ts.isoformat(), "mode": "live", "breadth": bz, **p} for p in live] +
             [{"date": today.strftime("%Y-%m-%d"), "published_at": ts.isoformat(), "mode": "practice", "breadth": bz, **p} for p in practice])
     if rows:
-        new = pd.DataFrame(rows).drop(columns=["score", "tm", "news_note", "hype_note"], errors="ignore")
+        new = pd.DataFrame(rows).drop(columns=["score", "tm", "news_note", "hype_note", "hold_note"], errors="ignore")
         picks_df = pd.concat([picks_df, new], ignore_index=True) if len(picks_df) else new
         save_picks(picks_df)
     to_boss(boss_text)
-    to_community(format_post([{k: v for k, v in p.items() if k not in ("tm", "news_note", "hype_note")} for p in live], ts))
+    to_community(format_post([{k: v for k, v in p.items() if k not in ("tm", "news_note", "hype_note", "hold_note")} for p in live], ts))
 
 
 def add_news(picks, ts):
     for p in picks:
         p["news"], note = news.check(p["ticker"], ts)
         p["news_note"] = news.line(p["news"], note)
+
+
+HOLDS_FOR_EARNINGS = {"VWAP Pullback"}   # Dip Buy may wait for an earnings report (Boss's rule)
+
+
+def add_earnings_hold(picks, today):
+    for p in picks:
+        if p["setup"] not in HOLDS_FOR_EARNINGS:
+            continue
+        try:
+            days, note = news.earnings_hold(today, news.earnings_date(p["ticker"]))
+        except Exception as e:
+            print("Earnings check skipped for", p["ticker"], e)
+            continue
+        if days and days > p.get("hold_days", 1):
+            p["hold_days"], p["hold_note"] = days, "Earnings [practice]: " + note
 
 
 def add_hype(picks):
@@ -121,6 +138,9 @@ def add_time_machine(picks, ts):
         print("Time Machine skipped:", e)
         return
     for p in picks:
+        if p.get("hold_days", 1) > 1:
+            p["tm"] = "Luck check: only replays one day, so it's skipped for picks that may hold overnight."
+            continue
         if p["ticker"] in hist:
             try:
                 p["tm"] = plain.luck(timemachine.odds(p, hist[p["ticker"]], ts))
@@ -134,7 +154,7 @@ def grade(note=""):
     now = now_ny()
     graded, waiting = [], 0
     if len(df):
-        todo = df[df["status"].isna() | (df["status"] == "")]
+        todo = df[df["status"].isna() | df["status"].isin(["", "open"])]   # "open" = still holding a swing
         todo = todo[[pd.Timestamp(d).tz_localize(NY) + pd.Timedelta(hours=16, minutes=5) < now for d in todo["date"]]]
         if len(todo):
             intraday = get_intraday(sorted(todo["ticker"].unique()), period="30d", interval="5m")
@@ -143,7 +163,7 @@ def grade(note=""):
                 if bars is None:
                     continue
                 pub = pd.Timestamp(row["published_at"])
-                after = bars[(bars.index.normalize() == pub.normalize()) & (bars.index >= pub)]
+                after = bars[bars.index >= pub]            # swing picks may run into later days
                 if after.empty:
                     continue
                 res = simulate(row.to_dict(), after)

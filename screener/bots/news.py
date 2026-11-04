@@ -72,6 +72,30 @@ def company_name(ticker):
     return yf.Ticker(ticker).info.get("shortName")
 
 
+MAX_HOLD_DAYS = 5     # Dip Buy may hold through an earnings report, but never longer than this
+
+
+def earnings_hold(today, earn):
+    """(hold_days, note) to hold until the close of the day AFTER an earnings report, or (None, None)."""
+    if earn is None:
+        return None, None
+    today = pd.Timestamp(today).normalize().tz_localize(None)
+    report = pd.Timestamp(earn).normalize()
+    if report < today:
+        return None, None
+    sell = report + pd.offsets.BDay(1)
+    days = len(pd.bdate_range(today, sell))
+    if days > MAX_HOLD_DAYS:
+        return None, None
+    return days, (f"earnings report {report:%a %b %d} - may hold through it, "
+                  f"sell by {clock_close()} ET on {sell:%a %b %d} (big jumps either way)")
+
+
+def clock_close():
+    from .. import plain
+    return plain.clock(C.EXIT_TIME)
+
+
 def mentions(title, ticker, name):
     if re.search(rf"\b{re.escape(ticker)}\b", title):
         return True

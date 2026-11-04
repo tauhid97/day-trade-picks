@@ -62,6 +62,7 @@ def ideas(contexts, skill, params=None, weather="cloudy"):
             print(f"skill {skill['name']} failed on {ctx.ticker}: {e}")
             continue
         if idea and (pick := make_pick(ctx, skill["name"], idea)):
+            pick["hold_days"] = int(p.get("hold_days", 1))      # 1 = day trade, 2 = may hold overnight
             out.append(pick)
     return out
 

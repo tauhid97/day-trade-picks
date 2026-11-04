@@ -49,7 +49,7 @@ def build():
     all_picks = load_picks()
     picks = all_picks[all_picks["mode"].fillna("live") == "live"]
     practice = all_picks[all_picks["mode"] == "practice"]
-    graded = picks[picks["status"].notna() & (picks["status"] != "")].copy()
+    graded = picks[picks["status"].isin(["target", "stop", "eod", "no_fill"])].copy()
     for c in ("r_multiple", "pct_return"):
         graded[c] = pd.to_numeric(graded[c], errors="coerce").fillna(0.0)
     filled = graded[graded["status"] != "no_fill"].sort_values("published_at")
@@ -72,7 +72,7 @@ def build():
                          ["Date", "Ticker", "Setup", "Entry", "Stop", "Target", "Result", "R"]) if len(recent) else ""
 
     prac_html = ""
-    pg = practice[practice["status"].notna() & (practice["status"] != "")].copy()
+    pg = practice[practice["status"].isin(["target", "stop", "eod", "no_fill"])].copy()
     if len(pg):
         pg["r_multiple"] = pd.to_numeric(pg["r_multiple"], errors="coerce").fillna(0.0)
         prac_html = ("<h2>Practice skills (not counted above)</h2><p class='muted'>Skills the Guard bot has benched "

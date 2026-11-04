@@ -69,9 +69,9 @@ def picks_text(df):
         for i, (_, p) in enumerate(part.iterrows(), 1):
             lines += plain.pick_lines(i, p.to_dict())[:-1]
             st = p["status"]
-            if st in DONE:
-                r = f" → {plain.money(float(p['r_multiple']))}" if st != "no_fill" else ""
-                lines.append(f"Result: {plain.RESULT_WORDS[st]}{r}")
+            if st in DONE or st == "open":
+                r = f" → {plain.money(float(p['r_multiple']))}" if st in plain.FINISHED else ""
+                lines.append(f"Result: {plain.result_word(p.to_dict())}{r}")
             else:
                 lines.append("Result: not graded yet (comes after the close)")
             lines.append("")

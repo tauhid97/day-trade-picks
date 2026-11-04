@@ -5,6 +5,7 @@ How it avoids fooling itself (overfitting):
  2. It learns on the older 60% of days, then checks on the newer 40% it never saw.
  3. It only suggests a change if it wins on BOTH, by at least 1R on the unseen days.
  4. Nothing changes until YOU approve it (Actions -> Run workflow -> approve).
+It also tries each skill as a day trade vs. holding up to 2 days, the same way.
 """
 import json
 import os
@@ -33,6 +34,7 @@ def run(prepared, intraday):
             for v in vals:
                 if base.get(k) != v:
                     variants.append({**base, k: v})
+        variants.append({**base, "hold_days": 2 if int(base.get("hold_days", 1)) == 1 else 1})   # day trade vs 2-day swing
         results = []
         for p in variants:
             tr = trades_for(sk, p, prepared, intraday)

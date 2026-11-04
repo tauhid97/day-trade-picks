@@ -45,9 +45,11 @@ def trades_for(skill, params, prepared, intraday):
         picks = rank_and_cap(ideas(d["ctxs"], skill, params, d["weather"]), total=C.MAX_PICKS_PER_SETUP)
         for p in picks:
             bars = intraday[p["ticker"]]
-            after = bars[(bars.index.normalize() == d["day"]) & (bars.index >= d["publish_ts"])]
+            res = simulate(p, bars[bars.index >= d["publish_ts"]])
+            if res["status"] == "open":          # data ends before the hold does - can't grade it
+                continue
             trades.append({"date": d["day"].strftime("%Y-%m-%d"), "weather": d["weather"],
-                           "breadth": d["breadth"], **p, **simulate(p, after)})
+                           "breadth": d["breadth"], **p, **res})
     return trades
 
 
