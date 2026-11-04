@@ -379,6 +379,10 @@ def test_all(tmp="/tmp/dtp_test"):
     assert len(trades) and "weather" in trades and "breadth" in trades
     print("\n".join(backtest.by_breadth(trades)))
     print(coach.run(prepared, ib))
+    assert coach.nightly(prepared, ib) == ""                     # same ideas as last night -> stays quiet
+    open(C.COACH_FILE, "w").write("{}")
+    tip = coach.nightly(prepared, ib)
+    assert (tip != "") == bool(coach._changes()), tip           # a new idea -> speaks up
     status, changes = guard.run(live.load_picks(), "2026-09-01")
     print(guard.team_sheet(status)); assert set(status) == {s["name"] for s in load_skills()}
     print(coach.approve())

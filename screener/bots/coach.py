@@ -5,6 +5,7 @@ How it avoids fooling itself (overfitting):
  2. It learns on the older 60% of days, then checks on the newer 40% it never saw.
  3. It only suggests a change if it wins on BOTH, by at least 1R on the unseen days.
  4. Nothing changes until YOU approve it (Actions -> Run workflow -> approve).
+It re-checks every evening (nightly) and on Saturdays (in the weekly check-up).
 It also tries each skill as a day trade vs. holding up to 2 days, the same way.
 """
 import json
@@ -54,6 +55,20 @@ def run(prepared, intraday):
     if suggestions:
         lines.append("To accept: GitHub -> Actions -> Daily picks -> Run workflow -> choose 'approve'.")
     return "\n".join(lines)
+
+
+def _changes():
+    if not os.path.exists(C.COACH_FILE):
+        return {}
+    return {n: s["change"] for n, s in json.load(open(C.COACH_FILE)).items()}
+
+
+def nightly(prepared, intraday):
+    """Every evening: re-check the settings on the latest days. Speaks up only when there's a NEW idea."""
+    before = _changes()
+    text = run(prepared, intraday)
+    after = _changes()
+    return text if after and after != before else ""
 
 
 def approve():

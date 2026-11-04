@@ -1,7 +1,7 @@
 """Command center for the bot team.
 
   python main.py scan       # Scout + Weather: find today's picks, send to Boss (10:30-12:00 ET)
-  python main.py grade      # Judge + Guard: grade picks after the close, bench/promote skills
+  python main.py grade      # Judge + Guard: grade picks after the close, then the Coach re-checks settings
   python main.py backtest   # Practice on the past + Coach ideas + Guard check (weekly)
   python main.py approve    # accept the Coach's latest suggestions
   python main.py hello      # send a test message to your Telegram
@@ -57,6 +57,13 @@ def evening():
         print("Study bot skipped:", e)
         note = ""
     live.grade(note=note); report.build()
+    try:                             # the Coach re-checks every skill's settings on the latest days
+        intraday, daily = backtest.load_data()
+        tip = coach.nightly(backtest.prepare(intraday, daily), intraday)
+        if tip:
+            to_boss("Boss, the Coach has a new idea tonight (nothing changes unless you approve it).\n\n" + tip)
+    except Exception as e:
+        print("Coach skipped:", e)
 
 
 def main():
