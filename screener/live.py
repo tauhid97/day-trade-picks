@@ -5,9 +5,9 @@ import pandas as pd
 
 from . import config as C
 from . import plain
-from .bots import breadth, guard, hype, news, timemachine
+from .bots import breadth, guard, hype, news, timemachine, watchlist
 from .data import NY, get_daily, get_intraday, load_universe
-from .engine import picks_for_day
+from .engine import market_change, picks_for_day
 from .notify import to_boss, to_community
 from .simulate import simulate
 from .skills import load_skills
@@ -42,12 +42,14 @@ def save_picks(df):
     df[PICK_COLS].to_csv(C.PICKS_FILE, index=False)
 
 
-def format_post(live, ts, practice=None, weather_note=None, weather=None, breadth_note=None, breadth_zone=None):
+def format_post(live, ts, practice=None, weather_note=None, weather=None, breadth_note=None, breadth_zone=None, watch=None):
     lines = [f"**{C.BRAND_NAME} - {ts:%a %b %d, %Y}** (sent {ts:%I:%M %p} ET)", ""]
     if weather:
         lines += [plain.weather_line(weather, weather_note), ""]
     if breadth_zone:
         lines += [plain.breadth_line(breadth_zone, breadth_note), ""]
+    if watch:
+        lines += watchlist.lines(watch) + [""]
     if not live:
         lines += ["No real picks today - nothing met our rules. No trade is a good trade.", ""]
     for i, p in enumerate(live, 1):
@@ -87,7 +89,8 @@ def scan(force=False):
     add_news(live + practice, ts)
     add_hype(live + practice)
     bz, bnote = breadth.check(today)
-    boss_text = format_post(live, ts, practice, note, w, bnote, bz)
+    watch = make_watchlist(today, ts, intraday, daily)
+    boss_text = format_post(live, ts, practice, note, w, bnote, bz, watch)
     os.makedirs("data", exist_ok=True)
     open(C.TODAY_POST_FILE, "w").write(boss_text)
     print(boss_text)
@@ -99,6 +102,23 @@ def scan(force=False):
         save_picks(picks_df)
     to_boss(boss_text)
     to_community(format_post([{k: v for k, v in p.items() if k not in ("tm", "news_note", "hype_note", "hold_note")} for p in live], ts))
+
+
+def make_watchlist(today, ts, intraday, daily):
+    try:
+        chg = {}
+        for t, b in intraday.items():
+            b = b[(b.index.normalize() == today) & (b.index < ts)]
+            d = daily.get(t)
+            if t == C.MARKET_TICKER or b.empty or d is None:
+                continue
+            d = d[d.index < today.tz_localize(None)]
+            if len(d):
+                chg[t] = (float(b["Close"].iloc[-1]) / float(d["Close"].iloc[-1]) - 1) * 100
+        return watchlist.build(daily, today, chg, market_change(today, ts, intraday, daily))
+    except Exception as e:
+        print("Watchlist skipped:", e)
+        return None
 
 
 def add_news(picks, ts):

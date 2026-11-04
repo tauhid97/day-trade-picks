@@ -20,9 +20,19 @@ def market_change(day, scan_ts, intraday, daily):
     return (float(b["Close"].iloc[-1]) / float(d["Close"].iloc[-1]) - 1) * 100
 
 
+def market_prev_change(day, daily):
+    """SPY's % change on the last full day before `day` (was yesterday a red day?), or None."""
+    spy = daily.get(C.MARKET_TICKER)
+    if spy is None:
+        return None
+    c = spy["Close"][spy.index < day.tz_localize(None)]
+    return (float(c.iloc[-1]) / float(c.iloc[-2]) - 1) * 100 if len(c) >= 2 else None
+
+
 def build_contexts(day, scan_ts, intraday, daily):
     cut = scan_ts.strftime("%H:%M")
     mkt = market_change(day, scan_ts, intraday, daily)
+    mkt_prev = market_prev_change(day, daily)
     out = []
     for t, bars in intraday.items():
         if t == C.MARKET_TICKER or t not in daily:
@@ -44,7 +54,7 @@ def build_contexts(day, scan_ts, intraday, daily):
         except Exception:
             continue
         if ctx.last >= C.MIN_PRICE and ctx.avg_dollar_vol >= C.MIN_AVG_DOLLAR_VOL:
-            ctx.market_chg_pct = mkt
+            ctx.market_chg_pct, ctx.market_prev_chg = mkt, mkt_prev
             out.append(ctx)
     return out
 

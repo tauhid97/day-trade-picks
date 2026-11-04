@@ -37,7 +37,16 @@ def _rsi(close, n=14):
     return 100 - 100 / (1 + up / dn.replace(0, float("nan")))
 
 
-def clues(d, market_ok=None):
+def _market(daily):
+    """(SPY above its 20-day average, SPY down 1%+ today) as day-by-day yes/no series, or (None, None)."""
+    spy = daily.get(C.MARKET_TICKER)
+    if spy is None:
+        return None, None
+    c = spy["Close"]
+    return c > c.rolling(20).mean(), c.pct_change() * 100 <= -1.0
+
+
+def clues(d, market_ok=None, market_red=None):
     """Yes/no clues for every day, using only that day's close and earlier."""
     c, v, rng = d["Close"], d["Volume"], d["High"] - d["Low"]
     chg = c.pct_change() * 100
@@ -53,9 +62,12 @@ def clues(d, market_ok=None):
         "Quiet day (smallest range in 7 days)": rng <= rng.rolling(7).min(),
         "Closed near its 20-day high": c >= 0.98 * d["High"].rolling(20).max(),
         "Closed near its 20-day low": c <= 1.02 * d["Low"].rolling(20).min(),
+        "Far below its 6-month high (25%+)": c <= 0.75 * d["High"].rolling(126, min_periods=60).max(),
     }
     if market_ok is not None:
         out["Healthy market (SPY above its 20-day average)"] = market_ok.reindex(d.index).fillna(False).astype(bool)
+    if market_red is not None:
+        out["Red market day (SPY down 1%+)"] = market_red.reindex(d.index).fillna(False).astype(bool)
     return pd.DataFrame(out)
 
 
@@ -80,13 +92,12 @@ def _history():
 
 def _table(daily):
     """One row per stock per day: every clue (yes/no), combos, and the next day's move."""
-    spy = daily.get(C.MARKET_TICKER)
-    market_ok = spy["Close"] > spy["Close"].rolling(20).mean() if spy is not None else None
+    market_ok, market_red = _market(daily)
     rows = []
     for t, d in daily.items():
         if t == C.MARKET_TICKER or len(d) < 60:
             continue
-        f = clues(d, market_ok)
+        f = clues(d, market_ok, market_red)
         f["next_move"] = (d["Close"].shift(-1) / d["Open"].shift(-1) - 1) * 100
         f["date"], f["ticker"] = pd.DatetimeIndex(d.index).tz_localize(None).normalize(), t
         rows.append(f.iloc[50:])
@@ -164,14 +175,13 @@ def learn(table, since=None):
 
 def todays_movers(daily):
     """Today's biggest riser and faller, and the clues their charts showed the day before."""
-    spy = daily.get(C.MARKET_TICKER)
-    market_ok = spy["Close"] > spy["Close"].rolling(20).mean() if spy is not None else None
+    market_ok, market_red = _market(daily)
     last = max(d.index[-1] for d in daily.values())
     moves = []
     for t, d in daily.items():
         if t == C.MARKET_TICKER or len(d) < 60 or d.index[-1] != last:
             continue
-        f = clues(d, market_ok).iloc[-2]
+        f = clues(d, market_ok, market_red).iloc[-2]
         moves.append({"ticker": t, "chg": round((d["Close"].iloc[-1] / d["Close"].iloc[-2] - 1) * 100, 1),
                       "clues": [k for k, v in f.items() if bool(v)]})
     if not moves:

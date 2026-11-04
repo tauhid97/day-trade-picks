@@ -21,6 +21,7 @@ NICKNAMES = {
     "Oversold Comeback": "Comeback Kid",
     "Hype Breakout": "Hype Rider",
     "Gap-Down Bounce": "Crash Bounce",
+    "Beaten-Down Turnaround": "Underdog",
 }
 
 BUY_WORDS = {
