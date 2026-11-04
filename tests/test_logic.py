@@ -125,6 +125,13 @@ def test_new_skills():
     assert wake_up_rally.find(SimpleNamespace(**{**vars(ctx), "daily": up}), wake_up_rally.SKILL["params"]) is None
     assert wake_up_rally.find(SimpleNamespace(**{**vars(ctx), "rvol": 1.1}), wake_up_rally.SKILL["params"]) is None
     assert wake_up_rally.find(SimpleNamespace(**{**vars(ctx), "hod": 74.6, "lod": 73.0}), wake_up_rally.SKILL["params"]) is None
+    # Crowd Breakout (ORB): Safety price = middle of the opening range (from the YouTube study)
+    from screener.skills import orb_stocks_in_play as orb
+    ctx = SimpleNamespace(atr=2.0, rvol=3.0, or_open=100.0, or_close=103.0, or_high=104.0, or_low=99.0, last=103.5)
+    idea = orb.find(ctx, orb.SKILL["params"])
+    assert idea and idea["entry"] == 104.01 and idea["stop"] == 101.5, idea
+    assert orb.find(SimpleNamespace(**{**vars(ctx), "or_close": 99.5}), orb.SKILL["params"]) is None   # red range
+    assert orb.find(SimpleNamespace(**{**vars(ctx), "last": 104.5}), orb.SKILL["params"]) is None      # already broken
     # A skill missing from the Guard's team list must start in PRACTICE, never live
     fake = {"name": "Brand New", "weather": ["cloudy"], "params": {},
             "find": lambda c, p: {"order_type": "buy_stop", "entry": 10.0, "stop": 9.8, "target_r": 2, "score": 1, "reason": "x"}}
