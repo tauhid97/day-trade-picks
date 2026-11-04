@@ -22,6 +22,7 @@ NICKNAMES = {
     "Hype Breakout": "Hype Rider",
     "Gap-Down Bounce": "Crash Bounce",
     "Beaten-Down Turnaround": "Underdog",
+    "Episodic Pivot": "Big News Jump",
 }
 
 BUY_WORDS = {

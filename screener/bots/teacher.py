@@ -32,6 +32,7 @@ WATCH_OUT = {
     "Hype Breakout": "Reddit crowds leave as fast as they come - hype stocks can crash quickly.",
     "Gap-Down Bounce": "Panic can keep going; only buy once it climbs back above the morning high.",
     "Beaten-Down Turnaround": "Cheap stocks can get cheaper - most turnarounds take many tries.",
+    "Episodic Pivot": "Big jumps can fade back down; holding for days means overnight news can hit you too.",
 }
 
 RULES = [

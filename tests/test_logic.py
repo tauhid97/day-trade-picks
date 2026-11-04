@@ -216,6 +216,15 @@ def test_new_skills():
     assert underdog.find(SimpleNamespace(**{**vars(ctx), "daily": flat}), underdog.SKILL["params"]) is None       # not beaten down
     assert underdog.find(SimpleNamespace(**{**vars(ctx), "last": 71.6}), underdog.SKILL["params"]) is None        # already broke out
     assert "stormy" in underdog.SKILL["weather"]
+    # Big News Jump (Kullamägi's episodic pivot): opened 10%+ up on huge volume, buy the new high, hold up to 5 days
+    from screener.skills import episodic_pivot as ep
+    ctx = SimpleNamespace(gap_pct=12.0, rvol=4.0, last=55.5, hod=55.8, lod=53.2, vwap=54.6, atr=2.0)
+    idea = ep.find(ctx, ep.SKILL["params"])
+    assert idea and round(idea["entry"], 2) == 55.81 and round(idea["stop"], 2) == 53.81 and idea["target_r"] is None, idea   # day low, capped at 1 ATR
+    assert ep.SKILL["params"]["hold_days"] == 5
+    assert ep.find(SimpleNamespace(**{**vars(ctx), "gap_pct": 5.0}), ep.SKILL["params"]) is None      # not a big jump
+    assert ep.find(SimpleNamespace(**{**vars(ctx), "rvol": 1.5}), ep.SKILL["params"]) is None         # no crowd
+    assert ep.find(SimpleNamespace(**{**vars(ctx), "last": 54.0}), ep.SKILL["params"]) is None        # fell under VWAP
     # the Scout tells every stock how the market did yesterday
     spy = pd.DataFrame({"Close": [100.0, 98.0]}, index=pd.bdate_range("2026-11-02", periods=2))
     assert round(engine.market_prev_change(pd.Timestamp("2026-11-04", tz=NY), {"SPY": spy}), 1) == -2.0
@@ -427,7 +436,8 @@ def plain_nick_ok():
         and plain.nick("Oversold Comeback") == "Comeback Kid (Oversold Comeback)" \
         and plain.nick("Hype Breakout") == "Hype Rider (Hype Breakout)" \
         and plain.nick("Gap-Down Bounce") == "Crash Bounce (Gap-Down Bounce)" \
-        and plain.nick("Beaten-Down Turnaround") == "Underdog (Beaten-Down Turnaround)"
+        and plain.nick("Beaten-Down Turnaround") == "Underdog (Beaten-Down Turnaround)" \
+        and plain.nick("Episodic Pivot") == "Big News Jump (Episodic Pivot)"
 
 
 def test_all(tmp="/tmp/dtp_test"):
@@ -628,7 +638,7 @@ def test_study_finds_a_planted_clue():
     names = {x["name"] for x in notes["clues"]}
     assert "Far below its 6-month high (25%+)" in names and "Red market day (SPY down 1%+)" in names, names
     text = study.lessons_text()
-    assert "Heavy volume" in text and "Reddit hype" in text, text
+    assert "Far below" not in "" and "Heavy volume" in text and "Reddit hype" in text, text
     for f in (C.STUDY_FILE, C.HYPE_HISTORY_FILE):
         os.remove(f)
     print("study OK")
