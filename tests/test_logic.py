@@ -179,6 +179,15 @@ def test_new_skills():
     assert hr.find(SimpleNamespace(**{**vars(ctx), "hype": "buzz"}), hr.SKILL["params"]) is None
     assert hr.find(SimpleNamespace(**{k: v for k, v in vars(ctx).items() if k != "hype"}), hr.SKILL["params"]) is None   # backtests: no hype data
     assert hr.find(SimpleNamespace(**{**vars(ctx), "day_chg_pct": -1.0}), hr.SKILL["params"]) is None
+    # Crash Bounce: opened 4%+ down on heavy volume; buy only once it climbs back above the morning high
+    from screener.skills import gap_down_bounce as gd
+    ctx = SimpleNamespace(gap_pct=-6.0, rvol=2.2, or_high=95.0, last=94.2, lod=92.8, atr=2.0, prev_close=100.0)
+    idea = gd.find(ctx, gd.SKILL["params"])
+    assert idea and idea["order_type"] == "buy_stop" and round(idea["entry"], 2) == 95.01 and idea["stop"] >= 92.79 - 1e-9, idea
+    assert gd.find(SimpleNamespace(**{**vars(ctx), "gap_pct": -2.0}), gd.SKILL["params"]) is None    # not a real crash
+    assert gd.find(SimpleNamespace(**{**vars(ctx), "rvol": 1.0}), gd.SKILL["params"]) is None        # nobody's trading it
+    assert gd.find(SimpleNamespace(**{**vars(ctx), "last": 95.5}), gd.SKILL["params"]) is None       # already bounced past
+    assert "stormy" in gd.SKILL["weather"]
     # live scans hand every stock its hype level, so Hype Rider can see it
     old_check = engine.hype.check
     engine.hype.check = lambda t: ("hype", "x")
@@ -284,7 +293,8 @@ def plain_nick_ok():
     return plain.nick("NR7 Breakout") == "Tight Spring (NR7 Breakout)" and plain.nick("Relative Strength") == "Strong Kid (Relative Strength)" \
         and plain.nick("Downtrend Reversal") == "Wake Up Rally (Downtrend Reversal)" \
         and plain.nick("Oversold Comeback") == "Comeback Kid (Oversold Comeback)" \
-        and plain.nick("Hype Breakout") == "Hype Rider (Hype Breakout)"
+        and plain.nick("Hype Breakout") == "Hype Rider (Hype Breakout)" \
+        and plain.nick("Gap-Down Bounce") == "Crash Bounce (Gap-Down Bounce)"
 
 
 def test_all(tmp="/tmp/dtp_test"):

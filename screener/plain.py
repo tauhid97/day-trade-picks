@@ -20,6 +20,7 @@ NICKNAMES = {
     "Downtrend Reversal": "Wake Up Rally",
     "Oversold Comeback": "Comeback Kid",
     "Hype Breakout": "Hype Rider",
+    "Gap-Down Bounce": "Crash Bounce",
 }
 
 BUY_WORDS = {
