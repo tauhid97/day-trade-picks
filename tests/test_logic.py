@@ -82,6 +82,18 @@ def test_simulate():
     r = simulate({**sw, "hold_days": 2}, two_days(10.3, 10.9).loc[:"2026-09-01 23:59"])
     assert r["status"] == "open" and r["days_held"] == 1, r                     # day 2 not here yet: still holding
     assert simulate({**sw, "hold_days": float("nan")}, two_days(10.3, 10.9))["status"] == "eod"   # old picks = day trades
+    # smart selling: sell half at +1R, then the Safety price moves up to the Buy price
+    idx = pd.date_range("2026-09-01 10:35", periods=3, freq="5min", tz=NY)
+    up_then_down = pd.DataFrame({"Open": [10.0, 10.25, 10.3], "High": [10.25, 10.45, 10.3],
+                                 "Low": [10.05, 10.3, 9.9], "Close": [10.2, 10.4, 9.95], "Volume": 1}, index=idx)
+    p = {"entry": 10.2, "stop": 10.0, "target": 10.6, "order_type": "buy_stop"}
+    assert simulate(p, up_then_down)["r_multiple"] < -0.9                      # normal: the full loss
+    r = simulate({**p, "half_at_r": 1.0}, up_then_down)
+    assert r["status"] == "stop" and r["half_price"] == 10.4 and 0.4 < r["r_multiple"] < 0.5, r   # half won, half even
+    up = up_then_down.assign(High=[10.25, 10.45, 10.7], Low=[10.05, 10.3, 10.35])
+    r = simulate({**p, "half_at_r": 1.0}, up)
+    assert r["status"] == "target" and 1.4 < r["r_multiple"] < 1.5, r          # half at +1R, half at +2R
+    assert simulate({**p, "half_at_r": float("nan")}, up_then_down)["r_multiple"] < -0.9   # blank = off
     print("simulate OK")
 
 
@@ -333,6 +345,34 @@ def test_teacher():
     print("teacher OK")
 
 
+def test_long_test():
+    """2-year test: hourly prices are split into 5-minute steps, every skill is graded normal + smart sell."""
+    import os
+    import screener.config as C
+    from screener.data import hourly_to_5min
+    h = pd.DataFrame({"Open": [10.0, 10.8], "High": [11.0, 11.2], "Low": [9.5, 10.6], "Close": [10.8, 10.7],
+                      "Volume": [1200.0, 600.0]},
+                     index=pd.DatetimeIndex(["2026-09-01 09:30", "2026-09-01 15:30"]).tz_localize(NY))
+    f = hourly_to_5min(h)
+    first, last = f[f.index < "2026-09-01 10:30"], f[f.index >= "2026-09-01 15:30"]
+    assert len(first) == 12 and len(last) == 6 and f.index[-1].strftime("%H:%M") == "15:55", f
+    assert first["Open"].iloc[0] == 10.0 and first["Close"].iloc[-1] == 10.8, first
+    assert first["High"].max() == 11.0 and first["Low"].min() == 9.5 and first["Volume"].sum() == 1200, first
+    C.LONG_TEST_FILE = "/tmp/dtp_long_test.csv"
+    intraday, daily = build()
+    hourly = {t: b.resample("60min", offset="30min").agg({"Open": "first", "High": "max", "Low": "min",
+                                                          "Close": "last", "Volume": "sum"}).dropna()
+              for t, b in intraday.items()}
+    s = backtest.long_test(hourly, daily)
+    assert len(s) and {"setup", "trades", "win_pct", "total_R", "smart_win_pct", "smart_total_R"} <= set(s), s
+    assert os.path.exists(C.LONG_TEST_FILE)
+    text = backtest.long_text(s)
+    assert "2-year practice test" in text and "smart sell" in text and "rough" in text, text
+    assert "not enough" in backtest.long_text(s.iloc[:0])
+    os.remove(C.LONG_TEST_FILE)
+    print(text + "\nlong test OK")
+
+
 def test_watchlist():
     """Beaten-down watchlist + red-day 'holding up best' list."""
     import os
@@ -374,7 +414,7 @@ def test_all(tmp="/tmp/dtp_test"):
     shutil.rmtree(tmp, ignore_errors=True); os.makedirs(tmp)
     for k in ["PICKS_FILE", "BACKTEST_TRADES_FILE", "BACKTEST_SUMMARY_FILE", "SKILL_STATUS_FILE",
               "TUNED_FILE", "COACH_FILE", "REPORT_FILE", "TODAY_POST_FILE", "STUDY_FILE",
-              "HYPE_HISTORY_FILE", "NEWS_HISTORY_FILE", "WATCHLIST_FILE"]:
+              "HYPE_HISTORY_FILE", "NEWS_HISTORY_FILE", "WATCHLIST_FILE", "LONG_TEST_FILE"]:
         setattr(C, k, os.path.join(tmp, os.path.basename(getattr(C, k))))
     C.MIN_AVG_DOLLAR_VOL = 1e6
     C.GUARD_MIN_TRADES = 2; C.COACH_MIN_TRADES = 1
@@ -579,6 +619,7 @@ if __name__ == "__main__":
     test_reader()
     test_watchlist()
     test_teacher()
+    test_long_test()
     test_new_skills()
     test_study_finds_a_planted_clue()
     test_all()

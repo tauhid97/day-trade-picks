@@ -13,6 +13,7 @@ STUDY_FILE = "data/study_notes.json"             # what the Study bot learned fr
 HYPE_HISTORY_FILE = "data/hype_history.csv"      # nightly Reddit mention counts (Hype bot)
 NEWS_HISTORY_FILE = "data/news_history.csv"      # nightly headline count + mood (News bot)
 WATCHLIST_FILE = "data/watchlist.json"           # beaten-down + red-day watchlist (Watchlist bot)
+LONG_TEST_FILE = "data/long_test_summary.csv"    # 2-year practice test on hourly prices (weekly)
 
 BRAND_NAME = "Day Trade Picks"
 

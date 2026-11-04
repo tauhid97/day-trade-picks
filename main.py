@@ -33,6 +33,10 @@ def weekly():
             msg += ["", "Breadth bot [practice - info only, all skills, by market breadth]:"] + backtest.by_breadth(trades)
         msg += ["", "News bot [practice - info only, real picks so far, by news label]:"] + news.summary(live.load_picks())
         msg += ["", coach.run(prepared, intraday)]
+    try:                             # 2 years of hourly prices: rough, but much longer than 2 months
+        msg += ["", backtest.long_text(backtest.long_test())]
+    except Exception as e:
+        print("2-year test skipped:", e)
     msg += ["", study.lessons_text()]
     try:
         msg += ["", teacher.lesson(live.load_picks(), pd.Timestamp.now(tz="America/New_York"))]

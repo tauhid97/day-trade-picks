@@ -8,6 +8,9 @@ Swing picks (hold_days > 1) may stay open overnight: they're sold at the close
 of their last day if neither stop nor target hit first. If a stock opens below
 the stop after a night, the loss is counted at that (worse) opening price.
 If the last day hasn't happened yet, the result is "open" (still holding).
+
+Smart selling (half_at_r, practice tests only): when the price is up that many R,
+half is sold and the Safety price moves up to the Buy price for the other half.
 """
 import pandas as pd
 
@@ -19,14 +22,21 @@ def _hold(pick):
     return int(h) if h is not None and h == h and h else 1
 
 
+def _half(pick):
+    h = pick.get("half_at_r")
+    return float(h) if h is not None and h == h and h else None
+
+
 def simulate(pick: dict, bars_after: pd.DataFrame) -> dict:
     entry, stop, target = pick["entry"], pick["stop"], pick.get("target")
     if target is not None and target != target:   # NaN from CSV -> no target
         target = None
-    hold = _hold(pick)
+    hold, half = _hold(pick), _half(pick)
     risk = entry - stop
     res = {"status": "no_fill", "fill_price": None, "exit_price": None,
            "exit_time": None, "r_multiple": 0.0, "pct_return": 0.0, "days_held": None}
+    if half:
+        res["half_price"] = None
     t = bars_after.index.strftime("%H:%M")
     days = bars_after.index.normalize()
     filled_at, day_n = None, 0
@@ -53,6 +63,9 @@ def simulate(pick: dict, bars_after: pd.DataFrame) -> dict:
             res["days_held"] = day_n
         if bar["Low"] <= stop:
             return _close(res, min(stop, bar["Open"]), ts, "stop", risk, entry)
+        if half and res["half_price"] is None and bar["High"] >= entry + half * risk:
+            res["half_price"] = round(max(entry + half * risk, bar["Open"]), 2)
+            stop = max(stop, entry)                    # the other half can't lose any more
         if target is not None and bar["High"] >= target:
             return _close(res, max(target, bar["Open"]), ts, "target", risk, entry)
         if hm >= C.EXIT_TIME and day_n >= hold:
@@ -69,6 +82,8 @@ def simulate(pick: dict, bars_after: pd.DataFrame) -> dict:
 def _close(res, exit_px, ts, status, risk, planned_entry):
     fill = res["fill_price"] * (1 + C.SLIPPAGE_PCT)
     ex = exit_px * (1 - C.SLIPPAGE_PCT)
+    if res.get("half_price"):                          # smart sell: average the two halves
+        ex = (ex + res["half_price"] * (1 - C.SLIPPAGE_PCT)) / 2
     res.update(status=status, exit_price=round(float(exit_px), 2),
                exit_time=ts.strftime("%H:%M"),
                r_multiple=round((ex - fill) / risk, 3),

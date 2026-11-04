@@ -1,6 +1,7 @@
 """Free market data from Yahoo Finance (via yfinance)."""
 import time
 
+import numpy as np
 import pandas as pd
 
 NY = "America/New_York"
@@ -62,3 +63,20 @@ def get_daily(tickers, period="1y"):
         df.index = pd.DatetimeIndex(idx).normalize()
         out[t] = df
     return out
+
+
+def hourly_to_5min(df):
+    """Split hourly bars into 5-minute steps so the normal grader can use them (a rough guess of the path:
+    up bars go open -> low -> high -> close, down bars open -> high -> low -> close)."""
+    rows, idx = [], []
+    starts = list(df.index)
+    for i, (ts, b) in enumerate(df.iterrows()):
+        nxt = starts[i + 1] if i + 1 < len(starts) and starts[i + 1].normalize() == ts.normalize() \
+            else ts.normalize() + pd.Timedelta(hours=16)
+        n = max(1, min(12, int((nxt - ts) / pd.Timedelta(minutes=5))))
+        mid = [b["Low"], b["High"]] if b["Close"] >= b["Open"] else [b["High"], b["Low"]]
+        pts = np.interp(np.arange(n + 1), [0, n / 3, 2 * n / 3, n], [b["Open"], *mid, b["Close"]])
+        for k in range(n):
+            rows.append((pts[k], max(pts[k], pts[k + 1]), min(pts[k], pts[k + 1]), pts[k + 1], b["Volume"] / n))
+            idx.append(ts + pd.Timedelta(minutes=5 * k))
+    return pd.DataFrame(rows, columns=COLS, index=pd.DatetimeIndex(idx))
