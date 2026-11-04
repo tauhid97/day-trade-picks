@@ -49,6 +49,9 @@ GUARD_WINDOW = 20              # look at each skill's last 20 triggered trades
 GUARD_MIN_TRADES = 10          # need at least this many before judging
 GUARD_BENCH_BELOW_R = -0.10    # live skill averaging worse than this -> practice
 GUARD_PROMOTE_ABOVE_R = 0.10   # practice skill averaging better than this -> live
+# Boss's choice after the 2-year test (Nov 4): the Guard follows this until a skill has
+# GUARD_MIN_TRADES real trades, then real results decide again.
+BOSS_CHOICES = {"VWAP Pullback": "practice", "ORB Stocks in Play": "live"}
 
 # --- Coach bot (tests better settings) ---
 COACH_TRAIN_SHARE = 0.6        # learn on the first 60% of days, check on the last 40%

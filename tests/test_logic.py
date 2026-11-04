@@ -373,6 +373,28 @@ def test_long_test():
     print(text + "\nlong test OK")
 
 
+def test_guard_boss_choice():
+    """Boss's choice beats the 2-month test, until a skill has enough REAL trades to judge."""
+    import json, os
+    import screener.config as C
+    from screener.bots import guard
+    C.SKILL_STATUS_FILE, C.BACKTEST_SUMMARY_FILE = "/tmp/dtp_guard_status.json", "/tmp/dtp_guard_bt.csv"
+    json.dump({"VWAP Pullback": {"mode": "live", "why": "x", "since": "2026-10-28"}}, open(C.SKILL_STATUS_FILE, "w"))
+    pd.DataFrame([{"setup": "VWAP Pullback", "filled": 60, "avg_R": 0.41},
+                  {"setup": "ORB Stocks in Play", "filled": 34, "avg_R": -0.44}]).to_csv(C.BACKTEST_SUMMARY_FILE, index=False)
+    status, changes = guard.run(pd.DataFrame(), "2026-11-04")
+    assert status["VWAP Pullback"]["mode"] == "practice" and "Boss's choice" in status["VWAP Pullback"]["why"], status
+    assert status["ORB Stocks in Play"]["mode"] == "live" and status["Oversold Bounce"]["mode"] == "practice", status
+    assert any("VWAP Pullback: LIVE -> PRACTICE" in c for c in changes), changes
+    real = pd.DataFrame({"setup": "ORB Stocks in Play", "status": "stop", "r_multiple": -1.0,
+                         "published_at": [f"2026-11-{d:02d}" for d in range(1, 13)]})
+    status, _ = guard.run(real, "2026-11-20")
+    assert status["ORB Stocks in Play"]["mode"] == "practice" and "real trades" in status["ORB Stocks in Play"]["why"], status
+    for f in (C.SKILL_STATUS_FILE, C.BACKTEST_SUMMARY_FILE):
+        os.remove(f)
+    print("guard boss choice OK")
+
+
 def test_watchlist():
     """Beaten-down watchlist + red-day 'holding up best' list."""
     import os
@@ -620,6 +642,7 @@ if __name__ == "__main__":
     test_watchlist()
     test_teacher()
     test_long_test()
+    test_guard_boss_choice()
     test_new_skills()
     test_study_finds_a_planted_clue()
     test_all()

@@ -5,7 +5,7 @@
 - A practice skill that starts winning gets promoted back to LIVE.
 - Brand-new skills start in PRACTICE until they prove themselves.
 Evidence = the skill's last 20 real graded trades; if it has fewer than 10,
-the backtest is used instead.
+Boss's choice (config BOSS_CHOICES) is used, and after that the backtest.
 """
 import json
 import os
@@ -39,11 +39,14 @@ def run(picks: pd.DataFrame, today: str):
             real = real.sort_values("published_at").tail(C.GUARD_WINDOW)
             if len(real) >= C.GUARD_MIN_TRADES:
                 evidence, avg = f"last {len(real)} real trades", float(pd.to_numeric(real["r_multiple"]).mean())
-        if evidence is None and len(bt) and (bt["setup"] == name).any():
+        boss = C.BOSS_CHOICES.get(name) if evidence is None else None
+        if evidence is None and not boss and len(bt) and (bt["setup"] == name).any():
             row = bt[bt["setup"] == name].iloc[0]
             if row["filled"] >= C.GUARD_MIN_TRADES:
                 evidence, avg = f"backtest ({int(row['filled'])} trades)", float(row["avg_R"])
         mode, why = prev["mode"], prev["why"]
+        if boss:
+            mode, why = boss, f"Boss's choice after the 2-year test (real results decide after {C.GUARD_MIN_TRADES} real trades)"
         if avg is not None:
             if avg < C.GUARD_BENCH_BELOW_R:
                 mode, why = "practice", f"Benched: averaging {avg:+.2f}R over {evidence}"
