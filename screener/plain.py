@@ -18,6 +18,8 @@ NICKNAMES = {
     "NR7 Breakout": "Tight Spring",
     "Relative Strength": "Strong Kid",
     "Downtrend Reversal": "Wake Up Rally",
+    "Oversold Comeback": "Comeback Kid",
+    "Hype Breakout": "Hype Rider",
 }
 
 BUY_WORDS = {

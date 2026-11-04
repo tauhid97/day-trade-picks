@@ -132,6 +132,35 @@ def test_new_skills():
     assert idea and idea["entry"] == 104.01 and idea["stop"] == 101.5, idea
     assert orb.find(SimpleNamespace(**{**vars(ctx), "or_close": 99.5}), orb.SKILL["params"]) is None   # red range
     assert orb.find(SimpleNamespace(**{**vars(ctx), "last": 104.5}), orb.SKILL["params"]) is None      # already broken
+    # Comeback Kid: yesterday a big drop into oversold; today buy only once it climbs above the morning high
+    from screener.skills import comeback_kid as ck
+    slide = np.r_[np.linspace(100, 80, 59), 76.0]               # steady slide, then -5% yesterday
+    dk = pd.DataFrame({"Open": slide, "High": slide + 0.5, "Low": slide - 0.5, "Close": slide, "Volume": 1e6},
+                      index=pd.bdate_range("2026-06-01", periods=60))
+    ctx = SimpleNamespace(daily=dk, or_high=77.0, last=76.6, lod=75.8, atr=1.5, rvol=1.4, vwap=76.4)
+    idea = ck.find(ctx, ck.SKILL["params"])
+    assert idea and idea["order_type"] == "buy_stop" and round(idea["entry"], 2) == 77.01 and idea["stop"] < 77, idea
+    assert ck.find(SimpleNamespace(**{**vars(ctx), "last": 77.2}), ck.SKILL["params"]) is None       # already broke out
+    calm = dk.copy(); calm.iloc[-1, calm.columns.get_loc("Close")] = 80.5                            # no big drop yesterday
+    assert ck.find(SimpleNamespace(**{**vars(ctx), "daily": calm}), ck.SKILL["params"]) is None
+    assert "stormy" in ck.SKILL["weather"]
+    # Hype Rider: Reddit HYPE + heavy volume + moving up -> buy the new high of the day
+    from screener.skills import hype_rider as hr
+    ctx = SimpleNamespace(hype="hype", rvol=2.5, day_chg_pct=4.0, last=51.0, hod=51.3, vwap=50.2, atr=1.5)
+    idea = hr.find(ctx, hr.SKILL["params"])
+    assert idea and round(idea["entry"], 2) == 51.31 and idea["stop"] >= 50.19 - 1e-9, idea
+    assert hr.find(SimpleNamespace(**{**vars(ctx), "hype": "buzz"}), hr.SKILL["params"]) is None
+    assert hr.find(SimpleNamespace(**{k: v for k, v in vars(ctx).items() if k != "hype"}), hr.SKILL["params"]) is None   # backtests: no hype data
+    assert hr.find(SimpleNamespace(**{**vars(ctx), "day_chg_pct": -1.0}), hr.SKILL["params"]) is None
+    # live scans hand every stock its hype level, so Hype Rider can see it
+    old_check = engine.hype.check
+    engine.hype.check = lambda t: ("hype", "x")
+    try:
+        cx = [SimpleNamespace(ticker="ABC")]
+        engine.add_hype(cx)
+        assert cx[0].hype == "hype"
+    finally:
+        engine.hype.check = old_check
     # A skill missing from the Guard's team list must start in PRACTICE, never live
     fake = {"name": "Brand New", "weather": ["cloudy"], "params": {},
             "find": lambda c, p: {"order_type": "buy_stop", "entry": 10.0, "stop": 9.8, "target_r": 2, "score": 1, "reason": "x"}}
@@ -218,7 +247,9 @@ def test_reader():
 def plain_nick_ok():
     from screener import plain
     return plain.nick("NR7 Breakout") == "Tight Spring (NR7 Breakout)" and plain.nick("Relative Strength") == "Strong Kid (Relative Strength)" \
-        and plain.nick("Downtrend Reversal") == "Wake Up Rally (Downtrend Reversal)"
+        and plain.nick("Downtrend Reversal") == "Wake Up Rally (Downtrend Reversal)" \
+        and plain.nick("Oversold Comeback") == "Comeback Kid (Oversold Comeback)" \
+        and plain.nick("Hype Breakout") == "Hype Rider (Hype Breakout)"
 
 
 def test_all(tmp="/tmp/dtp_test"):

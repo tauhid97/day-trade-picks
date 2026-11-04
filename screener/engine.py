@@ -2,6 +2,7 @@
 import pandas as pd
 
 from . import config as C
+from .bots import hype
 from .bots import weather as weather_bot
 from .setups import Context, make_pick, rank_and_cap
 
@@ -65,11 +66,22 @@ def ideas(contexts, skill, params=None, weather="cloudy"):
     return out
 
 
+def add_hype(contexts):
+    """Live scans only: tell each stock its Reddit hype level (the past has no hype data)."""
+    for ctx in contexts:
+        try:
+            ctx.hype = hype.check(ctx.ticker)[0]
+        except Exception as e:
+            print("Hype check skipped for", ctx.ticker, e)
+            ctx.hype = "unknown"
+
+
 def picks_for_day(day, scan_ts, intraday, daily, skills, status=None):
     """Returns (live_picks, practice_picks, weather, weather_note)."""
     status = status or {}
     w, note = weather_bot.check(day, scan_ts, intraday, daily)
     ctxs = build_contexts(day, scan_ts, intraday, daily)
+    add_hype(ctxs)
     live, practice = [], []
     for sk in skills:
         found = ideas(ctxs, sk, weather=w)
