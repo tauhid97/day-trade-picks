@@ -1,0 +1,38 @@
+{
+ "date": "2026-11-04",
+ "market_chg": 1.29,
+ "red_day": false,
+ "beaten": [
+  {
+   "ticker": "OKLO",
+   "below_high_pct": 71,
+   "chg_3m": -44.3,
+   "today": -7.19455321636715
+  },
+  {
+   "ticker": "QBTS",
+   "below_high_pct": 67,
+   "chg_3m": -46.6,
+   "today": -1.591127904280898
+  },
+  {
+   "ticker": "IREN",
+   "below_high_pct": 65,
+   "chg_3m": -35.5,
+   "today": -12.264922781229448
+  },
+  {
+   "ticker": "LCID",
+   "below_high_pct": 64,
+   "chg_3m": -56.7,
+   "today": 9.437088994393061
+  },
+  {
+   "ticker": "SMR",
+   "below_high_pct": 62,
+   "chg_3m": -43.3,
+   "today": -6.424577235456153
+  }
+ ],
+ "holding_up": []
+}
