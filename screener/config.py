@@ -10,6 +10,8 @@ COACH_FILE = "data/coach_suggestions.json"       # Coach bot's latest ideas
 REPORT_FILE = "docs/index.html"
 TODAY_POST_FILE = "data/today_post.md"
 STUDY_FILE = "data/study_notes.json"             # what the Study bot learned from past charts
+HYPE_HISTORY_FILE = "data/hype_history.csv"      # nightly Reddit mention counts (Hype bot)
+NEWS_HISTORY_FILE = "data/news_history.csv"      # nightly headline count + mood (News bot)
 
 BRAND_NAME = "Day Trade Picks"
 

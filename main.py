@@ -16,7 +16,8 @@ import pandas as pd
 
 from screener import backtest, commands, live, plain, report
 from screener import config as C
-from screener.bots import coach, guard, news, study
+from screener.bots import coach, guard, hype, news, study
+from screener.data import load_universe
 from screener.notify import to_boss
 
 
@@ -42,6 +43,14 @@ def weekly():
 
 
 def evening():
+    now = pd.Timestamp.now(tz="America/New_York")
+    tickers = load_universe(C.UNIVERSE_FILE)
+    for name, job in [("Hype snapshot", lambda: hype.snapshot(tickers, now.strftime("%Y-%m-%d"))),
+                      ("News snapshot", lambda: news.snapshot(tickers, now))]:
+        try:                         # tonight's Reddit buzz + headline mood, saved for the Study bot
+            print(name, "saved for", job(), "stocks")
+        except Exception as e:
+            print(name, "skipped:", e)
     try:
         note = study.run()
     except Exception as e:           # a study hiccup must never stop the results being graded
