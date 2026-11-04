@@ -9,10 +9,30 @@
     "why": "Holding: averaging -0.04R over backtest (11 trades) (not clearly good or bad)",
     "since": "2026-10-28"
   },
+  "Oversold Comeback": {
+    "mode": "practice",
+    "why": "New skill - must prove itself first",
+    "since": "2026-11-04"
+  },
+  "Episodic Pivot": {
+    "mode": "practice",
+    "why": "New skill - must prove itself first",
+    "since": "2026-11-04"
+  },
   "Gap & Go": {
     "mode": "practice",
     "why": "Benched: averaging -0.18R over backtest (21 trades)",
     "since": "2026-10-28"
+  },
+  "Gap-Down Bounce": {
+    "mode": "practice",
+    "why": "New skill - must prove itself first",
+    "since": "2026-11-04"
+  },
+  "Hype Breakout": {
+    "mode": "practice",
+    "why": "New skill - must prove itself first",
+    "since": "2026-11-04"
   },
   "MA20 Reclaim": {
     "mode": "practice",
@@ -20,9 +40,9 @@
     "since": "2026-10-28"
   },
   "ORB Stocks in Play": {
-    "mode": "practice",
-    "why": "Benched: averaging -0.44R over backtest (34 trades)",
-    "since": "2026-10-28"
+    "mode": "live",
+    "why": "Boss's choice after the 2-year test (real results decide after 10 real trades)",
+    "since": "2026-11-04"
   },
   "Oversold Bounce": {
     "mode": "live",
@@ -39,10 +59,15 @@
     "why": "New skill - must prove itself first",
     "since": "2026-11-02"
   },
+  "Beaten-Down Turnaround": {
+    "mode": "practice",
+    "why": "New skill - must prove itself first",
+    "since": "2026-11-04"
+  },
   "VWAP Pullback": {
-    "mode": "live",
-    "why": "Playing: averaging +0.41R over backtest (61 trades)",
-    "since": "2026-10-28"
+    "mode": "practice",
+    "why": "Boss's choice after the 2-year test (real results decide after 10 real trades)",
+    "since": "2026-11-04"
   },
   "Downtrend Reversal": {
     "mode": "practice",

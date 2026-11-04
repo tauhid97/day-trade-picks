@@ -1,0 +1,4598 @@
+{
+ "updated": "2026-11-04 17:11",
+ "stocks": 178,
+ "days": 450,
+ "baseline": {
+  "learn": {
+   "n": 47993,
+   "rise_pct": 29.3,
+   "fall_pct": 28.4,
+   "avg_move": 0.04
+  },
+  "check": {
+   "n": 32040,
+   "rise_pct": 30.1,
+   "fall_pct": 31.1,
+   "avg_move": 0.05
+  }
+ },
+ "clues": [
+  {
+   "name": "Heavy volume (1.5x normal)",
+   "kind": "big move",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 5602,
+    "rise_pct": 33.6,
+    "fall_pct": 34.1,
+    "avg_move": 0.13
+   },
+   "check": {
+    "n": 2922,
+    "rise_pct": 34.8,
+    "fall_pct": 34.1,
+    "avg_move": 0.17
+   }
+  },
+  {
+   "name": "Big up day (+3% or more)",
+   "kind": "fall",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 5711,
+    "rise_pct": 32.3,
+    "fall_pct": 36.8,
+    "avg_move": -0.11
+   },
+   "check": {
+    "n": 4363,
+    "rise_pct": 33.6,
+    "fall_pct": 35.6,
+    "avg_move": 0.06
+   }
+  },
+  {
+   "name": "Big down day (-3% or more)",
+   "kind": "big move",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 5430,
+    "rise_pct": 39.9,
+    "fall_pct": 31.9,
+    "avg_move": 0.49
+   },
+   "check": {
+    "n": 4119,
+    "rise_pct": 36.5,
+    "fall_pct": 35.5,
+    "avg_move": 0.17
+   }
+  },
+  {
+   "name": "Oversold (RSI under 30)",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 1801,
+    "rise_pct": 38.5,
+    "fall_pct": 33.0,
+    "avg_move": 0.64
+   },
+   "check": {
+    "n": 1201,
+    "rise_pct": 32.8,
+    "fall_pct": 29.0,
+    "avg_move": 0.33
+   }
+  },
+  {
+   "name": "Overbought (RSI over 70)",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 4149,
+    "rise_pct": 27.6,
+    "fall_pct": 27.9,
+    "avg_move": 0.02
+   },
+   "check": {
+    "n": 1672,
+    "rise_pct": 31.2,
+    "fall_pct": 33.1,
+    "avg_move": 0.12
+   }
+  },
+  {
+   "name": "In an uptrend (above its 50-day average)",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 26998,
+    "rise_pct": 28.0,
+    "fall_pct": 27.4,
+    "avg_move": 0.02
+   },
+   "check": {
+    "n": 15188,
+    "rise_pct": 30.1,
+    "fall_pct": 31.3,
+    "avg_move": 0.05
+   }
+  },
+  {
+   "name": "In a downtrend (below its 50-day average)",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 20995,
+    "rise_pct": 31.0,
+    "fall_pct": 29.8,
+    "avg_move": 0.07
+   },
+   "check": {
+    "n": 16852,
+    "rise_pct": 30.1,
+    "fall_pct": 31.0,
+    "avg_move": 0.04
+   }
+  },
+  {
+   "name": "Quiet day (smallest range in 7 days)",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 7346,
+    "rise_pct": 27.2,
+    "fall_pct": 28.5,
+    "avg_move": -0.09
+   },
+   "check": {
+    "n": 4890,
+    "rise_pct": 29.3,
+    "fall_pct": 30.7,
+    "avg_move": 0.01
+   }
+  },
+  {
+   "name": "Closed near its 20-day high",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 9405,
+    "rise_pct": 24.9,
+    "fall_pct": 22.7,
+    "avg_move": 0.04
+   },
+   "check": {
+    "n": 4487,
+    "rise_pct": 27.0,
+    "fall_pct": 28.1,
+    "avg_move": 0.02
+   }
+  },
+  {
+   "name": "Closed near its 20-day low",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 5206,
+    "rise_pct": 28.7,
+    "fall_pct": 26.9,
+    "avg_move": 0.12
+   },
+   "check": {
+    "n": 4554,
+    "rise_pct": 27.7,
+    "fall_pct": 28.1,
+    "avg_move": 0.1
+   }
+  },
+  {
+   "name": "Far below its 6-month high (25%+)",
+   "kind": "big move",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 12288,
+    "rise_pct": 35.0,
+    "fall_pct": 34.6,
+    "avg_move": 0.12
+   },
+   "check": {
+    "n": 11408,
+    "rise_pct": 33.9,
+    "fall_pct": 34.9,
+    "avg_move": 0.08
+   }
+  },
+  {
+   "name": "Healthy market (SPY above its 20-day average)",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 35217,
+    "rise_pct": 26.5,
+    "fall_pct": 28.1,
+    "avg_move": -0.05
+   },
+   "check": {
+    "n": 17800,
+    "rise_pct": 29.4,
+    "fall_pct": 31.7,
+    "avg_move": -0.02
+   }
+  },
+  {
+   "name": "Red market day (SPY down 1%+)",
+   "kind": "rise",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 5501,
+    "rise_pct": 46.9,
+    "fall_pct": 19.0,
+    "avg_move": 1.32
+   },
+   "check": {
+    "n": 3204,
+    "rise_pct": 36.2,
+    "fall_pct": 31.4,
+    "avg_move": 0.3
+   }
+  },
+  {
+   "name": "Reddit hype (2x more mentions)",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Lots of Reddit talk (20+ mentions)",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Good news (headlines)",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Bad news (headlines)",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Heavy volume + Big up day",
+   "kind": "fall",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 1692,
+    "rise_pct": 32.2,
+    "fall_pct": 39.6,
+    "avg_move": -0.14
+   },
+   "check": {
+    "n": 907,
+    "rise_pct": 37.9,
+    "fall_pct": 37.3,
+    "avg_move": 0.17
+   }
+  },
+  {
+   "name": "Heavy volume + Big down day",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 1543,
+    "rise_pct": 41.0,
+    "fall_pct": 32.0,
+    "avg_move": 0.67
+   },
+   "check": {
+    "n": 811,
+    "rise_pct": 35.4,
+    "fall_pct": 34.6,
+    "avg_move": 0.21
+   }
+  },
+  {
+   "name": "Heavy volume + Oversold",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 645,
+    "rise_pct": 38.9,
+    "fall_pct": 37.5,
+    "avg_move": 0.66
+   },
+   "check": {
+    "n": 253,
+    "rise_pct": 34.8,
+    "fall_pct": 30.0,
+    "avg_move": 0.57
+   }
+  },
+  {
+   "name": "Heavy volume + Overbought",
+   "kind": "rise",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 850,
+    "rise_pct": 35.5,
+    "fall_pct": 30.7,
+    "avg_move": 0.42
+   },
+   "check": {
+    "n": 340,
+    "rise_pct": 39.7,
+    "fall_pct": 37.6,
+    "avg_move": 0.24
+   }
+  },
+  {
+   "name": "Heavy volume + In an uptrend",
+   "kind": "big move",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 2887,
+    "rise_pct": 34.2,
+    "fall_pct": 32.2,
+    "avg_move": 0.2
+   },
+   "check": {
+    "n": 1355,
+    "rise_pct": 36.6,
+    "fall_pct": 35.4,
+    "avg_move": 0.21
+   }
+  },
+  {
+   "name": "Heavy volume + In a downtrend",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 2715,
+    "rise_pct": 33.1,
+    "fall_pct": 36.1,
+    "avg_move": 0.06
+   },
+   "check": {
+    "n": 1567,
+    "rise_pct": 33.2,
+    "fall_pct": 33.1,
+    "avg_move": 0.14
+   }
+  },
+  {
+   "name": "Heavy volume + Quiet day",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 166,
+    "rise_pct": 30.1,
+    "fall_pct": 29.5,
+    "avg_move": -0.1
+   },
+   "check": {
+    "n": 130,
+    "rise_pct": 31.5,
+    "fall_pct": 27.7,
+    "avg_move": 0.46
+   }
+  },
+  {
+   "name": "Heavy volume + Closed near its 20-day high",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 1169,
+    "rise_pct": 32.8,
+    "fall_pct": 27.7,
+    "avg_move": 0.2
+   },
+   "check": {
+    "n": 504,
+    "rise_pct": 34.5,
+    "fall_pct": 35.5,
+    "avg_move": 0.16
+   }
+  },
+  {
+   "name": "Heavy volume + Closed near its 20-day low",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 951,
+    "rise_pct": 32.3,
+    "fall_pct": 29.4,
+    "avg_move": 0.2
+   },
+   "check": {
+    "n": 592,
+    "rise_pct": 28.9,
+    "fall_pct": 31.2,
+    "avg_move": 0.18
+   }
+  },
+  {
+   "name": "Heavy volume + Far below its 6-month high",
+   "kind": "big move",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 1629,
+    "rise_pct": 37.1,
+    "fall_pct": 40.5,
+    "avg_move": 0.25
+   },
+   "check": {
+    "n": 1137,
+    "rise_pct": 37.6,
+    "fall_pct": 36.1,
+    "avg_move": 0.27
+   }
+  },
+  {
+   "name": "Heavy volume + Healthy market",
+   "kind": "fall",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 3683,
+    "rise_pct": 31.7,
+    "fall_pct": 33.0,
+    "avg_move": 0.12
+   },
+   "check": {
+    "n": 1547,
+    "rise_pct": 35.6,
+    "fall_pct": 35.3,
+    "avg_move": 0.12
+   }
+  },
+  {
+   "name": "Heavy volume + Red market day",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 940,
+    "rise_pct": 51.4,
+    "fall_pct": 23.5,
+    "avg_move": 1.98
+   },
+   "check": {
+    "n": 381,
+    "rise_pct": 34.6,
+    "fall_pct": 33.3,
+    "avg_move": 0.5
+   }
+  },
+  {
+   "name": "Heavy volume + Reddit hype",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Heavy volume + Lots of Reddit talk",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Heavy volume + Good news",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Heavy volume + Bad news",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Big up day + Big down day",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Big up day + Oversold",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 48,
+    "rise_pct": 31.2,
+    "fall_pct": 39.6,
+    "avg_move": -0.71
+   },
+   "check": {
+    "n": 22,
+    "rise_pct": 40.9,
+    "fall_pct": 27.3,
+    "avg_move": 0.78
+   }
+  },
+  {
+   "name": "Big up day + Overbought",
+   "kind": "big move",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 986,
+    "rise_pct": 32.9,
+    "fall_pct": 32.9,
+    "avg_move": 0.15
+   },
+   "check": {
+    "n": 554,
+    "rise_pct": 36.8,
+    "fall_pct": 38.8,
+    "avg_move": 0.19
+   }
+  },
+  {
+   "name": "Big up day + In an uptrend",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 3699,
+    "rise_pct": 32.1,
+    "fall_pct": 35.0,
+    "avg_move": 0.01
+   },
+   "check": {
+    "n": 2699,
+    "rise_pct": 35.1,
+    "fall_pct": 35.2,
+    "avg_move": 0.17
+   }
+  },
+  {
+   "name": "Big up day + In a downtrend",
+   "kind": "fall",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 2012,
+    "rise_pct": 32.7,
+    "fall_pct": 40.1,
+    "avg_move": -0.34
+   },
+   "check": {
+    "n": 1664,
+    "rise_pct": 31.2,
+    "fall_pct": 36.4,
+    "avg_move": -0.12
+   }
+  },
+  {
+   "name": "Big up day + Quiet day",
+   "kind": "fall",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 280,
+    "rise_pct": 34.3,
+    "fall_pct": 45.7,
+    "avg_move": -0.43
+   },
+   "check": {
+    "n": 204,
+    "rise_pct": 28.9,
+    "fall_pct": 40.2,
+    "avg_move": -0.31
+   }
+  },
+  {
+   "name": "Big up day + Closed near its 20-day high",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 1854,
+    "rise_pct": 31.3,
+    "fall_pct": 30.3,
+    "avg_move": 0.09
+   },
+   "check": {
+    "n": 1280,
+    "rise_pct": 31.6,
+    "fall_pct": 34.4,
+    "avg_move": 0.04
+   }
+  },
+  {
+   "name": "Big up day + Closed near its 20-day low",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Big up day + Far below its 6-month high",
+   "kind": "big move",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 1939,
+    "rise_pct": 33.6,
+    "fall_pct": 41.2,
+    "avg_move": -0.3
+   },
+   "check": {
+    "n": 1790,
+    "rise_pct": 33.2,
+    "fall_pct": 38.8,
+    "avg_move": -0.01
+   }
+  },
+  {
+   "name": "Big up day + Healthy market",
+   "kind": "fall",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 4236,
+    "rise_pct": 32.2,
+    "fall_pct": 34.2,
+    "avg_move": 0.02
+   },
+   "check": {
+    "n": 2657,
+    "rise_pct": 33.3,
+    "fall_pct": 37.6,
+    "avg_move": -0.01
+   }
+  },
+  {
+   "name": "Big up day + Red market day",
+   "kind": "rise",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 138,
+    "rise_pct": 44.9,
+    "fall_pct": 32.6,
+    "avg_move": 0.94
+   },
+   "check": {
+    "n": 141,
+    "rise_pct": 41.1,
+    "fall_pct": 23.4,
+    "avg_move": 0.78
+   }
+  },
+  {
+   "name": "Big up day + Reddit hype",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Big up day + Lots of Reddit talk",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Big up day + Good news",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Big up day + Bad news",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Big down day + Oversold",
+   "kind": "rise",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 696,
+    "rise_pct": 48.6,
+    "fall_pct": 29.9,
+    "avg_move": 1.61
+   },
+   "check": {
+    "n": 331,
+    "rise_pct": 39.0,
+    "fall_pct": 32.0,
+    "avg_move": 0.74
+   }
+  },
+  {
+   "name": "Big down day + Overbought",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 65,
+    "rise_pct": 49.2,
+    "fall_pct": 38.5,
+    "avg_move": 1.86
+   },
+   "check": {
+    "n": 48,
+    "rise_pct": 35.4,
+    "fall_pct": 39.6,
+    "avg_move": 0.59
+   }
+  },
+  {
+   "name": "Big down day + In an uptrend",
+   "kind": "big move",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 1926,
+    "rise_pct": 37.5,
+    "fall_pct": 33.1,
+    "avg_move": 0.24
+   },
+   "check": {
+    "n": 1404,
+    "rise_pct": 35.3,
+    "fall_pct": 37.3,
+    "avg_move": 0.07
+   }
+  },
+  {
+   "name": "Big down day + In a downtrend",
+   "kind": "rise",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 3504,
+    "rise_pct": 41.2,
+    "fall_pct": 31.2,
+    "avg_move": 0.63
+   },
+   "check": {
+    "n": 2715,
+    "rise_pct": 37.2,
+    "fall_pct": 34.6,
+    "avg_move": 0.22
+   }
+  },
+  {
+   "name": "Big down day + Quiet day",
+   "kind": "big move",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 254,
+    "rise_pct": 40.9,
+    "fall_pct": 37.0,
+    "avg_move": -0.13
+   },
+   "check": {
+    "n": 255,
+    "rise_pct": 34.5,
+    "fall_pct": 40.8,
+    "avg_move": -0.25
+   }
+  },
+  {
+   "name": "Big down day + Closed near its 20-day high",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Big down day + Closed near its 20-day low",
+   "kind": "rise",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 1506,
+    "rise_pct": 39.3,
+    "fall_pct": 28.8,
+    "avg_move": 0.51
+   },
+   "check": {
+    "n": 1207,
+    "rise_pct": 37.2,
+    "fall_pct": 32.1,
+    "avg_move": 0.45
+   }
+  },
+  {
+   "name": "Big down day + Far below its 6-month high",
+   "kind": "big move",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 2682,
+    "rise_pct": 44.1,
+    "fall_pct": 33.1,
+    "avg_move": 0.8
+   },
+   "check": {
+    "n": 2308,
+    "rise_pct": 38.1,
+    "fall_pct": 36.9,
+    "avg_move": 0.2
+   }
+  },
+  {
+   "name": "Big down day + Healthy market",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 2860,
+    "rise_pct": 33.6,
+    "fall_pct": 35.8,
+    "avg_move": -0.08
+   },
+   "check": {
+    "n": 1922,
+    "rise_pct": 33.4,
+    "fall_pct": 36.4,
+    "avg_move": -0.06
+   }
+  },
+  {
+   "name": "Big down day + Red market day",
+   "kind": "rise",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 2198,
+    "rise_pct": 51.9,
+    "fall_pct": 22.3,
+    "avg_move": 1.73
+   },
+   "check": {
+    "n": 1076,
+    "rise_pct": 41.1,
+    "fall_pct": 34.2,
+    "avg_move": 0.52
+   }
+  },
+  {
+   "name": "Big down day + Reddit hype",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Big down day + Lots of Reddit talk",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Big down day + Good news",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Big down day + Bad news",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Oversold + Overbought",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Oversold + In an uptrend",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Oversold + In a downtrend",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 1801,
+    "rise_pct": 38.5,
+    "fall_pct": 33.0,
+    "avg_move": 0.64
+   },
+   "check": {
+    "n": 1201,
+    "rise_pct": 32.8,
+    "fall_pct": 29.0,
+    "avg_move": 0.33
+   }
+  },
+  {
+   "name": "Oversold + Quiet day",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 209,
+    "rise_pct": 34.4,
+    "fall_pct": 28.7,
+    "avg_move": 0.2
+   },
+   "check": {
+    "n": 175,
+    "rise_pct": 32.0,
+    "fall_pct": 27.4,
+    "avg_move": 0.12
+   }
+  },
+  {
+   "name": "Oversold + Closed near its 20-day high",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Oversold + Closed near its 20-day low",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 987,
+    "rise_pct": 35.8,
+    "fall_pct": 30.5,
+    "avg_move": 0.47
+   },
+   "check": {
+    "n": 811,
+    "rise_pct": 30.8,
+    "fall_pct": 28.6,
+    "avg_move": 0.31
+   }
+  },
+  {
+   "name": "Oversold + Far below its 6-month high",
+   "kind": "rise",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 1389,
+    "rise_pct": 40.7,
+    "fall_pct": 35.0,
+    "avg_move": 0.74
+   },
+   "check": {
+    "n": 910,
+    "rise_pct": 36.7,
+    "fall_pct": 30.8,
+    "avg_move": 0.46
+   }
+  },
+  {
+   "name": "Oversold + Healthy market",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 631,
+    "rise_pct": 25.5,
+    "fall_pct": 34.9,
+    "avg_move": -0.27
+   },
+   "check": {
+    "n": 445,
+    "rise_pct": 31.9,
+    "fall_pct": 28.8,
+    "avg_move": 0.05
+   }
+  },
+  {
+   "name": "Oversold + Red market day",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 639,
+    "rise_pct": 61.7,
+    "fall_pct": 15.3,
+    "avg_move": 3.5
+   },
+   "check": {
+    "n": 230,
+    "rise_pct": 35.2,
+    "fall_pct": 36.5,
+    "avg_move": 0.4
+   }
+  },
+  {
+   "name": "Oversold + Reddit hype",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Oversold + Lots of Reddit talk",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Oversold + Good news",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Oversold + Bad news",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Overbought + In an uptrend",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 4149,
+    "rise_pct": 27.6,
+    "fall_pct": 27.9,
+    "avg_move": 0.02
+   },
+   "check": {
+    "n": 1672,
+    "rise_pct": 31.2,
+    "fall_pct": 33.1,
+    "avg_move": 0.12
+   }
+  },
+  {
+   "name": "Overbought + In a downtrend",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Overbought + Quiet day",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 455,
+    "rise_pct": 24.2,
+    "fall_pct": 26.4,
+    "avg_move": -0.19
+   },
+   "check": {
+    "n": 157,
+    "rise_pct": 27.4,
+    "fall_pct": 28.7,
+    "avg_move": 0.16
+   }
+  },
+  {
+   "name": "Overbought + Closed near its 20-day high",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 2945,
+    "rise_pct": 25.5,
+    "fall_pct": 23.8,
+    "avg_move": 0.04
+   },
+   "check": {
+    "n": 1122,
+    "rise_pct": 29.9,
+    "fall_pct": 30.9,
+    "avg_move": 0.11
+   }
+  },
+  {
+   "name": "Overbought + Closed near its 20-day low",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Overbought + Far below its 6-month high",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 114,
+    "rise_pct": 36.0,
+    "fall_pct": 32.5,
+    "avg_move": 0.54
+   },
+   "check": {
+    "n": 66,
+    "rise_pct": 27.3,
+    "fall_pct": 50.0,
+    "avg_move": -0.39
+   }
+  },
+  {
+   "name": "Overbought + Healthy market",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 3780,
+    "rise_pct": 26.6,
+    "fall_pct": 27.8,
+    "avg_move": -0.01
+   },
+   "check": {
+    "n": 1252,
+    "rise_pct": 34.7,
+    "fall_pct": 32.8,
+    "avg_move": 0.22
+   }
+  },
+  {
+   "name": "Overbought + Red market day",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 172,
+    "rise_pct": 36.6,
+    "fall_pct": 24.4,
+    "avg_move": 0.62
+   },
+   "check": {
+    "n": 114,
+    "rise_pct": 24.6,
+    "fall_pct": 29.8,
+    "avg_move": -0.11
+   }
+  },
+  {
+   "name": "Overbought + Reddit hype",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Overbought + Lots of Reddit talk",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Overbought + Good news",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Overbought + Bad news",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "In an uptrend + In a downtrend",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "In an uptrend + Quiet day",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 3822,
+    "rise_pct": 25.7,
+    "fall_pct": 26.4,
+    "avg_move": -0.09
+   },
+   "check": {
+    "n": 2146,
+    "rise_pct": 28.9,
+    "fall_pct": 30.6,
+    "avg_move": 0.03
+   }
+  },
+  {
+   "name": "In an uptrend + Closed near its 20-day high",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 8874,
+    "rise_pct": 24.7,
+    "fall_pct": 22.8,
+    "avg_move": 0.03
+   },
+   "check": {
+    "n": 4035,
+    "rise_pct": 27.3,
+    "fall_pct": 28.7,
+    "avg_move": 0.02
+   }
+  },
+  {
+   "name": "In an uptrend + Closed near its 20-day low",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 523,
+    "rise_pct": 27.3,
+    "fall_pct": 20.7,
+    "avg_move": 0.14
+   },
+   "check": {
+    "n": 360,
+    "rise_pct": 22.2,
+    "fall_pct": 23.6,
+    "avg_move": 0.02
+   }
+  },
+  {
+   "name": "In an uptrend + Far below its 6-month high",
+   "kind": "big move",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 2718,
+    "rise_pct": 34.3,
+    "fall_pct": 34.5,
+    "avg_move": 0.08
+   },
+   "check": {
+    "n": 2287,
+    "rise_pct": 35.1,
+    "fall_pct": 36.5,
+    "avg_move": 0.12
+   }
+  },
+  {
+   "name": "In an uptrend + Healthy market",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 22623,
+    "rise_pct": 26.6,
+    "fall_pct": 27.5,
+    "avg_move": -0.01
+   },
+   "check": {
+    "n": 9467,
+    "rise_pct": 30.1,
+    "fall_pct": 32.0,
+    "avg_move": 0.01
+   }
+  },
+  {
+   "name": "In an uptrend + Red market day",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 1995,
+    "rise_pct": 40.7,
+    "fall_pct": 18.8,
+    "avg_move": 0.74
+   },
+   "check": {
+    "n": 1181,
+    "rise_pct": 35.5,
+    "fall_pct": 29.4,
+    "avg_move": 0.37
+   }
+  },
+  {
+   "name": "In an uptrend + Reddit hype",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "In an uptrend + Lots of Reddit talk",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "In an uptrend + Good news",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "In an uptrend + Bad news",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "In a downtrend + Quiet day",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 3524,
+    "rise_pct": 28.9,
+    "fall_pct": 30.8,
+    "avg_move": -0.09
+   },
+   "check": {
+    "n": 2744,
+    "rise_pct": 29.6,
+    "fall_pct": 30.7,
+    "avg_move": -0.01
+   }
+  },
+  {
+   "name": "In a downtrend + Closed near its 20-day high",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 531,
+    "rise_pct": 26.9,
+    "fall_pct": 20.3,
+    "avg_move": 0.13
+   },
+   "check": {
+    "n": 452,
+    "rise_pct": 24.3,
+    "fall_pct": 22.8,
+    "avg_move": 0.02
+   }
+  },
+  {
+   "name": "In a downtrend + Closed near its 20-day low",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 4683,
+    "rise_pct": 28.8,
+    "fall_pct": 27.6,
+    "avg_move": 0.11
+   },
+   "check": {
+    "n": 4194,
+    "rise_pct": 28.2,
+    "fall_pct": 28.5,
+    "avg_move": 0.1
+   }
+  },
+  {
+   "name": "In a downtrend + Far below its 6-month high",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 9570,
+    "rise_pct": 35.2,
+    "fall_pct": 34.6,
+    "avg_move": 0.13
+   },
+   "check": {
+    "n": 9121,
+    "rise_pct": 33.6,
+    "fall_pct": 34.5,
+    "avg_move": 0.06
+   }
+  },
+  {
+   "name": "In a downtrend + Healthy market",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 12594,
+    "rise_pct": 26.4,
+    "fall_pct": 29.3,
+    "avg_move": -0.13
+   },
+   "check": {
+    "n": 8333,
+    "rise_pct": 28.7,
+    "fall_pct": 31.3,
+    "avg_move": -0.06
+   }
+  },
+  {
+   "name": "In a downtrend + Red market day",
+   "kind": "rise",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 3506,
+    "rise_pct": 50.5,
+    "fall_pct": 19.1,
+    "avg_move": 1.65
+   },
+   "check": {
+    "n": 2023,
+    "rise_pct": 36.6,
+    "fall_pct": 32.5,
+    "avg_move": 0.26
+   }
+  },
+  {
+   "name": "In a downtrend + Reddit hype",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "In a downtrend + Lots of Reddit talk",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "In a downtrend + Good news",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "In a downtrend + Bad news",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Quiet day + Closed near its 20-day high",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 1339,
+    "rise_pct": 23.0,
+    "fall_pct": 19.7,
+    "avg_move": 0.04
+   },
+   "check": {
+    "n": 545,
+    "rise_pct": 28.8,
+    "fall_pct": 25.1,
+    "avg_move": 0.14
+   }
+  },
+  {
+   "name": "Quiet day + Closed near its 20-day low",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 710,
+    "rise_pct": 27.6,
+    "fall_pct": 26.6,
+    "avg_move": 0.04
+   },
+   "check": {
+    "n": 757,
+    "rise_pct": 25.1,
+    "fall_pct": 26.7,
+    "avg_move": -0.03
+   }
+  },
+  {
+   "name": "Quiet day + Far below its 6-month high",
+   "kind": "rise",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 2071,
+    "rise_pct": 32.4,
+    "fall_pct": 35.5,
+    "avg_move": -0.18
+   },
+   "check": {
+    "n": 1808,
+    "rise_pct": 34.3,
+    "fall_pct": 33.9,
+    "avg_move": 0.09
+   }
+  },
+  {
+   "name": "Quiet day + Healthy market",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 5510,
+    "rise_pct": 25.4,
+    "fall_pct": 27.6,
+    "avg_move": -0.1
+   },
+   "check": {
+    "n": 2809,
+    "rise_pct": 27.8,
+    "fall_pct": 31.8,
+    "avg_move": -0.09
+   }
+  },
+  {
+   "name": "Quiet day + Red market day",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 413,
+    "rise_pct": 44.8,
+    "fall_pct": 12.6,
+    "avg_move": 0.86
+   },
+   "check": {
+    "n": 405,
+    "rise_pct": 32.8,
+    "fall_pct": 33.3,
+    "avg_move": -0.09
+   }
+  },
+  {
+   "name": "Quiet day + Reddit hype",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Quiet day + Lots of Reddit talk",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Quiet day + Good news",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Quiet day + Bad news",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Closed near its 20-day high + Closed near its 20-day low",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 5,
+    "rise_pct": 20.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.24
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Closed near its 20-day high + Far below its 6-month high",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 618,
+    "rise_pct": 32.4,
+    "fall_pct": 31.2,
+    "avg_move": 0.08
+   },
+   "check": {
+    "n": 440,
+    "rise_pct": 29.3,
+    "fall_pct": 33.2,
+    "avg_move": -0.0
+   }
+  },
+  {
+   "name": "Closed near its 20-day high + Healthy market",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 8521,
+    "rise_pct": 24.2,
+    "fall_pct": 22.5,
+    "avg_move": 0.03
+   },
+   "check": {
+    "n": 3006,
+    "rise_pct": 27.7,
+    "fall_pct": 28.9,
+    "avg_move": 0.02
+   }
+  },
+  {
+   "name": "Closed near its 20-day high + Red market day",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 352,
+    "rise_pct": 33.2,
+    "fall_pct": 19.3,
+    "avg_move": 0.33
+   },
+   "check": {
+    "n": 302,
+    "rise_pct": 26.8,
+    "fall_pct": 27.2,
+    "avg_move": 0.17
+   }
+  },
+  {
+   "name": "Closed near its 20-day high + Reddit hype",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Closed near its 20-day high + Lots of Reddit talk",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Closed near its 20-day high + Good news",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Closed near its 20-day high + Bad news",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Closed near its 20-day low + Far below its 6-month high",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 1811,
+    "rise_pct": 33.1,
+    "fall_pct": 34.2,
+    "avg_move": 0.16
+   },
+   "check": {
+    "n": 2018,
+    "rise_pct": 32.6,
+    "fall_pct": 33.3,
+    "avg_move": 0.21
+   }
+  },
+  {
+   "name": "Closed near its 20-day low + Healthy market",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 3114,
+    "rise_pct": 22.6,
+    "fall_pct": 28.0,
+    "avg_move": -0.2
+   },
+   "check": {
+    "n": 1946,
+    "rise_pct": 26.2,
+    "fall_pct": 27.4,
+    "avg_move": -0.05
+   }
+  },
+  {
+   "name": "Closed near its 20-day low + Red market day",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 1337,
+    "rise_pct": 45.6,
+    "fall_pct": 19.7,
+    "avg_move": 1.15
+   },
+   "check": {
+    "n": 793,
+    "rise_pct": 34.0,
+    "fall_pct": 33.5,
+    "avg_move": 0.35
+   }
+  },
+  {
+   "name": "Closed near its 20-day low + Reddit hype",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Closed near its 20-day low + Lots of Reddit talk",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Closed near its 20-day low + Good news",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Closed near its 20-day low + Bad news",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Far below its 6-month high + Healthy market",
+   "kind": "fall",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 7566,
+    "rise_pct": 30.9,
+    "fall_pct": 34.9,
+    "avg_move": -0.12
+   },
+   "check": {
+    "n": 6049,
+    "rise_pct": 31.9,
+    "fall_pct": 36.5,
+    "avg_move": -0.07
+   }
+  },
+  {
+   "name": "Far below its 6-month high + Red market day",
+   "kind": "rise",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 2030,
+    "rise_pct": 58.0,
+    "fall_pct": 19.1,
+    "avg_move": 2.41
+   },
+   "check": {
+    "n": 1276,
+    "rise_pct": 41.7,
+    "fall_pct": 33.2,
+    "avg_move": 0.43
+   }
+  },
+  {
+   "name": "Far below its 6-month high + Reddit hype",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Far below its 6-month high + Lots of Reddit talk",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Far below its 6-month high + Good news",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Far below its 6-month high + Bad news",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Healthy market + Red market day",
+   "kind": "rise",
+   "held": true,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 1067,
+    "rise_pct": 33.5,
+    "fall_pct": 24.1,
+    "avg_move": 0.37
+   },
+   "check": {
+    "n": 178,
+    "rise_pct": 36.5,
+    "fall_pct": 35.4,
+    "avg_move": -0.24
+   }
+  },
+  {
+   "name": "Healthy market + Reddit hype",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Healthy market + Lots of Reddit talk",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Healthy market + Good news",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Healthy market + Bad news",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Red market day + Reddit hype",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Red market day + Lots of Reddit talk",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Red market day + Good news",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  },
+  {
+   "name": "Red market day + Bad news",
+   "kind": null,
+   "held": false,
+   "base": {
+    "learn": {
+     "n": 47993,
+     "rise_pct": 29.3,
+     "fall_pct": 28.4,
+     "avg_move": 0.04
+    },
+    "check": {
+     "n": 32040,
+     "rise_pct": 30.1,
+     "fall_pct": 31.1,
+     "avg_move": 0.05
+    }
+   },
+   "learn": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   },
+   "check": {
+    "n": 0,
+    "rise_pct": 0.0,
+    "fall_pct": 0.0,
+    "avg_move": 0.0
+   }
+  }
+ ],
+ "movers": {
+  "date": "2026-11-04",
+  "riser": {
+   "ticker": "XYZ",
+   "chg": 15.3,
+   "clues": [
+    "Heavy volume (1.5x normal)",
+    "In a downtrend (below its 50-day average)"
+   ]
+  },
+  "faller": {
+   "ticker": "HUT",
+   "chg": -23.2,
+   "clues": [
+    "Big up day (+3% or more)",
+    "In a downtrend (below its 50-day average)",
+    "Far below its 6-month high (25%+)"
+   ]
+  }
+ }
+}
