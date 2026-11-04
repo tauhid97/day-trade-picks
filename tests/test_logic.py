@@ -188,6 +188,25 @@ def test_new_skills():
     assert gd.find(SimpleNamespace(**{**vars(ctx), "rvol": 1.0}), gd.SKILL["params"]) is None        # nobody's trading it
     assert gd.find(SimpleNamespace(**{**vars(ctx), "last": 95.5}), gd.SKILL["params"]) is None       # already bounced past
     assert "stormy" in gd.SKILL["weather"]
+    # Underdog: the day after a red market day, a stock 25%+ below its 6-month high; buy above the morning high
+    from screener.skills import underdog
+    sink = np.r_[np.linspace(100, 70, 130)]                      # slid from 100 to 70 over ~6 months
+    du = pd.DataFrame({"Open": sink, "High": sink + 0.5, "Low": sink - 0.5, "Close": sink, "Volume": 1e6},
+                      index=pd.bdate_range("2026-04-01", periods=130))
+    ctx = SimpleNamespace(daily=du, market_prev_chg=-1.4, day_chg_pct=1.5, last=71.05, vwap=70.9, rvol=1.4,
+                          or_high=71.5, lod=70.3, atr=1.8, prev_close=70.0)
+    idea = underdog.find(ctx, underdog.SKILL["params"])
+    assert idea and round(idea["entry"], 2) == 71.51 and idea["stop"] < idea["entry"], idea
+    assert underdog.SKILL["params"]["hold_days"] == 2
+    assert underdog.find(SimpleNamespace(**{**vars(ctx), "market_prev_chg": -0.3}), underdog.SKILL["params"]) is None  # yesterday wasn't red
+    assert underdog.find(SimpleNamespace(**{**vars(ctx), "market_prev_chg": None}), underdog.SKILL["params"]) is None
+    flat = du.copy(); flat["Close"] = 70.0; flat["High"] = 71.0
+    assert underdog.find(SimpleNamespace(**{**vars(ctx), "daily": flat}), underdog.SKILL["params"]) is None       # not beaten down
+    assert underdog.find(SimpleNamespace(**{**vars(ctx), "last": 71.6}), underdog.SKILL["params"]) is None        # already broke out
+    assert "stormy" in underdog.SKILL["weather"]
+    # the Scout tells every stock how the market did yesterday
+    spy = pd.DataFrame({"Close": [100.0, 98.0]}, index=pd.bdate_range("2026-11-02", periods=2))
+    assert round(engine.market_prev_change(pd.Timestamp("2026-11-04", tz=NY), {"SPY": spy}), 1) == -2.0
     # live scans hand every stock its hype level, so Hype Rider can see it
     old_check = engine.hype.check
     engine.hype.check = lambda t: ("hype", "x")
@@ -288,13 +307,39 @@ def test_reader():
     print("reader OK")
 
 
+def test_watchlist():
+    """Beaten-down watchlist + red-day 'holding up best' list."""
+    import os
+    import screener.config as C
+    from screener.bots import watchlist
+    C.WATCHLIST_FILE = "/tmp/dtp_watchlist.json"
+    idx = pd.bdate_range("2026-04-01", periods=130)
+    def stock(top, now):
+        c = np.r_[np.full(30, top), np.linspace(top, now, 100)]
+        return pd.DataFrame({"Open": c, "High": c, "Low": c, "Close": c, "Volume": 1e6}, index=idx)
+    daily = {"AAA": stock(100, 60), "BBB": stock(100, 90), "CCC": stock(50, 35), "SPY": stock(500, 480)}
+    today = idx[-1] + pd.offsets.BDay(1)
+    w = watchlist.build(daily, today, {"AAA": -3.0, "BBB": 0.5, "CCC": 1.2}, market_chg=-1.6)
+    assert [x["ticker"] for x in w["beaten"]] == ["AAA", "CCC"], w            # BBB only 10% down: not beaten
+    assert w["beaten"][0]["below_high_pct"] == 40 and w["red_day"], w
+    assert [x["ticker"] for x in w["holding_up"]][:2] == ["CCC", "BBB"], w   # best on a red day first
+    text = "\n".join(watchlist.lines(w))
+    assert "Beaten-down watchlist" in text and "$AAA" in text and "Red day" in text, text
+    calm = watchlist.build(daily, today, {"AAA": 1.0}, market_chg=0.3)
+    assert not calm["red_day"] and "Red day" not in "\n".join(watchlist.lines(calm))
+    assert "$AAA" in watchlist.text()                                         # /watchlist reads the saved list
+    os.remove(C.WATCHLIST_FILE)
+    print("watchlist OK")
+
+
 def plain_nick_ok():
     from screener import plain
     return plain.nick("NR7 Breakout") == "Tight Spring (NR7 Breakout)" and plain.nick("Relative Strength") == "Strong Kid (Relative Strength)" \
         and plain.nick("Downtrend Reversal") == "Wake Up Rally (Downtrend Reversal)" \
         and plain.nick("Oversold Comeback") == "Comeback Kid (Oversold Comeback)" \
         and plain.nick("Hype Breakout") == "Hype Rider (Hype Breakout)" \
-        and plain.nick("Gap-Down Bounce") == "Crash Bounce (Gap-Down Bounce)"
+        and plain.nick("Gap-Down Bounce") == "Crash Bounce (Gap-Down Bounce)" \
+        and plain.nick("Beaten-Down Turnaround") == "Underdog (Beaten-Down Turnaround)"
 
 
 def test_all(tmp="/tmp/dtp_test"):
@@ -303,7 +348,7 @@ def test_all(tmp="/tmp/dtp_test"):
     shutil.rmtree(tmp, ignore_errors=True); os.makedirs(tmp)
     for k in ["PICKS_FILE", "BACKTEST_TRADES_FILE", "BACKTEST_SUMMARY_FILE", "SKILL_STATUS_FILE",
               "TUNED_FILE", "COACH_FILE", "REPORT_FILE", "TODAY_POST_FILE", "STUDY_FILE",
-              "HYPE_HISTORY_FILE", "NEWS_HISTORY_FILE"]:
+              "HYPE_HISTORY_FILE", "NEWS_HISTORY_FILE", "WATCHLIST_FILE"]:
         setattr(C, k, os.path.join(tmp, os.path.basename(getattr(C, k))))
     C.MIN_AVG_DOLLAR_VOL = 1e6
     C.GUARD_MIN_TRADES = 2; C.COACH_MIN_TRADES = 1
@@ -363,6 +408,8 @@ def test_all(tmp="/tmp/dtp_test"):
     assert "Hype [practice, info only]" in [t for who, t in sent if who == "boss"][0]
     assert all("Hype [practice" not in t for who, t in sent if who == "community")
     assert "News [practice, info only]" in [t for who, t in sent if who == "boss"][0]
+    assert "Beaten-down watchlist" in [t for who, t in sent if who == "boss"][0]
+    assert all("Beaten-down watchlist" not in t for who, t in sent if who == "community")
     assert all("News [practice" not in t for who, t in sent if who == "community")
     print("\n--- sample message to Boss ---\n" + [t for who, t in sent if who == "boss"][0])
     results_msg = [t for who, t in sent if who == "boss"][-1]
@@ -413,7 +460,8 @@ def test_all(tmp="/tmp/dtp_test"):
     assert "Study bot" in note and "Biggest riser" in note and "Biggest faller" in note, note
     assert os.path.exists(C.STUDY_FILE)
     assert "Study bot" in commands.answer("/lessons", live.load_picks(), {})
-    assert "/lessons" in commands.HELP
+    assert "/lessons" in commands.HELP and "/watchlist" in commands.HELP
+    assert "watchlist" in commands.answer("/watchlist", live.load_picks(), {}).lower()
     n = len(sent); live.grade(note=note)                     # the note rides along in the evening message
     assert len(sent) == n + 1 and "Study bot" in sent[-1][1], sent[-1][1]
     print("\n--- study note ---\n" + note + "\n\n--- /lessons ---\n" + commands.answer("/lessons", live.load_picks(), {}))
@@ -484,6 +532,8 @@ def test_study_finds_a_planted_clue():
     hyped = [x for x in notes["clues"] if x["name"].startswith("Reddit hype")][0]
     assert hyped["held"] and hyped["kind"] == "fall", hyped
     assert any(" + " in x["name"] for x in notes["clues"]), "no combos studied"
+    names = {x["name"] for x in notes["clues"]}
+    assert "Far below its 6-month high (25%+)" in names and "Red market day (SPY down 1%+)" in names, names
     text = study.lessons_text()
     assert "Heavy volume" in text and "Reddit hype" in text, text
     for f in (C.STUDY_FILE, C.HYPE_HISTORY_FILE):
@@ -496,6 +546,7 @@ if __name__ == "__main__":
     test_plain()
     test_news()
     test_reader()
+    test_watchlist()
     test_new_skills()
     test_study_finds_a_planted_clue()
     test_all()
