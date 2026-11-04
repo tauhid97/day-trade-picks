@@ -7,7 +7,7 @@
   python main.py hello      # send a test message to your Telegram
   python main.py report     # rebuild the track-record page
   python main.py auto       # picks the right job based on the time (used by the schedule)
-  python main.py commands   # answer Boss's /status /picks /scoreboard /skills /lessons messages (every ~15 min)
+  python main.py commands   # answer Boss's /status /picks /scoreboard /skills /lessons /teach messages (every ~15 min)
   python main.py study      # Study bot: learn from past charts (also runs every evening before grading)
 """
 import sys
@@ -16,7 +16,7 @@ import pandas as pd
 
 from screener import backtest, commands, live, plain, report
 from screener import config as C
-from screener.bots import coach, guard, hype, news, study
+from screener.bots import coach, guard, hype, news, study, teacher
 from screener.data import load_universe
 from screener.notify import to_boss
 
@@ -34,6 +34,10 @@ def weekly():
         msg += ["", "News bot [practice - info only, real picks so far, by news label]:"] + news.summary(live.load_picks())
         msg += ["", coach.run(prepared, intraday)]
     msg += ["", study.lessons_text()]
+    try:
+        msg += ["", teacher.lesson(live.load_picks(), pd.Timestamp.now(tz="America/New_York"))]
+    except Exception as e:
+        print("Teacher skipped:", e)
     status, changes = guard.run(live.load_picks(), pd.Timestamp.now(tz="America/New_York").strftime("%Y-%m-%d"))
     msg += ["", guard.team_sheet(status)]
     text = "\n".join(msg)
@@ -56,6 +60,10 @@ def evening():
     except Exception as e:           # a study hiccup must never stop the results being graded
         print("Study bot skipped:", e)
         note = ""
+    try:                             # one tip from the Teacher rides along with the results
+        note = (note + "\n\n" if note else "") + teacher.tip(live.load_picks(), now)
+    except Exception as e:
+        print("Teacher skipped:", e)
     live.grade(note=note); report.build()
     try:                             # the Coach re-checks every skill's settings on the latest days
         intraday, daily = backtest.load_data()

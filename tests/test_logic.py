@@ -307,6 +307,32 @@ def test_reader():
     print("reader OK")
 
 
+def test_teacher():
+    """Teacher: ranks skills on real + past-test trades, explains them, gives a nightly tip."""
+    import os
+    import screener.config as C
+    from screener.bots import teacher
+    C.BACKTEST_TRADES_FILE = "/tmp/dtp_teacher_bt.csv"
+    past = [{"setup": "VWAP Pullback", "status": "target", "r_multiple": 2.0, "weather": "sunny"}] * 8 + \
+           [{"setup": "VWAP Pullback", "status": "stop", "r_multiple": -1.0, "weather": "cloudy"}] * 8 + \
+           [{"setup": "Gap & Go", "status": "stop", "r_multiple": -1.0, "weather": "sunny"}] * 10
+    pd.DataFrame(past).to_csv(C.BACKTEST_TRADES_FILE, index=False)
+    real = pd.DataFrame({"setup": ["VWAP Pullback", "Oversold Bounce", "Oversold Bounce"], "mode": "live",
+                         "status": ["target", "eod", "no_fill"], "r_multiple": [2.0, 0.5, 0.0]})
+    r = teacher.rank(real)
+    assert [x[0] for x in r] == ["VWAP Pullback", "Gap & Go"] and r[0][2:] == (1, 16, 2.0), r   # Bounce Back: too few trades
+    text = teacher.lesson(real, pd.Timestamp("2026-11-04"))
+    assert "1. Dip Buy (VWAP Pullback)" in text and "1 real pick +" in text and "Real picks so far: +$20.00" in text and "Morning Rocket" not in text, text
+    assert "Watch out:" in text and "What it looks for:" in text and "not advice" in text, text
+    tips = teacher.data_tips(real)
+    assert any("did better on ☀️ SUNNY" in t for t in tips), tips                 # the bot's own lesson
+    assert teacher.tip(real, "2026-11-04") != teacher.tip(real, "2026-11-05")      # a new tip each night
+    assert all(teacher.WATCH_OUT.get(s["name"]) for s in teacher.load_skills())   # every skill has a warning
+    os.remove(C.BACKTEST_TRADES_FILE)
+    assert "No skill is clearly winning yet" in teacher.lesson(real.iloc[:0], "2026-11-04")
+    print("teacher OK")
+
+
 def test_watchlist():
     """Beaten-down watchlist + red-day 'holding up best' list."""
     import os
@@ -464,7 +490,8 @@ def test_all(tmp="/tmp/dtp_test"):
     assert "Study bot" in note and "Biggest riser" in note and "Biggest faller" in note, note
     assert os.path.exists(C.STUDY_FILE)
     assert "Study bot" in commands.answer("/lessons", live.load_picks(), {})
-    assert "/lessons" in commands.HELP and "/watchlist" in commands.HELP
+    assert "/lessons" in commands.HELP and "/watchlist" in commands.HELP and "/teach" in commands.HELP
+    assert "Teacher's lesson" in commands.answer("/teach", live.load_picks(), {})
     assert "watchlist" in commands.answer("/watchlist", live.load_picks(), {}).lower()
     n = len(sent); live.grade(note=note)                     # the note rides along in the evening message
     assert len(sent) == n + 1 and "Study bot" in sent[-1][1], sent[-1][1]
@@ -551,6 +578,7 @@ if __name__ == "__main__":
     test_news()
     test_reader()
     test_watchlist()
+    test_teacher()
     test_new_skills()
     test_study_finds_a_planted_clue()
     test_all()

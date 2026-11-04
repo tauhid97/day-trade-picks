@@ -9,6 +9,7 @@ It only ever answers Boss's own chat (TELEGRAM_CHAT_ID); anyone else is ignored.
   /skills       which skills are LIVE and which are PRACTICE
   /lessons      what the Study bot has learned from past charts
   /watchlist    beaten-down stocks + who's holding up on red days
+  /teach        the Teacher's lesson: best skills now, how they work, a tip
   anything else this help message
 """
 import json
@@ -18,7 +19,7 @@ import pandas as pd
 import requests
 
 from . import plain
-from .bots import guard, study, watchlist
+from .bots import guard, study, teacher, watchlist
 from .data import NY
 from .live import load_picks
 from .notify import to_boss
@@ -32,7 +33,8 @@ HELP = ("Hi Boss! I check for messages about every 15 minutes, so my answers can
         "/scoreboard - wins and losses so far\n"
         "/skills - which skills are live and which are practice\n"
         "/lessons - what the Study bot learned from past charts\n"
-        "/watchlist - beaten-down stocks, and who's strong on red days")
+        "/watchlist - beaten-down stocks, and who's strong on red days\n"
+        "/teach - a lesson: the best skills now, how they work, and a tip")
 
 
 def get_updates(offset):
@@ -116,6 +118,8 @@ def answer(text, df, status):
         return study.lessons_text()
     if word == "/watchlist":
         return watchlist.text()
+    if word == "/teach":
+        return teacher.lesson(df, pd.Timestamp.now(tz=NY))
     return HELP
 
 
