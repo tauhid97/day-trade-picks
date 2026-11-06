@@ -4,8 +4,9 @@
   tracked, but they're labeled practice and never go to the community).
 - A practice skill that starts winning gets promoted back to LIVE.
 - Brand-new skills start in PRACTICE until they prove themselves.
-Evidence = the skill's last 20 real graded trades; if it has fewer than 10,
-Boss's choice (config BOSS_CHOICES) is used, and after that the backtest.
+Evidence = the skill's last 20 real graded trades. Quick to bench, slow to trust:
+3 trades that are losing are enough to bench a skill; going live needs 5.
+With fewer trades, Boss's choice (config BOSS_CHOICES) is used, and after that the backtest.
 """
 import json
 import os
@@ -37,12 +38,13 @@ def run(picks: pd.DataFrame, today: str):
         if len(picks):
             real = picks[(picks["setup"] == name) & picks["status"].isin(["target", "stop", "eod"])]
             real = real.sort_values("published_at").tail(C.GUARD_WINDOW)
-            if len(real) >= C.GUARD_MIN_TRADES:
-                evidence, avg = f"last {len(real)} real trades", float(pd.to_numeric(real["r_multiple"]).mean())
+            r_avg = float(pd.to_numeric(real["r_multiple"]).mean()) if len(real) else 0.0
+            if len(real) >= C.GUARD_MIN_TRADES or (len(real) >= C.GUARD_BENCH_MIN_TRADES and r_avg < C.GUARD_BENCH_BELOW_R):
+                evidence, avg = f"last {len(real)} real trades", r_avg
         boss = C.BOSS_CHOICES.get(name) if evidence is None else None
         if evidence is None and not boss and len(bt) and (bt["setup"] == name).any():
             row = bt[bt["setup"] == name].iloc[0]
-            if row["filled"] >= C.GUARD_MIN_TRADES:
+            if row["filled"] >= C.GUARD_BACKTEST_MIN_TRADES:
                 evidence, avg = f"backtest ({int(row['filled'])} trades)", float(row["avg_R"])
         mode, why = prev["mode"], prev["why"]
         if boss:

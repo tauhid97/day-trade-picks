@@ -55,9 +55,8 @@ def format_post(live, ts, practice=None, weather_note=None, weather=None, breadt
     for i, p in enumerate(live, 1):
         lines += plain.pick_lines(i, p)
     if practice:
-        lines += ["--- PRACTICE picks (skills still being tested - just watch, don't trade these) ---", ""]
-        for i, p in enumerate(practice, 1):
-            lines += plain.pick_lines(i, p)
+        lines += ["--- PRACTICE picks (skills still being tested - just watch, don't trade these) ---"]
+        lines += [plain.practice_line(i, p) for i, p in enumerate(practice, 1)] + [""]
     lines += plain.footer() + ["", f"_{DISCLAIMER}_"]
     return "\n".join(lines)
 

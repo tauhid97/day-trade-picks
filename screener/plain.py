@@ -92,6 +92,20 @@ def pick_lines(i, p):
     return lines + [p[k] for k in ("hold_note", "tm", "news_note", "hype_note") if p.get(k)] + [""]
 
 
+def practice_line(i, p):
+    """A practice pick on one short line, so a long practice list stays easy to read."""
+    buy = "buy dip to" if p["order_type"] == "buy_limit" else "buy above"
+    line = f"{i}. ${p['ticker']} {NICKNAMES.get(p['setup'], p['setup'])}: {buy} ${p['entry']:.2f}, Safety ${p['stop']:.2f}"
+    hold = _int(p.get("hold_days"))
+    if _has_target(p):
+        line += f", Win ${p['target']:.2f}"
+    else:
+        line += ", no Win price" + ("" if hold > 1 else f" - sell at {clock(C.EXIT_TIME)}")
+    if hold > 1:
+        line += f", hold up to {hold} days (until {clock(C.EXIT_TIME)} on day {hold})"
+    return line
+
+
 def luck(o):
     if not o:
         return "Luck check: not enough history for this stock."

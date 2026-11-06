@@ -248,6 +248,26 @@ def test_new_skills():
     finally:
         engine.build_contexts, engine.weather_bot.check = old_bc, old_w
     assert not live_p and len(practice_p) == 1, (live_p, practice_p)
+    # practice skills get more picks a day (more trades to learn from); real picks stay few
+    many = {**fake, "find": lambda c, p: {"order_type": "buy_stop", "entry": 10.0, "stop": 9.8, "target_r": 2,
+                                          "score": float(ord(c.ticker[0])), "reason": "x"}}
+    engine.build_contexts = lambda *a: [SimpleNamespace(ticker=t) for t in "ABCDEFG"]
+    engine.weather_bot.check = lambda *a: ("cloudy", "test")
+    try:
+        _, practice_p, _, _ = engine.picks_for_day(None, None, {}, {}, [many], {})
+        live_p, _, _, _ = engine.picks_for_day(None, None, {}, {}, [many], {"Brand New": "live"})
+    finally:
+        engine.build_contexts, engine.weather_bot.check = old_bc, old_w
+    assert len(practice_p) == 3 and len(live_p) == 2, (practice_p, live_p)
+    from screener import live as live_mod, plain as plain_mod
+    pp = {"ticker": "ABC", "setup": "VWAP Pullback", "order_type": "buy_limit", "entry": 10.0, "stop": 9.5,
+          "target": 11.0, "reason": "dipped", "tm": "Luck check: x", "news_note": "News: y"}
+    short = plain_mod.practice_line(1, pp)
+    assert short == "1. $ABC Dip Buy: buy dip to $10.00, Safety $9.50, Win $11.00", short
+    assert "until 3:55 PM" in plain_mod.practice_line(2, {**pp, "target": None, "hold_days": 5}) and "hold up to 5 days" in \
+        plain_mod.practice_line(2, {**pp, "target": None, "hold_days": 5})
+    post = live_mod.format_post([], pd.Timestamp("2026-11-06 10:31", tz=NY), [pp])
+    assert short in post and "Luck check" not in post, post
     assert plain_nick_ok()
     print("new skills OK")
 
@@ -399,6 +419,19 @@ def test_guard_boss_choice():
                          "published_at": [f"2026-11-{d:02d}" for d in range(1, 13)]})
     status, _ = guard.run(real, "2026-11-20")
     assert status["ORB Stocks in Play"]["mode"] == "practice" and "real trades" in status["ORB Stocks in Play"]["why"], status
+    # quick to bench: 3 losing real trades are enough, even for Boss's live choice
+    json.dump({"ORB Stocks in Play": {"mode": "live", "why": "x", "since": "2026-11-04"}}, open(C.SKILL_STATUS_FILE, "w"))
+    status, _ = guard.run(real.head(3), "2026-11-06")
+    assert status["ORB Stocks in Play"]["mode"] == "practice" and "Benched" in status["ORB Stocks in Play"]["why"], status
+    # slow to trust: 3 winning practice trades are not enough to go live, 5 are
+    won = lambda n: pd.DataFrame({"setup": "Oversold Bounce", "status": "target", "r_multiple": 2.0,
+                                  "published_at": [f"2026-11-{d:02d}" for d in range(1, n + 1)]})
+    assert guard.run(won(3), "2026-11-06")[0]["Oversold Bounce"]["mode"] == "practice"
+    assert guard.run(won(5), "2026-11-06")[0]["Oversold Bounce"]["mode"] == "live"
+    # 3 trades that aren't losing: Boss's choice still stands
+    json.dump({"ORB Stocks in Play": {"mode": "live", "why": "x", "since": "2026-11-04"}}, open(C.SKILL_STATUS_FILE, "w"))
+    ok3 = real.head(3).assign(status=["target", "stop", "eod"], r_multiple=[2.0, -1.0, 0.0])
+    assert guard.run(ok3, "2026-11-06")[0]["ORB Stocks in Play"]["mode"] == "live"
     for f in (C.SKILL_STATUS_FILE, C.BACKTEST_SUMMARY_FILE):
         os.remove(f)
     print("guard boss choice OK")
@@ -638,7 +671,7 @@ def test_study_finds_a_planted_clue():
     names = {x["name"] for x in notes["clues"]}
     assert "Far below its 6-month high (25%+)" in names and "Red market day (SPY down 1%+)" in names, names
     text = study.lessons_text()
-    assert "Far below" not in "" and "Heavy volume" in text and "Reddit hype" in text, text
+    assert "Heavy volume" in text and "Reddit hype" in text, text
     for f in (C.STUDY_FILE, C.HYPE_HISTORY_FILE):
         os.remove(f)
     print("study OK")

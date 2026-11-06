@@ -97,4 +97,4 @@ def picks_for_day(day, scan_ts, intraday, daily, skills, status=None):
     for sk in skills:
         found = ideas(ctxs, sk, weather=w)
         (live if status.get(sk["name"], "practice") == "live" else practice).extend(found)   # new skills start in practice
-    return rank_and_cap(live), rank_and_cap(practice), w, note
+    return rank_and_cap(live), rank_and_cap(practice, C.PRACTICE_PICKS_PER_SETUP, C.PRACTICE_PICKS_TOTAL), w, note

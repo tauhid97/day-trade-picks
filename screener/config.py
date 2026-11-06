@@ -40,13 +40,17 @@ SLIPPAGE_PCT = 0.0005          # 0.05% per side
 # --- Output limits ---
 MAX_PICKS_PER_SETUP = 2
 MAX_PICKS_TOTAL = 5
+PRACTICE_PICKS_PER_SETUP = 3   # practice skills get more picks a day = more trades to learn from (never real)
+PRACTICE_PICKS_TOTAL = 30
 MIN_RISK_PCT = 0.4
 MAX_RISK_PCT = 6.0
 RVOL_LOOKBACK_DAYS = 10
 
 # --- Guard bot (benches losing skills, promotes winning ones) ---
 GUARD_WINDOW = 20              # look at each skill's last 20 triggered trades
-GUARD_MIN_TRADES = 10          # need at least this many before judging
+GUARD_MIN_TRADES = 5           # need at least this many before judging (and before any skill goes live)
+GUARD_BENCH_MIN_TRADES = 3     # quick to bench: a skill losing after just 3 real trades goes to practice
+GUARD_BACKTEST_MIN_TRADES = 10 # the past-days test needs this many trades to count
 GUARD_BENCH_BELOW_R = -0.10    # live skill averaging worse than this -> practice
 GUARD_PROMOTE_ABOVE_R = 0.10   # practice skill averaging better than this -> live
 # Boss's choice after the 2-year test (Nov 4): the Guard follows this until a skill has
