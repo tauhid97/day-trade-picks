@@ -10,9 +10,9 @@
     "since": "2026-10-28"
   },
   "Oversold Comeback": {
-    "mode": "practice",
-    "why": "New skill - must prove itself first",
-    "since": "2026-11-04"
+    "mode": "live",
+    "why": "Playing: averaging +0.14R over backtest (14 trades)",
+    "since": "2026-11-07"
   },
   "Episodic Pivot": {
     "mode": "practice",
@@ -21,12 +21,12 @@
   },
   "Gap & Go": {
     "mode": "practice",
-    "why": "Benched: averaging -0.18R over backtest (21 trades)",
+    "why": "Benched: averaging -0.10R over backtest (21 trades)",
     "since": "2026-10-28"
   },
   "Gap-Down Bounce": {
     "mode": "practice",
-    "why": "New skill - must prove itself first",
+    "why": "Benched: averaging -0.11R over backtest (22 trades)",
     "since": "2026-11-04"
   },
   "Hype Breakout": {
@@ -46,18 +46,18 @@
   },
   "Oversold Bounce": {
     "mode": "live",
-    "why": "Holding: averaging +0.08R over backtest (13 trades) (not clearly good or bad)",
+    "why": "Holding: averaging +0.07R over backtest (14 trades) (not clearly good or bad)",
     "since": "2026-10-28"
   },
   "Relative Strength": {
     "mode": "practice",
-    "why": "New skill - must prove itself first",
+    "why": "Benched: averaging -0.14R over backtest (42 trades)",
     "since": "2026-11-02"
   },
   "NR7 Breakout": {
-    "mode": "practice",
-    "why": "New skill - must prove itself first",
-    "since": "2026-11-02"
+    "mode": "live",
+    "why": "Playing: averaging +0.25R over backtest (17 trades)",
+    "since": "2026-11-07"
   },
   "Beaten-Down Turnaround": {
     "mode": "practice",
@@ -71,7 +71,7 @@
   },
   "Downtrend Reversal": {
     "mode": "practice",
-    "why": "New skill - must prove itself first",
+    "why": "Benched: averaging -0.45R over backtest (11 trades)",
     "since": "2026-11-02"
   }
 }

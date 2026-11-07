@@ -1,1 +1,28 @@
-{}
+{
+  "ORB Stocks in Play": {
+    "change": {
+      "target_r": 1.5
+    },
+    "train_R": [
+      -2.69,
+      -0.31
+    ],
+    "test_R": [
+      0.1,
+      1.4
+    ]
+  },
+  "Oversold Bounce": {
+    "change": {
+      "max_rsi": 35
+    },
+    "train_R": [
+      0.92,
+      1.55
+    ],
+    "test_R": [
+      0.05,
+      1.53
+    ]
+  }
+}
