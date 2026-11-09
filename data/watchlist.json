@@ -1,37 +1,37 @@
 {
- "date": "2026-11-06",
- "market_chg": 0.98,
+ "date": "2026-11-09",
+ "market_chg": 1.97,
  "red_day": false,
  "beaten": [
   {
    "ticker": "OKLO",
-   "below_high_pct": 76,
-   "chg_3m": -56.8,
-   "today": 20.468740841995036
+   "below_high_pct": 70,
+   "chg_3m": -49.9,
+   "today": 11.932065665925485
   },
   {
    "ticker": "IREN",
-   "below_high_pct": 75,
-   "chg_3m": -53.5,
-   "today": 20.297277675146287
-  },
-  {
-   "ticker": "QBTS",
-   "below_high_pct": 71,
-   "chg_3m": -55.2,
-   "today": 11.491712043473212
+   "below_high_pct": 69,
+   "chg_3m": -45.6,
+   "today": -0.004618533788280921
   },
   {
    "ticker": "CLSK",
-   "below_high_pct": 70,
-   "chg_3m": -51.0,
-   "today": 1.8485919409648721
+   "below_high_pct": 68,
+   "chg_3m": -46.5,
+   "today": 11.120129216680375
   },
   {
-   "ticker": "SMR",
-   "below_high_pct": 69,
-   "chg_3m": -52.4,
-   "today": 13.844394391696536
+   "ticker": "WDC",
+   "below_high_pct": 67,
+   "chg_3m": -39.8,
+   "today": 8.859653963658198
+  },
+  {
+   "ticker": "QBTS",
+   "below_high_pct": 66,
+   "chg_3m": -47.2,
+   "today": 6.367034944483296
   }
  ],
  "holding_up": []

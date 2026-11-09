@@ -1,53 +1,78 @@
-**Day Trade Picks - Fri Nov 06, 2026** (sent 11:25 AM ET)
+**Day Trade Picks - Mon Nov 09, 2026** (sent 11:38 AM ET)
 
-Market mood: ⛅ CLOUDY - mixed day, be picky (SPY +0.98% today, below its 20-day average)
+Market mood: ⛅ CLOUDY - mixed day, be picky (SPY +1.97% today, below its 20-day average)
 
-How many stocks are rising [practice, info only]: HEALTHY (63% of S&P 500 stocks in uptrends, long-term trend falling)
+How many stocks are rising [practice, info only]: HEALTHY (62% of S&P 500 stocks in uptrends, long-term trend falling)
 
 👀 Beaten-down watchlist [practice, info only] - furthest below their 6-month high:
-- $OKLO: 76% below its high (3 months: -56.8%, today +20.5%)
-- $IREN: 75% below its high (3 months: -53.5%, today +20.3%)
-- $QBTS: 71% below its high (3 months: -55.2%, today +11.5%)
-- $CLSK: 70% below its high (3 months: -51.0%, today +1.8%)
-- $SMR: 69% below its high (3 months: -52.4%, today +13.8%)
+- $OKLO: 70% below its high (3 months: -49.9%, today +11.9%)
+- $IREN: 69% below its high (3 months: -45.6%, today -0.0%)
+- $CLSK: 68% below its high (3 months: -46.5%, today +11.1%)
+- $WDC: 67% below its high (3 months: -39.8%, today +8.9%)
+- $QBTS: 66% below its high (3 months: -47.2%, today +6.4%)
 
-**1. $AFRM - Crowd Breakout (ORB Stocks in Play)**
-Buy: only if the price climbs UP to $71.79
-Safety (sell if it falls to): $68.90
+**1. $NVDA - Bounce Back (Oversold Bounce)**
+Buy: only if the price climbs UP to $178.89
+Safety (sell if it falls to): $171.24
+Win (sell if it rises to): $190.36
+If you risked $10: lose $10.00 at Safety, win +$14.99 at Win.
+Why: RSI 26 (oversold), down 6.3% - only buy if it bounces back above the morning high
+Luck check (59 past days replayed 2,000 times): the Buy happens 0% of the time. Win first 0%, Safety first 0%. Average -$0.50 per $10 risked. A simulation, not a promise.
+News [practice, info only]: IN THE NEWS (7 headlines in the last 24 hours, mood: BAD, about: legal, people)
+Hype [practice, info only]: 🔥 HYPE (1290 Reddit mentions in 24 hours, 15x yesterday)
+
+**2. $TSLA - Crowd Breakout (ORB Stocks in Play)**
+Buy: only if the price climbs UP to $378.98
+Safety (sell if it falls to): $369.49
 Win: no set price - sell at 3:55 PM ET
 If you risked $10: lose $10.00 at Safety.
-Why: Stock in play: 4.6x normal volume, green opening range - buy the breakout
-Luck check (59 past days replayed 2,000 times): the Buy happens 0% of the time. Win first 0%, Safety first 0%. Average -$4.50 per $10 risked. A simulation, not a promise.
-News [practice, info only]: IN THE NEWS (15 headlines in the last 24 hours, mood: BAD, about: earnings, people)
+Why: Stock in play: 2.7x normal volume, green opening range - buy the breakout
+Luck check (59 past days replayed 2,000 times): the Buy happens 45% of the time. Win first 0%, Safety first 1%. Average -$0.70 per $10 risked. A simulation, not a promise.
+News [practice, info only]: IN THE NEWS (14 headlines in the last 24 hours, mood: GOOD)
+Hype [practice, info only]: 🔥 HYPE (31 Reddit mentions in 24 hours, 6x yesterday)
+
+**3. $AMZN - Crowd Breakout (ORB Stocks in Play)**
+Buy: only if the price climbs UP to $275.32
+Safety (sell if it falls to): $272.32
+Win: no set price - sell at 3:55 PM ET
+If you risked $10: lose $10.00 at Safety.
+Why: Stock in play: 2.3x normal volume, green opening range - buy the breakout
+Luck check (59 past days replayed 2,000 times): the Buy happens 0% of the time. Win first 0%, Safety first 0%. Average +$0.00 per $10 risked. A simulation, not a promise.
+News [practice, info only]: IN THE NEWS (1 headline in the last 24 hours, mood: GOOD)
+Hype [practice, info only]: 🔥 HYPE (32 Reddit mentions in 24 hours, 4x yesterday)
+
+**4. $UAL - Tight Spring (NR7 Breakout)**
+Buy: only if the price climbs UP to $121.02
+Safety (sell if it falls to): $118.43
+Win (sell if it rises to): $126.20
+If you risked $10: lose $10.00 at Safety, win +$20.00 at Win.
+Why: Yesterday was its quietest day in 7 days, in an uptrend - buy if it breaks out above $121.01
+Luck check (59 past days replayed 2,000 times): the Buy happens 41% of the time. Win first 0%, Safety first 3%. Average -$0.30 per $10 risked. A simulation, not a promise.
+News [practice, info only]: QUIET (no headlines in the last 24 hours)
 Hype [practice, info only]: QUIET (hardly mentioned on Reddit)
 
-**2. $NVDA - Crowd Breakout (ORB Stocks in Play)**
-Buy: only if the price climbs UP to $194.91
-Safety (sell if it falls to): $192.45
-Win: no set price - sell at 3:55 PM ET
-If you risked $10: lose $10.00 at Safety.
-Why: Stock in play: 4.5x normal volume, green opening range - buy the breakout
-Luck check (59 past days replayed 2,000 times): the Buy happens 0% of the time. Win first 0%, Safety first 0%. Average +$0.00 per $10 risked. A simulation, not a promise.
-News [practice, info only]: IN THE NEWS (3 headlines in the last 24 hours, mood: NEUTRAL)
-Hype [practice, info only]: 💬 BUZZ (396 Reddit mentions in 24 hours, yesterday: 245)
+**5. $AAL - Tight Spring (NR7 Breakout)**
+Buy: only if the price climbs UP to $14.16
+Safety (sell if it falls to): $13.86
+Win (sell if it rises to): $14.76
+If you risked $10: lose $10.00 at Safety, win +$20.00 at Win.
+Why: Yesterday was its quietest day in 7 days, in an uptrend - buy if it breaks out above $14.15
+Luck check (59 past days replayed 2,000 times): the Buy happens 56% of the time. Win first 0%, Safety first 5%. Average -$0.50 per $10 risked. A simulation, not a promise.
+News [practice, info only]: QUIET (no headlines in the last 24 hours)
+Hype [practice, info only]: QUIET (1 Reddit mentions in 24 hours, yesterday: 0)
 
 --- PRACTICE picks (skills still being tested - just watch, don't trade these) ---
-1. $LRCX Underdog: buy above $209.19, Safety $199.32, Win $228.93, hold up to 2 days (until 3:55 PM on day 2)
-2. $TSM Underdog: buy above $380.73, Safety $367.94, Win $406.31, hold up to 2 days (until 3:55 PM on day 2)
-3. $CCJ Underdog: buy above $70.01, Safety $67.74, Win $74.55, hold up to 2 days (until 3:55 PM on day 2)
-4. $ABNB Big News Jump: buy above $192.51, Safety $186.90, no Win price, hold up to 5 days (until 3:55 PM on day 5)
-5. $OKLO Wake Up Rally: buy above $23.14, Safety $22.15, Win $25.12
-6. $PLTR Comeback Kid: buy above $163.98, Safety $157.23, Win $177.48, hold up to 2 days (until 3:55 PM on day 2)
-7. $ASML Comeback Kid: buy above $1447.46, Safety $1409.20, Win $1523.98, hold up to 2 days (until 3:55 PM on day 2)
-8. $TSLA Dip Buy: buy dip to $357.52, Safety $353.41, Win $365.74
-9. $IREN Dip Buy: buy dip to $21.26, Safety $20.55, Win $22.68
-10. $U New Monthly High: buy above $52.51, Safety $51.22, Win $55.09
-11. $FSLR Dip Buy: buy dip to $202.19, Safety $199.66, Win $207.25
-12. $LYFT Crash Bounce: buy above $17.14, Safety $16.40, Win $18.62
-13. $MRNA New Monthly High: buy above $265.63, Safety $255.53, Win $285.83
-14. $APP New Monthly High: buy above $386.41, Safety $376.49, Win $406.25
-15. $SNOW Morning Rocket: buy above $281.01, Safety $272.66, Win $297.71
-16. $ELF Back Above Normal: buy above $116.82, Safety $112.83, Win $124.80
+1. $NVDA Crash Bounce: buy above $178.89, Safety $171.24, Win $194.19
+2. $TTD New Monthly High: buy above $15.08, Safety $14.79, Win $15.66
+3. $IONQ Wake Up Rally: buy above $35.51, Safety $34.74, Win $37.05
+4. $UAL Dip Buy: buy dip to $119.81, Safety $118.51, Win $122.41
+5. $AA Dip Buy: buy dip to $41.59, Safety $41.19, Win $42.39
+6. $ASML Dip Buy: buy dip to $1502.06, Safety $1485.02, Win $1536.14
+7. $CEG Back Above Normal: buy above $271.27, Safety $261.53, Win $290.75
+8. $NRG Back Above Normal: buy above $97.32, Safety $95.59, Win $100.78
+9. $ANET Back Above Normal: buy above $187.76, Safety $179.33, Win $204.62
+10. $BBY New Monthly High: buy above $106.46, Safety $104.60, Win $110.18
+11. $TGT New Monthly High: buy above $166.50, Safety $163.99, Win $171.52
 
 Not bought by 3:00 PM ET? Forget it. Still holding at 3:55 PM ET? Sell - unless the pick says Hold.
 
