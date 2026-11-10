@@ -1,15 +1,15 @@
 {
-  "Bull Flag": {
+  "Relative Strength": {
     "change": {
-      "min_pole_pct": 7.0
+      "hold_days": 2
     },
     "train_R": [
-      1.69,
-      2.34
+      2.03,
+      7.27
     ],
     "test_R": [
-      0.95,
-      3.77
+      -5.8,
+      -4.01
     ]
   }
 }

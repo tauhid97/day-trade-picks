@@ -45,9 +45,9 @@
     "since": "2026-11-04"
   },
   "Oversold Bounce": {
-    "mode": "live",
-    "why": "Holding: averaging +0.07R over backtest (14 trades) (not clearly good or bad)",
-    "since": "2026-10-28"
+    "mode": "practice",
+    "why": "Benched: averaging -0.69R over last 3 real trades",
+    "since": "2026-11-10"
   },
   "Relative Strength": {
     "mode": "practice",
