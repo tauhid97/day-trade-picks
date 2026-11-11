@@ -1,37 +1,37 @@
 {
- "date": "2026-11-10",
- "market_chg": -0.74,
+ "date": "2026-11-11",
+ "market_chg": 1.23,
  "red_day": false,
  "beaten": [
   {
    "ticker": "IREN",
-   "below_high_pct": 70,
-   "chg_3m": -51.0,
-   "today": -5.231195422078172
-  },
-  {
-   "ticker": "OKLO",
-   "below_high_pct": 65,
-   "chg_3m": -40.5,
-   "today": -4.228763868961449
-  },
-  {
-   "ticker": "CLSK",
-   "below_high_pct": 64,
-   "chg_3m": -43.3,
-   "today": -4.413890522050446
+   "below_high_pct": 72,
+   "chg_3m": -55.9,
+   "today": 8.844403850582182
   },
   {
    "ticker": "QBTS",
-   "below_high_pct": 64,
-   "chg_3m": -44.7,
-   "today": -9.197910031514489
+   "below_high_pct": 67,
+   "chg_3m": -49.9,
+   "today": 2.719473411595308
+  },
+  {
+   "ticker": "CLSK",
+   "below_high_pct": 66,
+   "chg_3m": -43.0,
+   "today": 7.07762045055087
+  },
+  {
+   "ticker": "OKLO",
+   "below_high_pct": 66,
+   "chg_3m": -46.0,
+   "today": 5.639693103121646
   },
   {
    "ticker": "WDC",
    "below_high_pct": 64,
-   "chg_3m": -36.2,
-   "today": -2.4311593130690867
+   "chg_3m": -40.7,
+   "today": 9.014514421243437
   }
  ],
  "holding_up": []
