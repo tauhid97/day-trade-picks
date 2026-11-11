@@ -1,15 +1,1 @@
-{
-  "Relative Strength": {
-    "change": {
-      "hold_days": 2
-    },
-    "train_R": [
-      2.03,
-      7.27
-    ],
-    "test_R": [
-      -5.8,
-      -4.01
-    ]
-  }
-}
+{}
