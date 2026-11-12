@@ -66,7 +66,7 @@
   },
   "VWAP Pullback": {
     "mode": "practice",
-    "why": "Benched: averaging -0.67R over last 11 real trades",
+    "why": "Benched: averaging -0.58R over last 12 real trades",
     "since": "2026-11-04"
   },
   "Downtrend Reversal": {
