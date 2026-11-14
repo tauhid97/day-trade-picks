@@ -11,7 +11,7 @@
   },
   "Oversold Comeback": {
     "mode": "live",
-    "why": "Playing: averaging +0.14R over backtest (14 trades)",
+    "why": "Holding: averaging -0.06R over backtest (19 trades) (not clearly good or bad)",
     "since": "2026-11-07"
   },
   "Episodic Pivot": {
@@ -21,12 +21,12 @@
   },
   "Gap & Go": {
     "mode": "practice",
-    "why": "Benched: averaging -0.10R over backtest (21 trades)",
+    "why": "Holding: averaging -0.04R over backtest (23 trades) (not clearly good or bad)",
     "since": "2026-10-28"
   },
   "Gap-Down Bounce": {
     "mode": "practice",
-    "why": "Benched: averaging -0.11R over backtest (22 trades)",
+    "why": "Benched: averaging -0.10R over backtest (23 trades)",
     "since": "2026-11-04"
   },
   "Hype Breakout": {
@@ -51,7 +51,7 @@
   },
   "Relative Strength": {
     "mode": "practice",
-    "why": "Benched: averaging -0.14R over backtest (42 trades)",
+    "why": "Holding: averaging -0.02R over backtest (36 trades) (not clearly good or bad)",
     "since": "2026-11-02"
   },
   "NR7 Breakout": {

@@ -1,15 +1,15 @@
 {
-  "ORB Stocks in Play": {
+  "Bull Flag": {
     "change": {
-      "target_r": 1.5
+      "min_pole_pct": 7.0
     },
     "train_R": [
-      0.14,
-      2.52
+      1.28,
+      3.38
     ],
     "test_R": [
-      -0.69,
-      0.61
+      0.95,
+      2.32
     ]
   }
 }
