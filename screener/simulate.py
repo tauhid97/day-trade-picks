@@ -9,6 +9,9 @@ of their last day if neither stop nor target hit first. If a stock opens below
 the stop after a night, the loss is counted at that (worse) opening price.
 If the last day hasn't happened yet, the result is "open" (still holding).
 
+"at_close" picks (Turnaround Tuesday) were bought at the close on the evening they were made,
+so the bars after them all belong to the next day(s).
+
 Smart selling (half_at_r, practice tests only): when the price is up that many R,
 half is sold and the Safety price moves up to the Buy price for the other half.
 """
@@ -40,6 +43,8 @@ def simulate(pick: dict, bars_after: pd.DataFrame) -> dict:
     t = bars_after.index.strftime("%H:%M")
     days = bars_after.index.normalize()
     filled_at, day_n = None, 0
+    if pick["order_type"] == "at_close":               # already bought at the close the evening it was made
+        filled_at, res["fill_price"], res["days_held"] = -1, round(entry, 2), 0
     for i, (ts, bar) in enumerate(bars_after.iterrows()):
         hm = t[i]
         if filled_at is None:
@@ -58,7 +63,7 @@ def simulate(pick: dict, bars_after: pd.DataFrame) -> dict:
             if hm >= C.EXIT_TIME and hold == 1:
                 return _close(res, bar["Close"], ts, "eod", risk, entry)
             continue
-        if days[i] != days[i - 1]:                     # a new trading day (we held overnight)
+        if i == 0 or days[i] != days[i - 1]:           # a new trading day (we held overnight)
             day_n += 1
             res["days_held"] = day_n
         if bar["Low"] <= stop:

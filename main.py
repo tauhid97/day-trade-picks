@@ -18,6 +18,7 @@ from screener import backtest, commands, live, plain, report
 from screener import config as C
 from screener.bots import coach, guard, hype, news, study, teacher
 from screener.data import load_universe
+from screener.skills import turnaround_tuesday
 from screener.notify import to_boss
 
 
@@ -69,6 +70,10 @@ def evening():
     except Exception as e:
         print("Teacher skipped:", e)
     live.grade(note=note); report.build()
+    try:                             # Turnaround Tuesday: on red Friday + red Monday, buy QQQ at the close (practice)
+        turnaround_tuesday.evening(now)
+    except Exception as e:
+        print("Turnaround Tuesday skipped:", e)
     try:                             # the Coach re-checks every skill's settings on the latest days
         intraday, daily = backtest.load_data()
         tip = coach.nightly(backtest.prepare(intraday, daily), intraday)

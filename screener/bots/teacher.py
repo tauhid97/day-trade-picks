@@ -33,6 +33,7 @@ WATCH_OUT = {
     "Gap-Down Bounce": "Panic can keep going; only buy once it climbs back above the morning high.",
     "Beaten-Down Turnaround": "Cheap stocks can get cheaper - most turnarounds take many tries.",
     "Episodic Pivot": "Big jumps can fade back down; holding for days means overnight news can hit you too.",
+    "Turnaround Tuesday": "Wins are small (under 1% most times) and a bad Tuesday can drop 3%; it only works over many tries.",
 }
 
 RULES = [
@@ -79,10 +80,10 @@ def rank(df):
 
 
 def explain(skill):
-    w = ", ".join(plain.MOOD[x][0] for x in skill["weather"] if x in plain.MOOD)
+    w = skill.get("plays_on") or ", ".join(plain.MOOD[x][0] for x in skill["weather"] if x in plain.MOOD) + " days"
     return "\n".join([f"📘 {plain.nick(skill['name'])}",
                       f"What it looks for: {skill['kid_explainer']}",
-                      f"Plays on: {w} days",
+                      f"Plays on: {w}",
                       f"Watch out: {WATCH_OUT.get(skill['name'], 'Every skill loses sometimes - always use the Safety price.')}"])
 
 

@@ -23,11 +23,13 @@ NICKNAMES = {
     "Gap-Down Bounce": "Crash Bounce",
     "Beaten-Down Turnaround": "Underdog",
     "Episodic Pivot": "Big News Jump",
+    "Turnaround Tuesday": "Monday Bounce",
 }
 
 BUY_WORDS = {
     "buy_stop": "only if the price climbs UP to",
     "buy_limit": "only if the price dips DOWN to",
+    "at_close": "at today's closing price (near 3:55 PM ET, or right after) -",
 }
 
 MOOD = {
@@ -82,6 +84,9 @@ def pick_lines(i, p):
         win_r = (p["target"] - p["entry"]) / (p["entry"] - p["stop"])
         lines += [f"Win (sell if it rises to): ${p['target']:.2f}",
                   f"If you risked ${RISK_DOLLARS}: lose {money(-1)[1:]} at Safety, win {money(win_r)} at Win."]
+    elif p["order_type"] == "at_close":
+        lines += [f"Win: no set price - sell at {clock(C.EXIT_TIME)} ET the next trading day",
+                  f"If you risked ${RISK_DOLLARS}: lose {money(-1)[1:]} at Safety."]
     else:
         lines += [f"Win: no set price - sell at {clock(C.EXIT_TIME)} ET",
                   f"If you risked ${RISK_DOLLARS}: lose {money(-1)[1:]} at Safety."]
@@ -94,11 +99,13 @@ def pick_lines(i, p):
 
 def practice_line(i, p):
     """A practice pick on one short line, so a long practice list stays easy to read."""
-    buy = "buy dip to" if p["order_type"] == "buy_limit" else "buy above"
+    buy = {"buy_limit": "buy dip to", "at_close": "buy at the close"}.get(p["order_type"], "buy above")
     line = f"{i}. ${p['ticker']} {NICKNAMES.get(p['setup'], p['setup'])}: {buy} ${p['entry']:.2f}, Safety ${p['stop']:.2f}"
     hold = _int(p.get("hold_days"))
     if _has_target(p):
         line += f", Win ${p['target']:.2f}"
+    elif p["order_type"] == "at_close":
+        line += f", no Win price - sell {clock(C.EXIT_TIME)} next trading day"
     else:
         line += ", no Win price" + ("" if hold > 1 else f" - sell at {clock(C.EXIT_TIME)}")
     if hold > 1:
