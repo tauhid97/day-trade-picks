@@ -1,1 +1,15 @@
-{}
+{
+  "ORB Stocks in Play": {
+    "change": {
+      "target_r": 1.5
+    },
+    "train_R": [
+      0.14,
+      2.52
+    ],
+    "test_R": [
+      -0.69,
+      0.61
+    ]
+  }
+}
