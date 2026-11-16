@@ -1,39 +1,30 @@
-**Day Trade Picks - Fri Nov 13, 2026** (sent 11:28 AM ET)
+**Day Trade Picks - Mon Nov 16, 2026** (sent 11:22 AM ET)
 
-Market mood: ⛅ CLOUDY - mixed day, be picky (SPY -0.85% today, below its 20-day average)
+Market mood: ⛈️ STORMY - market is falling, only Bounce Back plays (SPY -1.08% today, below its 20-day average)
 
 How many stocks are rising [practice, info only]: HEALTHY (65% of S&P 500 stocks in uptrends, long-term trend falling)
 
 👀 Beaten-down watchlist [practice, info only] - furthest below their 6-month high:
-- $IREN: 72% below its high (3 months: -56.6%, today -8.3%)
-- $QBTS: 69% below its high (3 months: -52.9%, today -4.2%)
-- $OKLO: 67% below its high (3 months: -44.3%, today -4.7%)
-- $SMR: 66% below its high (3 months: -47.6%, today -4.4%)
-- $CLSK: 64% below its high (3 months: -44.8%, today -5.1%)
+- $IREN: 74% below its high (3 months: -56.7%, today -9.2%)
+- $QBTS: 70% below its high (3 months: -51.0%, today -6.1%)
+- $OKLO: 68% below its high (3 months: -42.2%, today -2.6%)
+- $SMR: 67% below its high (3 months: -46.1%, today -3.9%)
+- $RGTI: 66% below its high (3 months: -45.7%, today -4.9%)
 
-**1. $GME - Crowd Breakout (ORB Stocks in Play)**
-Buy: only if the price climbs UP to $26.48
-Safety (sell if it falls to): $26.07
-Win: no set price - sell at 3:55 PM ET
-If you risked $10: lose $10.00 at Safety.
-Why: Stock in play: 2.9x normal volume, green opening range - buy the breakout
-Luck check (59 past days replayed 2,000 times): the Buy happens 23% of the time. Win first 0%, Safety first 4%. Average +$1.80 per $10 risked. A simulation, not a promise.
-News [practice, info only]: QUIET (no headlines in the last 24 hours)
-Hype [practice, info only]: 💬 BUZZ (23 Reddit mentions in 24 hours, yesterday: 19)
+🟥 Red day (market -1.1%) - holding up best:
+- $XPEV: +5.4% today
+- $LYFT: +2.9% today
+- $ADBE: +2.7% today
+- $SBUX: +2.4% today
+- $UAL: +2.0% today
 
-**2. $MSFT - Crowd Breakout (ORB Stocks in Play)**
-Buy: only if the price climbs UP to $523.58
-Safety (sell if it falls to): $518.69
-Win: no set price - sell at 3:55 PM ET
-If you risked $10: lose $10.00 at Safety.
-Why: Stock in play: 2.8x normal volume, green opening range - buy the breakout
-Luck check (59 past days replayed 2,000 times): the Buy happens 94% of the time. Win first 0%, Safety first 24%. Average -$0.70 per $10 risked. A simulation, not a promise.
-News [practice, info only]: IN THE NEWS (8 headlines in the last 24 hours, mood: BAD, about: risk)
-Hype [practice, info only]: 🔥 HYPE (355 Reddit mentions in 24 hours, 5x yesterday)
+No real picks today - nothing met our rules. No trade is a good trade.
 
 --- PRACTICE picks (skills still being tested - just watch, don't trade these) ---
-1. $NU Strong Kid: buy above $13.16, Safety $12.80, Win $13.88
-2. $UPS Dip Buy: buy dip to $111.67, Safety $111.02, Win $112.97
+1. $NVDA Bounce Back: buy above $163.01, Safety $158.10, Win $170.38
+2. $TSM Crash Bounce: buy above $385.48, Safety $372.45, Win $411.54
+3. $MSTR Bounce Back: buy above $105.80, Safety $101.69, Win $111.97
+4. $COIN Bounce Back: buy above $122.99, Safety $117.31, Win $131.51
 
 Not bought by 3:00 PM ET? Forget it. Still holding at 3:55 PM ET? Sell - unless the pick says Hold.
 

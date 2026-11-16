@@ -1,38 +1,59 @@
 {
- "date": "2026-11-13",
- "market_chg": -0.85,
- "red_day": false,
+ "date": "2026-11-16",
+ "market_chg": -1.08,
+ "red_day": true,
  "beaten": [
   {
    "ticker": "IREN",
-   "below_high_pct": 72,
-   "chg_3m": -56.6,
-   "today": -8.265908688129887
+   "below_high_pct": 74,
+   "chg_3m": -56.7,
+   "today": -9.218487782209127
   },
   {
    "ticker": "QBTS",
-   "below_high_pct": 69,
-   "chg_3m": -52.9,
-   "today": -4.200208412725425
+   "below_high_pct": 70,
+   "chg_3m": -51.0,
+   "today": -6.119246992359728
   },
   {
    "ticker": "OKLO",
-   "below_high_pct": 67,
-   "chg_3m": -44.3,
-   "today": -4.662581846316538
+   "below_high_pct": 68,
+   "chg_3m": -42.2,
+   "today": -2.633775747312672
   },
   {
    "ticker": "SMR",
-   "below_high_pct": 66,
-   "chg_3m": -47.6,
-   "today": -4.385892624783683
+   "below_high_pct": 67,
+   "chg_3m": -46.1,
+   "today": -3.8626573869650294
   },
   {
-   "ticker": "CLSK",
-   "below_high_pct": 64,
-   "chg_3m": -44.8,
-   "today": -5.118421529615491
+   "ticker": "RGTI",
+   "below_high_pct": 66,
+   "chg_3m": -45.7,
+   "today": -4.937624048295975
   }
  ],
- "holding_up": []
+ "holding_up": [
+  {
+   "ticker": "XPEV",
+   "chg": 5.4
+  },
+  {
+   "ticker": "LYFT",
+   "chg": 2.9
+  },
+  {
+   "ticker": "ADBE",
+   "chg": 2.7
+  },
+  {
+   "ticker": "SBUX",
+   "chg": 2.4
+  },
+  {
+   "ticker": "UAL",
+   "chg": 2.0
+  }
+ ]
 }
