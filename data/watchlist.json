@@ -1,59 +1,59 @@
 {
- "date": "2026-11-16",
- "market_chg": -1.08,
+ "date": "2026-11-17",
+ "market_chg": -1.22,
  "red_day": true,
  "beaten": [
   {
    "ticker": "IREN",
-   "below_high_pct": 74,
-   "chg_3m": -56.7,
-   "today": -9.218487782209127
+   "below_high_pct": 77,
+   "chg_3m": -61.7,
+   "today": -3.874309327970882
   },
   {
    "ticker": "QBTS",
-   "below_high_pct": 70,
-   "chg_3m": -51.0,
-   "today": -6.119246992359728
-  },
-  {
-   "ticker": "OKLO",
-   "below_high_pct": 68,
-   "chg_3m": -42.2,
-   "today": -2.633775747312672
+   "below_high_pct": 73,
+   "chg_3m": -55.1,
+   "today": -7.785469259458155
   },
   {
    "ticker": "SMR",
-   "below_high_pct": 67,
-   "chg_3m": -46.1,
-   "today": -3.8626573869650294
+   "below_high_pct": 70,
+   "chg_3m": -54.0,
+   "today": -3.747069042782347
+  },
+  {
+   "ticker": "OKLO",
+   "below_high_pct": 69,
+   "chg_3m": -46.4,
+   "today": -2.974387116228916
   },
   {
    "ticker": "RGTI",
-   "below_high_pct": 66,
-   "chg_3m": -45.7,
-   "today": -4.937624048295975
+   "below_high_pct": 68,
+   "chg_3m": -46.7,
+   "today": -8.443712007632765
   }
  ],
  "holding_up": [
   {
+   "ticker": "SNAP",
+   "chg": 4.8
+  },
+  {
+   "ticker": "NIO",
+   "chg": 4.0
+  },
+  {
    "ticker": "XPEV",
-   "chg": 5.4
-  },
-  {
-   "ticker": "LYFT",
-   "chg": 2.9
-  },
-  {
-   "ticker": "ADBE",
    "chg": 2.7
   },
   {
-   "ticker": "SBUX",
-   "chg": 2.4
+   "ticker": "HUT",
+   "chg": 2.2
   },
   {
-   "ticker": "UAL",
-   "chg": 2.0
+   "ticker": "KGC",
+   "chg": 2.1
   }
  ]
 }
