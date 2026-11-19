@@ -1,37 +1,37 @@
 {
- "date": "2026-11-18",
- "market_chg": -0.44,
+ "date": "2026-11-19",
+ "market_chg": -0.03,
  "red_day": false,
  "beaten": [
   {
    "ticker": "IREN",
    "below_high_pct": 78,
-   "chg_3m": -62.9,
-   "today": -3.6064576873932275
+   "chg_3m": -63.6,
+   "today": 0.9514465875417377
   },
   {
    "ticker": "QBTS",
-   "below_high_pct": 74,
-   "chg_3m": -57.0,
-   "today": -3.0321768301045715
+   "below_high_pct": 76,
+   "chg_3m": -62.3,
+   "today": 1.4304308543030553
   },
   {
    "ticker": "SMR",
-   "below_high_pct": 71,
-   "chg_3m": -54.9,
-   "today": 0.733489776331897
+   "below_high_pct": 73,
+   "chg_3m": -58.4,
+   "today": 0.5115084523652724
   },
   {
    "ticker": "RGTI",
    "below_high_pct": 70,
-   "chg_3m": -47.3,
-   "today": -0.7683165495296795
+   "chg_3m": -53.5,
+   "today": 3.0912328593354355
   },
   {
    "ticker": "OKLO",
    "below_high_pct": 70,
-   "chg_3m": -46.3,
-   "today": -1.0505167703856677
+   "chg_3m": -48.2,
+   "today": 0.8027575712556523
   }
  ],
  "holding_up": []
