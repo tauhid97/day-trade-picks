@@ -1,5 +1,11 @@
 {
   "Bull Flag": {
     "min_pole_pct": 7.0
+  },
+  "Gap & Go": {
+    "stop_atr": 0.3
+  },
+  "Relative Strength": {
+    "hold_days": 2
   }
 }
