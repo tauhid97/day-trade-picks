@@ -5,13 +5,13 @@
     "since": "2026-10-28"
   },
   "Bull Flag": {
-    "mode": "practice",
-    "why": "Holding: averaging -0.04R over backtest (11 trades) (not clearly good or bad)",
-    "since": "2026-10-28"
+    "mode": "live",
+    "why": "Playing: averaging +0.44R over backtest (13 trades)",
+    "since": "2026-11-21"
   },
   "Oversold Comeback": {
     "mode": "live",
-    "why": "Holding: averaging -0.06R over backtest (19 trades) (not clearly good or bad)",
+    "why": "Holding: averaging -0.08R over backtest (18 trades) (not clearly good or bad)",
     "since": "2026-11-07"
   },
   "Episodic Pivot": {
@@ -21,12 +21,12 @@
   },
   "Gap & Go": {
     "mode": "practice",
-    "why": "Holding: averaging -0.04R over backtest (23 trades) (not clearly good or bad)",
+    "why": "Holding: averaging +0.08R over backtest (21 trades) (not clearly good or bad)",
     "since": "2026-10-28"
   },
   "Gap-Down Bounce": {
     "mode": "practice",
-    "why": "Benched: averaging -0.10R over backtest (23 trades)",
+    "why": "Benched: averaging -0.13R over backtest (21 trades)",
     "since": "2026-11-04"
   },
   "Hype Breakout": {

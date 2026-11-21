@@ -1,10 +1,4 @@
 date,weather,breadth,ticker,setup,order_type,entry,stop,target,risk_pct,score,reason,hold_days,status,fill_price,exit_price,exit_time,r_multiple,pct_return,days_held
-2026-09-04,cloudy,healthy,ORCL,20-Day Breakout,buy_stop,159.71,156.9,165.33,1.76,5.343,Knocking on its 20-day high ($159.26) on 1.8x volume,1,no_fill,,,,0.0,0.0,
-2026-09-08,cloudy,healthy,VST,20-Day Breakout,buy_stop,153.59,150.87,159.03,1.77,4.701,Knocking on its 20-day high ($150.18) on 2.4x volume,1,eod,153.62,151.74,15:55,-0.747,-1.323,1.0
-2026-09-09,cloudy,healthy,GME,20-Day Breakout,buy_stop,19.9,19.64,20.42,1.31,11.084,Knocking on its 20-day high ($19.50) on 2.3x volume,1,eod,19.9,19.89,15:55,-0.115,-0.15,1.0
-2026-09-09,cloudy,healthy,AMD,20-Day Breakout,buy_stop,526.8,515.11,550.18,2.22,5.069,Knocking on its 20-day high ($517.35) on 1.7x volume,1,no_fill,,,,0.0,0.0,
-2026-09-11,cloudy,healthy,HPQ,20-Day Breakout,buy_stop,36.04,35.32,37.48,2.0,20.127,Knocking on its 20-day high ($33.17) on 2.0x volume,1,stop,36.04,35.32,11:10,-1.05,-2.096,1.0
-2026-09-11,cloudy,healthy,DELL,20-Day Breakout,buy_stop,567.76,552.15,598.98,2.75,17.856,Knocking on its 20-day high ($562.99) on 1.6x volume,1,no_fill,,,,0.0,0.0,
 2026-09-14,cloudy,healthy,CRWD,20-Day Breakout,buy_stop,233.89,228.23,245.21,2.42,37.049,Knocking on its 20-day high ($233.88) on 3.0x volume,1,eod,233.89,235.44,15:55,0.232,0.562,1.0
 2026-09-14,cloudy,healthy,RBLX,20-Day Breakout,buy_stop,48.71,47.65,50.83,2.18,15.483,Knocking on its 20-day high ($46.50) on 2.2x volume,1,target,49.56,50.83,11:45,1.151,2.46,1.0
 2026-09-15,cloudy,healthy,CRWD,20-Day Breakout,buy_stop,239.38,232.96,252.22,2.68,0.533,Knocking on its 20-day high ($239.37) on 1.4x volume,1,eod,239.38,242.52,15:55,0.452,1.21,1.0
@@ -68,16 +62,32 @@ date,weather,breadth,ticker,setup,order_type,entry,stop,target,risk_pct,score,re
 2026-11-09,cloudy,healthy,TTD,20-Day Breakout,buy_stop,15.01,14.71,15.61,2.0,109.054,Knocking on its 20-day high ($13.68) on 7.2x volume,1,eod,15.01,14.95,15:55,-0.233,-0.466,1.0
 2026-11-09,cloudy,healthy,BBY,20-Day Breakout,buy_stop,105.71,103.85,109.43,1.76,10.646,Knocking on its 20-day high ($103.54) on 1.8x volume,1,eod,105.71,106.28,15:55,0.249,0.439,1.0
 2026-11-12,cloudy,healthy,AVGO,20-Day Breakout,buy_stop,365.72,357.43,382.3,2.27,11.076,Knocking on its 20-day high ($356.85) on 2.3x volume,1,eod,365.72,364.38,15:55,-0.206,-0.466,1.0
-2026-09-08,cloudy,healthy,FCX,Bull Flag,buy_stop,78.24,76.81,81.1,1.83,2.355,"Bull flag: ran up 15%, rested 5 days, now pushing the top of the flag on 1.6x volume",1,stop,78.24,76.81,12:10,-1.054,-1.926,1.0
+2026-11-17,cloudy,healthy,DIS,20-Day Breakout,buy_stop,122.73,121.57,125.05,0.95,10.285,Knocking on its 20-day high ($120.80) on 4.1x volume,1,no_fill,,,,0.0,0.0,
+2026-11-18,cloudy,healthy,TGT,20-Day Breakout,buy_stop,169.89,167.39,174.89,1.47,31.038,Knocking on its 20-day high ($167.60) on 5.3x volume,1,stop,169.89,167.39,14:50,-1.067,-1.57,1.0
+2026-11-20,cloudy,neutral,WMT,20-Day Breakout,buy_stop,131.83,130.44,134.61,1.05,5.411,Knocking on its 20-day high ($131.82) on 1.7x volume,1,no_fill,,,,0.0,0.0,
+2026-11-20,cloudy,neutral,COST,20-Day Breakout,buy_stop,1123.68,1114.52,1142.0,0.82,2.849,Knocking on its 20-day high ($1123.67) on 1.4x volume,1,no_fill,,,,0.0,0.0,
 2026-09-14,cloudy,healthy,CRWD,Bull Flag,buy_stop,232.45,226.79,243.77,2.43,3.942,"Bull flag: ran up 13%, rested 5 days, now pushing the top of the flag on 3.0x volume",1,eod,232.45,235.44,15:55,0.487,1.185,1.0
+2026-09-17,cloudy,neutral,AMD,Bull Flag,buy_stop,540.21,528.55,563.53,2.16,1.061,"Bull flag: ran up 9%, rested 5 days, now pushing the top of the flag on 1.2x volume",1,eod,540.21,544.78,15:55,0.345,0.745,1.0
 2026-09-21,sunny,neutral,META,Bull Flag,buy_stop,716.3,705.68,737.54,1.48,2.797,"Bull flag: ran up 13%, rested 5 days, now pushing the top of the flag on 2.1x volume",1,target,716.3,737.54,13:25,1.932,2.862,1.0
+2026-09-30,sunny,weak,AAPL,Bull Flag,buy_stop,343.0,339.48,350.04,1.03,0.976,"Bull flag: ran up 7%, rested 5 days, now pushing the top of the flag on 1.3x volume",1,no_fill,,,,0.0,0.0,
 2026-10-06,sunny,weak,AMD,Bull Flag,buy_stop,649.89,638.15,673.37,1.81,3.035,"Bull flag: ran up 23%, rested 5 days, now pushing the top of the flag on 1.3x volume",1,eod,649.89,649.55,15:55,-0.084,-0.152,1.0
+2026-10-06,sunny,weak,ANET,Bull Flag,buy_stop,212.37,209.03,219.05,1.57,1.467,"Bull flag: ran up 9%, rested 5 days, now pushing the top of the flag on 1.6x volume",1,eod,212.37,215.36,15:55,0.831,1.307,1.0
+2026-10-12,cloudy,weak,META,Bull Flag,buy_stop,748.17,737.12,770.27,1.48,1.227,"Bull flag: ran up 9%, rested 5 days, now pushing the top of the flag on 1.3x volume",1,eod,748.17,743.11,15:55,-0.525,-0.776,1.0
+2026-10-15,cloudy,neutral,ABNB,Bull Flag,buy_stop,170.66,168.29,175.4,1.39,1.38,"Bull flag: ran up 7%, rested 5 days, now pushing the top of the flag on 1.9x volume",1,eod,170.66,174.27,15:55,1.45,2.013,1.0
 2026-10-23,cloudy,neutral,COP,Bull Flag,buy_stop,151.25,149.58,154.59,1.1,2.318,"Bull flag: ran up 12%, rested 5 days, now pushing the top of the flag on 2.0x volume",1,eod,151.25,150.81,15:55,-0.354,-0.391,1.0
+2026-10-26,cloudy,neutral,COST,Bull Flag,buy_stop,1021.46,1013.38,1037.62,0.79,0.972,"Bull flag: ran up 7%, rested 5 days, now pushing the top of the flag on 1.3x volume",1,no_fill,,,,0.0,0.0,
 2026-10-27,cloudy,neutral,RBLX,Bull Flag,buy_stop,54.73,53.57,57.05,2.12,2.29,"Bull flag: ran up 14%, rested 5 days, now pushing the top of the flag on 1.7x volume",1,eod,54.73,54.45,15:55,-0.288,-0.611,1.0
+2026-10-29,cloudy,neutral,MA,Bull Flag,buy_stop,641.58,636.48,651.78,0.79,1.924,"Bull flag: ran up 9%, rested 5 days, now pushing the top of the flag on 2.1x volume",1,no_fill,,,,0.0,0.0,
+2026-10-29,cloudy,neutral,V,Bull Flag,buy_stop,414.61,411.13,421.57,0.84,1.312,"Bull flag: ran up 10%, rested 5 days, now pushing the top of the flag on 1.4x volume",1,no_fill,,,,0.0,0.0,
+2026-11-02,cloudy,healthy,WMT,Bull Flag,buy_stop,125.91,124.7,128.33,0.96,1.09,"Bull flag: ran up 8%, rested 5 days, now pushing the top of the flag on 1.4x volume",1,eod,125.91,127.7,15:55,1.375,1.32,1.0
 2026-11-04,cloudy,healthy,UPS,Bull Flag,buy_stop,112.98,111.85,115.24,1.0,2.449,"Bull flag: ran up 12%, rested 5 days, now pushing the top of the flag on 2.1x volume",1,eod,113.44,114.31,15:55,0.669,0.666,1.0
 2026-11-04,cloudy,healthy,SBUX,Bull Flag,buy_stop,108.06,106.84,110.5,1.13,1.464,"Bull flag: ran up 12%, rested 5 days, now pushing the top of the flag on 1.2x volume",1,eod,108.45,109.68,15:55,0.919,1.033,1.0
-2026-09-10,cloudy,healthy,PINS,Oversold Comeback,buy_stop,18.83,18.04,20.41,4.2,72.485,Fell 9.2% yesterday into oversold (RSI 23) - buy only if it climbs back above the morning high,2,eod,18.83,19.03,15:55,0.236,0.988,2.0
-2026-09-10,cloudy,healthy,NCLH,Oversold Comeback,buy_stop,14.83,14.57,15.35,1.75,17.892,Fell 3.5% yesterday into oversold (RSI 26) - buy only if it climbs back above the morning high,2,no_fill,,,,0.0,0.0,
+2026-11-17,cloudy,healthy,DIS,Bull Flag,buy_stop,122.73,121.57,125.05,0.95,3.269,"Bull flag: ran up 8%, rested 5 days, now pushing the top of the flag on 4.1x volume",1,no_fill,,,,0.0,0.0,
+2026-11-18,cloudy,healthy,TGT,Bull Flag,buy_stop,169.89,167.39,174.89,1.47,4.959,"Bull flag: ran up 9%, rested 5 days, now pushing the top of the flag on 5.3x volume",1,stop,169.89,167.39,14:50,-1.067,-1.57,1.0
+2026-11-18,cloudy,healthy,CMG,Bull Flag,buy_stop,36.91,36.33,38.07,1.57,3.406,"Bull flag: ran up 28%, rested 5 days, now pushing the top of the flag on 1.2x volume",1,no_fill,,,,0.0,0.0,
+2026-11-19,cloudy,healthy,DIS,Bull Flag,buy_stop,123.38,121.92,126.3,1.18,1.673,"Bull flag: ran up 10%, rested 5 days, now pushing the top of the flag on 1.7x volume",1,no_fill,,,,0.0,0.0,
+2026-11-19,cloudy,healthy,TGT,Bull Flag,buy_stop,171.92,169.16,177.44,1.61,1.389,"Bull flag: ran up 9%, rested 5 days, now pushing the top of the flag on 1.5x volume",1,no_fill,,,,0.0,0.0,
+2026-11-20,cloudy,neutral,COST,Bull Flag,buy_stop,1123.68,1114.52,1142.0,0.82,1.326,"Bull flag: ran up 10%, rested 5 days, now pushing the top of the flag on 1.4x volume",1,no_fill,,,,0.0,0.0,
 2026-09-24,cloudy,neutral,ABNB,Oversold Comeback,buy_stop,153.98,150.69,160.56,2.14,34.064,Fell 7.6% yesterday into oversold (RSI 26) - buy only if it climbs back above the morning high,2,no_fill,,,,0.0,0.0,
 2026-09-24,cloudy,neutral,MCD,Oversold Comeback,buy_stop,242.57,238.73,250.25,1.58,24.665,Fell 4.8% yesterday into oversold (RSI 26) - buy only if it climbs back above the morning high,2,no_fill,,,,0.0,0.0,
 2026-09-25,sunny,neutral,FDX,Oversold Comeback,buy_stop,281.91,279.22,287.29,0.95,30.188,Fell 4.1% yesterday into oversold (RSI 24) - buy only if it climbs back above the morning high,2,target,282.31,287.29,12:50,1.745,1.662,2.0
@@ -88,7 +98,7 @@ date,weather,breadth,ticker,setup,order_type,entry,stop,target,risk_pct,score,re
 2026-10-15,cloudy,neutral,QBTS,Oversold Comeback,buy_stop,11.83,11.34,12.81,4.14,87.749,Fell 10.1% yesterday into oversold (RSI 22) - buy only if it climbs back above the morning high,2,target,11.88,12.81,15:45,1.873,7.721,1.0
 2026-10-15,cloudy,neutral,RGTI,Oversold Comeback,buy_stop,11.53,11.1,12.39,3.73,76.545,Fell 8.6% yesterday into oversold (RSI 22) - buy only if it climbs back above the morning high,2,target,11.6,12.39,15:15,1.809,6.704,1.0
 2026-10-19,cloudy,neutral,IREN,Oversold Comeback,buy_stop,28.72,27.63,30.9,3.8,97.916,Fell 11.2% yesterday into oversold (RSI 22) - buy only if it climbs back above the morning high,2,stop,28.72,27.63,14:20,-1.026,-3.891,1.0
-2026-10-19,cloudy,neutral,SNDK,Oversold Comeback,buy_stop,1407.01,1357.63,1505.77,3.51,8.964,Fell 6.8% yesterday into oversold (RSI 30) - buy only if it climbs back above the morning high,2,no_fill,,,,0.0,0.0,
+2026-10-19,cloudy,neutral,SNDK,Oversold Comeback,buy_stop,175.88,169.69,188.26,3.52,8.964,Fell 6.8% yesterday into oversold (RSI 30) - buy only if it climbs back above the morning high,2,no_fill,,,,0.0,0.0,
 2026-10-22,stormy,neutral,SE,Oversold Comeback,buy_stop,76.95,75.39,80.07,2.03,33.676,Fell 3.1% yesterday into oversold (RSI 20) - buy only if it climbs back above the morning high,2,stop,76.95,75.2,09:30,-1.171,-2.372,2.0
 2026-10-23,cloudy,neutral,LRCX,Oversold Comeback,buy_stop,229.23,225.13,237.43,1.79,75.662,Fell 11.8% yesterday into oversold (RSI 25) - buy only if it climbs back above the morning high,2,target,230.36,237.43,09:45,1.667,2.966,2.0
 2026-10-23,cloudy,neutral,RIVN,Oversold Comeback,buy_stop,11.94,11.59,12.64,2.93,27.791,Fell 3.2% yesterday into oversold (RSI 22) - buy only if it climbs back above the morning high,2,stop,11.94,11.59,09:40,-1.034,-3.028,2.0
@@ -98,49 +108,47 @@ date,weather,breadth,ticker,setup,order_type,entry,stop,target,risk_pct,score,re
 2026-10-30,stormy,healthy,CAT,Oversold Comeback,buy_stop,637.25,621.84,668.07,2.42,44.097,Fell 9.3% yesterday into oversold (RSI 26) - buy only if it climbs back above the morning high,2,stop,637.25,621.84,14:20,-1.041,-2.516,1.0
 2026-11-02,cloudy,healthy,INTC,Oversold Comeback,buy_stop,65.71,63.69,69.75,3.07,168.642,Fell 28.6% yesterday into oversold (RSI 25) - buy only if it climbs back above the morning high,2,no_fill,,,,0.0,0.0,
 2026-11-02,cloudy,healthy,APP,Oversold Comeback,buy_stop,237.65,230.58,251.79,2.97,61.744,Fell 10.4% yesterday into oversold (RSI 25) - buy only if it climbs back above the morning high,2,stop,237.65,230.58,14:30,-1.033,-3.072,1.0
-2026-11-03,cloudy,healthy,SNDK,Oversold Comeback,buy_stop,1153.2,1100.52,1258.56,4.57,6.736,Fell 6.6% yesterday into oversold (RSI 30) - buy only if it climbs back above the morning high,2,no_fill,,,,0.0,0.0,
+2026-11-03,cloudy,healthy,SNDK,Oversold Comeback,buy_stop,144.16,137.56,157.36,4.58,6.736,Fell 6.6% yesterday into oversold (RSI 30) - buy only if it climbs back above the morning high,2,no_fill,,,,0.0,0.0,
 2026-11-05,stormy,healthy,NRG,Oversold Comeback,buy_stop,83.14,80.35,88.72,3.36,14.728,Fell 13.5% yesterday into oversold (RSI 30) - buy only if it climbs back above the morning high,2,no_fill,,,,0.0,0.0,
 2026-11-06,cloudy,healthy,QBTS,Oversold Comeback,buy_stop,9.78,9.2,10.94,5.93,107.173,Fell 12.8% yesterday into oversold (RSI 23) - buy only if it climbs back above the morning high,2,target,9.78,10.94,09:50,1.982,11.749,2.0
 2026-11-06,cloudy,healthy,FCX,Oversold Comeback,buy_stop,59.66,58.29,62.4,2.3,41.474,Fell 7.5% yesterday into oversold (RSI 25) - buy only if it climbs back above the morning high,2,target,59.66,62.4,09:45,1.955,4.488,2.0
 2026-11-09,cloudy,healthy,MCHP,Oversold Comeback,buy_stop,60.4,58.55,64.1,3.06,40.812,Fell 10.0% yesterday into oversold (RSI 27) - buy only if it climbs back above the morning high,2,eod,60.5,60.35,15:55,-0.114,-0.348,2.0
 2026-11-10,cloudy,healthy,NVDA,Oversold Comeback,buy_stop,174.66,170.11,183.76,2.61,15.36,Fell 4.3% yesterday into oversold (RSI 27) - buy only if it climbs back above the morning high,2,stop,174.66,170.11,13:00,-1.038,-2.702,1.0
 2026-11-11,cloudy,healthy,NVDA,Oversold Comeback,buy_stop,175.14,170.76,183.9,2.5,38.605,Fell 5.5% yesterday into oversold (RSI 24) - buy only if it climbs back above the morning high,2,stop,175.14,149.29,09:30,-5.939,-14.844,2.0
+2026-11-17,cloudy,healthy,BABA,Oversold Comeback,buy_stop,88.51,87.31,90.91,1.36,4.912,Fell 4.0% yesterday into oversold (RSI 30) - buy only if it climbs back above the morning high,2,no_fill,,,,0.0,0.0,
+2026-11-20,cloudy,neutral,BIDU,Oversold Comeback,buy_stop,65.45,63.78,68.79,2.55,34.57,Fell 4.1% yesterday into oversold (RSI 23) - buy only if it climbs back above the morning high,2,no_fill,,,,0.0,0.0,
 2026-09-29,cloudy,neutral,CCL,Episodic Pivot,buy_stop,25.17,24.39,,3.1,69.205,"Jumped +10.2% at the open on 6.8x normal volume (big news?) - buy a new high, hold up to 5 days",5,eod,25.17,25.58,15:55,0.493,1.527,5.0
 2026-10-05,sunny,weak,NU,Episodic Pivot,buy_stop,15.47,14.91,,3.62,74.971,"Jumped +11.5% at the open on 6.5x normal volume (big news?) - buy a new high, hold up to 5 days",5,no_fill,,,,0.0,0.0,
 2026-10-27,cloudy,neutral,SOFI,Episodic Pivot,buy_stop,16.36,15.74,,3.79,57.383,"Jumped +10.5% at the open on 5.5x normal volume (big news?) - buy a new high, hold up to 5 days",5,eod,16.36,16.6,15:55,0.36,1.365,5.0
 2026-11-04,cloudy,healthy,XYZ,Episodic Pivot,buy_stop,88.25,85.92,,2.64,88.793,"Jumped +10.5% at the open on 8.4x normal volume (big news?) - buy a new high, hold up to 5 days",5,stop,88.25,85.92,09:40,-1.037,-2.738,2.0
-2026-09-08,cloudy,healthy,ENPH,Gap & Go,buy_stop,38.89,37.93,40.81,2.47,8.166,"Gapped +3.4%, 2.4x normal volume, holding above VWAP",1,eod,38.89,38.85,15:55,-0.082,-0.203,1.0
-2026-09-09,cloudy,healthy,NET,Gap & Go,buy_stop,309.01,301.12,324.79,2.55,8.664,"Gapped +3.9%, 2.2x normal volume, holding above VWAP",1,eod,309.01,314.28,15:55,0.628,1.604,1.0
-2026-09-14,cloudy,healthy,CRWD,Gap & Go,buy_stop,232.45,226.79,243.77,2.43,18.063,"Gapped +5.9%, 3.0x normal volume, holding above VWAP",1,eod,232.45,235.44,15:55,0.487,1.185,1.0
-2026-09-14,cloudy,healthy,PANW,Gap & Go,buy_stop,367.11,358.49,384.35,2.35,12.479,"Gapped +4.8%, 2.6x normal volume, holding above VWAP",1,eod,367.11,373.96,15:55,0.752,1.764,1.0
-2026-09-18,cloudy,neutral,MSTR,Gap & Go,buy_stop,147.23,143.04,155.61,2.85,6.745,"Gapped +3.3%, 2.1x normal volume, holding above VWAP",1,eod,147.23,153.91,15:55,1.558,4.433,1.0
-2026-09-21,sunny,neutral,ARM,Gap & Go,buy_stop,312.88,304.61,329.42,2.64,24.63,"Gapped +6.8%, 3.6x normal volume, holding above VWAP",1,eod,312.88,323.1,15:55,1.197,3.163,1.0
-2026-09-21,sunny,neutral,COIN,Gap & Go,buy_stop,208.34,202.61,219.8,2.75,12.146,"Gapped +5.8%, 2.1x normal volume, holding above VWAP",1,no_fill,,,,0.0,0.0,
-2026-09-22,sunny,neutral,SHOP,Gap & Go,buy_stop,150.19,147.12,156.33,2.04,23.867,"Gapped +4.8%, 5.0x normal volume, holding above VWAP",1,no_fill,,,,0.0,0.0,
-2026-09-29,cloudy,neutral,CCL,Gap & Go,buy_stop,25.17,24.78,25.95,1.55,69.205,"Gapped +10.2%, 6.8x normal volume, holding above VWAP",1,eod,25.17,25.14,15:55,-0.141,-0.219,1.0
-2026-09-29,cloudy,neutral,NCLH,Gap & Go,buy_stop,15.28,14.99,15.86,1.9,12.284,"Gapped +5.6%, 2.2x normal volume, holding above VWAP",1,no_fill,,,,0.0,0.0,
-2026-10-05,sunny,weak,NU,Gap & Go,buy_stop,15.47,15.19,16.03,1.81,74.971,"Gapped +11.5%, 6.5x normal volume, holding above VWAP",1,no_fill,,,,0.0,0.0,
-2026-10-05,sunny,weak,WDC,Gap & Go,buy_stop,446.81,432.32,475.79,3.24,7.797,"Gapped +3.5%, 2.2x normal volume, holding above VWAP",1,eod,446.81,441.66,15:55,-0.386,-1.251,1.0
-2026-10-06,sunny,weak,VST,Gap & Go,buy_stop,160.71,158.17,165.79,1.58,19.005,"Gapped +4.5%, 4.2x normal volume, holding above VWAP",1,eod,160.71,160.48,15:55,-0.154,-0.243,1.0
-2026-10-06,sunny,weak,NRG,Gap & Go,buy_stop,105.5,103.47,109.56,1.92,15.251,"Gapped +4.3%, 3.5x normal volume, holding above VWAP",1,stop,105.5,103.47,14:20,-1.051,-2.022,1.0
-2026-10-15,cloudy,neutral,WMT,Gap & Go,buy_stop,121.39,120.24,123.69,0.95,10.79,"Gapped +3.4%, 3.2x normal volume, holding above VWAP",1,no_fill,,,,0.0,0.0,
-2026-10-15,cloudy,neutral,HD,Gap & Go,buy_stop,309.0,305.83,315.34,1.03,7.57,"Gapped +3.4%, 2.2x normal volume, holding above VWAP",1,stop,309.0,305.83,10:55,-1.097,-1.125,1.0
-2026-10-16,cloudy,neutral,AA,Gap & Go,buy_stop,43.72,42.96,45.24,1.74,17.943,"Gapped +3.0%, 5.9x normal volume, holding above VWAP",1,stop,43.72,42.96,11:55,-1.057,-1.837,1.0
-2026-10-27,cloudy,neutral,SOFI,Gap & Go,buy_stop,16.36,16.05,16.98,1.89,57.383,"Gapped +10.5%, 5.5x normal volume, holding above VWAP",1,eod,16.36,16.4,15:55,0.06,0.114,1.0
-2026-10-29,cloudy,neutral,NCLH,Gap & Go,buy_stop,18.1,17.78,18.74,1.77,55.808,"Gapped +9.3%, 6.0x normal volume, holding above VWAP",1,eod,18.1,18.2,15:55,0.271,0.48,1.0
-2026-10-29,cloudy,neutral,DASH,Gap & Go,buy_stop,180.68,176.49,189.06,2.32,27.208,"Gapped +5.3%, 5.1x normal volume, holding above VWAP",1,stop,180.8,176.49,12:00,-1.071,-2.481,1.0
-2026-11-02,cloudy,healthy,RIVN,Gap & Go,buy_stop,13.53,13.26,14.07,2.0,15.961,"Gapped +4.9%, 3.3x normal volume, holding above VWAP",1,stop,13.53,13.26,12:45,-1.05,-2.094,1.0
-2026-11-04,cloudy,healthy,RIOT,Gap & Go,buy_stop,16.21,15.53,17.57,4.19,111.715,"Gapped +11.3%, 9.9x normal volume, holding above VWAP",1,no_fill,,,,0.0,0.0,
-2026-11-04,cloudy,healthy,XYZ,Gap & Go,buy_stop,88.25,87.09,90.57,1.31,88.793,"Gapped +10.5%, 8.4x normal volume, holding above VWAP",1,eod,88.25,87.57,15:55,-0.662,-0.87,1.0
-2026-11-06,cloudy,healthy,OKLO,Gap & Go,buy_stop,23.02,21.98,25.1,4.52,33.161,"Gapped +10.5%, 3.2x normal volume, holding above VWAP",1,eod,23.02,23.56,15:55,0.497,2.243,1.0
-2026-11-06,cloudy,healthy,U,Gap & Go,buy_stop,52.51,51.22,55.09,2.46,11.38,"Gapped +4.8%, 2.4x normal volume, holding above VWAP",1,eod,52.51,51.49,15:55,-0.831,-2.04,1.0
-2026-11-09,cloudy,healthy,TTD,Gap & Go,buy_stop,15.01,14.71,15.61,2.0,47.291,"Gapped +6.6%, 7.2x normal volume, holding above VWAP",1,eod,15.01,14.95,15:55,-0.233,-0.466,1.0
-2026-11-09,cloudy,healthy,NRG,Gap & Go,buy_stop,96.71,94.16,101.81,2.64,12.378,"Gapped +5.9%, 2.1x normal volume, holding above VWAP",1,eod,96.71,97.49,15:55,0.268,0.706,1.0
-2026-11-12,cloudy,healthy,AVGO,Gap & Go,buy_stop,365.72,357.43,382.3,2.27,7.857,"Gapped +3.4%, 2.3x normal volume, holding above VWAP",1,eod,365.72,364.38,15:55,-0.206,-0.466,1.0
-2026-11-13,cloudy,healthy,NU,Gap & Go,buy_stop,12.79,12.49,13.39,2.35,12.751,"Gapped +4.5%, 2.8x normal volume, holding above VWAP",1,eod,12.79,13.22,15:55,1.39,3.259,1.0
-2026-09-04,cloudy,healthy,ZS,Gap-Down Bounce,buy_stop,177.15,168.42,194.61,4.93,37.409,Crashed 6.5% overnight on 5.7x volume - buy only if it climbs back above the morning high,1,no_fill,,,,0.0,0.0,
-2026-09-08,cloudy,healthy,BIDU,Gap-Down Bounce,buy_stop,92.2,91.1,94.4,1.19,26.971,Crashed 7.9% overnight on 3.4x volume - buy only if it climbs back above the morning high,1,eod,92.2,92.56,15:55,0.243,0.29,1.0
-2026-09-10,cloudy,healthy,FCX,Gap-Down Bounce,buy_stop,71.08,68.84,75.56,3.15,24.162,Crashed 7.8% overnight on 3.1x volume - buy only if it climbs back above the morning high,1,eod,71.08,71.24,15:55,0.04,0.125,1.0
+2026-09-14,cloudy,healthy,CRWD,Gap & Go,buy_stop,232.45,229.05,239.25,1.46,18.063,"Gapped +5.9%, 3.0x normal volume, holding above VWAP",1,target,232.45,239.25,13:55,1.931,2.822,1.0
+2026-09-14,cloudy,healthy,PANW,Gap & Go,buy_stop,367.11,361.94,377.45,1.41,12.479,"Gapped +4.8%, 2.6x normal volume, holding above VWAP",1,target,367.11,377.45,13:40,1.928,2.714,1.0
+2026-09-18,cloudy,neutral,MSTR,Gap & Go,buy_stop,147.23,144.72,152.25,1.7,6.745,"Gapped +3.3%, 2.1x normal volume, holding above VWAP",1,target,147.23,152.25,15:05,1.94,3.306,1.0
+2026-09-21,sunny,neutral,ARM,Gap & Go,buy_stop,312.88,307.92,322.8,1.59,24.63,"Gapped +6.8%, 3.6x normal volume, holding above VWAP",1,target,312.88,322.8,15:50,1.936,3.067,1.0
+2026-09-21,sunny,neutral,COIN,Gap & Go,buy_stop,208.34,204.57,215.88,1.81,12.146,"Gapped +5.8%, 2.1x normal volume, holding above VWAP",1,no_fill,,,,0.0,0.0,
+2026-09-22,sunny,neutral,SHOP,Gap & Go,buy_stop,150.19,148.35,153.87,1.23,23.867,"Gapped +4.8%, 5.0x normal volume, holding above VWAP",1,no_fill,,,,0.0,0.0,
+2026-09-29,cloudy,neutral,CCL,Gap & Go,buy_stop,25.17,24.94,25.63,0.91,69.205,"Gapped +10.2%, 6.8x normal volume, holding above VWAP",1,eod,25.17,25.14,15:55,-0.24,-0.219,1.0
+2026-09-29,cloudy,neutral,NCLH,Gap & Go,buy_stop,15.28,15.11,15.62,1.11,12.284,"Gapped +5.6%, 2.2x normal volume, holding above VWAP",1,no_fill,,,,0.0,0.0,
+2026-10-05,sunny,weak,NU,Gap & Go,buy_stop,15.47,15.3,15.81,1.1,74.971,"Gapped +11.5%, 6.5x normal volume, holding above VWAP",1,no_fill,,,,0.0,0.0,
+2026-10-05,sunny,weak,WDC,Gap & Go,buy_stop,446.81,438.12,464.19,1.94,7.797,"Gapped +3.5%, 2.2x normal volume, holding above VWAP",1,stop,446.81,438.12,14:55,-1.051,-2.043,1.0
+2026-10-06,sunny,weak,VST,Gap & Go,buy_stop,160.71,159.19,163.75,0.95,19.005,"Gapped +4.5%, 4.2x normal volume, holding above VWAP",1,stop,160.71,159.19,14:20,-1.105,-1.045,1.0
+2026-10-06,sunny,weak,NRG,Gap & Go,buy_stop,105.5,104.28,107.94,1.16,15.251,"Gapped +4.3%, 3.5x normal volume, holding above VWAP",1,stop,105.5,104.28,14:05,-1.086,-1.255,1.0
+2026-10-15,cloudy,neutral,WMT,Gap & Go,buy_stop,121.39,120.7,122.77,0.57,10.79,"Gapped +3.4%, 3.2x normal volume, holding above VWAP",1,no_fill,,,,0.0,0.0,
+2026-10-15,cloudy,neutral,HD,Gap & Go,buy_stop,309.0,307.1,312.8,0.61,7.57,"Gapped +3.4%, 2.2x normal volume, holding above VWAP",1,stop,309.0,307.1,10:45,-1.162,-0.714,1.0
+2026-10-16,cloudy,neutral,AA,Gap & Go,buy_stop,43.72,43.26,44.64,1.05,17.943,"Gapped +3.0%, 5.9x normal volume, holding above VWAP",1,stop,43.72,43.26,11:15,-1.095,-1.151,1.0
+2026-10-27,cloudy,neutral,SOFI,Gap & Go,buy_stop,16.36,16.17,16.74,1.16,57.383,"Gapped +10.5%, 5.5x normal volume, holding above VWAP",1,target,16.36,16.74,12:00,1.913,2.22,1.0
+2026-10-29,cloudy,neutral,NCLH,Gap & Go,buy_stop,18.1,17.91,18.48,1.05,55.808,"Gapped +9.3%, 6.0x normal volume, holding above VWAP",1,eod,18.1,18.2,15:55,0.457,0.48,1.0
+2026-10-29,cloudy,neutral,DASH,Gap & Go,buy_stop,180.68,178.17,185.7,1.39,27.208,"Gapped +5.3%, 5.1x normal volume, holding above VWAP",1,stop,180.8,178.17,11:50,-1.119,-1.553,1.0
+2026-11-02,cloudy,healthy,RIVN,Gap & Go,buy_stop,13.53,13.37,13.85,1.18,15.961,"Gapped +4.9%, 3.3x normal volume, holding above VWAP",1,stop,13.53,13.37,11:45,-1.084,-1.281,1.0
+2026-11-04,cloudy,healthy,RIOT,Gap & Go,buy_stop,16.21,15.81,17.01,2.47,111.715,"Gapped +11.3%, 9.9x normal volume, holding above VWAP",1,no_fill,,,,0.0,0.0,
+2026-11-04,cloudy,healthy,XYZ,Gap & Go,buy_stop,88.25,87.55,89.65,0.79,88.793,"Gapped +10.5%, 8.4x normal volume, holding above VWAP",1,stop,88.25,87.55,12:40,-1.126,-0.892,1.0
+2026-11-06,cloudy,healthy,OKLO,Gap & Go,buy_stop,23.02,22.4,24.26,2.69,33.161,"Gapped +10.5%, 3.2x normal volume, holding above VWAP",1,eod,23.02,23.56,15:55,0.833,2.243,1.0
+2026-11-06,cloudy,healthy,U,Gap & Go,buy_stop,52.51,51.73,54.07,1.49,11.38,"Gapped +4.8%, 2.4x normal volume, holding above VWAP",1,stop,52.51,51.73,15:55,-1.067,-1.584,1.0
+2026-11-09,cloudy,healthy,TTD,Gap & Go,buy_stop,15.01,14.83,15.37,1.2,47.291,"Gapped +6.6%, 7.2x normal volume, holding above VWAP",1,stop,15.01,14.83,11:10,-1.083,-1.298,1.0
+2026-11-09,cloudy,healthy,NRG,Gap & Go,buy_stop,96.71,95.18,99.77,1.58,12.378,"Gapped +5.9%, 2.1x normal volume, holding above VWAP",1,eod,96.71,97.49,15:55,0.446,0.706,1.0
+2026-11-12,cloudy,healthy,AVGO,Gap & Go,buy_stop,365.72,360.75,375.66,1.36,7.857,"Gapped +3.4%, 2.3x normal volume, holding above VWAP",1,eod,365.72,364.38,15:55,-0.343,-0.466,1.0
+2026-11-13,cloudy,healthy,NU,Gap & Go,buy_stop,12.79,12.61,13.15,1.41,12.751,"Gapped +4.5%, 2.8x normal volume, holding above VWAP",1,target,12.79,13.15,11:25,1.928,2.712,1.0
+2026-11-19,cloudy,healthy,PDD,Gap & Go,buy_stop,87.39,86.72,88.73,0.77,43.326,"Gapped +6.6%, 6.6x normal volume, holding above VWAP",1,no_fill,,,,0.0,0.0,
 2026-09-14,cloudy,healthy,LRCX,Gap-Down Bounce,buy_stop,280.19,273.46,293.65,2.4,14.587,Crashed 7.8% overnight on 1.9x volume - buy only if it climbs back above the morning high,1,no_fill,,,,0.0,0.0,
 2026-09-14,cloudy,healthy,ARM,Gap-Down Bounce,buy_stop,248.13,238.99,266.41,3.68,13.599,Crashed 8.5% overnight on 1.6x volume - buy only if it climbs back above the morning high,1,no_fill,,,,0.0,0.0,
 2026-09-16,cloudy,healthy,FANG,Gap-Down Bounce,buy_stop,198.66,193.35,209.28,2.67,144.459,Crashed 6.9% overnight on 21.1x volume - buy only if it climbs back above the morning high,1,no_fill,,,,0.0,0.0,
@@ -153,7 +161,7 @@ date,weather,breadth,ticker,setup,order_type,entry,stop,target,risk_pct,score,re
 2026-10-12,cloudy,weak,ALB,Gap-Down Bounce,buy_stop,99.43,96.62,105.05,2.83,11.25,Crashed 4.2% overnight on 2.7x volume - buy only if it climbs back above the morning high,1,no_fill,,,,0.0,0.0,
 2026-10-14,cloudy,weak,BAC,Gap-Down Bounce,buy_stop,50.5,49.42,52.66,2.14,35.7,Crashed 7.7% overnight on 4.7x volume - buy only if it climbs back above the morning high,1,eod,50.5,51.41,15:55,0.795,1.7,1.0
 2026-10-14,cloudy,weak,PANW,Gap-Down Bounce,buy_stop,382.13,370.49,405.41,3.05,9.563,Crashed 4.6% overnight on 2.1x volume - buy only if it climbs back above the morning high,1,eod,382.13,375.04,15:55,-0.642,-1.953,1.0
-2026-10-15,cloudy,neutral,SNDK,Gap-Down Bounce,buy_stop,1325.01,1276.06,1422.91,3.69,12.55,Crashed 6.4% overnight on 1.9x volume - buy only if it climbs back above the morning high,1,eod,1325.01,1395.61,15:55,1.414,5.223,1.0
+2026-10-15,cloudy,neutral,SNDK,Gap-Down Bounce,buy_stop,165.63,159.5,177.89,3.7,12.55,Crashed 6.4% overnight on 1.9x volume - buy only if it climbs back above the morning high,1,eod,165.63,174.45,15:55,1.411,5.221,1.0
 2026-10-15,cloudy,neutral,AMD,Gap-Down Bounce,buy_stop,550.82,530.08,592.3,3.77,9.841,Crashed 5.5% overnight on 1.8x volume - buy only if it climbs back above the morning high,1,eod,550.82,562.13,15:55,0.518,1.951,1.0
 2026-10-20,sunny,neutral,GM,Gap-Down Bounce,buy_stop,78.81,76.67,83.09,2.72,38.172,Crashed 6.7% overnight on 5.7x volume - buy only if it climbs back above the morning high,1,stop,78.81,76.67,12:10,-1.036,-2.813,1.0
 2026-10-21,cloudy,neutral,NFLX,Gap-Down Bounce,buy_stop,67.13,65.22,70.95,2.85,27.946,Crashed 6.6% overnight on 4.2x volume - buy only if it climbs back above the morning high,1,no_fill,,,,0.0,0.0,
@@ -175,13 +183,8 @@ date,weather,breadth,ticker,setup,order_type,entry,stop,target,risk_pct,score,re
 2026-11-06,cloudy,healthy,DVN,Gap-Down Bounce,buy_stop,42.38,40.69,45.76,3.99,8.935,Crashed 4.2% overnight on 2.2x volume - buy only if it climbs back above the morning high,1,eod,42.38,42.21,15:55,-0.126,-0.501,1.0
 2026-11-12,cloudy,healthy,BABA,Gap-Down Bounce,buy_stop,95.93,93.41,100.97,2.63,17.964,Crashed 5.9% overnight on 3.0x volume - buy only if it climbs back above the morning high,1,no_fill,,,,0.0,0.0,
 2026-11-12,cloudy,healthy,SMCI,Gap-Down Bounce,buy_stop,28.22,26.95,30.76,4.5,16.881,Crashed 10.6% overnight on 1.6x volume - buy only if it climbs back above the morning high,1,stop,28.22,26.95,11:25,-1.022,-4.596,1.0
-2026-09-04,cloudy,healthy,INTC,MA20 Reclaim,buy_stop,95.35,93.46,99.13,1.98,4.882,Climbed back above its 20-day average ($94.24) and pushing new highs,1,eod,95.35,95.81,15:55,0.193,0.382,1.0
-2026-09-04,cloudy,healthy,TSM,MA20 Reclaim,buy_stop,426.99,417.85,445.27,2.14,3.107,Climbed back above its 20-day average ($419.49) and pushing new highs,1,eod,426.99,428.58,15:55,0.127,0.272,1.0
-2026-09-08,cloudy,healthy,ENPH,MA20 Reclaim,buy_stop,38.89,38.08,40.51,2.08,14.748,Climbed back above its 20-day average ($38.37) and pushing new highs,1,eod,38.89,38.85,15:55,-0.097,-0.203,1.0
-2026-09-08,cloudy,healthy,STX,MA20 Reclaim,buy_stop,891.62,847.08,980.7,5.0,6.087,Climbed back above its 20-day average ($853.35) and pushing new highs,1,eod,891.62,903.35,15:55,0.243,1.214,1.0
-2026-09-09,cloudy,healthy,NET,MA20 Reclaim,buy_stop,309.01,296.39,334.25,4.08,17.754,Climbed back above its 20-day average ($294.97) and pushing new highs,1,eod,309.01,314.28,15:55,0.393,1.604,1.0
-2026-09-11,cloudy,healthy,KR,MA20 Reclaim,buy_stop,59.5,58.42,61.66,1.82,16.971,Climbed back above its 20-day average ($57.45) and pushing new highs,1,no_fill,,,,0.0,0.0,
-2026-09-11,cloudy,healthy,SMCI,MA20 Reclaim,buy_stop,40.45,38.66,44.03,4.43,12.007,Climbed back above its 20-day average ($37.83) and pushing new highs,1,no_fill,,,,0.0,0.0,
+2026-11-16,stormy,healthy,MSTR,Gap-Down Bounce,buy_stop,105.8,101.69,114.02,3.88,11.319,Crashed 7.4% overnight on 1.5x volume - buy only if it climbs back above the morning high,1,no_fill,,,,0.0,0.0,
+2026-11-17,cloudy,healthy,JD,Gap-Down Bounce,buy_stop,26.42,25.76,27.74,2.5,15.481,Crashed 6.6% overnight on 2.3x volume - buy only if it climbs back above the morning high,1,no_fill,,,,0.0,0.0,
 2026-09-14,cloudy,healthy,CRWD,MA20 Reclaim,buy_stop,232.45,223.39,250.57,3.9,37.049,Climbed back above its 20-day average ($207.51) and pushing new highs,1,eod,232.45,235.44,15:55,0.304,1.185,1.0
 2026-09-14,cloudy,healthy,PANW,MA20 Reclaim,buy_stop,367.11,353.32,394.69,3.76,27.52,Climbed back above its 20-day average ($353.25) and pushing new highs,1,eod,367.11,373.96,15:55,0.47,1.764,1.0
 2026-09-15,cloudy,healthy,NXPI,MA20 Reclaim,buy_stop,228.75,224.72,236.81,1.76,1.939,Climbed back above its 20-day average ($225.92) and pushing new highs,1,no_fill,,,,0.0,0.0,
@@ -233,16 +236,8 @@ date,weather,breadth,ticker,setup,order_type,entry,stop,target,risk_pct,score,re
 2026-11-09,cloudy,healthy,ANET,MA20 Reclaim,buy_stop,186.96,179.01,202.86,4.25,11.266,Climbed back above its 20-day average ($180.59) and pushing new highs,1,eod,186.96,186.26,15:55,-0.112,-0.474,1.0
 2026-11-10,cloudy,healthy,AMD,MA20 Reclaim,buy_stop,539.26,517.21,583.36,4.09,6.672,Climbed back above its 20-day average ($523.01) and pushing new highs,1,no_fill,,,,0.0,0.0,
 2026-11-10,cloudy,healthy,AVGO,MA20 Reclaim,buy_stop,334.68,327.99,348.06,2.0,5.117,Climbed back above its 20-day average ($330.36) and pushing new highs,1,no_fill,,,,0.0,0.0,
-2026-09-04,cloudy,healthy,LULU,ORB Stocks in Play,buy_stop,103.17,100.58,,2.51,23.931,"Stock in play: 23.9x normal volume, green opening range - buy the breakout",1,no_fill,,,,0.0,0.0,
-2026-09-04,cloudy,healthy,ZS,ORB Stocks in Play,buy_stop,177.15,171.1,,3.42,5.714,"Stock in play: 5.7x normal volume, green opening range - buy the breakout",1,no_fill,,,,0.0,0.0,
-2026-09-08,cloudy,healthy,IONQ,ORB Stocks in Play,buy_stop,44.44,43.23,,2.72,3.05,"Stock in play: 3.1x normal volume, green opening range - buy the breakout",1,no_fill,,,,0.0,0.0,
-2026-09-08,cloudy,healthy,QBTS,ORB Stocks in Play,buy_stop,18.49,18.08,,2.22,2.774,"Stock in play: 2.8x normal volume, green opening range - buy the breakout",1,no_fill,,,,0.0,0.0,
-2026-09-09,cloudy,healthy,NET,ORB Stocks in Play,buy_stop,309.01,300.77,,2.67,2.199,"Stock in play: 2.2x normal volume, green opening range - buy the breakout",1,eod,309.01,314.28,15:55,0.602,1.604,1.0
-2026-09-09,cloudy,healthy,GM,ORB Stocks in Play,buy_stop,86.22,85.51,,0.82,2.158,"Stock in play: 2.2x normal volume, green opening range - buy the breakout",1,stop,86.22,85.51,11:10,-1.121,-0.923,1.0
-2026-09-10,cloudy,healthy,FCX,ORB Stocks in Play,buy_stop,71.08,69.96,,1.58,3.08,"Stock in play: 3.1x normal volume, green opening range - buy the breakout",1,eod,71.08,71.24,15:55,0.079,0.125,1.0
-2026-09-10,cloudy,healthy,NOC,ORB Stocks in Play,buy_stop,523.37,519.68,,0.71,2.275,"Stock in play: 2.3x normal volume, green opening range - buy the breakout",1,no_fill,,,,0.0,0.0,
-2026-09-11,cloudy,healthy,KR,ORB Stocks in Play,buy_stop,59.38,57.51,,3.15,4.104,"Stock in play: 4.1x normal volume, green opening range - buy the breakout",1,no_fill,,,,0.0,0.0,
-2026-09-11,cloudy,healthy,ADBE,ORB Stocks in Play,buy_stop,249.78,245.65,,1.65,3.359,"Stock in play: 3.4x normal volume, green opening range - buy the breakout",1,eod,249.78,252.23,15:55,0.532,0.88,1.0
+2026-11-17,cloudy,healthy,NOC,MA20 Reclaim,buy_stop,550.91,544.34,564.05,1.19,1.247,Climbed back above its 20-day average ($546.57) and pushing new highs,1,eod,550.91,553.39,15:55,0.293,0.35,1.0
+2026-11-20,cloudy,neutral,KR,MA20 Reclaim,buy_stop,69.7,68.22,72.66,2.12,6.131,Climbed back above its 20-day average ($68.18) and pushing new highs,1,stop,69.7,68.22,15:55,-1.047,-2.221,1.0
 2026-09-14,cloudy,healthy,GOOGL,ORB Stocks in Play,buy_stop,347.29,344.78,,0.72,2.548,"Stock in play: 2.5x normal volume, green opening range - buy the breakout",1,eod,347.29,349.51,15:55,0.746,0.539,1.0
 2026-09-14,cloudy,healthy,COIN,ORB Stocks in Play,buy_stop,189.45,184.99,,2.35,2.069,"Stock in play: 2.1x normal volume, green opening range - buy the breakout",1,eod,189.45,191.41,15:55,0.397,0.934,1.0
 2026-09-18,cloudy,neutral,GILD,ORB Stocks in Play,buy_stop,153.24,151.67,,1.02,4.302,"Stock in play: 4.3x normal volume, green opening range - buy the breakout",1,no_fill,,,,0.0,0.0,
@@ -307,8 +302,14 @@ date,weather,breadth,ticker,setup,order_type,entry,stop,target,risk_pct,score,re
 2026-11-11,cloudy,healthy,OXY,ORB Stocks in Play,buy_stop,57.52,57.09,,0.75,4.198,"Stock in play: 4.2x normal volume, green opening range - buy the breakout",1,no_fill,,,,0.0,0.0,
 2026-11-12,cloudy,healthy,AVGO,ORB Stocks in Play,buy_stop,365.72,360.22,,1.5,2.344,"Stock in play: 2.3x normal volume, green opening range - buy the breakout",1,eod,365.72,364.38,15:55,-0.31,-0.466,1.0
 2026-11-13,cloudy,healthy,GME,ORB Stocks in Play,buy_stop,26.48,26.07,,1.55,3.964,"Stock in play: 4.0x normal volume, green opening range - buy the breakout",1,no_fill,,,,0.0,0.0,
-2026-09-09,cloudy,healthy,NCLH,Oversold Bounce,buy_stop,15.28,15.02,15.67,1.7,3.763,"RSI 27 (oversold), down 2.1% - only buy if it bounces back above the morning high",1,no_fill,,,,0.0,0.0,
-2026-09-14,cloudy,healthy,RCL,Oversold Bounce,buy_stop,257.72,254.12,263.12,1.4,7.416,"RSI 21 (oversold), down 2.2% - only buy if it bounces back above the morning high",1,no_fill,,,,0.0,0.0,
+2026-11-17,cloudy,healthy,DIS,ORB Stocks in Play,buy_stop,122.73,120.49,,1.83,4.139,"Stock in play: 4.1x normal volume, green opening range - buy the breakout",1,no_fill,,,,0.0,0.0,
+2026-11-17,cloudy,healthy,JD,ORB Stocks in Play,buy_stop,26.42,26.03,,1.48,2.343,"Stock in play: 2.3x normal volume, green opening range - buy the breakout",1,no_fill,,,,0.0,0.0,
+2026-11-18,cloudy,healthy,BBY,ORB Stocks in Play,buy_stop,99.28,97.97,,1.32,3.113,"Stock in play: 3.1x normal volume, green opening range - buy the breakout",1,eod,99.56,100.32,15:55,0.504,0.663,1.0
+2026-11-19,cloudy,healthy,PDD,ORB Stocks in Play,buy_stop,87.39,84.7,,3.08,6.554,"Stock in play: 6.6x normal volume, green opening range - buy the breakout",1,no_fill,,,,0.0,0.0,
+2026-11-19,cloudy,healthy,PANW,ORB Stocks in Play,buy_stop,370.01,362.1,,2.14,4.1,"Stock in play: 4.1x normal volume, green opening range - buy the breakout",1,no_fill,,,,0.0,0.0,
+2026-11-20,cloudy,neutral,KR,ORB Stocks in Play,buy_stop,69.59,69.15,,0.63,2.653,"Stock in play: 2.7x normal volume, green opening range - buy the breakout",1,stop,69.59,69.15,12:40,-1.158,-0.732,1.0
+2026-11-20,cloudy,neutral,MRK,ORB Stocks in Play,buy_stop,136.66,135.22,,1.05,2.607,"Stock in play: 2.6x normal volume, green opening range - buy the breakout",1,no_fill,,,,0.0,0.0,
+2026-09-14,cloudy,healthy,RCL,Oversold Bounce,buy_stop,257.72,254.12,263.12,1.4,7.227,"RSI 21 (oversold), down 2.2% - only buy if it bounces back above the morning high",1,no_fill,,,,0.0,0.0,
 2026-09-14,cloudy,healthy,HON,Oversold Bounce,buy_stop,199.52,197.9,201.95,0.81,5.702,"RSI 26 (oversold), down 2.0% - only buy if it bounces back above the morning high",1,eod,199.52,201.41,15:55,1.043,0.846,1.0
 2026-09-16,cloudy,healthy,WYNN,Oversold Bounce,buy_stop,87.43,84.77,91.42,3.04,13.247,"RSI 23 (oversold), down 2.2% - only buy if it bounces back above the morning high",1,no_fill,,,,0.0,0.0,
 2026-09-22,sunny,neutral,RTX,Oversold Bounce,buy_stop,194.88,187.5,205.95,3.79,10.535,"RSI 25 (oversold), down 3.1% - only buy if it bounces back above the morning high",1,no_fill,,,,0.0,0.0,
@@ -358,58 +359,64 @@ date,weather,breadth,ticker,setup,order_type,entry,stop,target,risk_pct,score,re
 2026-11-05,stormy,healthy,ARM,Oversold Bounce,buy_stop,175.84,166.42,189.97,5.36,16.833,"RSI 28 (oversold), down 12.1% - only buy if it bounces back above the morning high",1,no_fill,,,,0.0,0.0,
 2026-11-05,stormy,healthy,CAT,Oversold Bounce,buy_stop,585.7,559.62,624.82,4.45,16.243,"RSI 20 (oversold), down 4.8% - only buy if it bounces back above the morning high",1,no_fill,,,,0.0,0.0,
 2026-11-10,cloudy,healthy,NVDA,Oversold Bounce,buy_stop,174.66,170.11,181.48,2.61,15.35,"RSI 25 (oversold), down 4.1% - only buy if it bounces back above the morning high",1,stop,174.66,170.11,13:00,-1.038,-2.702,1.0
-2026-09-04,cloudy,healthy,KLAC,Relative Strength,buy_stop,186.29,183.0,192.87,1.77,19.458,"Up 6.7% while the market is -0.3%, on 2.8x volume - buy if it makes a new high",1,eod,186.29,185.56,15:55,-0.278,-0.491,1.0
-2026-09-04,cloudy,healthy,SNDK,Relative Strength,buy_stop,1670.52,1639.77,1732.02,1.84,12.934,"Up 7.4% while the market is -0.3%, on 1.7x volume - buy if it makes a new high",1,target,1677.51,1732.02,12:55,1.717,3.146,1.0
-2026-09-08,cloudy,healthy,ENPH,Relative Strength,buy_stop,38.89,37.94,40.79,2.44,15.841,"Up 6.1% while the market is -0.5%, on 2.4x volume - buy if it makes a new high",1,eod,38.89,38.85,15:55,-0.083,-0.203,1.0
-2026-09-08,cloudy,healthy,INTC,Relative Strength,buy_stop,103.31,101.68,106.57,1.58,15.164,"Up 7.8% while the market is -0.5%, on 1.8x volume - buy if it makes a new high",1,eod,103.31,104.44,15:55,0.63,0.993,1.0
-2026-09-09,cloudy,healthy,NET,Relative Strength,buy_stop,309.01,303.18,320.67,1.89,18.322,"Up 8.1% while the market is -0.3%, on 2.2x volume - buy if it makes a new high",1,eod,309.01,314.28,15:55,0.85,1.604,1.0
-2026-09-09,cloudy,healthy,GME,Relative Strength,buy_stop,19.9,19.58,20.54,1.61,11.689,"Up 4.7% while the market is -0.3%, on 2.3x volume - buy if it makes a new high",1,eod,19.9,19.89,15:55,-0.093,-0.15,1.0
-2026-09-10,cloudy,healthy,PINS,Relative Strength,buy_stop,18.85,18.55,19.45,1.59,5.144,"Up 2.6% while the market is -0.5%, on 1.7x volume - buy if it makes a new high",1,eod,18.85,18.77,15:55,-0.329,-0.524,1.0
-2026-09-14,cloudy,healthy,CRWD,Relative Strength,buy_stop,232.45,225.65,246.05,2.93,39.221,"Up 12.2% while the market is -0.7%, on 3.0x volume - buy if it makes a new high",1,eod,232.45,235.44,15:55,0.405,1.185,1.0
-2026-09-14,cloudy,healthy,PANW,Relative Strength,buy_stop,367.11,356.77,387.79,2.82,29.378,"Up 10.6% while the market is -0.7%, on 2.6x volume - buy if it makes a new high",1,eod,367.11,373.96,15:55,0.627,1.764,1.0
-2026-09-16,cloudy,healthy,HON,Relative Strength,buy_stop,209.99,207.21,215.55,1.32,5.775,"Up 3.1% while the market is +0.2%, on 2.0x volume - buy if it makes a new high",1,stop,209.99,207.14,13:00,-1.1,-1.456,1.0
-2026-09-18,cloudy,neutral,MSTR,Relative Strength,buy_stop,147.23,142.75,156.19,3.04,22.057,"Up 10.3% while the market is -0.4%, on 2.1x volume - buy if it makes a new high",1,eod,147.23,153.91,15:55,1.457,4.433,1.0
-2026-09-18,cloudy,neutral,COIN,Relative Strength,buy_stop,190.47,184.5,202.41,3.13,19.697,"Up 9.0% while the market is -0.4%, on 2.1x volume - buy if it makes a new high",1,eod,190.47,194.27,15:55,0.605,1.896,1.0
-2026-09-22,sunny,neutral,MRNA,Relative Strength,buy_stop,182.66,176.36,195.26,3.45,10.218,"Up 5.2% while the market is +0.0%, on 2.0x volume - buy if it makes a new high",1,eod,182.66,182.57,15:55,-0.043,-0.149,1.0
-2026-09-22,sunny,neutral,RIOT,Relative Strength,buy_stop,25.36,24.86,26.36,1.97,8.773,"Up 4.6% while the market is +0.0%, on 1.9x volume - buy if it makes a new high",1,no_fill,,,,0.0,0.0,
-2026-09-23,cloudy,neutral,BA,Relative Strength,buy_stop,203.61,201.25,208.33,1.16,6.84,"Up 2.1% while the market is -0.6%, on 2.6x volume - buy if it makes a new high",1,stop,203.61,201.25,13:05,-1.086,-1.258,1.0
-2026-09-23,cloudy,neutral,DVN,Relative Strength,buy_stop,48.57,47.98,49.75,1.21,5.733,"Up 3.0% while the market is -0.6%, on 1.6x volume - buy if it makes a new high",1,stop,48.57,47.98,15:50,-1.082,-1.313,1.0
-2026-09-24,cloudy,neutral,META,Relative Strength,buy_stop,768.66,758.51,788.96,1.32,5.107,"Up 2.9% while the market is -0.2%, on 1.6x volume - buy if it makes a new high",1,eod,768.66,777.44,15:55,0.789,1.041,1.0
-2026-09-24,cloudy,neutral,PFE,Relative Strength,buy_stop,28.86,28.6,29.38,0.9,3.543,"Up 2.0% while the market is -0.2%, on 1.6x volume - buy if it makes a new high",1,no_fill,,,,0.0,0.0,
-2026-09-25,sunny,neutral,COST,Relative Strength,buy_stop,921.71,913.49,938.15,0.89,9.835,"Up 2.5% while the market is +0.0%, on 4.0x volume - buy if it makes a new high",1,eod,921.71,922.95,15:55,0.039,0.034,1.0
-2026-09-25,sunny,neutral,PYPL,Relative Strength,buy_stop,54.46,53.51,56.36,1.74,9.106,"Up 3.5% while the market is +0.0%, on 2.6x volume - buy if it makes a new high",1,eod,54.64,55.04,15:55,0.363,0.631,1.0
-2026-09-28,cloudy,neutral,TGT,Relative Strength,buy_stop,160.81,159.04,164.35,1.1,3.684,"Up 1.8% while the market is -0.5%, on 1.6x volume - buy if it makes a new high",1,no_fill,,,,0.0,0.0,
-2026-09-29,cloudy,neutral,CCL,Relative Strength,buy_stop,25.17,24.72,26.07,1.79,85.619,"Up 12.5% while the market is -0.0%, on 6.8x volume - buy if it makes a new high",1,eod,25.17,25.14,15:55,-0.123,-0.219,1.0
-2026-09-29,cloudy,neutral,BA,Relative Strength,buy_stop,190.91,189.13,194.47,0.93,4.763,"Up 3.1% while the market is -0.0%, on 1.5x volume - buy if it makes a new high",1,no_fill,,,,0.0,0.0,
-2026-10-01,cloudy,weak,OXY,Relative Strength,buy_stop,57.21,56.58,58.47,1.1,5.844,"Up 3.0% while the market is -0.3%, on 1.8x volume - buy if it makes a new high",1,eod,57.21,57.83,15:55,0.901,0.991,1.0
-2026-10-12,cloudy,weak,SNAP,Relative Strength,buy_stop,6.51,6.38,6.77,2.0,6.797,"Up 4.0% while the market is -0.1%, on 1.7x volume - buy if it makes a new high",1,eod,6.51,6.54,15:55,0.181,0.36,1.0
-2026-10-13,cloudy,weak,META,Relative Strength,buy_stop,771.28,757.53,798.78,1.78,8.485,"Up 3.6% while the market is -0.1%, on 2.3x volume - buy if it makes a new high",1,no_fill,,,,0.0,0.0,
-2026-10-13,cloudy,weak,PDD,Relative Strength,buy_stop,83.41,82.31,85.61,1.32,5.766,"Up 2.9% while the market is -0.1%, on 1.9x volume - buy if it makes a new high",1,stop,83.41,82.31,12:30,-1.075,-1.417,1.0
-2026-10-14,cloudy,weak,ALB,Relative Strength,buy_stop,100.77,99.43,103.45,1.33,7.83,"Up 2.6% while the market is -0.7%, on 2.4x volume - buy if it makes a new high",1,no_fill,,,,0.0,0.0,
-2026-10-14,cloudy,weak,LLY,Relative Strength,buy_stop,1214.9,1203.83,1237.04,0.91,7.127,"Up 3.8% while the market is -0.7%, on 1.6x volume - buy if it makes a new high",1,eod,1214.9,1210.84,15:55,-0.476,-0.434,1.0
-2026-10-15,cloudy,neutral,TTD,Relative Strength,buy_stop,13.04,12.74,13.64,2.3,14.506,"Up 6.1% while the market is -0.3%, on 2.3x volume - buy if it makes a new high",1,eod,13.04,13.11,15:55,0.204,0.469,1.0
-2026-10-15,cloudy,neutral,WMT,Relative Strength,buy_stop,121.39,120.47,123.23,0.76,12.975,"Up 3.8% while the market is -0.3%, on 3.2x volume - buy if it makes a new high",1,no_fill,,,,0.0,0.0,
-2026-10-16,cloudy,neutral,AA,Relative Strength,buy_stop,43.72,42.87,45.42,1.94,46.916,"Up 7.8% while the market is -0.1%, on 5.9x volume - buy if it makes a new high",1,stop,43.72,42.87,11:55,-1.051,-2.042,1.0
-2026-10-16,cloudy,neutral,NEM,Relative Strength,buy_stop,119.79,117.54,124.29,1.88,6.814,"Up 3.2% while the market is -0.1%, on 2.1x volume - buy if it makes a new high",1,stop,119.79,117.54,11:55,-1.053,-1.976,1.0
-2026-10-21,cloudy,neutral,UAL,Relative Strength,buy_stop,102.04,99.8,106.52,2.2,8.103,"Up 3.3% while the market is +0.0%, on 2.5x volume - buy if it makes a new high",1,eod,102.04,101.68,15:55,-0.204,-0.448,1.0
-2026-10-22,stormy,neutral,PDD,Relative Strength,buy_stop,79.92,78.73,82.3,1.49,4.188,"Up 1.4% while the market is -1.3%, on 1.6x volume - buy if it makes a new high",1,no_fill,,,,0.0,0.0,
-2026-10-23,cloudy,neutral,DVN,Relative Strength,buy_stop,50.91,50.26,52.21,1.28,8.887,"Up 3.5% while the market is -0.6%, on 2.2x volume - buy if it makes a new high",1,eod,50.91,51.39,15:55,0.66,0.842,1.0
-2026-10-23,cloudy,neutral,COP,Relative Strength,buy_stop,151.25,149.64,154.47,1.06,8.748,"Up 3.8% while the market is -0.6%, on 2.0x volume - buy if it makes a new high",1,eod,151.25,150.81,15:55,-0.367,-0.391,1.0
-2026-10-27,cloudy,neutral,SOFI,Relative Strength,buy_stop,16.36,15.99,17.1,2.26,67.244,"Up 12.5% while the market is +0.2%, on 5.5x volume - buy if it makes a new high",1,eod,16.36,16.4,15:55,0.05,0.114,1.0
-2026-10-27,cloudy,neutral,STX,Relative Strength,buy_stop,682.96,669.53,709.82,1.97,15.377,"Up 6.0% while the market is +0.2%, on 2.7x volume - buy if it makes a new high",1,stop,684.4,669.53,14:20,-1.158,-2.27,1.0
-2026-10-29,cloudy,neutral,DASH,Relative Strength,buy_stop,180.68,177.8,186.44,1.59,33.929,"Up 6.3% while the market is -0.4%, on 5.1x volume - buy if it makes a new high",1,stop,180.8,177.8,11:55,-1.104,-1.758,1.0
-2026-10-29,cloudy,neutral,MGM,Relative Strength,buy_stop,28.3,27.75,29.4,1.94,12.942,"Up 2.8% while the market is -0.4%, on 4.0x volume - buy if it makes a new high",1,eod,28.3,28.84,15:55,0.93,1.806,1.0
-2026-10-30,stormy,healthy,FDX,Relative Strength,buy_stop,318.16,315.36,323.76,0.88,8.856,"Up 2.5% while the market is -1.5%, on 2.3x volume - buy if it makes a new high",1,stop,318.16,315.36,15:25,-1.113,-0.979,1.0
-2026-10-30,stormy,healthy,DE,Relative Strength,buy_stop,675.89,668.72,690.23,1.06,5.657,"Up 2.0% while the market is -1.5%, on 1.6x volume - buy if it makes a new high",1,no_fill,,,,0.0,0.0,
-2026-11-05,stormy,healthy,COST,Relative Strength,buy_stop,1081.21,1072.29,1099.05,0.83,15.518,"Up 2.8% while the market is -2.5%, on 2.9x volume - buy if it makes a new high",1,stop,1081.21,1072.29,11:10,-1.121,-0.924,1.0
-2026-11-05,stormy,healthy,CVS,Relative Strength,buy_stop,83.4,82.27,85.66,1.35,13.274,"Up 3.5% while the market is -2.5%, on 2.2x volume - buy if it makes a new high",1,no_fill,,,,0.0,0.0,
-2026-11-10,cloudy,healthy,MARA,Relative Strength,buy_stop,7.59,7.2,8.37,5.14,30.861,"Up 13.1% while the market is -0.4%, on 2.3x volume - buy if it makes a new high",1,no_fill,,,,0.0,0.0,
-2026-11-13,cloudy,healthy,NU,Relative Strength,buy_stop,12.79,12.56,13.25,1.8,25.024,"Up 7.9% while the market is -0.9%, on 2.8x volume - buy if it makes a new high",1,target,12.79,13.25,12:05,1.943,3.493,1.0
-2026-11-13,cloudy,healthy,GME,Relative Strength,buy_stop,26.48,26.1,27.24,1.44,14.832,"Up 2.8% while the market is -0.9%, on 4.0x volume - buy if it makes a new high",1,no_fill,,,,0.0,0.0,
-2026-09-08,cloudy,healthy,CMG,NR7 Breakout,buy_stop,37.43,36.82,38.65,1.63,2.13,"Yesterday was its quietest day in 7 days, in an uptrend - buy if it breaks out above $37.42",1,no_fill,,,,0.0,0.0,
-2026-09-08,cloudy,healthy,NEM,NR7 Breakout,buy_stop,129.81,127.54,134.35,1.75,1.626,"Yesterday was its quietest day in 7 days, in an uptrend - buy if it breaks out above $129.80",1,stop,129.85,127.54,14:50,-1.074,-1.877,1.0
+2026-11-16,stormy,healthy,NVDA,Oversold Bounce,buy_stop,163.01,158.1,170.38,3.01,6.626,"RSI 24 (oversold), down 2.0% - only buy if it bounces back above the morning high",1,no_fill,,,,0.0,0.0,
+2026-11-16,stormy,healthy,COIN,Oversold Bounce,buy_stop,122.99,117.31,131.51,4.62,3.618,"RSI 29 (oversold), down 7.5% - only buy if it bounces back above the morning high",1,no_fill,,,,0.0,0.0,
+2026-11-17,cloudy,healthy,BABA,Oversold Bounce,buy_stop,88.51,87.31,90.31,1.36,4.393,"RSI 27 (oversold), down 3.3% - only buy if it bounces back above the morning high",1,no_fill,,,,0.0,0.0,
+2026-11-17,cloudy,healthy,DDOG,Oversold Bounce,buy_stop,173.51,163.7,188.22,5.65,3.609,"RSI 26 (oversold), down 5.0% - only buy if it bounces back above the morning high",1,no_fill,,,,0.0,0.0,
+2026-11-18,cloudy,healthy,CRM,Oversold Bounce,buy_stop,193.51,186.83,203.53,3.45,17.474,"RSI 24 (oversold), down 2.8% - only buy if it bounces back above the morning high",1,no_fill,,,,0.0,0.0,
+2026-11-18,cloudy,healthy,FCX,Oversold Bounce,buy_stop,52.64,50.45,55.92,4.16,13.638,"RSI 26 (oversold), down 7.5% - only buy if it bounces back above the morning high",1,no_fill,,,,0.0,0.0,
+2026-11-19,cloudy,healthy,UNH,Oversold Bounce,buy_stop,353.86,335.2,381.85,5.27,16.377,"RSI 25 (oversold), down 4.2% - only buy if it bounces back above the morning high",1,no_fill,,,,0.0,0.0,
+2026-11-19,cloudy,healthy,MELI,Oversold Bounce,buy_stop,1434.74,1390.6,1500.95,3.08,2.872,"RSI 28 (oversold), down 2.1% - only buy if it bounces back above the morning high",1,no_fill,,,,0.0,0.0,
+2026-11-20,cloudy,neutral,BIDU,Oversold Bounce,buy_stop,65.45,63.78,67.96,2.55,23.739,"RSI 21 (oversold), down 2.9% - only buy if it bounces back above the morning high",1,no_fill,,,,0.0,0.0,
+2026-11-20,cloudy,neutral,FCX,Oversold Bounce,buy_stop,48.41,46.91,50.66,3.1,19.613,"RSI 22 (oversold), down 4.0% - only buy if it bounces back above the morning high",1,no_fill,,,,0.0,0.0,
+2026-09-14,cloudy,healthy,CRWD,Relative Strength,buy_stop,232.45,225.65,246.05,2.93,39.221,"Up 12.2% while the market is -0.7%, on 3.0x volume - buy if it makes a new high",2,eod,232.45,242.52,15:55,1.446,4.228,2.0
+2026-09-14,cloudy,healthy,PANW,Relative Strength,buy_stop,367.11,356.77,387.79,2.82,29.378,"Up 10.6% while the market is -0.7%, on 2.6x volume - buy if it makes a new high",2,eod,367.11,375.12,15:55,0.739,2.08,2.0
+2026-09-16,cloudy,healthy,HON,Relative Strength,buy_stop,209.99,207.21,215.55,1.32,5.775,"Up 3.1% while the market is +0.2%, on 2.0x volume - buy if it makes a new high",2,stop,209.99,207.14,13:00,-1.1,-1.456,1.0
+2026-09-18,cloudy,neutral,MSTR,Relative Strength,buy_stop,147.23,142.75,156.19,3.04,22.057,"Up 10.3% while the market is -0.4%, on 2.1x volume - buy if it makes a new high",2,target,147.23,164.58,09:30,3.838,11.673,2.0
+2026-09-18,cloudy,neutral,COIN,Relative Strength,buy_stop,190.47,184.5,202.41,3.13,19.697,"Up 9.0% while the market is -0.4%, on 2.1x volume - buy if it makes a new high",2,target,190.47,205.5,09:30,2.484,7.783,2.0
+2026-09-22,sunny,neutral,MRNA,Relative Strength,buy_stop,182.66,176.36,195.26,3.45,10.218,"Up 5.2% while the market is +0.0%, on 2.0x volume - buy if it makes a new high",2,eod,182.66,182.05,15:55,-0.126,-0.434,2.0
+2026-09-22,sunny,neutral,RIOT,Relative Strength,buy_stop,25.36,24.86,26.36,1.97,8.773,"Up 4.6% while the market is +0.0%, on 1.9x volume - buy if it makes a new high",2,no_fill,,,,0.0,0.0,
+2026-09-23,cloudy,neutral,BA,Relative Strength,buy_stop,203.61,201.25,208.33,1.16,6.84,"Up 2.1% while the market is -0.6%, on 2.6x volume - buy if it makes a new high",2,stop,203.61,201.25,13:05,-1.086,-1.258,1.0
+2026-09-23,cloudy,neutral,DVN,Relative Strength,buy_stop,48.57,47.98,49.75,1.21,5.733,"Up 3.0% while the market is -0.6%, on 1.6x volume - buy if it makes a new high",2,stop,48.57,47.98,15:50,-1.082,-1.313,1.0
+2026-09-24,cloudy,neutral,META,Relative Strength,buy_stop,768.66,758.51,788.96,1.32,5.107,"Up 2.9% while the market is -0.2%, on 1.6x volume - buy if it makes a new high",2,stop,768.66,758.51,09:30,-1.075,-1.419,2.0
+2026-09-24,cloudy,neutral,PFE,Relative Strength,buy_stop,28.86,28.6,29.38,0.9,3.543,"Up 2.0% while the market is -0.2%, on 1.6x volume - buy if it makes a new high",2,no_fill,,,,0.0,0.0,
+2026-09-25,sunny,neutral,COST,Relative Strength,buy_stop,921.71,913.49,938.15,0.89,9.835,"Up 2.5% while the market is +0.0%, on 4.0x volume - buy if it makes a new high",2,stop,921.71,913.49,09:30,-1.112,-0.991,2.0
+2026-09-25,sunny,neutral,PYPL,Relative Strength,buy_stop,54.46,53.51,56.36,1.74,9.106,"Up 3.5% while the market is +0.0%, on 2.6x volume - buy if it makes a new high",2,stop,54.64,53.51,09:30,-1.246,-2.166,2.0
+2026-09-28,cloudy,neutral,TGT,Relative Strength,buy_stop,160.81,159.04,164.35,1.1,3.684,"Up 1.8% while the market is -0.5%, on 1.6x volume - buy if it makes a new high",2,no_fill,,,,0.0,0.0,
+2026-09-29,cloudy,neutral,CCL,Relative Strength,buy_stop,25.17,24.72,26.07,1.79,85.619,"Up 12.5% while the market is -0.0%, on 6.8x volume - buy if it makes a new high",2,stop,25.17,24.72,13:30,-1.055,-1.886,2.0
+2026-09-29,cloudy,neutral,BA,Relative Strength,buy_stop,190.91,189.13,194.47,0.93,4.763,"Up 3.1% while the market is -0.0%, on 1.5x volume - buy if it makes a new high",2,no_fill,,,,0.0,0.0,
+2026-10-01,cloudy,weak,OXY,Relative Strength,buy_stop,57.21,56.58,58.47,1.1,5.844,"Up 3.0% while the market is -0.3%, on 1.8x volume - buy if it makes a new high",2,eod,57.21,58.1,15:55,1.321,1.454,2.0
+2026-10-12,cloudy,weak,SNAP,Relative Strength,buy_stop,6.51,6.38,6.77,2.0,6.797,"Up 4.0% while the market is -0.1%, on 1.7x volume - buy if it makes a new high",2,target,6.51,6.77,10:15,1.949,3.89,2.0
+2026-10-13,cloudy,weak,META,Relative Strength,buy_stop,771.28,757.53,798.78,1.78,8.485,"Up 3.6% while the market is -0.1%, on 2.3x volume - buy if it makes a new high",2,no_fill,,,,0.0,0.0,
+2026-10-13,cloudy,weak,PDD,Relative Strength,buy_stop,83.41,82.31,85.61,1.32,5.766,"Up 2.9% while the market is -0.1%, on 1.9x volume - buy if it makes a new high",2,stop,83.41,82.31,12:30,-1.075,-1.417,1.0
+2026-10-14,cloudy,weak,ALB,Relative Strength,buy_stop,100.77,99.43,103.45,1.33,7.83,"Up 2.6% while the market is -0.7%, on 2.4x volume - buy if it makes a new high",2,no_fill,,,,0.0,0.0,
+2026-10-14,cloudy,weak,LLY,Relative Strength,buy_stop,1214.9,1203.83,1237.04,0.91,7.127,"Up 3.8% while the market is -0.7%, on 1.6x volume - buy if it makes a new high",2,target,1214.9,1237.04,09:30,1.889,1.721,2.0
+2026-10-15,cloudy,neutral,TTD,Relative Strength,buy_stop,13.04,12.74,13.64,2.3,14.506,"Up 6.1% while the market is -0.3%, on 2.3x volume - buy if it makes a new high",2,stop,13.04,12.74,12:45,-1.043,-2.398,2.0
+2026-10-15,cloudy,neutral,WMT,Relative Strength,buy_stop,121.39,120.47,123.23,0.76,12.975,"Up 3.8% while the market is -0.3%, on 3.2x volume - buy if it makes a new high",2,no_fill,,,,0.0,0.0,
+2026-10-16,cloudy,neutral,AA,Relative Strength,buy_stop,43.72,42.87,45.42,1.94,46.916,"Up 7.8% while the market is -0.1%, on 5.9x volume - buy if it makes a new high",2,stop,43.72,42.87,11:55,-1.051,-2.042,1.0
+2026-10-16,cloudy,neutral,NEM,Relative Strength,buy_stop,119.79,117.54,124.29,1.88,6.814,"Up 3.2% while the market is -0.1%, on 2.1x volume - buy if it makes a new high",2,stop,119.79,117.54,11:55,-1.053,-1.976,1.0
+2026-10-21,cloudy,neutral,UAL,Relative Strength,buy_stop,102.04,99.8,106.52,2.2,8.103,"Up 3.3% while the market is +0.0%, on 2.5x volume - buy if it makes a new high",2,stop,102.04,98.0,09:30,-1.848,-4.055,2.0
+2026-10-22,stormy,neutral,PDD,Relative Strength,buy_stop,79.92,78.73,82.3,1.49,4.188,"Up 1.4% while the market is -1.3%, on 1.6x volume - buy if it makes a new high",2,no_fill,,,,0.0,0.0,
+2026-10-23,cloudy,neutral,DVN,Relative Strength,buy_stop,50.91,50.26,52.21,1.28,8.887,"Up 3.5% while the market is -0.6%, on 2.2x volume - buy if it makes a new high",2,eod,50.91,51.63,15:55,1.029,1.313,2.0
+2026-10-23,cloudy,neutral,COP,Relative Strength,buy_stop,151.25,149.64,154.47,1.06,8.748,"Up 3.8% while the market is -0.6%, on 2.0x volume - buy if it makes a new high",2,stop,151.25,149.24,09:30,-1.342,-1.428,2.0
+2026-10-27,cloudy,neutral,SOFI,Relative Strength,buy_stop,16.36,15.99,17.1,2.26,67.244,"Up 12.5% while the market is +0.2%, on 5.5x volume - buy if it makes a new high",2,target,16.36,17.1,09:35,1.955,4.419,2.0
+2026-10-27,cloudy,neutral,STX,Relative Strength,buy_stop,682.96,669.53,709.82,1.97,15.377,"Up 6.0% while the market is +0.2%, on 2.7x volume - buy if it makes a new high",2,stop,684.4,669.53,14:20,-1.158,-2.27,1.0
+2026-10-29,cloudy,neutral,DASH,Relative Strength,buy_stop,180.68,177.8,186.44,1.59,33.929,"Up 6.3% while the market is -0.4%, on 5.1x volume - buy if it makes a new high",2,stop,180.8,177.8,11:55,-1.104,-1.758,1.0
+2026-10-29,cloudy,neutral,MGM,Relative Strength,buy_stop,28.3,27.75,29.4,1.94,12.942,"Up 2.8% while the market is -0.4%, on 4.0x volume - buy if it makes a new high",2,target,28.3,29.4,11:15,1.948,3.783,2.0
+2026-10-30,stormy,healthy,FDX,Relative Strength,buy_stop,318.16,315.36,323.76,0.88,8.856,"Up 2.5% while the market is -1.5%, on 2.3x volume - buy if it makes a new high",2,stop,318.16,315.36,15:25,-1.113,-0.979,1.0
+2026-10-30,stormy,healthy,DE,Relative Strength,buy_stop,675.89,668.72,690.23,1.06,5.657,"Up 2.0% while the market is -1.5%, on 1.6x volume - buy if it makes a new high",2,no_fill,,,,0.0,0.0,
+2026-11-05,stormy,healthy,COST,Relative Strength,buy_stop,1081.21,1072.29,1099.05,0.83,15.518,"Up 2.8% while the market is -2.5%, on 2.9x volume - buy if it makes a new high",2,stop,1081.21,1072.29,11:10,-1.121,-0.924,1.0
+2026-11-05,stormy,healthy,CVS,Relative Strength,buy_stop,83.4,82.27,85.66,1.35,13.274,"Up 3.5% while the market is -2.5%, on 2.2x volume - buy if it makes a new high",2,no_fill,,,,0.0,0.0,
+2026-11-10,cloudy,healthy,MARA,Relative Strength,buy_stop,7.59,7.2,8.37,5.14,30.861,"Up 13.1% while the market is -0.4%, on 2.3x volume - buy if it makes a new high",2,no_fill,,,,0.0,0.0,
+2026-11-13,cloudy,healthy,NU,Relative Strength,buy_stop,12.79,12.56,13.25,1.8,25.024,"Up 7.9% while the market is -0.9%, on 2.8x volume - buy if it makes a new high",2,target,12.79,13.25,12:05,1.943,3.493,1.0
+2026-11-13,cloudy,healthy,GME,Relative Strength,buy_stop,26.48,26.1,27.24,1.44,14.832,"Up 2.8% while the market is -0.9%, on 4.0x volume - buy if it makes a new high",2,no_fill,,,,0.0,0.0,
+2026-11-17,cloudy,healthy,SNAP,Relative Strength,buy_stop,5.52,5.38,5.8,2.54,14.647,"Up 7.4% while the market is -0.4%, on 1.9x volume - buy if it makes a new high",2,no_fill,,,,0.0,0.0,
+2026-11-17,cloudy,healthy,DIS,Relative Strength,buy_stop,122.73,121.33,125.53,1.14,12.142,"Up 2.5% while the market is -0.4%, on 4.1x volume - buy if it makes a new high",2,no_fill,,,,0.0,0.0,
+2026-11-18,cloudy,healthy,TGT,Relative Strength,buy_stop,169.89,166.89,175.89,1.77,31.424,"Up 5.8% while the market is -0.1%, on 5.3x volume - buy if it makes a new high",2,stop,169.89,166.89,15:30,-1.056,-1.864,1.0
+2026-11-20,cloudy,neutral,MRK,Relative Strength,buy_stop,137.18,135.49,140.56,1.23,8.845,"Up 2.6% while the market is -0.8%, on 2.6x volume - buy if it makes a new high",2,no_fill,,,,0.0,0.0,
+2026-11-20,cloudy,neutral,KR,Relative Strength,buy_stop,69.7,69.34,70.42,0.52,8.121,"Up 2.3% while the market is -0.8%, on 2.7x volume - buy if it makes a new high",2,stop,69.7,69.34,12:30,-1.193,-0.616,1.0
 2026-09-14,cloudy,healthy,SPOT,NR7 Breakout,buy_stop,553.86,544.29,573.0,1.73,2.329,"Yesterday was its quietest day in 7 days, in an uptrend - buy if it breaks out above $553.85",1,eod,553.86,556.61,15:55,0.229,0.396,1.0
-2026-09-14,cloudy,healthy,ZS,NR7 Breakout,buy_stop,183.29,178.97,191.93,2.36,1.661,"Yesterday was its quietest day in 7 days, in an uptrend - buy if it breaks out above $183.28",1,target,183.78,191.93,15:30,1.843,4.33,1.0
+2026-09-14,cloudy,healthy,RBLX,NR7 Breakout,buy_stop,48.71,47.65,50.83,2.18,1.625,"Yesterday was its quietest day in 7 days, in an uptrend - buy if it breaks out above $48.70",1,target,49.56,50.83,11:45,1.151,2.46,1.0
 2026-09-16,cloudy,healthy,CLF,NR7 Breakout,buy_stop,12.44,12.15,13.02,2.33,2.091,"Yesterday was its quietest day in 7 days, in an uptrend - buy if it breaks out above $12.43",1,stop,12.44,12.15,14:50,-1.042,-2.429,1.0
 2026-09-17,cloudy,neutral,MU,NR7 Breakout,buy_stop,986.21,961.55,1035.53,2.5,2.093,"Yesterday was its quietest day in 7 days, in an uptrend - buy if it breaks out above $986.20",1,no_fill,,,,0.0,0.0,
 2026-09-17,cloudy,neutral,MRNA,NR7 Breakout,buy_stop,161.97,156.17,173.57,3.58,1.751,"Yesterday was its quietest day in 7 days, in an uptrend - buy if it breaks out above $161.96",1,no_fill,,,,0.0,0.0,
@@ -437,26 +444,23 @@ date,weather,breadth,ticker,setup,order_type,entry,stop,target,risk_pct,score,re
 2026-11-04,cloudy,healthy,GME,NR7 Breakout,buy_stop,25.02,24.52,26.02,2.0,1.845,"Yesterday was its quietest day in 7 days, in an uptrend - buy if it breaks out above $25.01",1,eod,25.02,25.13,15:55,0.17,0.339,1.0
 2026-11-09,cloudy,healthy,UAL,NR7 Breakout,buy_stop,120.76,118.17,125.94,2.14,2.233,"Yesterday was its quietest day in 7 days, in an uptrend - buy if it breaks out above $120.75",1,eod,120.76,120.43,15:55,-0.174,-0.373,1.0
 2026-11-09,cloudy,healthy,AAL,NR7 Breakout,buy_stop,14.15,13.85,14.75,2.12,1.912,"Yesterday was its quietest day in 7 days, in an uptrend - buy if it breaks out above $14.14",1,eod,14.15,14.15,15:55,-0.047,-0.1,1.0
+2026-11-20,cloudy,neutral,COST,NR7 Breakout,buy_stop,1117.75,1108.59,1136.07,0.82,1.573,"Yesterday was its quietest day in 7 days, in an uptrend - buy if it breaks out above $1117.74",1,stop,1119.08,1108.59,14:20,-1.267,-1.036,1.0
 2026-10-15,cloudy,neutral,IONQ,Beaten-Down Turnaround,buy_stop,31.25,30.02,33.71,3.94,158.383,Market fell 1.1% yesterday and this stock is 57% below its 6-month high - buy only if it climbs above the morning high,2,target,31.38,33.71,15:15,1.868,7.318,1.0
 2026-10-15,cloudy,neutral,QBTS,Beaten-Down Turnaround,buy_stop,11.83,11.34,12.81,4.14,113.309,Market fell 1.1% yesterday and this stock is 62% below its 6-month high - buy only if it climbs above the morning high,2,target,11.88,12.81,15:45,1.873,7.721,1.0
 2026-10-19,cloudy,neutral,KLAC,Beaten-Down Turnaround,buy_stop,173.06,169.29,180.6,2.18,62.705,Market fell 1.1% yesterday and this stock is 46% below its 6-month high - buy only if it climbs above the morning high,2,no_fill,,,,0.0,0.0,
-2026-10-19,cloudy,neutral,SNDK,Beaten-Down Turnaround,buy_stop,1407.01,1357.63,1505.77,3.51,54.294,Market fell 1.1% yesterday and this stock is 45% below its 6-month high - buy only if it climbs above the morning high,2,no_fill,,,,0.0,0.0,
+2026-10-19,cloudy,neutral,SNDK,Beaten-Down Turnaround,buy_stop,175.88,169.69,188.26,3.52,54.294,Market fell 1.1% yesterday and this stock is 45% below its 6-month high - buy only if it climbs above the morning high,2,no_fill,,,,0.0,0.0,
 2026-10-23,cloudy,neutral,NCLH,Beaten-Down Turnaround,buy_stop,15.0,14.53,15.94,3.13,64.962,Market fell 1.2% yesterday and this stock is 29% below its 6-month high - buy only if it climbs above the morning high,2,eod,15.0,15.24,15:55,0.478,1.498,2.0
 2026-10-23,cloudy,neutral,LRCX,Beaten-Down Turnaround,buy_stop,229.23,225.13,237.43,1.79,61.297,Market fell 1.2% yesterday and this stock is 48% below its 6-month high - buy only if it climbs above the morning high,2,target,230.36,237.43,09:45,1.667,2.966,2.0
 2026-11-02,cloudy,healthy,APP,Beaten-Down Turnaround,buy_stop,237.65,230.58,251.79,2.97,130.36,Market fell 1.8% yesterday and this stock is 63% below its 6-month high - buy only if it climbs above the morning high,2,stop,237.65,230.58,14:30,-1.033,-3.072,1.0
 2026-11-02,cloudy,healthy,ORCL,Beaten-Down Turnaround,buy_stop,126.51,122.22,135.09,3.39,128.999,Market fell 1.8% yesterday and this stock is 48% below its 6-month high - buy only if it climbs above the morning high,2,no_fill,,,,0.0,0.0,
 2026-11-06,cloudy,healthy,QBTS,Beaten-Down Turnaround,buy_stop,9.78,9.2,10.94,5.93,102.462,Market fell 4.4% yesterday and this stock is 71% below its 6-month high - buy only if it climbs above the morning high,2,target,9.78,10.94,09:50,1.982,11.749,2.0
 2026-11-06,cloudy,healthy,ARM,Beaten-Down Turnaround,buy_stop,177.63,170.64,191.61,3.94,82.863,Market fell 4.4% yesterday and this stock is 63% below its 6-month high - buy only if it climbs above the morning high,2,no_fill,,,,0.0,0.0,
-2026-09-04,cloudy,healthy,KLAC,VWAP Pullback,buy_limit,183.01,180.78,187.47,1.22,22.105,"Up 6.7% on 2.8x volume, rising VWAP - buy the dip to VWAP",1,no_fill,,,,0.0,0.0,
-2026-09-04,cloudy,healthy,AMD,VWAP Pullback,buy_limit,468.15,462.53,479.39,1.2,15.488,"Up 2.8% on 1.4x volume, rising VWAP - buy the dip to VWAP",1,eod,468.15,477.45,15:55,1.571,1.885,1.0
-2026-09-08,cloudy,healthy,LMT,VWAP Pullback,buy_limit,537.5,534.08,544.34,0.64,21.11,"Up 2.4% on 2.2x volume, rising VWAP - buy the dip to VWAP",1,eod,537.5,536.16,15:55,-0.549,-0.349,1.0
-2026-09-08,cloudy,healthy,SMR,VWAP Pullback,buy_limit,10.6,10.44,10.92,1.51,19.292,"Up 10.6% on 2.1x volume, rising VWAP - buy the dip to VWAP",1,no_fill,,,,0.0,0.0,
-2026-09-09,cloudy,healthy,NET,VWAP Pullback,buy_limit,303.19,299.24,311.09,1.3,13.25,"Up 8.1% on 2.2x volume, rising VWAP - buy the dip to VWAP",1,no_fill,,,,0.0,0.0,
-2026-09-09,cloudy,healthy,AMD,VWAP Pullback,buy_limit,518.74,512.89,530.44,1.13,10.811,"Up 3.1% on 1.7x volume, rising VWAP - buy the dip to VWAP",1,eod,518.74,521.08,15:55,0.311,0.351,1.0
-2026-09-10,cloudy,healthy,NOC,VWAP Pullback,buy_limit,519.88,516.7,526.24,0.61,5.621,"Up 1.4% on 2.3x volume, rising VWAP - buy the dip to VWAP",1,eod,519.88,519.05,15:55,-0.424,-0.259,1.0
-2026-09-10,cloudy,healthy,PINS,VWAP Pullback,buy_limit,18.56,18.33,19.02,1.24,3.942,"Up 2.6% on 1.7x volume, rising VWAP - buy the dip to VWAP",1,no_fill,,,,0.0,0.0,
-2026-09-11,cloudy,healthy,UAL,VWAP Pullback,buy_limit,109.35,108.43,111.19,0.84,20.948,"Up 2.8% on 1.9x volume, rising VWAP - buy the dip to VWAP",1,no_fill,,,,0.0,0.0,
-2026-09-11,cloudy,healthy,KR,VWAP Pullback,buy_limit,58.3,57.96,58.98,0.58,9.839,"Up 4.1% on 4.1x volume, rising VWAP - buy the dip to VWAP",1,stop,58.3,57.96,11:50,-1.171,-0.683,1.0
+2026-11-17,cloudy,healthy,AA,Beaten-Down Turnaround,buy_stop,38.6,37.69,40.42,2.36,88.565,Market fell 1.9% yesterday and this stock is 54% below its 6-month high - buy only if it climbs above the morning high,2,no_fill,,,,0.0,0.0,
+2026-11-17,cloudy,healthy,KLAC,Beaten-Down Turnaround,buy_stop,146.52,142.62,154.32,2.66,82.21,Market fell 1.9% yesterday and this stock is 53% below its 6-month high - buy only if it climbs above the morning high,2,no_fill,,,,0.0,0.0,
+2026-11-18,cloudy,healthy,AA,Beaten-Down Turnaround,buy_stop,36.63,35.48,38.93,3.14,122.054,Market fell 1.0% yesterday and this stock is 56% below its 6-month high - buy only if it climbs above the morning high,2,no_fill,,,,0.0,0.0,
+2026-11-18,cloudy,healthy,CRM,Beaten-Down Turnaround,buy_stop,193.51,186.83,206.87,3.45,64.993,Market fell 1.0% yesterday and this stock is 27% below its 6-month high - buy only if it climbs above the morning high,2,no_fill,,,,0.0,0.0,
+2026-11-20,cloudy,neutral,ALB,Beaten-Down Turnaround,buy_stop,84.77,81.15,92.01,4.27,129.8,Market fell 2.0% yesterday and this stock is 54% below its 6-month high - buy only if it climbs above the morning high,2,no_fill,,,,0.0,0.0,
+2026-11-20,cloudy,neutral,BIDU,Beaten-Down Turnaround,buy_stop,65.45,63.78,68.79,2.55,120.951,Market fell 2.0% yesterday and this stock is 53% below its 6-month high - buy only if it climbs above the morning high,2,no_fill,,,,0.0,0.0,
 2026-09-14,cloudy,healthy,NFLX,VWAP Pullback,buy_limit,79.59,79.05,80.67,0.68,19.897,"Up 3.1% on 1.8x volume, rising VWAP - buy the dip to VWAP",1,no_fill,,,,0.0,0.0,
 2026-09-14,cloudy,healthy,SPOT,VWAP Pullback,buy_limit,545.55,540.76,555.13,0.88,17.833,"Up 4.1% on 1.6x volume, rising VWAP - buy the dip to VWAP",1,target,545.55,555.13,12:45,1.885,1.654,1.0
 2026-09-16,cloudy,healthy,CLF,VWAP Pullback,buy_limit,12.22,12.08,12.5,1.15,26.013,"Up 3.9% on 1.7x volume, rising VWAP - buy the dip to VWAP",1,stop,12.22,12.08,14:55,-1.087,-1.244,1.0
@@ -476,7 +480,7 @@ date,weather,breadth,ticker,setup,order_type,entry,stop,target,risk_pct,score,re
 2026-09-25,sunny,neutral,MSFT,VWAP Pullback,buy_limit,511.56,508.82,517.04,0.54,14.962,"Up 3.3% on 2.4x volume, rising VWAP - buy the dip to VWAP",1,no_fill,,,,0.0,0.0,
 2026-09-25,sunny,neutral,FSLR,VWAP Pullback,buy_limit,176.43,173.82,181.65,1.48,12.446,"Up 2.9% on 1.7x volume, rising VWAP - buy the dip to VWAP",1,no_fill,,,,0.0,0.0,
 2026-09-28,cloudy,neutral,IONQ,VWAP Pullback,buy_limit,47.03,46.33,48.43,1.49,10.454,"Up 3.9% on 1.3x volume, rising VWAP - buy the dip to VWAP",1,stop,46.87,46.33,10:45,-0.838,-1.251,1.0
-2026-09-28,cloudy,neutral,ZS,VWAP Pullback,buy_limit,195.84,193.27,200.98,1.31,4.862,"Up 2.1% on 1.4x volume, rising VWAP - buy the dip to VWAP",1,target,195.84,200.98,11:45,1.923,2.522,1.0
+2026-09-28,cloudy,neutral,TGT,VWAP Pullback,buy_limit,159.05,158.07,161.01,0.62,3.635,"Up 1.8% on 1.6x volume, rising VWAP - buy the dip to VWAP",1,stop,159.05,158.07,12:10,-1.162,-0.715,1.0
 2026-09-29,cloudy,neutral,CCL,VWAP Pullback,buy_limit,24.73,24.54,25.11,0.77,115.546,"Up 12.5% on 6.8x volume, rising VWAP - buy the dip to VWAP",1,target,24.73,25.11,14:00,1.869,1.435,1.0
 2026-09-29,cloudy,neutral,RCL,VWAP Pullback,buy_limit,257.67,255.21,262.59,0.95,40.482,"Up 6.3% on 1.6x volume, rising VWAP - buy the dip to VWAP",1,eod,256.5,260.65,15:55,1.582,1.516,1.0
 2026-09-30,sunny,weak,AI,VWAP Pullback,buy_limit,10.79,10.67,11.03,1.11,28.64,"Up 4.5% on 1.6x volume, rising VWAP - buy the dip to VWAP",1,target,10.79,11.03,15:00,1.909,2.122,1.0
@@ -534,7 +538,14 @@ date,weather,breadth,ticker,setup,order_type,entry,stop,target,risk_pct,score,re
 2026-11-12,cloudy,healthy,OXY,VWAP Pullback,buy_limit,57.76,57.31,58.66,0.78,5.141,"Up 1.3% on 1.6x volume, rising VWAP - buy the dip to VWAP",1,no_fill,,,,0.0,0.0,
 2026-11-13,cloudy,healthy,NU,VWAP Pullback,buy_limit,12.57,12.42,12.87,1.19,14.523,"Up 7.9% on 2.8x volume, rising VWAP - buy the dip to VWAP",1,no_fill,,,,0.0,0.0,
 2026-11-13,cloudy,healthy,GME,VWAP Pullback,buy_limit,26.11,25.86,26.61,0.96,12.779,"Up 2.8% on 4.0x volume, rising VWAP - buy the dip to VWAP",1,stop,26.11,25.86,15:20,-1.104,-1.056,1.0
-2026-09-04,cloudy,healthy,KLAC,Downtrend Reversal,buy_stop,186.29,183.0,192.87,1.77,18.751,"Down 19% in 60 days, now up 6.7% on 2.8x volume - buy if it makes a new high",1,eod,186.29,185.56,15:55,-0.278,-0.491,1.0
+2026-11-17,cloudy,healthy,DIS,VWAP Pullback,buy_limit,120.69,120.11,121.85,0.48,12.942,"Up 2.5% on 4.1x volume, rising VWAP - buy the dip to VWAP",1,stop,120.69,120.11,10:50,-1.208,-0.58,1.0
+2026-11-17,cloudy,healthy,SNAP,VWAP Pullback,buy_limit,5.39,5.31,5.55,1.48,9.688,"Up 7.4% on 1.9x volume, rising VWAP - buy the dip to VWAP",1,stop,5.39,5.31,10:45,-1.067,-1.583,1.0
+2026-11-18,cloudy,healthy,LYFT,VWAP Pullback,buy_limit,17.58,17.39,17.96,1.08,30.548,"Up 5.2% on 1.5x volume, rising VWAP - buy the dip to VWAP",1,stop,17.58,17.39,11:20,-1.092,-1.18,1.0
+2026-11-18,cloudy,healthy,TGT,VWAP Pullback,buy_limit,166.31,165.06,168.81,0.75,20.545,"Up 5.8% on 5.3x volume, rising VWAP - buy the dip to VWAP",1,no_fill,,,,0.0,0.0,
+2026-11-19,cloudy,healthy,PDD,VWAP Pullback,buy_limit,85.45,84.89,86.57,0.66,273.665,"Up 10.4% on 6.6x volume, rising VWAP - buy the dip to VWAP",1,no_fill,,,,0.0,0.0,
+2026-11-19,cloudy,healthy,BABA,VWAP Pullback,buy_limit,86.38,85.5,88.14,1.02,8.859,"Up 3.3% on 2.3x volume, rising VWAP - buy the dip to VWAP",1,stop,86.38,85.5,12:05,-1.098,-1.118,1.0
+2026-11-20,cloudy,neutral,UNH,VWAP Pullback,buy_limit,343.14,339.33,350.76,1.11,38.617,"Up 4.0% on 2.4x volume, rising VWAP - buy the dip to VWAP",1,stop,343.14,339.33,15:30,-1.09,-1.209,1.0
+2026-11-20,cloudy,neutral,KR,VWAP Pullback,buy_limit,69.35,68.89,70.27,0.66,24.522,"Up 2.3% on 2.7x volume, rising VWAP - buy the dip to VWAP",1,stop,69.35,68.89,13:25,-1.15,-0.763,1.0
 2026-09-29,cloudy,neutral,CCL,Downtrend Reversal,buy_stop,25.17,24.72,26.07,1.79,85.352,"Down 20% in 60 days, now up 12.5% on 6.8x volume - buy if it makes a new high",1,eod,25.17,25.14,15:55,-0.123,-0.219,1.0
 2026-10-15,cloudy,neutral,TTD,Downtrend Reversal,buy_stop,13.04,12.69,13.74,2.68,13.845,"Down 31% in 60 days, now up 6.1% on 2.3x volume - buy if it makes a new high",1,eod,13.04,13.11,15:55,0.175,0.469,1.0
 2026-10-21,cloudy,neutral,UAL,Downtrend Reversal,buy_stop,102.04,99.8,106.52,2.2,8.205,"Down 21% in 60 days, now up 3.3% on 2.5x volume - buy if it makes a new high",1,eod,102.04,101.68,15:55,-0.204,-0.448,1.0
