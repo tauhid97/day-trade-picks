@@ -1,1 +1,15 @@
-{}
+{
+  "Gap-Down Bounce": {
+    "change": {
+      "min_gap_pct": 6.0
+    },
+    "train_R": [
+      0.76,
+      1.91
+    ],
+    "test_R": [
+      -3.4,
+      -2.3
+    ]
+  }
+}
