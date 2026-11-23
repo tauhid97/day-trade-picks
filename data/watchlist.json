@@ -1,59 +1,38 @@
 {
- "date": "2026-11-20",
- "market_chg": -1.5,
- "red_day": true,
+ "date": "2026-11-23",
+ "market_chg": 5.4,
+ "red_day": false,
  "beaten": [
   {
    "ticker": "IREN",
-   "below_high_pct": 80,
-   "chg_3m": -63.8,
-   "today": -12.179043254855404
+   "below_high_pct": 83,
+   "chg_3m": -72.0,
+   "today": 31.68358699026832
   },
   {
    "ticker": "QBTS",
-   "below_high_pct": 77,
-   "chg_3m": -60.9,
-   "today": -7.93296569688251
+   "below_high_pct": 79,
+   "chg_3m": -66.3,
+   "today": 17.484660580069477
   },
   {
    "ticker": "SMR",
-   "below_high_pct": 73,
-   "chg_3m": -57.9,
-   "today": -8.53018510668575
+   "below_high_pct": 77,
+   "chg_3m": -65.7,
+   "today": 9.821433703206184
   },
   {
-   "ticker": "OKLO",
-   "below_high_pct": 72,
-   "chg_3m": -47.5,
-   "today": -0.0935735713967989
+   "ticker": "CLSK",
+   "below_high_pct": 74,
+   "chg_3m": -61.6,
+   "today": 16.703479341395223
   },
   {
    "ticker": "RGTI",
-   "below_high_pct": 71,
-   "chg_3m": -50.8,
-   "today": -6.079407226366184
+   "below_high_pct": 74,
+   "chg_3m": -57.7,
+   "today": 18.365929638014002
   }
  ],
- "holding_up": [
-  {
-   "ticker": "UNH",
-   "chg": 4.9
-  },
-  {
-   "ticker": "IBM",
-   "chg": 3.3
-  },
-  {
-   "ticker": "WMT",
-   "chg": 3.2
-  },
-  {
-   "ticker": "CVS",
-   "chg": 2.8
-  },
-  {
-   "ticker": "KR",
-   "chg": 2.7
-  }
- ]
+ "holding_up": []
 }
