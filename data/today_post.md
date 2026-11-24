@@ -1,83 +1,58 @@
-**Day Trade Picks - Mon Nov 23, 2026** (sent 10:39 AM ET)
+**Day Trade Picks - Tue Nov 24, 2026** (sent 10:36 AM ET)
 
-Market mood: ⛅ CLOUDY - mixed day, be picky (SPY +5.40% today, below its 20-day average)
+Market mood: ⛅ CLOUDY - mixed day, be picky (SPY -0.77% today, below its 20-day average)
 
 How many stocks are rising [practice, info only]: NEUTRAL (57% of S&P 500 stocks in uptrends, long-term trend falling)
 
 👀 Beaten-down watchlist [practice, info only] - furthest below their 6-month high:
-- $IREN: 83% below its high (3 months: -72.0%, today +31.7%)
-- $QBTS: 79% below its high (3 months: -66.3%, today +17.5%)
-- $SMR: 77% below its high (3 months: -65.7%, today +9.8%)
-- $CLSK: 74% below its high (3 months: -61.6%, today +16.7%)
-- $RGTI: 74% below its high (3 months: -57.7%, today +18.4%)
+- $IREN: 79% below its high (3 months: -63.0%, today -12.6%)
+- $QBTS: 77% below its high (3 months: -58.3%, today -7.7%)
+- $SMR: 75% below its high (3 months: -61.9%, today -5.7%)
+- $OKLO: 72% below its high (3 months: -50.1%, today -7.0%)
+- $ENPH: 72% below its high (3 months: -45.7%, today -4.1%)
 
-**1. $BIDU - Comeback Kid (Oversold Comeback)**
-Buy: only if the price climbs UP to $66.73
-Safety (sell if it falls to): $64.82
-Win (sell if it rises to): $70.55
-If you risked $10: lose $10.00 at Safety, win +$20.00 at Win.
-Why: Fell 6.7% yesterday into oversold (RSI 19) - buy only if it climbs back above the morning high
-Hold: up to 2 days - if Safety/Win aren't hit, sell at 3:55 PM ET on day 2.
-Luck check: only replays one day, so it's skipped for picks that may hold overnight.
-News [practice, info only]: IN THE NEWS (1 headline in the last 24 hours, mood: NEUTRAL)
-Hype [practice, info only]: QUIET (hardly mentioned on Reddit)
-
-**2. $HOOD - Comeback Kid (Oversold Comeback)**
-Buy: only if the price climbs UP to $70.25
-Safety (sell if it falls to): $67.68
-Win (sell if it rises to): $75.39
-If you risked $10: lose $10.00 at Safety, win +$20.00 at Win.
-Why: Fell 9.4% yesterday into oversold (RSI 23) - buy only if it climbs back above the morning high
-Hold: up to 2 days - if Safety/Win aren't hit, sell at 3:55 PM ET on day 2.
-Luck check: only replays one day, so it's skipped for picks that may hold overnight.
-News [practice, info only]: IN THE NEWS (4 headlines in the last 24 hours, mood: BAD)
-Hype [practice, info only]: QUIET (5 Reddit mentions in 24 hours, 5x yesterday)
-
-**3. $NVDA - Crowd Breakout (ORB Stocks in Play)**
-Buy: only if the price climbs UP to $168.76
-Safety (sell if it falls to): $162.84
+**1. $DLTR - Crowd Breakout (ORB Stocks in Play)**
+Buy: only if the price climbs UP to $155.08
+Safety (sell if it falls to): $151.45
 Win: no set price - sell at 3:55 PM ET
 If you risked $10: lose $10.00 at Safety.
-Why: Stock in play: 8.7x normal volume, green opening range - buy the breakout
-Luck check (59 past days replayed 2,000 times): the Buy happens 85% of the time. Win first 0%, Safety first 3%. Average -$1.40 per $10 risked. A simulation, not a promise.
-News [practice, info only]: IN THE NEWS (9 headlines in the last 24 hours, mood: GOOD, about: legal, people)
-Hype [practice, info only]: 🔥 HYPE (967 Reddit mentions in 24 hours, 3x yesterday)
+Why: Stock in play: 5.8x normal volume, green opening range - buy the breakout
+Luck check (59 past days replayed 2,000 times): the Buy happens 67% of the time. Win first 0%, Safety first 5%. Average -$0.10 per $10 risked. A simulation, not a promise.
+News [practice, info only]: ⚠️ EARNINGS (earnings report today - expect big moves either way)
+Hype [practice, info only]: QUIET (1 Reddit mentions in 24 hours, yesterday: 0)
 
-**4. $AFRM - Crowd Breakout (ORB Stocks in Play)**
-Buy: only if the price climbs UP to $59.27
-Safety (sell if it falls to): $58.36
+**2. $XPEV - Crowd Breakout (ORB Stocks in Play)**
+Buy: only if the price climbs UP to $9.10
+Safety (sell if it falls to): $8.91
 Win: no set price - sell at 3:55 PM ET
 If you risked $10: lose $10.00 at Safety.
-Why: Stock in play: 3.0x normal volume, green opening range - buy the breakout
-Luck check (59 past days replayed 2,000 times): the Buy happens 50% of the time. Win first 0%, Safety first 18%. Average -$0.40 per $10 risked. A simulation, not a promise.
-News [practice, info only]: QUIET (no headlines in the last 24 hours)
+Why: Stock in play: 2.5x normal volume, green opening range - buy the breakout
+Luck check (59 past days replayed 2,000 times): the Buy happens 3% of the time. Win first 0%, Safety first 0%. Average -$1.10 per $10 risked. A simulation, not a promise.
+News [practice, info only]: IN THE NEWS (2 headlines in the last 24 hours, mood: NEUTRAL)
 Hype [practice, info only]: QUIET (hardly mentioned on Reddit)
 
-**5. $JNJ - Tight Spring (NR7 Breakout)**
-Buy: only if the price climbs UP to $272.51
-Safety (sell if it falls to): $269.16
-Win (sell if it rises to): $279.21
+**3. $LMT - Tight Spring (NR7 Breakout)**
+Buy: only if the price climbs UP to $589.50
+Safety (sell if it falls to): $580.93
+Win (sell if it rises to): $606.64
 If you risked $10: lose $10.00 at Safety, win +$20.00 at Win.
-Why: Yesterday was its quietest day in 7 days, in an uptrend - buy if it breaks out above $272.50
-Luck check (59 past days replayed 2,000 times): the Buy happens 53% of the time. Win first 0%, Safety first 4%. Average +$0.20 per $10 risked. A simulation, not a promise.
-News [practice, info only]: IN THE NEWS (3 headlines in the last 24 hours, mood: GOOD)
-Hype [practice, info only]: QUIET (1 Reddit mentions in 24 hours, yesterday: 1)
+Why: Yesterday was its quietest day in 7 days, in an uptrend - buy if it breaks out above $589.49
+Luck check (59 past days replayed 2,000 times): the Buy happens 45% of the time. Win first 0%, Safety first 4%. Average -$0.10 per $10 risked. A simulation, not a promise.
+News [practice, info only]: IN THE NEWS (10 headlines in the last 24 hours, mood: MIXED, about: deal)
+Hype [practice, info only]: QUIET (hardly mentioned on Reddit)
 
 --- PRACTICE picks (skills still being tested - just watch, don't trade these) ---
-1. $NVDA Morning Rocket: buy above $171.51, Safety $168.30, Win $177.93
-2. $ORCL Underdog: buy above $118.71, Safety $112.92, Win $130.29, hold up to 2 days (until 3:55 PM on day 2)
-3. $TSLA Dip Buy: buy dip to $389.80, Safety $385.51, Win $398.38
-4. $ON Underdog: buy above $66.57, Safety $64.89, Win $69.93, hold up to 2 days (until 3:55 PM on day 2)
-5. $XPEV Underdog: buy above $8.90, Safety $8.64, Win $9.42, hold up to 2 days (until 3:55 PM on day 2)
-6. $IREN Morning Rocket: buy above $16.00, Safety $15.25, Win $17.50
-7. $ARM Morning Rocket: buy above $183.58, Safety $178.71, Win $193.32
-8. $TXN Dip Buy: buy dip to $292.74, Safety $289.23, Win $299.76
-9. $SMCI Dip Buy: buy dip to $25.71, Safety $25.11, Win $26.91
-10. $GOOGL Hype Rider: buy above $284.61, Safety $280.49, Win $292.85
-11. $GE Back Above Normal: buy above $322.48, Safety $318.08, Win $331.28
-12. $PDD New Monthly High: buy above $87.65, Safety $86.21, Win $90.53
-13. $AAPL Back Above Normal: buy above $352.60, Safety $346.25, Win $365.30
-14. $GILD Back Above Normal: buy above $170.72, Safety $167.09, Win $177.98
+1. $DLTR Dip Buy: buy dip to $152.98, Safety $151.70, Win $155.54, hold up to 2 days (until 3:55 PM on day 2)
+2. $DG Dip Buy: buy dip to $138.77, Safety $137.64, Win $141.03
+3. $KR Dip Buy: buy dip to $69.00, Safety $68.53, Win $69.94
+4. $VRTX Strong Kid: buy above $563.18, Safety $556.94, Win $575.66, hold up to 2 days (until 3:55 PM on day 2)
+5. $NKE Strong Kid: buy above $35.47, Safety $34.99, Win $36.43, hold up to 2 days (until 3:55 PM on day 2)
+6. $GILD Strong Kid: buy above $176.78, Safety $175.29, Win $179.76, hold up to 2 days (until 3:55 PM on day 2)
+7. $MSTR Bounce Back: buy above $82.93, Safety $78.89, Win $88.99
+8. $ABBV Back Above Normal: buy above $296.73, Safety $291.37, Win $307.45
+9. $WMT New Monthly High: buy above $132.30, Safety $130.81, Win $135.28
+10. $FCX Bounce Back: buy above $48.12, Safety $46.66, Win $50.31
+11. $BIDU Bounce Back: buy above $64.69, Safety $63.11, Win $67.06
 
 Not bought by 3:00 PM ET? Forget it. Still holding at 3:55 PM ET? Sell - unless the pick says Hold.
 
