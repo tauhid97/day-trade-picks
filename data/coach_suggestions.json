@@ -1,4 +1,17 @@
 {
+  "Oversold Comeback": {
+    "change": {
+      "min_drop_pct": 2.0
+    },
+    "train_R": [
+      4.62,
+      4.89
+    ],
+    "test_R": [
+      -9.43,
+      -7.9
+    ]
+  },
   "Gap & Go": {
     "change": {
       "min_rvol": 1.5

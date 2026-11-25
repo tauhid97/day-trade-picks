@@ -45,13 +45,13 @@
     "since": "2026-11-04"
   },
   "Oversold Bounce": {
-    "mode": "practice",
-    "why": "Benched: averaging -0.69R over last 3 real trades",
-    "since": "2026-11-10"
+    "mode": "live",
+    "why": "Playing: averaging +0.15R over last 6 real trades",
+    "since": "2026-11-25"
   },
   "Relative Strength": {
     "mode": "practice",
-    "why": "Benched: averaging -0.85R over last 6 real trades",
+    "why": "Benched: averaging -0.26R over last 10 real trades",
     "since": "2026-11-02"
   },
   "NR7 Breakout": {
