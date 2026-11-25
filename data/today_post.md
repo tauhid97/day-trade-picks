@@ -1,58 +1,44 @@
-**Day Trade Picks - Tue Nov 24, 2026** (sent 10:36 AM ET)
+**Day Trade Picks - Wed Nov 25, 2026** (sent 10:37 AM ET)
 
-Market mood: ⛅ CLOUDY - mixed day, be picky (SPY -0.77% today, below its 20-day average)
+Market mood: ⛈️ STORMY - market is falling, only Bounce Back plays (SPY -2.35% today, below its 20-day average)
 
 How many stocks are rising [practice, info only]: NEUTRAL (57% of S&P 500 stocks in uptrends, long-term trend falling)
 
 👀 Beaten-down watchlist [practice, info only] - furthest below their 6-month high:
-- $IREN: 79% below its high (3 months: -63.0%, today -12.6%)
-- $QBTS: 77% below its high (3 months: -58.3%, today -7.7%)
-- $SMR: 75% below its high (3 months: -61.9%, today -5.7%)
-- $OKLO: 72% below its high (3 months: -50.1%, today -7.0%)
-- $ENPH: 72% below its high (3 months: -45.7%, today -4.1%)
+- $IREN: 82% below its high (3 months: -68.0%, today -8.7%)
+- $QBTS: 78% below its high (3 months: -62.3%, today -7.4%)
+- $SMR: 77% below its high (3 months: -66.1%, today -7.0%)
+- $OKLO: 74% below its high (3 months: -54.9%, today -7.5%)
+- $CLSK: 73% below its high (3 months: -60.5%, today -3.3%)
 
-**1. $DLTR - Crowd Breakout (ORB Stocks in Play)**
-Buy: only if the price climbs UP to $155.08
-Safety (sell if it falls to): $151.45
-Win: no set price - sell at 3:55 PM ET
-If you risked $10: lose $10.00 at Safety.
-Why: Stock in play: 5.8x normal volume, green opening range - buy the breakout
-Luck check (59 past days replayed 2,000 times): the Buy happens 67% of the time. Win first 0%, Safety first 5%. Average -$0.10 per $10 risked. A simulation, not a promise.
-News [practice, info only]: ⚠️ EARNINGS (earnings report today - expect big moves either way)
-Hype [practice, info only]: QUIET (1 Reddit mentions in 24 hours, yesterday: 0)
+🟥 Red day (market -2.4%) - holding up best:
+- $HPQ: +10.6% today
+- $LI: +4.0% today
+- $DE: +3.7% today
+- $DVN: +2.1% today
+- $IBM: +1.8% today
 
-**2. $XPEV - Crowd Breakout (ORB Stocks in Play)**
-Buy: only if the price climbs UP to $9.10
-Safety (sell if it falls to): $8.91
-Win: no set price - sell at 3:55 PM ET
-If you risked $10: lose $10.00 at Safety.
-Why: Stock in play: 2.5x normal volume, green opening range - buy the breakout
-Luck check (59 past days replayed 2,000 times): the Buy happens 3% of the time. Win first 0%, Safety first 0%. Average -$1.10 per $10 risked. A simulation, not a promise.
-News [practice, info only]: IN THE NEWS (2 headlines in the last 24 hours, mood: NEUTRAL)
-Hype [practice, info only]: QUIET (hardly mentioned on Reddit)
-
-**3. $LMT - Tight Spring (NR7 Breakout)**
-Buy: only if the price climbs UP to $589.50
-Safety (sell if it falls to): $580.93
-Win (sell if it rises to): $606.64
+**1. $COIN - Comeback Kid (Oversold Comeback)**
+Buy: only if the price climbs UP to $98.66
+Safety (sell if it falls to): $94.86
+Win (sell if it rises to): $106.26
 If you risked $10: lose $10.00 at Safety, win +$20.00 at Win.
-Why: Yesterday was its quietest day in 7 days, in an uptrend - buy if it breaks out above $589.49
-Luck check (59 past days replayed 2,000 times): the Buy happens 45% of the time. Win first 0%, Safety first 4%. Average -$0.10 per $10 risked. A simulation, not a promise.
-News [practice, info only]: IN THE NEWS (10 headlines in the last 24 hours, mood: MIXED, about: deal)
+Why: Fell 5.9% yesterday into oversold (RSI 27) - buy only if it climbs back above the morning high
+Hold: up to 2 days - if Safety/Win aren't hit, sell at 3:55 PM ET on day 2.
+Luck check: only replays one day, so it's skipped for picks that may hold overnight.
+News [practice, info only]: IN THE NEWS (4 headlines in the last 24 hours, mood: GOOD, about: legal, people)
 Hype [practice, info only]: QUIET (hardly mentioned on Reddit)
 
 --- PRACTICE picks (skills still being tested - just watch, don't trade these) ---
-1. $DLTR Dip Buy: buy dip to $152.98, Safety $151.70, Win $155.54, hold up to 2 days (until 3:55 PM on day 2)
-2. $DG Dip Buy: buy dip to $138.77, Safety $137.64, Win $141.03
-3. $KR Dip Buy: buy dip to $69.00, Safety $68.53, Win $69.94
-4. $VRTX Strong Kid: buy above $563.18, Safety $556.94, Win $575.66, hold up to 2 days (until 3:55 PM on day 2)
-5. $NKE Strong Kid: buy above $35.47, Safety $34.99, Win $36.43, hold up to 2 days (until 3:55 PM on day 2)
-6. $GILD Strong Kid: buy above $176.78, Safety $175.29, Win $179.76, hold up to 2 days (until 3:55 PM on day 2)
-7. $MSTR Bounce Back: buy above $82.93, Safety $78.89, Win $88.99
-8. $ABBV Back Above Normal: buy above $296.73, Safety $291.37, Win $307.45
-9. $WMT New Monthly High: buy above $132.30, Safety $130.81, Win $135.28
-10. $FCX Bounce Back: buy above $48.12, Safety $46.66, Win $50.31
-11. $BIDU Bounce Back: buy above $64.69, Safety $63.11, Win $67.06
+1. $DELL Crash Bounce: buy above $280.09, Safety $264.99, Win $310.29
+2. $DE Strong Kid: buy above $637.97, Safety $625.51, Win $662.89, hold up to 2 days (until 3:55 PM on day 2)
+3. $MU Crash Bounce: buy above $580.64, Safety $557.33, Win $627.26
+4. $SNDK Bounce Back: buy above $72.53, Safety $68.20, Win $79.03
+5. $GOOGL Crash Bounce: buy above $268.41, Safety $262.72, Win $279.79
+6. $COIN Bounce Back: buy above $98.66, Safety $94.86, Win $104.36
+7. $BIDU Bounce Back: buy above $61.53, Safety $60.11, Win $63.66
+8. $BNTX Strong Kid: buy above $89.84, Safety $88.19, Win $93.14, hold up to 2 days (until 3:55 PM on day 2)
+9. $CHWY Strong Kid: buy above $19.76, Safety $19.47, Win $20.34, hold up to 2 days (until 3:55 PM on day 2)
 
 Not bought by 3:00 PM ET? Forget it. Still holding at 3:55 PM ET? Sell - unless the pick says Hold.
 
