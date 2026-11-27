@@ -24,6 +24,7 @@ NICKNAMES = {
     "Beaten-Down Turnaround": "Underdog",
     "Episodic Pivot": "Big News Jump",
     "Turnaround Tuesday": "Monday Bounce",
+    "Beaten-Down Volume": "Volume Wake-Up",
 }
 
 BUY_WORDS = {

@@ -2,7 +2,7 @@
 import pandas as pd
 
 from . import config as C
-from .bots import hype
+from .bots import hype, watchlist
 from .bots import weather as weather_bot
 from .setups import Context, make_pick, rank_and_cap
 
@@ -56,7 +56,19 @@ def build_contexts(day, scan_ts, intraday, daily):
         if ctx.last >= C.MIN_PRICE and ctx.avg_dollar_vol >= C.MIN_AVG_DOLLAR_VOL:
             ctx.market_chg_pct, ctx.market_prev_chg = mkt, mkt_prev
             out.append(ctx)
+    add_beaten_rank(out)
     return out
+
+
+def add_beaten_rank(ctxs):
+    """Give each stock its watchlist rank: 1 = furthest below its 6-month high (only 20%+ down get a rank)."""
+    for c in ctxs:
+        high = float(c.daily["High"].iloc[-watchlist.LOOKBACK_DAYS:].max())
+        c.below_high_pct = (1 - c.prev_close / high) * 100 if high > 0 else 0.0
+        c.beaten_rank = None
+    beaten = sorted((c for c in ctxs if c.below_high_pct >= watchlist.MIN_BELOW_PCT), key=lambda c: -c.below_high_pct)
+    for i, c in enumerate(beaten, 1):
+        c.beaten_rank = i
 
 
 def ideas(contexts, skill, params=None, weather="cloudy"):

@@ -34,6 +34,7 @@ WATCH_OUT = {
     "Beaten-Down Turnaround": "Cheap stocks can get cheaper - most turnarounds take many tries.",
     "Episodic Pivot": "Big jumps can fade back down; holding for days means overnight news can hit you too.",
     "Turnaround Tuesday": "Wins are small (under 1% most times) and a bad Tuesday can drop 3%; it only works over many tries.",
+    "Beaten-Down Volume": "Beaten-down stocks swing hard: about half the trades lose, and one can drop 6% fast. The test win came from many small tries.",
 }
 
 RULES = [
